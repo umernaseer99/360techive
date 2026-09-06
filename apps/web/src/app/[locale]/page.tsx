@@ -6,7 +6,6 @@ import {
   ProductsSection,
   BuildingNextSection,
   SelectedWorkSection,
-  TechnologySection,
   WhyUsSection,
   AboutSection,
   StartProjectSection,
@@ -43,7 +42,6 @@ export default function HomePage() {
       <ProductsSection />
       <BuildingNextSection />
       <SelectedWorkSection />
-      <TechnologySection />
       <WhyUsSection />
       <AboutSection />
       <StartProjectSection />

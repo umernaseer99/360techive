@@ -107,12 +107,6 @@ export const projects: Project[] = [
   { key: "approvals", approach: "Laravel, MySQL, integrations" },
 ];
 
-/** Section 8. Grouped so the section reads as thinking, not a stack list. */
-export const technology = {
-  build: ["React", "Next.js", "TypeScript", "Node.js", "React Native"],
-  platform: ["Laravel", "WordPress", "PostgreSQL", "MySQL"],
-  intelligence: ["AI APIs", "Vector search", "Cloud infrastructure"],
-} as const;
 
 /** Section 9. */
 export const principles = [

@@ -261,45 +261,45 @@
       }
     },
     "lab": {
-      "eyebrow": "Das Labor",
+      "eyebrow": "KI-Fähigkeiten",
       "headline": {
-        "first": "Woran wir als",
-        "accent": "Nächstes arbeiten."
+        "first": "Wohin wir KI als",
+        "accent": "Nächstes bringen."
       },
-      "exploring": "Aktuell in Arbeit",
-      "footnote": "Ein Teil davon wird Kundenarbeit, ein Teil wird Produkt. Alles davon hält unsere Entwicklung auf dem aktuellen Stand.",
+      "exploring": "Aktuell in Entwicklung",
+      "footnote": "All das setzt auf den Systemen auf, die Sie bereits betreiben. Nichts davon verlangt, Funktionierendes zu ersetzen.",
       "areas": {
         "agents": {
-          "name": "KI-Agenten",
-          "note": "Systeme, die eine Aufgabe bis zum Ende bringen."
+          "name": "Autonome Agenten",
+          "note": "Agenten, die eine Aufgabe durch Ihre Systeme bis zum Ende führen."
         },
         "automation": {
-          "name": "Geschäftsautomatisierung",
-          "note": "Schritte entfernen, die niemand zweimal machen sollte."
+          "name": "Prozessautomatisierung",
+          "note": "Die Arbeit, die Ihr Team täglich wiederholt, vollständig übernommen."
         },
         "webApps": {
-          "name": "Webanwendungen",
-          "note": "Plattformen, in denen Teams den ganzen Tag arbeiten."
+          "name": "Automatisierung bestehender Systeme",
+          "note": "Moderne Automatisierung auf der Software, auf die Sie heute angewiesen sind."
         },
         "mobile": {
-          "name": "Mobile Produkte",
-          "note": "Software, die mit der Arbeit unterwegs ist."
+          "name": "Dokumentenverarbeitung",
+          "note": "Verträge, Rechnungen und Formulare gelesen, klassifiziert und verarbeitet."
         },
         "internalTools": {
-          "name": "Interne Business-Tools",
-          "note": "Die unscheinbare Software, die ein Unternehmen am Laufen hält."
+          "name": "Wissen und Recherche",
+          "note": "Ihre eigene Dokumentation, beantwortbar in normaler Sprache."
         },
         "customerExperience": {
-          "name": "KI-gestützte Kundenerlebnisse",
-          "note": "Service und Vertrieb, die wirklich antworten."
+          "name": "KI im Kundenservice",
+          "note": "Anfragen im Service und Vertrieb gelöst, nicht nur abgewiesen."
         },
         "workflows": {
-          "name": "Intelligente Workflows",
-          "note": "Prozesse, die entscheiden statt nur weiterzuleiten."
+          "name": "Entscheidungssysteme",
+          "note": "Ihre Regeln und Ihr Urteil, konsistent und in großer Menge angewendet."
         },
         "platforms": {
-          "name": "Digitale Plattformen",
-          "note": "Produkte mit mehr als einer Nutzergruppe."
+          "name": "Sprach- und Dialogschnittstellen",
+          "note": "Natürliche Sprache als Zugang zu Ihren eigenen Systemen."
         }
       }
     },
@@ -338,30 +338,6 @@
           "problem": "Freigaben lagen in E-Mail-Verläufen. Anfragen gingen unter, und niemand konnte nachvollziehen, wer was freigegeben hatte.",
           "built": "Ein Workflow-Tool mit strukturierten Anfragen, klarer Zuständigkeit in jedem Schritt und einem dauerhaften Protokoll jeder Entscheidung.",
           "outcome": "Anfragen, die von allein weiterlaufen, und ein Prüfpfad, den niemand pflegen muss."
-        }
-      }
-    },
-    "technology": {
-      "eyebrow": "Technologie",
-      "headline": {
-        "first": "Die Technik ändert sich.",
-        "second": "Das",
-        "accent": "Denken",
-        "third": "dahinter nicht."
-      },
-      "body": "Wir wählen den Stack, der zu Ihrem Problem, Ihrem Zeitplan und dem Team passt, das ihn übernimmt. Tiefe Expertise in allen, ohne Bindung an einen einzelnen.",
-      "groups": {
-        "build": {
-          "label": "Produkt und Oberfläche",
-          "note": "Was Menschen täglich sehen und benutzen."
-        },
-        "platform": {
-          "label": "Plattform und Daten",
-          "note": "Wo Geschäftslogik und Datenbestand liegen."
-        },
-        "intelligence": {
-          "label": "Intelligenz und Infrastruktur",
-          "note": "Was Software verstehen und zuverlässig laufen lässt."
         }
       }
     },

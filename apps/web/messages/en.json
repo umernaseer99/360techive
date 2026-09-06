@@ -261,45 +261,45 @@
       }
     },
     "lab": {
-      "eyebrow": "The lab",
+      "eyebrow": "AI capabilities",
       "headline": {
-        "first": "What we are building",
+        "first": "Where we are taking AI",
         "accent": "next."
       },
-      "exploring": "Currently exploring",
-      "footnote": "Some of this becomes client work and some becomes a product. All of it keeps our engineering current.",
+      "exploring": "Currently building",
+      "footnote": "Each of these is built on top of the systems you already run. Nothing here asks you to replace what works.",
       "areas": {
         "agents": {
-          "name": "AI Agents",
-          "note": "Systems that carry a task through to the end."
+          "name": "Autonomous Agents",
+          "note": "Agents that carry a task through your systems from start to finish."
         },
         "automation": {
-          "name": "Business Automation",
-          "note": "Removing the steps nobody should do twice."
+          "name": "Process Automation",
+          "note": "The work your team repeats every day, handled end to end."
         },
         "webApps": {
-          "name": "Web Applications",
-          "note": "Platforms teams live in all day."
+          "name": "Legacy System Automation",
+          "note": "Modern automation layered onto the software you already depend on."
         },
         "mobile": {
-          "name": "Mobile Products",
-          "note": "Software that travels with the work."
+          "name": "Document Intelligence",
+          "note": "Contracts, invoices and forms read, classified and processed."
         },
         "internalTools": {
-          "name": "Internal Business Tools",
-          "note": "The unglamorous software that runs a company."
+          "name": "Knowledge and Retrieval",
+          "note": "Your own documentation, answerable in plain language."
         },
         "customerExperience": {
-          "name": "AI Powered Customer Experiences",
-          "note": "Support and sales that answer properly."
+          "name": "AI Customer Operations",
+          "note": "Support and sales conversations resolved, not just deflected."
         },
         "workflows": {
-          "name": "Intelligent Workflows",
-          "note": "Processes that decide, not just forward."
+          "name": "Decision Systems",
+          "note": "Your rules and your judgement, applied consistently at volume."
         },
         "platforms": {
-          "name": "Digital Platforms",
-          "note": "Products with more than one kind of user."
+          "name": "Voice and Conversational Interfaces",
+          "note": "Natural language as the way into your own systems."
         }
       }
     },
@@ -338,30 +338,6 @@
           "problem": "Approvals lived in email threads. Requests were missed, and no one could reconstruct who signed off on what.",
           "built": "A workflow tool with structured requests, clear ownership at every step and a permanent record of each decision.",
           "outcome": "Requests that move on their own and an audit trail that exists without anyone maintaining it."
-        }
-      }
-    },
-    "technology": {
-      "eyebrow": "Technology",
-      "headline": {
-        "first": "The technology changes.",
-        "second": "The",
-        "accent": "thinking",
-        "third": "does not."
-      },
-      "body": "We choose the stack that fits your problem, your timeline and the team that inherits it. Deep expertise across all of them, and no attachment to any one of them.",
-      "groups": {
-        "build": {
-          "label": "Product and interface",
-          "note": "What people see and use every day."
-        },
-        "platform": {
-          "label": "Platform and data",
-          "note": "Where the business logic and the records live."
-        },
-        "intelligence": {
-          "label": "Intelligence and infrastructure",
-          "note": "What makes software understand and keep running."
         }
       }
     },

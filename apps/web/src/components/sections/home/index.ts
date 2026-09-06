@@ -9,7 +9,6 @@ export { AutomationSection } from "./AutomationSection";
 export { ProductsSection } from "./ProductsSection";
 export { BuildingNextSection } from "./BuildingNextSection";
 export { SelectedWorkSection } from "./SelectedWorkSection";
-export { TechnologySection } from "./TechnologySection";
 export { WhyUsSection } from "./WhyUsSection";
 export { AboutSection } from "./AboutSection";
 export { StartProjectSection } from "./StartProjectSection";

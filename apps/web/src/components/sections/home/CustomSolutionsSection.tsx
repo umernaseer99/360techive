@@ -51,7 +51,7 @@ export function CustomSolutionsSection() {
       </div>
 
       <div className="mt-14 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-        <RevealGroup className="flex flex-col" stagger={0.05}>
+        <RevealGroup className="flex min-w-0 flex-col" stagger={0.05}>
           {capabilities.map((c, i) => {
             const isActive = i === activeIndex;
             return (
@@ -81,7 +81,7 @@ export function CustomSolutionsSection() {
                       {String(i + 1).padStart(2, "0")}
                     </span>
 
-                    <div className="flex-1">
+                    <div className="min-w-0 flex-1">
                       <h3
                         className={`text-xl font-semibold tracking-tight transition-all duration-300 md:text-2xl ${
                           isActive
@@ -112,7 +112,7 @@ export function CustomSolutionsSection() {
                       </div>
 
                       {/* inline preview: the pointer pane does not exist below lg */}
-                      <div className="mt-5 h-44 lg:hidden">
+                      <div className="mt-5 h-44 min-w-0 overflow-hidden lg:hidden">
                         <CapabilityPreview id={c.id} />
                       </div>
                     </div>

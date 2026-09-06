@@ -1,16 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useInView,
-} from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { labAreas } from "@/config/company";
+import { AgentNetworkVisual } from "@/components/sections/hero/AgentNetworkVisual";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
 /**
@@ -23,6 +20,10 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  *
  * The cycle only runs while the section is on screen, and never under reduced
  * motion.
+ *
+ * The agent network diagram sits alongside it. It is the same visual language
+ * as the AI Automation hero, which is deliberate: this section and that page
+ * describe the same capability, so they should look like the same system.
  */
 
 const DWELL = 2600;
@@ -42,7 +43,7 @@ export function BuildingNextSection() {
     if (!running) return;
     const timer = setInterval(
       () => setIndex((i) => (i + 1) % labAreas.length),
-      DWELL
+      DWELL,
     );
     return () => clearInterval(timer);
   }, [running]);
@@ -65,91 +66,98 @@ export function BuildingNextSection() {
           </h2>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:gap-16">
-          {/* the field */}
-          <ul className="flex flex-wrap items-baseline gap-x-7 gap-y-3 md:gap-x-10 md:gap-y-4">
-            {labAreas.map((area, i) => {
-              const isActive = i === activeIndex;
-              return (
-                <li key={area}>
-                  <button
-                    type="button"
-                    onMouseEnter={() => setPinned(i)}
-                    onMouseLeave={() => setPinned(null)}
-                    onFocus={() => setPinned(i)}
-                    onBlur={() => setPinned(null)}
-                    className="group relative block text-left transition-transform duration-300 ease-out hover:-translate-y-0.5 focus-visible:outline-none motion-reduce:transform-none"
-                  >
-                    <motion.span
-                      animate={{
-                        opacity: isActive ? 1 : 0.34,
-                        color: isActive
-                          ? "rgb(var(--color-foreground))"
-                          : "rgb(var(--color-foreground))",
-                      }}
-                      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                      className="block text-2xl font-semibold tracking-tight md:text-[2.1rem]"
+        <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="flex flex-col gap-10">
+            {/* the field */}
+            <ul className="flex flex-wrap items-baseline gap-x-7 gap-y-3 md:gap-x-10 md:gap-y-4">
+              {labAreas.map((area, i) => {
+                const isActive = i === activeIndex;
+                return (
+                  <li key={area}>
+                    <button
+                      type="button"
+                      onMouseEnter={() => setPinned(i)}
+                      onMouseLeave={() => setPinned(null)}
+                      onFocus={() => setPinned(i)}
+                      onBlur={() => setPinned(null)}
+                      className="group relative block text-left transition-transform duration-300 ease-out hover:-translate-y-0.5 focus-visible:outline-none motion-reduce:transform-none"
                     >
-                      {t(`areas.${area}.name`)}
-                    </motion.span>
+                      <motion.span
+                        animate={{
+                          opacity: isActive ? 1 : 0.34,
+                          color: isActive
+                            ? "rgb(var(--color-foreground))"
+                            : "rgb(var(--color-foreground))",
+                        }}
+                        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                        className="block text-2xl font-semibold tracking-tight md:text-[2.1rem]"
+                      >
+                        {t(`areas.${area}.name`)}
+                      </motion.span>
 
-                    {/* underline that draws under whichever area currently leads */}
+                      {/* underline that draws under whichever area currently leads */}
+                      <motion.span
+                        aria-hidden="true"
+                        animate={{ scaleX: isActive ? 1 : 0 }}
+                        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+                        className="mt-1 block h-px origin-left bg-primary"
+                      />
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* the readout */}
+            <div className="border-t border-border/10 pt-8">
+              <div className="flex items-center gap-2">
+                <span className="relative flex size-1.5">
+                  {running && (
                     <motion.span
-                      aria-hidden="true"
-                      animate={{ scaleX: isActive ? 1 : 0 }}
-                      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                      className="mt-1 block h-px origin-left bg-primary"
+                      animate={{ scale: [1, 2.6, 1], opacity: [0.7, 0, 0.7] }}
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
+                        ease: "easeOut",
+                      }}
+                      className="absolute inset-0 rounded-full bg-primary"
                     />
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+                  )}
+                  <span className="relative size-1.5 rounded-full bg-primary" />
+                </span>
+                <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
+                  {t("exploring")}
+                </span>
+              </div>
 
-          {/* the readout */}
-          <div className="lg:border-l lg:border-border/10 lg:pl-10">
-            <div className="flex items-center gap-2">
-              <span className="relative flex size-1.5">
-                {running && (
-                  <motion.span
-                    animate={{ scale: [1, 2.6, 1], opacity: [0.7, 0, 0.7] }}
-                    transition={{
-                      duration: 2.2,
-                      repeat: Infinity,
-                      ease: "easeOut",
-                    }}
-                    className="absolute inset-0 rounded-full bg-primary"
-                  />
-                )}
-                <span className="relative size-1.5 rounded-full bg-primary" />
-              </span>
-              <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                {t("exploring")}
-              </span>
+              <div className="relative mt-5 min-h-[6.5rem]">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={active}
+                    initial={reduced ? { opacity: 0 } : { opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={reduced ? { opacity: 0 } : { opacity: 0, y: -10 }}
+                    transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <p className="text-base font-medium text-foreground">
+                      {t(`areas.${active}.name`)}
+                    </p>
+                    <p className="mt-2 text-pretty text-sm leading-relaxed text-muted">
+                      {t(`areas.${active}.note`)}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              <p className="mt-6 text-pretty text-sm leading-relaxed text-muted/80">
+                {t("footnote")}
+              </p>
             </div>
+          </div>
 
-            <div className="relative mt-5 min-h-[6.5rem]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={active}
-                  initial={reduced ? { opacity: 0 } : { opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={reduced ? { opacity: 0 } : { opacity: 0, y: -10 }}
-                  transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <p className="text-base font-medium text-foreground">
-                    {t(`areas.${active}.name`)}
-                  </p>
-                  <p className="mt-2 text-pretty text-sm leading-relaxed text-muted">
-                    {t(`areas.${active}.note`)}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            <p className="mt-6 border-t border-border/10 pt-5 text-pretty text-sm leading-relaxed text-muted/80">
-              {t("footnote")}
-            </p>
+          {/* the same agent network used by the AI Automation hero */}
+          <div className="flex justify-center lg:justify-end">
+            <AgentNetworkVisual />
           </div>
         </div>
       </div>
