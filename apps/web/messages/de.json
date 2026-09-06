@@ -130,12 +130,12 @@
       "counter": "{current} von {total}",
       "items": {
         "web-apps": {
-          "name": "Webanwendungen",
-          "description": "Leistungsfähige Webanwendungen, gebaut auf echten fachlichen Anforderungen: vom ersten internen Tool bis zur Plattform, auf der das ganze Unternehmen läuft.",
+          "name": "Webanwendungen und Webentwicklung",
+          "description": "Alles, was im Browser läuft, von der Website bis zur Plattform, in der Ihr ganzes Unternehmen arbeitet. Gebaut auf echte Anforderungen und schnell, auch wenn Inhalte und Traffic wachsen.",
           "detail": [
+            "Plattformen",
             "Dashboards",
-            "Workflows",
-            "Rollen"
+            "Websites"
           ]
         },
         "mobile": {
@@ -145,24 +145,6 @@
             "iOS",
             "Android",
             "Offline"
-          ]
-        },
-        "web": {
-          "name": "Webentwicklung",
-          "description": "Schnelle, moderne und skalierbare Websites und digitale Plattformen, die auch bei wachsenden Inhalten und Zugriffszahlen schnell bleiben.",
-          "detail": [
-            "Marketing",
-            "CMS",
-            "Commerce"
-          ]
-        },
-        "design": {
-          "name": "UI- und UX-Design",
-          "description": "Oberflächen, die verständlich und angenehm zu bedienen sind, entworfen bevor jemand Code schreibt.",
-          "detail": [
-            "Research",
-            "Prototypen",
-            "Designsysteme"
           ]
         },
         "agents": {
@@ -300,44 +282,6 @@
         "platforms": {
           "name": "Sprach- und Dialogschnittstellen",
           "note": "Natürliche Sprache als Zugang zu Ihren eigenen Systemen."
-        }
-      }
-    },
-    "work": {
-      "eyebrow": "Ausgewählte Projekte",
-      "headline": {
-        "first": "Gebaut für",
-        "accent": "echte",
-        "second": "Probleme."
-      },
-      "body": "Individuelle Systeme, die wir für konkrete Unternehmen konzipiert und gebaut haben, und die Probleme dahinter.",
-      "fields": {
-        "problem": "Das Problem",
-        "built": "Was wir gebaut haben",
-        "approach": "Technologie",
-        "outcome": "Was sich geändert hat"
-      },
-      "projects": {
-        "operations": {
-          "title": "Betriebsplattform für einen Dienstleister",
-          "sector": "Außendienst",
-          "problem": "Aufträge wurden in einem System angelegt, in einer Tabelle geplant und an dritter Stelle abgerechnet. Niemand konnte sagen, wie weit ein Auftrag tatsächlich war.",
-          "built": "Eine Webanwendung für Buchung, Einsatzplanung, Auftragshistorie und Rechnungsstellung, mit einer mobilen Ansicht für das Team vor Ort.",
-          "outcome": "Ein Ort, an dem der Stand jedes Auftrags steht, und ein Innendienst, der dieselben Angaben nicht mehr dreimal abtippt."
-        },
-        "support": {
-          "title": "Assistent für den Kundenservice",
-          "sector": "E-Commerce",
-          "problem": "Jeden Tag kamen dieselben Fragen zu Lieferung, Rückgabe und Größen, und das kleine Serviceteam beantwortete jede einzelne von Hand.",
-          "built": "Ein Assistent, trainiert auf den eigenen Richtlinien und Produktdaten des Unternehmens, der alles Ungewöhnliche mit der vollständigen Historie an einen Menschen übergibt.",
-          "outcome": "Routinefragen werden sofort beantwortet, und das Serviceteam verbringt seinen Tag mit den Fällen, die eine Einschätzung brauchen."
-        },
-        "approvals": {
-          "title": "Interner Freigabeprozess",
-          "sector": "Professional Services",
-          "problem": "Freigaben lagen in E-Mail-Verläufen. Anfragen gingen unter, und niemand konnte nachvollziehen, wer was freigegeben hatte.",
-          "built": "Ein Workflow-Tool mit strukturierten Anfragen, klarer Zuständigkeit in jedem Schritt und einem dauerhaften Protokoll jeder Entscheidung.",
-          "outcome": "Anfragen, die von allein weiterlaufen, und ein Prüfpfad, den niemand pflegen muss."
         }
       }
     },

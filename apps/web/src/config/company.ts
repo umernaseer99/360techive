@@ -29,19 +29,11 @@ export interface Product {
   projectName?: string;
 }
 
-export interface Project {
-  /** Message key under `home.work.projects`. */
-  key: string;
-  /** Stack line, left untranslated: these are product names. */
-  approach: string;
-}
 
 /** Section 3. Each one gets an interface preview, so keep the list tight. */
 export const capabilities: Capability[] = [
   { id: "web-apps" },
   { id: "mobile" },
-  { id: "web" },
-  { id: "design" },
   { id: "agents" },
   { id: "automation" },
 ];
@@ -94,16 +86,4 @@ export const labAreas = [
   "platforms",
 ] as const;
 
-/**
- * Section 7. PLACEHOLDER PROJECTS.
- *
- * Written as project types rather than named clients, and deliberately free of
- * statistics. Swap in real case studies with the same shape when they are
- * cleared for publication.
- */
-export const projects: Project[] = [
-  { key: "operations", approach: "Next.js, TypeScript, PostgreSQL" },
-  { key: "support", approach: "AI APIs, retrieval, Node.js" },
-  { key: "approvals", approach: "Laravel, MySQL, integrations" },
-];
 

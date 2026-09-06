@@ -21,7 +21,6 @@ export const siteConfig = {
     { key: "services", href: "/#services" },
     { key: "aiAutomation", href: "/ai-automation" },
     { key: "products", href: "/#products" },
-    { key: "work", href: "/#work" },
     { key: "about", href: "/#about" },
     { key: "contact", href: "/contact" },
   ] satisfies NavLink[],
@@ -29,8 +28,7 @@ export const siteConfig = {
     company: [
       { key: "customSolutions", href: "/#services" },
       { key: "products", href: "/#products" },
-      { key: "work", href: "/#work" },
-      { key: "about", href: "/#about" },
+        { key: "about", href: "/#about" },
       { key: "contact", href: "/contact" },
     ] satisfies NavLink[],
     explore: [

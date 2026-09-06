@@ -92,7 +92,7 @@ export function StartProjectSection() {
                 {t("primaryCta")}
               </Button>
             </Link>
-            <Link href="/#work">
+            <Link href="/#products">
               <Button size="lg" variant="secondary">
                 {t("secondaryCta")}
               </Button>

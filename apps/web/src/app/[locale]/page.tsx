@@ -5,7 +5,6 @@ import {
   CustomSolutionsSection,
   ProductsSection,
   BuildingNextSection,
-  SelectedWorkSection,
   AboutSection,
   StartProjectSection,
 } from "@/components/sections/home";
@@ -19,9 +18,8 @@ import {
  *   4. what can you build for me       (custom solutions)
  *   5. do you build anything yourself  (products)
  *   6. where is this going             (the AI lab)
- *   7. has this worked before          (selected work)
- *   8. who is behind it                (about)
- *   9. the ask                         (start a project)
+ *   7. who is behind it                (about)
+ *   8. the ask                         (start a project)
  *
  * AI automation sits third on purpose. It is the reason to choose this firm
  * over a general development shop, so it is stated before the capability list
@@ -41,7 +39,6 @@ export default function HomePage() {
       <CustomSolutionsSection />
       <ProductsSection />
       <BuildingNextSection />
-      <SelectedWorkSection />
       <AboutSection />
       <StartProjectSection />
     </>

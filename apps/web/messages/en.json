@@ -130,12 +130,12 @@
       "counter": "{current} of {total}",
       "items": {
         "web-apps": {
-          "name": "Web Applications",
-          "description": "Powerful web applications built around real business requirements, from the first internal tool to the platform your whole company runs on.",
+          "name": "Web Applications and Development",
+          "description": "Everything that runs in a browser, from a marketing site through to the platform your whole company works in. Built around real requirements and fast as the traffic and the content grow.",
           "detail": [
+            "Platforms",
             "Dashboards",
-            "Workflows",
-            "Roles"
+            "Websites"
           ]
         },
         "mobile": {
@@ -145,24 +145,6 @@
             "iOS",
             "Android",
             "Offline"
-          ]
-        },
-        "web": {
-          "name": "Web Development",
-          "description": "Fast, modern, scalable websites and digital platforms that stay quick as the content and the traffic grow.",
-          "detail": [
-            "Marketing",
-            "CMS",
-            "Commerce"
-          ]
-        },
-        "design": {
-          "name": "UI and UX Design",
-          "description": "Interfaces that are simple to understand and enjoyable to use, designed before anyone writes code.",
-          "detail": [
-            "Research",
-            "Prototypes",
-            "Systems"
           ]
         },
         "agents": {
@@ -300,44 +282,6 @@
         "platforms": {
           "name": "Voice and Conversational Interfaces",
           "note": "Natural language as the way into your own systems."
-        }
-      }
-    },
-    "work": {
-      "eyebrow": "Selected work",
-      "headline": {
-        "first": "Built for",
-        "accent": "real",
-        "second": "problems."
-      },
-      "body": "Custom systems we designed and built for specific businesses, and the problems behind them.",
-      "fields": {
-        "problem": "The problem",
-        "built": "What we built",
-        "approach": "Approach",
-        "outcome": "What changed"
-      },
-      "projects": {
-        "operations": {
-          "title": "Operations platform for a service business",
-          "sector": "Field services",
-          "problem": "Jobs were booked in one system, scheduled in a spreadsheet and invoiced in a third place. Nobody could answer where a job actually stood.",
-          "built": "One web application covering bookings, scheduling, job history and invoicing, with a mobile view for the crew on site.",
-          "outcome": "One place to look for the state of any job, and an office team that stopped rekeying the same details three times."
-        },
-        "support": {
-          "title": "Customer support assistant",
-          "sector": "Ecommerce",
-          "problem": "The same questions arrived every day about delivery, returns and sizing, and the small support team answered each one by hand.",
-          "built": "An assistant trained on the company's own policies and product data, handing anything unusual to a person with the full history attached.",
-          "outcome": "Routine questions answered immediately, and a support team that now spends its day on the cases that need judgement."
-        },
-        "approvals": {
-          "title": "Internal approval workflow",
-          "sector": "Professional services",
-          "problem": "Approvals lived in email threads. Requests were missed, and no one could reconstruct who signed off on what.",
-          "built": "A workflow tool with structured requests, clear ownership at every step and a permanent record of each decision.",
-          "outcome": "Requests that move on their own and an audit trail that exists without anyone maintaining it."
         }
       }
     },
