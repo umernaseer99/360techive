@@ -76,46 +76,46 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Custom software, digital products and AI systems",
+      "eyebrow": "Custom software and AI systems, built for your business",
       "headline": {
-        "first": "We build software",
-        "second": "businesses",
-        "accent": "actually",
-        "third": "run on."
+        "first": "Custom software,",
+        "second": "built around",
+        "accent": "your",
+        "third": "business."
       },
-      "body": "We design and engineer the systems businesses run on. Web platforms, mobile applications, interface design, AI agents and automation, delivered end to end by one team that owns the outcome.",
+      "body": "We design and engineer solutions around the way your business actually works, and we build AI into them where it makes the result faster, cheaper and more capable. Web platforms, mobile applications, internal systems, agents and automation, engineered for your process rather than someone else's template.",
       "primaryCta": "Start a project",
       "secondaryCta": "Explore our work",
-      "footnote": "Come with a specification or come with the problem. We will tell you what it takes to solve it properly."
+      "footnote": "Come with a specification or come with the problem. We will tell you what the right solution takes."
     },
     "whatWeDo": {
       "eyebrow": "What we do",
       "headline": {
-        "first": "From an idea to",
-        "second": "something people",
-        "accent": "use."
+        "first": "Built around",
+        "second": "how your business",
+        "accent": "works."
       },
-      "body": "Strategy, design, engineering, automation and AI under one roof. We take responsibility for the whole path, from the first conversation to software running in production.",
+      "body": "No two businesses run the same way, so nothing we build is assembled from a template. Strategy, design, engineering, automation and AI under one roof, shaped to your process from the first conversation to production.",
       "stages": {
         "problem": {
           "name": "Discover",
           "line": "We map the business before we design anything.",
-          "note": "Workflows, systems, users and commercial goals, documented. You get a clear definition of the problem and what solving it is worth."
+          "note": "Your workflows, systems, users and commercial goals, documented. This is what the solution gets shaped around."
         },
         "design": {
           "name": "Design",
           "line": "The product is decided before code is written.",
-          "note": "Flows, interfaces and architecture, agreed and prototyped. Every decision is made where changing it is still cheap."
+          "note": "Flows, interfaces and architecture designed for your process, prototyped and agreed before code is written."
         },
         "build": {
           "name": "Build",
           "line": "Engineered to production standard from day one.",
-          "note": "Tested, reviewed and documented code, shipped in working increments you can use and direct as we go."
+          "note": "Tested, reviewed and documented code, built to fit your systems and shipped in increments you can direct."
         },
         "launch": {
           "name": "Launch",
           "line": "Released, measured and improved.",
-          "note": "Deployment, monitoring, handover and documentation. Your team can run it, and we keep improving it."
+          "note": "Deployment, monitoring, handover and documentation. Your team owns it, and we keep tailoring it as the business changes."
         }
       }
     },
@@ -126,7 +126,7 @@
         "accent": "your",
         "second": "business."
       },
-      "body": "Every business works differently. We build software around the way yours actually works, instead of bending your process to fit a tool somebody else designed.",
+      "body": "Every business works differently, so we build around the way yours actually works instead of bending your process to fit a tool somebody else designed. Each of these is engineered for your requirements, with AI applied wherever it earns its place.",
       "counter": "{current} of {total}",
       "items": {
         "web-apps": {
@@ -188,12 +188,12 @@
     "automation": {
       "eyebrow": "AI automation",
       "headline": {
-        "first": "When software",
-        "second": "starts",
-        "accent": "doing",
-        "third": "the work."
+        "first": "AI built into",
+        "second": "your",
+        "accent": "own",
+        "third": "processes."
       },
-      "body": "We build AI agents and automation that run inside the processes your business already has. Trained on your data, your rules and your language, integrated with the systems you use, and accountable for the work they complete.",
+      "body": "Generic AI tools are trained on everyone. Yours is trained on your data, your rules and your language, and connected to the systems you already run. That is the difference between a chatbot and a system that completes real work inside your business.",
       "cta": "Explore AI Automation",
       "diagramLabel": "An automated workflow: input, AI agent, decision, action, result",
       "footnote": "Every workflow is trained on your process, governed by your rules and fully auditable",
@@ -226,7 +226,7 @@
         "first": "We build products",
         "accent": "too."
       },
-      "body": "Not every idea starts with a client brief. We build and own products of our own, which is how we stay sharp on the problems our clients bring us and how we prove what our engineering can do.",
+      "body": "We build and own products of our own, which is where our engineering gets proven before it reaches your project. The same team, the same standard, applied to problems we chose ourselves.",
       "counter": "{current} of {total}",
       "viewProject": "View Project",
       "featured": "Featured: {name}",
@@ -310,7 +310,7 @@
         "accent": "real",
         "second": "problems."
       },
-      "body": "Representative engagements, the problems behind them and the systems we delivered.",
+      "body": "Custom systems we designed and built for specific businesses, and the problems behind them.",
       "fields": {
         "problem": "The problem",
         "built": "What we built",
@@ -349,7 +349,7 @@
         "accent": "thinking",
         "third": "does not."
       },
-      "body": "We choose the stack that fits the problem, the timeline and the team that inherits it. Deep expertise across each of them, and no attachment to any one of them.",
+      "body": "We choose the stack that fits your problem, your timeline and the team that inherits it. Deep expertise across all of them, and no attachment to any one of them.",
       "groups": {
         "build": {
           "label": "Product and interface",
@@ -368,16 +368,16 @@
     "principles": {
       "eyebrow": "Why us",
       "headline": {
-        "first": "Good software starts",
-        "second": "with understanding",
-        "third": "the",
+        "first": "Off the shelf",
+        "second": "solves",
+        "third": "somebody else's",
         "accent": "problem."
       },
-      "body": "Most failed software was built competently and solved the wrong problem. We put senior time into the decisions that come before the code, which is why what we deliver holds up.",
+      "body": "Standard tools force your business to work the way the tool was designed. We do it the other way round, and put senior engineering into the decisions that make a solution fit.",
       "items": {
         "understand": {
-          "title": "We understand the business first",
-          "body": "Every engagement starts with how the work happens now, who it touches and what it costs when it fails. That is what makes the solution the right one."
+          "title": "We build around your business, not a template",
+          "body": "Every engagement starts with how your work happens now, who it touches and what it costs when it fails. The solution is shaped to that, and to nothing else."
         },
         "design": {
           "title": "We decide the product before we build it",
@@ -389,7 +389,7 @@
         },
         "automate": {
           "title": "We apply AI where it returns",
-          "body": "Automation goes where a process is well understood and repeats. We build the judgement into the system, and we say so when a problem needs engineering rather than a model."
+          "body": "AI goes where it measurably improves the outcome, trained on your data and governed by your rules. Where a problem needs engineering instead of a model, we say so and build that."
         },
         "maintain": {
           "title": "We hand over software your team can own",
@@ -404,13 +404,13 @@
     "about": {
       "eyebrow": "About us",
       "headline": {
-        "first": "A software team that",
-        "second": "likes",
-        "accent": "building",
-        "third": "things."
+        "first": "One team for the",
+        "second": "whole",
+        "accent": "solution,",
+        "third": "end to end."
       },
-      "bodyOne": "360 Techive is a software house. We combine design, development, software engineering, AI and product thinking under one roof, which means a project does not get passed between four companies before it reaches anyone who can use it.",
-      "bodyTwo": "We work with businesses that have outgrown their spreadsheets, and with founders who have an idea and need someone to make it real. We also build our own products, which keeps us honest about how long things take.",
+      "bodyOne": "360 Techive is a software house. Design, engineering, AI and product thinking sit under one roof, so a custom solution is specified, built and delivered by the same team rather than passed between four companies.",
+      "bodyTwo": "We work with established businesses that have outgrown the tools they started on, and with founders building something that does not exist yet. In both cases the work is bespoke, and in both cases we own the result.",
       "disciplines": {
         "design": {
           "label": "Design",
@@ -422,7 +422,7 @@
         },
         "ai": {
           "label": "AI",
-          "note": "Agents, assistants and automation"
+          "note": "Trained on your data and your rules"
         },
         "product": {
           "label": "Product",
@@ -437,7 +437,7 @@
         "second": "or something that should",
         "accent": "work better?"
       },
-      "body": "Tell us what you are trying to build. We will help you figure out what comes next, even if that turns out to be something smaller than you expected.",
+      "body": "Tell us how your business works and what is getting in the way. We will come back with what a solution built around it actually takes.",
       "primaryCta": "Start a conversation",
       "secondaryCta": "See what we build",
       "footnote": "No pitch deck required. A paragraph about the problem is enough."

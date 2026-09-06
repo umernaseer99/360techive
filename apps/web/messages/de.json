@@ -76,46 +76,46 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Individuelle Software, digitale Produkte und KI-Systeme",
+      "eyebrow": "Individuelle Software und KI-Systeme für Ihr Unternehmen",
       "headline": {
-        "first": "Wir bauen Software,",
-        "second": "auf der Unternehmen",
-        "accent": "wirklich",
-        "third": "laufen."
+        "first": "Individuelle Software,",
+        "second": "gebaut um",
+        "accent": "Ihr",
+        "third": "Unternehmen."
       },
-      "body": "Wir konzipieren und entwickeln die Systeme, auf denen Unternehmen laufen. Webplattformen, mobile Anwendungen, Interface-Design, KI-Agenten und Automatisierung, umgesetzt von einem Team, das für das Ergebnis verantwortlich ist.",
+      "body": "Wir konzipieren und entwickeln Lösungen entlang der Art, wie Ihr Unternehmen tatsächlich arbeitet, und setzen KI dort ein, wo sie das Ergebnis schneller, günstiger und leistungsfähiger macht. Webplattformen, mobile Anwendungen, interne Systeme, Agenten und Automatisierung, entwickelt für Ihren Prozess statt für eine fremde Vorlage.",
       "primaryCta": "Projekt starten",
       "secondaryCta": "Referenzen ansehen",
-      "footnote": "Kommen Sie mit einem Lastenheft oder mit dem Problem. Wir sagen Ihnen, was die saubere Lösung erfordert."
+      "footnote": "Kommen Sie mit einem Lastenheft oder mit dem Problem. Wir sagen Ihnen, was die passende Lösung erfordert."
     },
     "whatWeDo": {
       "eyebrow": "Was wir tun",
       "headline": {
-        "first": "Von der Idee zu etwas,",
-        "second": "das Menschen",
-        "accent": "nutzen."
+        "first": "Gebaut um",
+        "second": "die Arbeitsweise Ihres",
+        "accent": "Unternehmens."
       },
-      "body": "Strategie, Design, Entwicklung, Automatisierung und KI aus einer Hand. Wir übernehmen den gesamten Weg, vom ersten Gespräch bis zur Software im Produktivbetrieb.",
+      "body": "Keine zwei Unternehmen arbeiten gleich, deshalb entsteht bei uns nichts aus einer Vorlage. Strategie, Design, Entwicklung, Automatisierung und KI aus einer Hand, zugeschnitten auf Ihren Prozess, vom ersten Gespräch bis in den Produktivbetrieb.",
       "stages": {
         "problem": {
           "name": "Analyse",
           "line": "Wir verstehen das Geschäft, bevor wir gestalten.",
-          "note": "Prozesse, Systeme, Nutzer und Ziele, dokumentiert. Sie erhalten eine klare Definition des Problems und seines wirtschaftlichen Werts."
+          "note": "Ihre Prozesse, Systeme, Nutzer und Ziele, dokumentiert. Genau darum wird die Lösung herum gebaut."
         },
         "design": {
           "name": "Design",
           "line": "Das Produkt steht fest, bevor Code entsteht.",
-          "note": "Abläufe, Oberflächen und Architektur, abgestimmt und als Prototyp erprobt. Jede Entscheidung fällt dort, wo eine Änderung noch günstig ist."
+          "note": "Abläufe, Oberflächen und Architektur für Ihren Prozess entworfen, als Prototyp erprobt und abgestimmt, bevor Code entsteht."
         },
         "build": {
           "name": "Entwicklung",
           "line": "Von Tag eins auf Produktionsniveau entwickelt.",
-          "note": "Getesteter, geprüfter und dokumentierter Code, geliefert in funktionsfähigen Schritten, die Sie nutzen und steuern können."
+          "note": "Getesteter, geprüfter und dokumentierter Code, passend zu Ihren Systemen und in Schritten geliefert, die Sie steuern."
         },
         "launch": {
           "name": "Launch",
           "line": "Ausgeliefert, gemessen und weiterentwickelt.",
-          "note": "Deployment, Monitoring, Übergabe und Dokumentation. Ihr Team kann das System betreiben, und wir verbessern es weiter."
+          "note": "Deployment, Monitoring, Übergabe und Dokumentation. Ihr Team besitzt das System, und wir passen es weiter an, wenn sich das Geschäft ändert."
         }
       }
     },
@@ -126,7 +126,7 @@
         "accent": "Ihr",
         "second": "Geschäft."
       },
-      "body": "Jedes Unternehmen arbeitet anders. Wir bauen Software um Ihre tatsächlichen Abläufe herum, statt Ihre Prozesse an ein Werkzeug anzupassen, das jemand anderes entworfen hat.",
+      "body": "Jedes Unternehmen arbeitet anders. Deshalb bauen wir um Ihre Arbeitsweise herum, statt Ihren Prozess in ein fremdes Werkzeug zu zwingen. Jede dieser Leistungen wird für Ihre Anforderungen entwickelt, mit KI überall dort, wo sie einen echten Beitrag leistet.",
       "counter": "{current} von {total}",
       "items": {
         "web-apps": {
@@ -188,12 +188,12 @@
     "automation": {
       "eyebrow": "KI-Automatisierung",
       "headline": {
-        "first": "Wenn Software",
-        "second": "die Arbeit",
-        "accent": "übernimmt.",
-        "third": ""
+        "first": "KI direkt in",
+        "second": "Ihren",
+        "accent": "eigenen",
+        "third": "Prozessen."
       },
-      "body": "Wir bauen KI-Agenten und Automatisierung, die in Ihren bestehenden Prozessen arbeiten. Trainiert auf Ihre Daten, Ihre Regeln und Ihre Sprache, integriert in Ihre Systeme und verantwortlich für die Arbeit, die sie erledigen.",
+      "body": "Generische KI-Werkzeuge sind auf alle trainiert. Ihre wird auf Ihre Daten, Ihre Regeln und Ihre Sprache trainiert und mit den Systemen verbunden, die Sie bereits nutzen. Das ist der Unterschied zwischen einem Chatbot und einem System, das echte Arbeit in Ihrem Unternehmen erledigt.",
       "cta": "KI-Automatisierung entdecken",
       "diagramLabel": "Ein automatisierter Ablauf: Eingang, KI-Agent, Entscheidung, Aktion, Ergebnis",
       "footnote": "Jeder Workflow wird auf Ihren Prozess trainiert, folgt Ihren Regeln und ist vollständig nachvollziehbar",
@@ -226,7 +226,7 @@
         "first": "Wir bauen auch eigene",
         "accent": "Produkte."
       },
-      "body": "Nicht jede Idee beginnt mit einem Kundenbriefing. Wir entwickeln eigene Produkte. Das hält uns nah an den Problemen, die unsere Kunden mitbringen, und zeigt, was unsere Entwicklung leistet.",
+      "body": "Wir entwickeln eigene Produkte. Dort beweist sich unsere Entwicklung, bevor sie in Ihr Projekt kommt. Dasselbe Team, derselbe Anspruch, angewendet auf Probleme, die wir selbst gewählt haben.",
       "counter": "{current} von {total}",
       "viewProject": "Projekt ansehen",
       "featured": "Referenz: {name}",
@@ -310,7 +310,7 @@
         "accent": "echte",
         "second": "Probleme."
       },
-      "body": "Repräsentative Projekte, die Probleme dahinter und die Systeme, die wir geliefert haben.",
+      "body": "Individuelle Systeme, die wir für konkrete Unternehmen konzipiert und gebaut haben, und die Probleme dahinter.",
       "fields": {
         "problem": "Das Problem",
         "built": "Was wir gebaut haben",
@@ -349,7 +349,7 @@
         "accent": "Denken",
         "third": "dahinter nicht."
       },
-      "body": "Wir wählen den Stack, der zum Problem, zum Zeitplan und zum Team passt, das ihn übernimmt. Tiefe Expertise in jedem davon, ohne Bindung an einen einzelnen.",
+      "body": "Wir wählen den Stack, der zu Ihrem Problem, Ihrem Zeitplan und dem Team passt, das ihn übernimmt. Tiefe Expertise in allen, ohne Bindung an einen einzelnen.",
       "groups": {
         "build": {
           "label": "Produkt und Oberfläche",
@@ -368,16 +368,16 @@
     "principles": {
       "eyebrow": "Warum wir",
       "headline": {
-        "first": "Gute Software beginnt",
-        "second": "mit dem Verständnis",
-        "third": "des",
-        "accent": "Problems."
+        "first": "Standardsoftware löst",
+        "second": "das Problem",
+        "third": "von",
+        "accent": "jemand anderem."
       },
-      "body": "Die meiste gescheiterte Software war sauber gebaut und löste das falsche Problem. Wir investieren erfahrene Köpfe in die Entscheidungen vor dem Code. Deshalb hält, was wir liefern.",
+      "body": "Fertige Werkzeuge zwingen Ihr Unternehmen in die Arbeitsweise des Werkzeugs. Wir machen es umgekehrt und investieren erfahrene Entwicklung in die Entscheidungen, die eine Lösung passend machen.",
       "items": {
         "understand": {
-          "title": "Wir verstehen zuerst das Geschäft",
-          "body": "Jedes Projekt beginnt damit, wie die Arbeit heute abläuft, wen sie betrifft und was ein Fehler kostet. Das macht die Lösung zur richtigen."
+          "title": "Wir bauen um Ihr Unternehmen, nicht um eine Vorlage",
+          "body": "Jedes Projekt beginnt damit, wie Ihre Arbeit heute abläuft, wen sie betrifft und was ein Fehler kostet. Danach richtet sich die Lösung, und nach nichts anderem."
         },
         "design": {
           "title": "Wir entscheiden das Produkt, bevor wir es bauen",
@@ -389,7 +389,7 @@
         },
         "automate": {
           "title": "Wir setzen KI dort ein, wo sie sich rechnet",
-          "body": "Automatisierung gehört dorthin, wo ein Prozess verstanden ist und sich wiederholt. Wir bauen die Entscheidungslogik in das System und sagen es, wenn ein Problem Entwicklung statt eines Modells braucht."
+          "body": "KI kommt dorthin, wo sie das Ergebnis messbar verbessert, trainiert auf Ihre Daten und geführt von Ihren Regeln. Wenn ein Problem Entwicklung statt eines Modells braucht, sagen wir das und bauen genau das."
         },
         "maintain": {
           "title": "Wir übergeben Software, die Ihr Team besitzt",
@@ -404,13 +404,13 @@
     "about": {
       "eyebrow": "Über uns",
       "headline": {
-        "first": "Ein Softwareteam, das",
-        "second": "gerne Dinge",
-        "accent": "baut.",
-        "third": ""
+        "first": "Ein Team für die",
+        "second": "gesamte",
+        "accent": "Lösung,",
+        "third": "von Anfang bis Ende."
       },
-      "bodyOne": "360 Techive ist ein Software-Haus. Wir vereinen Design, Entwicklung, Software Engineering, KI und Produktdenken unter einem Dach. Das heißt: ein Projekt wandert nicht durch vier Firmen, bevor es bei jemandem ankommt, der damit arbeiten kann.",
-      "bodyTwo": "Wir arbeiten mit Unternehmen, denen ihre Tabellen zu eng geworden sind, und mit Gründerinnen und Gründern, die eine Idee haben und jemanden brauchen, der sie umsetzt. Wir bauen außerdem eigene Produkte, was uns ehrlich hält, wie lange Dinge wirklich dauern.",
+      "bodyOne": "360 Techive ist ein Software-Haus. Design, Entwicklung, KI und Produktdenken sitzen unter einem Dach. Eine individuelle Lösung wird also von demselben Team spezifiziert, gebaut und geliefert, statt zwischen vier Firmen weitergereicht zu werden.",
+      "bodyTwo": "Wir arbeiten mit etablierten Unternehmen, die ihren bisherigen Werkzeugen entwachsen sind, und mit Gründern, die etwas bauen, das es noch nicht gibt. In beiden Fällen entsteht Maßarbeit, und in beiden Fällen verantworten wir das Ergebnis.",
       "disciplines": {
         "design": {
           "label": "Design",
@@ -422,7 +422,7 @@
         },
         "ai": {
           "label": "KI",
-          "note": "Agenten, Assistenten und Automatisierung"
+          "note": "Trainiert auf Ihre Daten und Ihre Regeln"
         },
         "product": {
           "label": "Produkt",
@@ -437,7 +437,7 @@
         "second": "oder etwas, das",
         "accent": "besser laufen sollte?"
       },
-      "body": "Erzählen Sie uns, was Sie bauen wollen. Wir helfen Ihnen herauszufinden, was der nächste Schritt ist, auch wenn er kleiner ausfällt als gedacht.",
+      "body": "Erzählen Sie uns, wie Ihr Unternehmen arbeitet und was im Weg steht. Wir melden uns mit dem, was eine passgenaue Lösung tatsächlich erfordert.",
       "primaryCta": "Gespräch beginnen",
       "secondaryCta": "Ansehen, was wir bauen",
       "footnote": "Kein Pitch Deck nötig. Ein Absatz über das Problem reicht."
