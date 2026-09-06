@@ -37,9 +37,5 @@ export const siteConfig = {
       { key: "howItWorks", href: "/how-it-works" },
       { key: "pricing", href: "/pricing" },
     ] satisfies NavLink[],
-    legal: [
-      { key: "privacy", href: "/privacy" },
-      { key: "terms", href: "/terms" },
-    ] satisfies NavLink[],
   },
 } as const;

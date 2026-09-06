@@ -24,7 +24,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-2">
             <FooterColumn
               heading={t("columns.explore")}
               links={siteConfig.footerLinks.explore}
@@ -32,10 +32,6 @@ export function Footer() {
             <FooterColumn
               heading={t("columns.company")}
               links={siteConfig.footerLinks.company}
-            />
-            <FooterColumn
-              heading={t("columns.legal")}
-              links={siteConfig.footerLinks.legal}
             />
           </div>
         </div>

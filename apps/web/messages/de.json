@@ -57,21 +57,17 @@
     "rights": "Alle Rechte vorbehalten.",
     "columns": {
       "explore": "Entdecken",
-      "company": "Unternehmen",
-      "legal": "Rechtliches"
+      "company": "Unternehmen"
     },
     "links": {
       "customSolutions": "Individuelle Lösungen",
       "products": "Unsere Produkte",
-      "work": "Ausgewählte Projekte",
       "about": "Über uns",
       "contact": "Kontakt",
       "aiAutomation": "KI-Automatisierung",
       "aiEmployees": "KI-Mitarbeiter",
       "howItWorks": "So arbeiten wir",
-      "pricing": "Preise",
-      "privacy": "Datenschutz",
-      "terms": "AGB"
+      "pricing": "Preise"
     }
   },
   "home": {
@@ -85,7 +81,7 @@
       },
       "body": "Wir konzipieren und entwickeln Lösungen entlang der Art, wie Ihr Unternehmen tatsächlich arbeitet, und setzen KI dort ein, wo sie das Ergebnis schneller, günstiger und leistungsfähiger macht. Webplattformen, mobile Anwendungen, interne Systeme, Agenten und Automatisierung, entwickelt für Ihren Prozess statt für eine fremde Vorlage.",
       "primaryCta": "Projekt starten",
-      "secondaryCta": "Referenzen ansehen",
+      "secondaryCta": "Unsere Produkte ansehen",
       "footnote": "Kommen Sie mit einem Lastenheft oder mit dem Problem. Wir sagen Ihnen, was die passende Lösung erfordert."
     },
     "whatWeDo": {
@@ -326,7 +322,7 @@
       },
       "body": "Erzählen Sie uns, wie Ihr Unternehmen arbeitet und was im Weg steht. Wir melden uns mit dem, was eine passgenaue Lösung tatsächlich erfordert.",
       "primaryCta": "Gespräch beginnen",
-      "secondaryCta": "Ansehen, was wir bauen",
+      "secondaryCta": "Unsere Produkte ansehen",
       "footnote": "Kein Pitch Deck nötig. Ein Absatz über das Problem reicht."
     }
   },

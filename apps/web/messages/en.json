@@ -57,21 +57,17 @@
     "rights": "All rights reserved.",
     "columns": {
       "explore": "Explore",
-      "company": "Company",
-      "legal": "Legal"
+      "company": "Company"
     },
     "links": {
       "customSolutions": "Custom solutions",
       "products": "Our products",
-      "work": "Selected work",
       "about": "About",
       "contact": "Contact",
       "aiAutomation": "AI Automation",
       "aiEmployees": "AI Employees",
       "howItWorks": "How it works",
-      "pricing": "Pricing",
-      "privacy": "Privacy",
-      "terms": "Terms"
+      "pricing": "Pricing"
     }
   },
   "home": {
@@ -85,7 +81,7 @@
       },
       "body": "We design and engineer solutions around the way your business actually works, and we build AI into them where it makes the result faster, cheaper and more capable. Web platforms, mobile applications, internal systems, agents and automation, engineered for your process rather than someone else's template.",
       "primaryCta": "Start a project",
-      "secondaryCta": "Explore our work",
+      "secondaryCta": "See our products",
       "footnote": "Come with a specification or come with the problem. We will tell you what the right solution takes."
     },
     "whatWeDo": {
@@ -326,7 +322,7 @@
       },
       "body": "Tell us how your business works and what is getting in the way. We will come back with what a solution built around it actually takes.",
       "primaryCta": "Start a conversation",
-      "secondaryCta": "See what we build",
+      "secondaryCta": "See our products",
       "footnote": "No pitch deck required. A paragraph about the problem is enough."
     }
   },
