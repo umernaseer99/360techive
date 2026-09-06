@@ -1771,14 +1771,17 @@
             "title": "Dev Workspace",
             "category": "Productivity"
           }
-        }
+        },
+        "assetAlt": "Illustration of two developers building a mobile app around a large phone screen"
       },
       "web": {
         "preview": "Preview",
         "heroTitle": "Live metrics, one screen",
         "heroSub": "Updated 4 seconds ago",
         "loadTime": "Load time",
-        "lighthouse": "Lighthouse"
+        "lighthouse": "Lighthouse",
+        "assetAlt": "Illustration of a website on a monitor surrounded by programming, design, content, SEO and optimisation icons",
+        "assetCaption": "What a build covers"
       },
       "design": {
         "system": "Design System",
@@ -1790,8 +1793,8 @@
         "question": "Where should it go?",
         "shipping": "Free delivery over £50",
         "action": "Continue to payment",
-        "photoAlt": "UI and UX design sketching and planning workspace",
-        "caption": "Research & Ideation"
+        "photoAlt": "Invoicing dashboard interface with revenue chart, client stats and a recent invoices table",
+        "caption": "Product UI"
       },
       "agents": {
         "title": "Agent",
@@ -1806,7 +1809,8 @@
           "followUp": "Schedule follow-up"
         },
         "userAlt": "User headshot avatar",
-        "agentAlt": "AI assistant headshot avatar"
+        "agentAlt": "AI assistant headshot avatar",
+        "assetAlt": "Illustration of an AI assistant greeting a customer from a laptop screen, with support, engagement, lead and automation labels"
       },
       "automation": {
         "title": "Pipeline Architecture",

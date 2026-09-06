@@ -39,6 +39,54 @@ function Frame({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * The client's own service illustrations.
+ *
+ * They are flat graphics on a light ground, unlike the photography elsewhere
+ * on the page, so each one sits on an explicit white sheet with a border and a
+ * caption. That reads as a deliberate printed card rather than a bright hole
+ * punched in a dark panel, and it keeps the corner radius and proportions of
+ * the photo slots these replace.
+ */
+function AssetCard({
+  src,
+  alt,
+  caption,
+  fit = "cover",
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  /** Flat illustrations are contained so nothing is cropped away; the
+   *  photographic assets fill their slot like the photos they replace. */
+  fit?: "cover" | "contain";
+  className?: string;
+}) {
+  return (
+    <div
+      className={`relative shrink-0 overflow-hidden rounded-lg border border-border/15 bg-white shadow-xs dark:border-white/10 ${className}`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 768px) 40vw, 220px"
+        className={`dark:brightness-[0.94] ${
+          fit === "contain"
+            ? `object-contain p-1.5 ${caption ? "pb-4" : ""}`
+            : "object-cover"
+        }`}
+      />
+      {caption && (
+        <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent px-1.5 pb-1 pt-3 text-[6.5px] font-medium text-foreground">
+          {caption}
+        </span>
+      )}
+    </div>
+  );
+}
+
 function WebApps() {
   const t = useTranslations("mockups.capabilities.webApps");
 
@@ -129,23 +177,22 @@ function WebApps() {
 
 function Mobile() {
   const t = useTranslations("mockups.capabilities.mobile");
+  // One supplied illustration, read three ways: the developer on the left, the
+  // phone in the middle, the designer on the right.
   const cards = [
     {
-      img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=160&q=80",
       title: t("cards.alpine.title"),
       category: t("cards.alpine.category"),
       rating: "4.9 ★",
       active: false,
     },
     {
-      img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=160&q=80",
       title: t("cards.studio.title"),
       category: t("cards.studio.category"),
       rating: "5.0 ★",
       active: true, // highlighted in primary red
     },
     {
-      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=160&q=80",
       title: t("cards.dev.title"),
       category: t("cards.dev.category"),
       rating: "4.8 ★",
@@ -155,8 +202,8 @@ function Mobile() {
 
   return (
     <Frame>
-      <div className="flex h-full items-center justify-center">
-        <div className="flex h-full w-[54%] max-w-[210px] flex-col overflow-hidden rounded-[1.2rem] border border-border/15 bg-surface/80 p-2 shadow-sm">
+      <div className="flex h-full items-center justify-center gap-3">
+        <div className="flex h-full w-[52%] max-w-[210px] flex-col overflow-hidden rounded-[1.2rem] border border-border/15 bg-surface/80 p-2 shadow-sm">
           {/* Status Bar */}
           <div className="mb-1 flex items-center justify-between px-1 text-[7px] font-medium text-muted/70">
             <span>9:41</span>
@@ -191,15 +238,16 @@ function Mobile() {
                     : "border-border/10 bg-background/50"
                 }`}
               >
-                <div className="relative size-7 shrink-0 overflow-hidden rounded-md ring-1 ring-border/10">
-                  <Image
-                    src={card.img}
-                    alt={card.title}
-                    width={28}
-                    height={28}
-                    className="size-full object-cover dark:brightness-90"
-                  />
-                </div>
+                <span
+                  aria-hidden="true"
+                  className={`flex size-7 shrink-0 items-center justify-center rounded-md text-[9px] font-semibold ${
+                    card.active
+                      ? "bg-primary/15 text-primary"
+                      : "bg-surface text-muted"
+                  }`}
+                >
+                  {card.title.charAt(0)}
+                </span>
                 <div className="flex min-w-0 flex-1 flex-col leading-none">
                   <span className="truncate text-[8px] font-semibold text-foreground">
                     {card.title}
@@ -223,6 +271,13 @@ function Mobile() {
             <span className="text-muted/60">■</span>
           </div>
         </div>
+
+        <AssetCard
+          src="/images/services/mobile-app-development.jpg"
+          alt={t("assetAlt")}
+          fit="contain"
+          className="aspect-[8/7] h-[86%] w-auto max-w-[42%] self-center"
+        />
       </div>
     </Frame>
   );
@@ -243,7 +298,7 @@ function WebDev() {
     <Frame>
       <div className="flex h-full gap-2 overflow-hidden rounded-lg border border-border/10 bg-background/50">
         {/* Code Editor */}
-        <div className="flex w-1/2 flex-col gap-1.5 border-r border-border/10 bg-surface/80 p-2.5 font-mono text-[8px]">
+        <div className="flex w-[38%] flex-col gap-1.5 border-r border-border/10 bg-surface/80 p-2.5 font-mono text-[8px]">
           <div className="mb-1 flex items-center gap-1 border-b border-border/10 pb-1 text-[7px] text-muted">
             <span className="size-1.5 rounded-full bg-primary/70" />
             <span>App.tsx</span>
@@ -302,6 +357,17 @@ function WebDev() {
             </div>
           </div>
         </div>
+
+        {/* The client's own website-development graphic */}
+        <div className="hidden w-[27%] shrink-0 items-center py-2.5 pr-2.5 lg:flex">
+          <AssetCard
+            src="/images/services/web-development.jpg"
+            alt={t("assetAlt")}
+            caption={t("assetCaption")}
+            fit="contain"
+            className="aspect-[8/7] w-full"
+          />
+        </div>
       </div>
     </Frame>
   );
@@ -309,8 +375,7 @@ function WebDev() {
 
 function DesignPreview() {
   const t = useTranslations("mockups.capabilities.design");
-  const photoUrl =
-    "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=400&q=80";
+  const photoUrl = "/images/services/dashboard-ui.jpg";
 
   return (
     <Frame>
@@ -385,19 +450,14 @@ function DesignPreview() {
           </div>
         </div>
 
-        {/* Right: Real Supporting Photo */}
-        <div className="relative w-[34%] shrink-0 overflow-hidden rounded-lg border border-border/15">
-          <Image
-            src={photoUrl}
-            alt={t("photoAlt")}
-            fill
-            sizes="(max-width: 768px) 33vw, 200px"
-            className="object-cover dark:brightness-90"
-          />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-1.5 text-[6.5px] font-medium text-foreground">
-            {t("caption")}
-          </div>
-        </div>
+        {/* Right: the client's own product UI reference */}
+        <AssetCard
+          src={photoUrl}
+          alt={t("photoAlt")}
+          caption={t("caption")}
+          fit="contain"
+          className="aspect-[4/3] w-[38%] self-center"
+        />
       </div>
     </Frame>
   );
@@ -412,7 +472,8 @@ function Agents() {
 
   return (
     <Frame>
-      <div className="flex h-full flex-col justify-between">
+      <div className="flex h-full gap-3">
+        <div className="flex h-full flex-1 flex-col justify-between">
         {/* Header Bar */}
         <div className="flex items-center justify-between border-b border-border/10 pb-2">
           <div className="flex items-center gap-1.5">
@@ -479,6 +540,14 @@ function Agents() {
             </span>
           </div>
         </div>
+        </div>
+
+        {/* The client's own assistant graphic, alongside the live conversation */}
+        <AssetCard
+          src="/images/services/ai-chatbot.jpg"
+          alt={t("assetAlt")}
+          className="hidden h-full w-[30%] lg:block"
+        />
       </div>
     </Frame>
   );

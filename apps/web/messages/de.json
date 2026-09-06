@@ -1771,14 +1771,17 @@
             "title": "Dev Workspace",
             "category": "Produktivität"
           }
-        }
+        },
+        "assetAlt": "Illustration: zwei Entwickler bauen eine mobile App rund um ein großes Smartphone"
       },
       "web": {
         "preview": "Vorschau",
         "heroTitle": "Live-Kennzahlen auf einem Screen",
         "heroSub": "Vor 4 Sekunden aktualisiert",
         "loadTime": "Ladezeit",
-        "lighthouse": "Lighthouse"
+        "lighthouse": "Lighthouse",
+        "assetAlt": "Illustration: eine Website auf einem Monitor, umgeben von Symbolen für Programmierung, Design, Inhalte, SEO und Optimierung",
+        "assetCaption": "Was ein Projekt umfasst"
       },
       "design": {
         "system": "Designsystem",
@@ -1790,8 +1793,8 @@
         "question": "Wohin soll es gehen?",
         "shipping": "Versandfrei ab 50 £",
         "action": "Weiter zur Zahlung",
-        "photoAlt": "Arbeitsplatz mit Skizzen und Planung für UI- und UX-Design",
-        "caption": "Research & Ideen"
+        "photoAlt": "Dashboard-Oberfläche für Rechnungen mit Umsatzdiagramm, Kundenkennzahlen und einer Tabelle aktueller Rechnungen",
+        "caption": "Produkt-UI"
       },
       "agents": {
         "title": "Agent",
@@ -1806,7 +1809,8 @@
           "followUp": "Nachfassen planen"
         },
         "userAlt": "Porträtbild eines Nutzers",
-        "agentAlt": "Porträtbild des KI-Assistenten"
+        "agentAlt": "Porträtbild des KI-Assistenten",
+        "assetAlt": "Illustration: ein KI-Assistent begrüßt einen Kunden vom Laptop aus, mit Hinweisen zu Support, Kundenbindung, Leads und Automatisierung"
       },
       "automation": {
         "title": "Pipeline-Architektur",
