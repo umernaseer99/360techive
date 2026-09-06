@@ -14,7 +14,7 @@ export function Footer() {
               href="/"
               className="group inline-flex items-center text-foreground focus-visible:outline-none"
             >
-              <BrandLogo />
+              <BrandLogo height={52} />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted">
               {siteConfig.tagline}

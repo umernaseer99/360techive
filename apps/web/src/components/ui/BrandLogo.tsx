@@ -6,6 +6,12 @@ import { siteConfig } from "@/config/site";
 interface BrandLogoProps {
   className?: string;
   showDot?: boolean;
+  /**
+   * Rendered height in pixels; the width follows the artwork's aspect ratio.
+   * Set as an inline style rather than a Tailwind class so a caller can pick
+   * any size without fighting the class already on the element.
+   */
+  height?: number;
 }
 
 /**
@@ -26,7 +32,11 @@ interface BrandLogoProps {
  * loaded and the failed case. The handlers then cover anything still in
  * flight.
  */
-export function BrandLogo({ className = "", showDot = true }: BrandLogoProps) {
+export function BrandLogo({
+  className = "",
+  showDot = true,
+  height = 40,
+}: BrandLogoProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageFailed, setImageFailed] = useState(false);
   const ref = useRef<HTMLImageElement>(null);
@@ -50,9 +60,8 @@ export function BrandLogo({ className = "", showDot = true }: BrandLogoProps) {
           ref={ref}
           src="/brand/techive-logo.svg"
           alt={siteConfig.name}
-          width={130}
-          height={28}
-          className={`h-6 w-auto max-h-7 object-contain transition-opacity duration-200 ${
+          style={{ height }}
+          className={`w-auto object-contain transition-opacity duration-200 ${
             imageLoaded ? "opacity-100" : "hidden opacity-0"
           }`}
           onLoad={() => setImageLoaded(true)}

@@ -65,7 +65,7 @@ export function Navbar() {
           href="/"
           className="group flex items-center text-foreground focus-visible:outline-none"
         >
-          <BrandLogo />
+          <BrandLogo height={44} />
         </Link>
 
         {/* Desktop */}
