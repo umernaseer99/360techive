@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { agents, getAgentBySlug } from "@/config/agents";
 import {
   AgentDetailHero,
@@ -11,38 +12,46 @@ import {
   RelatedAgents,
 } from "@/components/sections/ai-employee-detail";
 import { ContactCTASection } from "@/components/sections/ContactCTASection";
+import { routing } from "@/i18n/routing";
+import { localeMetadata } from "@/i18n/metadata";
 
 interface Props {
-  params: Promise<{ agentId: string }>;
+  params: Promise<{ locale: string; agentId: string }>;
 }
 
-export async function generateStaticParams() {
-  return agents.map((agent) => ({ agentId: agent.slug }));
+export function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    agents.map((agent) => ({ locale, agentId: agent.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { agentId } = await params;
+  const { locale, agentId } = await params;
   const agent = getAgentBySlug(agentId);
 
   if (!agent) return { title: "Not Found" };
 
-  return {
-    title: `${agent.name} — 360 Techive`,
-    description: agent.description,
-    openGraph: {
-      title: `${agent.name} — 360 Techive`,
-      description: agent.tagline,
-    },
-  };
+  const t = await getTranslations({ locale, namespace: "agents" });
+  const name = t(`${agent.slug}.name`);
+
+  return localeMetadata({
+    locale,
+    path: `/ai-employees/${agent.slug}`,
+    title: `${name} — 360 Techive`,
+    description: t(`${agent.slug}.description`),
+  });
 }
 
 export default async function AIEmployeeDetailPage({ params }: Props) {
-  const { agentId } = await params;
-  const agent = getAgentBySlug(agentId);
+  const { locale, agentId } = await params;
+  setRequestLocale(locale);
 
+  const agent = getAgentBySlug(agentId);
   if (!agent) {
     notFound();
   }
+
+  const t = await getTranslations({ locale, namespace: "agents" });
 
   return (
     <>
@@ -53,7 +62,7 @@ export default async function AIEmployeeDetailPage({ params }: Props) {
       <AgentUseCases agent={agent} />
       {agent.hasInteractiveDemo && <AgentInteractiveDemo agent={agent} />}
       <RelatedAgents current={agent} />
-      <ContactCTASection agentName={agent.name} />
+      <ContactCTASection agentName={t(`${agent.slug}.name`)} />
     </>
   );
 }

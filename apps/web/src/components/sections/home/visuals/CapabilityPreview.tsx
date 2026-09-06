@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 /**
  * Six small interface previews, one per capability.
@@ -38,7 +39,57 @@ function Frame({ children }: { children: React.ReactNode }) {
   );
 }
 
+/**
+ * The client's own service illustrations.
+ *
+ * They are flat graphics on a light ground, unlike the photography elsewhere
+ * on the page, so each one sits on an explicit white sheet with a border and a
+ * caption. That reads as a deliberate printed card rather than a bright hole
+ * punched in a dark panel, and it keeps the corner radius and proportions of
+ * the photo slots these replace.
+ */
+function AssetCard({
+  src,
+  alt,
+  caption,
+  fit = "cover",
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  /** Flat illustrations are contained so nothing is cropped away; the
+   *  photographic assets fill their slot like the photos they replace. */
+  fit?: "cover" | "contain";
+  className?: string;
+}) {
+  return (
+    <div
+      className={`relative shrink-0 overflow-hidden rounded-lg border border-border/15 bg-white shadow-xs dark:border-white/10 ${className}`}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 768px) 40vw, 220px"
+        className={`dark:brightness-[0.94] ${
+          fit === "contain"
+            ? `object-contain p-1.5 ${caption ? "pb-4" : ""}`
+            : "object-cover"
+        }`}
+      />
+      {caption && (
+        <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/70 to-transparent px-1.5 pb-1 pt-3 text-[6.5px] font-medium text-foreground">
+          {caption}
+        </span>
+      )}
+    </div>
+  );
+}
+
 function WebApps() {
+  const t = useTranslations("mockups.capabilities.webApps");
+
   return (
     <Frame>
       <div className="flex h-full flex-col">
@@ -54,7 +105,7 @@ function WebApps() {
           </div>
           <div className="flex items-center gap-1">
             <span className="size-1.5 rounded-full bg-primary" />
-            <span className="text-[8px] font-medium text-muted">Live</span>
+            <span className="text-[8px] font-medium text-muted">{t("live")}</span>
           </div>
         </div>
 
@@ -63,10 +114,10 @@ function WebApps() {
           {/* Sidebar */}
           <div className="flex w-[20%] flex-col gap-1 border-r border-border/10 pr-2">
             {[
-              { label: "Dashboard", active: true },
-              { label: "Analytics", active: false },
-              { label: "Customers", active: false },
-              { label: "Settings", active: false },
+              { label: t("nav.dashboard"), active: true },
+              { label: t("nav.analytics"), active: false },
+              { label: t("nav.customers"), active: false },
+              { label: t("nav.settings"), active: false },
             ].map((item, i) => (
               <div
                 key={i}
@@ -87,9 +138,9 @@ function WebApps() {
             {/* 3 mini stat cards */}
             <div className="grid grid-cols-3 gap-1.5">
               {[
-                { label: "Users", val: "14.2k", change: "+12%" },
-                { label: "Revenue", val: "$48.5k", change: "+24%" },
-                { label: "Conversion", val: "4.8%", change: "+0.6%" },
+                { label: t("stats.users"), val: "14.2k", change: "+12%" },
+                { label: t("stats.revenue"), val: "$48.5k", change: "+24%" },
+                { label: t("stats.conversion"), val: "4.8%", change: "+0.6%" },
               ].map((stat, i) => (
                 <div key={i} className={`${chip} p-1.5`}>
                   <span className="text-[7px] text-muted">{stat.label}</span>
@@ -125,25 +176,25 @@ function WebApps() {
 }
 
 function Mobile() {
+  const t = useTranslations("mockups.capabilities.mobile");
+  // One supplied illustration, read three ways: the developer on the left, the
+  // phone in the middle, the designer on the right.
   const cards = [
     {
-      img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=160&q=80",
-      title: "Alpine Explorer",
-      category: "Travel & Tours",
+      title: t("cards.alpine.title"),
+      category: t("cards.alpine.category"),
       rating: "4.9 ★",
       active: false,
     },
     {
-      img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=160&q=80",
-      title: "Studio Acoustics",
-      category: "Audio Streaming",
+      title: t("cards.studio.title"),
+      category: t("cards.studio.category"),
       rating: "5.0 ★",
       active: true, // highlighted in primary red
     },
     {
-      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=160&q=80",
-      title: "Dev Workspace",
-      category: "Productivity",
+      title: t("cards.dev.title"),
+      category: t("cards.dev.category"),
       rating: "4.8 ★",
       active: false,
     },
@@ -151,8 +202,8 @@ function Mobile() {
 
   return (
     <Frame>
-      <div className="flex h-full items-center justify-center">
-        <div className="flex h-full w-[54%] max-w-[210px] flex-col overflow-hidden rounded-[1.2rem] border border-border/15 bg-surface/80 p-2 shadow-sm">
+      <div className="flex h-full items-center justify-center gap-3">
+        <div className="flex h-full w-[52%] max-w-[210px] flex-col overflow-hidden rounded-[1.2rem] border border-border/15 bg-surface/80 p-2 shadow-sm">
           {/* Status Bar */}
           <div className="mb-1 flex items-center justify-between px-1 text-[7px] font-medium text-muted/70">
             <span>9:41</span>
@@ -165,9 +216,11 @@ function Mobile() {
 
           {/* App Header */}
           <div className="mb-2 flex items-center justify-between px-1">
-            <span className="text-[9px] font-semibold text-foreground">Featured Apps</span>
+            <span className="text-[9px] font-semibold text-foreground">
+              {t("header")}
+            </span>
             <span className="rounded-full bg-primary/10 px-1.5 py-0.5 text-[7px] font-medium text-primary">
-              Pro
+              {t("badge")}
             </span>
           </div>
 
@@ -185,15 +238,16 @@ function Mobile() {
                     : "border-border/10 bg-background/50"
                 }`}
               >
-                <div className="relative size-7 shrink-0 overflow-hidden rounded-md ring-1 ring-border/10">
-                  <Image
-                    src={card.img}
-                    alt={card.title}
-                    width={28}
-                    height={28}
-                    className="size-full object-cover dark:brightness-90"
-                  />
-                </div>
+                <span
+                  aria-hidden="true"
+                  className={`flex size-7 shrink-0 items-center justify-center rounded-md text-[9px] font-semibold ${
+                    card.active
+                      ? "bg-primary/15 text-primary"
+                      : "bg-surface text-muted"
+                  }`}
+                >
+                  {card.title.charAt(0)}
+                </span>
                 <div className="flex min-w-0 flex-1 flex-col leading-none">
                   <span className="truncate text-[8px] font-semibold text-foreground">
                     {card.title}
@@ -217,12 +271,20 @@ function Mobile() {
             <span className="text-muted/60">■</span>
           </div>
         </div>
+
+        <AssetCard
+          src="/images/services/mobile-app-development.jpg"
+          alt={t("assetAlt")}
+          fit="contain"
+          className="aspect-[8/7] h-[86%] w-auto max-w-[42%] self-center"
+        />
       </div>
     </Frame>
   );
 }
 
 function WebDev() {
+  const t = useTranslations("mockups.capabilities.web");
   const codeLines = [
     { num: 1, indent: 0, tokens: [{ text: "export", c: "text-primary font-semibold" }, { text: " function Page() {", c: "text-foreground/70" }] },
     { num: 2, indent: 2, tokens: [{ text: "const", c: "text-primary/80" }, { text: " data = useMetrics();", c: "text-muted" }] },
@@ -236,7 +298,7 @@ function WebDev() {
     <Frame>
       <div className="flex h-full gap-2 overflow-hidden rounded-lg border border-border/10 bg-background/50">
         {/* Code Editor */}
-        <div className="flex w-1/2 flex-col gap-1.5 border-r border-border/10 bg-surface/80 p-2.5 font-mono text-[8px]">
+        <div className="flex w-[38%] flex-col gap-1.5 border-r border-border/10 bg-surface/80 p-2.5 font-mono text-[8px]">
           <div className="mb-1 flex items-center gap-1 border-b border-border/10 pb-1 text-[7px] text-muted">
             <span className="size-1.5 rounded-full bg-primary/70" />
             <span>App.tsx</span>
@@ -260,23 +322,25 @@ function WebDev() {
               <span className="size-1 rounded-full bg-emerald-500" />
               <span className="text-[7px] font-mono text-muted">localhost:3000</span>
             </div>
-            <span className="rounded bg-primary/10 px-1 text-[6px] font-medium text-primary">Preview</span>
+            <span className="rounded bg-primary/10 px-1 text-[6px] font-medium text-primary">
+              {t("preview")}
+            </span>
           </div>
 
           {/* Mini mock webpage layout */}
           <div className="flex flex-1 flex-col gap-1.5">
             <div className="flex h-10 w-full flex-col justify-center rounded-md border border-primary/20 bg-primary/15 p-2">
               <span className="text-[8px] font-semibold leading-none text-foreground">
-                Live metrics, one screen
+                {t("heroTitle")}
               </span>
               <span className="mt-1 text-[6.5px] leading-none text-muted">
-                Updated 4 seconds ago
+                {t("heroSub")}
               </span>
             </div>
             <div className="grid grid-cols-2 gap-1.5">
               <div className="h-8 rounded-md border border-border/10 bg-surface/60 p-1.5">
                 <span className="block text-[6px] leading-none text-muted">
-                  Load time
+                  {t("loadTime")}
                 </span>
                 <span className="mt-1 block text-[8.5px] font-semibold leading-none tabular-nums text-primary">
                   0.9s
@@ -284,7 +348,7 @@ function WebDev() {
               </div>
               <div className="h-8 rounded-md border border-border/10 bg-surface/60 p-1.5">
                 <span className="block text-[6px] leading-none text-muted">
-                  Lighthouse
+                  {t("lighthouse")}
                 </span>
                 <span className="mt-1 block text-[8.5px] font-semibold leading-none tabular-nums text-foreground">
                   98 / 100
@@ -293,14 +357,25 @@ function WebDev() {
             </div>
           </div>
         </div>
+
+        {/* The client's own website-development graphic */}
+        <div className="hidden w-[27%] shrink-0 items-center py-2.5 pr-2.5 lg:flex">
+          <AssetCard
+            src="/images/services/web-development.jpg"
+            alt={t("assetAlt")}
+            caption={t("assetCaption")}
+            fit="contain"
+            className="aspect-[8/7] w-full"
+          />
+        </div>
       </div>
     </Frame>
   );
 }
 
 function DesignPreview() {
-  const photoUrl =
-    "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=400&q=80";
+  const t = useTranslations("mockups.capabilities.design");
+  const photoUrl = "/images/services/dashboard-ui.jpg";
 
   return (
     <Frame>
@@ -308,7 +383,9 @@ function DesignPreview() {
         {/* Left: Artboards progression + Swatches */}
         <div className="flex flex-1 flex-col justify-between">
           <div className="flex items-center justify-between">
-            <span className="text-[8px] font-medium uppercase tracking-wider text-muted">Design System</span>
+            <span className="text-[8px] font-medium uppercase tracking-wider text-muted">
+              {t("system")}
+            </span>
             <span className="text-[7px] text-muted/60 font-mono">v2.4</span>
           </div>
 
@@ -320,17 +397,19 @@ function DesignPreview() {
               transition={{ duration: 0.35 }}
               className="flex h-24 flex-1 flex-col justify-between rounded-lg border border-border/20 bg-surface/40 p-2"
             >
-              <span className="text-[6px] font-mono text-muted/60 uppercase">Wireframe</span>
+              <span className="text-[6px] font-mono text-muted/60 uppercase">
+                {t("wireframe")}
+              </span>
               <div className="leading-tight">
                 <span className="block text-[7.5px] font-medium text-foreground/70">
-                  Checkout · step 2
+                  {t("step")}
                 </span>
                 <span className="block text-[6px] text-muted">
-                  Delivery details
+                  {t("delivery")}
                 </span>
               </div>
               <div className="flex h-6 w-full items-center justify-center rounded border border-dashed border-border/30 bg-border/10 text-[6px] text-muted">
-                3 fields · button
+                {t("fields")}
               </div>
             </motion.div>
 
@@ -344,17 +423,19 @@ function DesignPreview() {
               transition={{ duration: 0.35, delay: 0.15 }}
               className="flex h-24 flex-1 flex-col justify-between rounded-lg border border-primary/30 bg-surface/80 p-2 shadow-xs"
             >
-              <span className="text-[6px] font-mono text-primary uppercase font-semibold">Polished</span>
+              <span className="text-[6px] font-mono text-primary uppercase font-semibold">
+                {t("polished")}
+              </span>
               <div className="leading-tight">
                 <span className="block text-[7.5px] font-semibold text-foreground">
-                  Where should it go?
+                  {t("question")}
                 </span>
                 <span className="block text-[6px] text-primary">
-                  Free delivery over £50
+                  {t("shipping")}
                 </span>
               </div>
               <div className="flex h-6 w-full items-center justify-center rounded bg-primary text-[7px] font-medium text-white shadow-xs">
-                Continue to payment
+                {t("action")}
               </div>
             </motion.div>
           </div>
@@ -369,25 +450,21 @@ function DesignPreview() {
           </div>
         </div>
 
-        {/* Right: Real Supporting Photo */}
-        <div className="relative w-[34%] shrink-0 overflow-hidden rounded-lg border border-border/15">
-          <Image
-            src={photoUrl}
-            alt="UI and UX design sketching and planning workspace"
-            fill
-            sizes="(max-width: 768px) 33vw, 200px"
-            className="object-cover dark:brightness-90"
-          />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-1.5 text-[6.5px] font-medium text-foreground">
-            Research & Ideation
-          </div>
-        </div>
+        {/* Right: the client's own product UI reference */}
+        <AssetCard
+          src={photoUrl}
+          alt={t("photoAlt")}
+          caption={t("caption")}
+          fit="contain"
+          className="aspect-[4/3] w-[38%] self-center"
+        />
       </div>
     </Frame>
   );
 }
 
 function Agents() {
+  const t = useTranslations("mockups.capabilities.agents");
   const userAvatar =
     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80";
   const agentAvatar =
@@ -395,15 +472,18 @@ function Agents() {
 
   return (
     <Frame>
-      <div className="flex h-full flex-col justify-between">
+      <div className="flex h-full gap-3">
+        <div className="flex h-full flex-1 flex-col justify-between">
         {/* Header Bar */}
         <div className="flex items-center justify-between border-b border-border/10 pb-2">
           <div className="flex items-center gap-1.5">
             <span className="size-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[9px] font-semibold text-foreground">Agent</span>
-            <span className="text-[8px] text-muted">· Online</span>
+            <span className="text-[9px] font-semibold text-foreground">
+              {t("title")}
+            </span>
+            <span className="text-[8px] text-muted">{t("online")}</span>
           </div>
-          <span className="text-[7px] font-mono text-muted/60">latency 42ms</span>
+          <span className="text-[7px] font-mono text-muted/60">{t("latency")}</span>
         </div>
 
         {/* Message Bubbles with Real Photos */}
@@ -411,12 +491,12 @@ function Agents() {
           {/* User message */}
           <div className="flex items-end gap-2 self-end">
             <div className="max-w-[190px] rounded-xl rounded-br-xs border border-border/10 bg-surface/70 px-2.5 py-1.5 text-[8px] text-foreground/85">
-              Can you generate the monthly customer report?
+              {t("userMessage")}
             </div>
             <div className="relative size-5 shrink-0 overflow-hidden rounded-full ring-1 ring-border/20">
               <Image
                 src={userAvatar}
-                alt="User headshot avatar"
+                alt={t("userAlt")}
                 width={20}
                 height={20}
                 className="size-full object-cover dark:brightness-90"
@@ -429,14 +509,14 @@ function Agents() {
             <div className="relative size-5 shrink-0 overflow-hidden rounded-full ring-1 ring-primary/30">
               <Image
                 src={agentAvatar}
-                alt="AI assistant headshot avatar"
+                alt={t("agentAlt")}
                 width={20}
                 height={20}
                 className="size-full object-cover dark:brightness-90"
               />
             </div>
             <div className="max-w-[210px] rounded-xl rounded-bl-xs border border-primary/25 bg-primary/10 px-2.5 py-1.5 text-[8px] text-foreground/90 shadow-xs">
-              Report compiled. 1,240 records analyzed with 99.4% accuracy.
+              {t("agentMessage")}
             </div>
           </div>
         </div>
@@ -444,33 +524,42 @@ function Agents() {
         {/* Input Bar & Suggested Reply Chips */}
         <div className="flex flex-col gap-1.5 border-t border-border/10 pt-2">
           <div className="flex items-center gap-2 rounded-lg border border-border/10 bg-surface/60 px-2 py-1">
-            <span className="text-[8px] text-muted">Ask anything...</span>
+            <span className="text-[8px] text-muted">{t("input")}</span>
             <span className="ml-auto rounded bg-primary px-1.5 py-0.5 text-[7px] font-medium text-white">
-              Send
+              {t("send")}
             </span>
           </div>
 
           {/* 2 Suggested Reply Chips */}
           <div className="flex items-center gap-1.5">
             <span className="rounded-full border border-primary/30 bg-primary/5 px-2 py-0.5 text-[7px] font-medium text-primary hover:bg-primary/15 transition-colors cursor-pointer">
-              Download CSV ↗
+              {t("chips.csv")}
             </span>
             <span className="rounded-full border border-border/15 bg-surface/80 px-2 py-0.5 text-[7px] text-muted hover:text-foreground transition-colors cursor-pointer">
-              Schedule follow-up
+              {t("chips.followUp")}
             </span>
           </div>
         </div>
+        </div>
+
+        {/* The client's own assistant graphic, alongside the live conversation */}
+        <AssetCard
+          src="/images/services/ai-chatbot.jpg"
+          alt={t("assetAlt")}
+          className="hidden h-full w-[30%] lg:block"
+        />
       </div>
     </Frame>
   );
 }
 
 function Automation() {
+  const t = useTranslations("mockups.capabilities.automation");
   const nodes = [
     {
       step: "01",
-      title: "Trigger",
-      sub: "Webhook",
+      title: t("nodes.trigger.title"),
+      sub: t("nodes.trigger.sub"),
       icon: (
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-3.5">
           <path d="M9 1L3 9h5l-1 6 7-8h-5l1-6z" strokeLinecap="round" strokeLinejoin="round" />
@@ -480,8 +569,8 @@ function Automation() {
     },
     {
       step: "02",
-      title: "Condition",
-      sub: "Filter & Validate",
+      title: t("nodes.condition.title"),
+      sub: t("nodes.condition.sub"),
       icon: (
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-3.5">
           <path d="M2 3h12M4 7h8M6 11h4M7 15h2" strokeLinecap="round" strokeLinejoin="round" />
@@ -491,8 +580,8 @@ function Automation() {
     },
     {
       step: "03",
-      title: "Action",
-      sub: "Process Payload",
+      title: t("nodes.action.title"),
+      sub: t("nodes.action.sub"),
       icon: (
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" className="size-3.5">
           <circle cx="8" cy="8" r="3" />
@@ -503,8 +592,8 @@ function Automation() {
     },
     {
       step: "04",
-      title: "Output",
-      sub: "Dispatched",
+      title: t("nodes.output.title"),
+      sub: t("nodes.output.sub"),
       icon: (
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" className="size-3.5 text-white">
           <path d="M3 8.5l3.5 3.5L13 5" strokeLinecap="round" strokeLinejoin="round" />
@@ -519,9 +608,9 @@ function Automation() {
       <div className="flex h-full flex-col justify-between">
         <div className="flex items-center justify-between border-b border-border/10 pb-2">
           <span className="text-[8px] font-medium uppercase tracking-wider text-muted">
-            Pipeline Architecture
+            {t("title")}
           </span>
-          <span className="text-[7px] font-mono text-emerald-500">Active · 100% health</span>
+          <span className="text-[7px] font-mono text-emerald-500">{t("health")}</span>
         </div>
 
         {/* Connected Nodes Diagram */}
@@ -563,8 +652,8 @@ function Automation() {
 
         {/* Footer status bar */}
         <div className="flex items-center justify-between rounded-md border border-border/10 bg-surface/40 px-2 py-1 text-[7px] text-muted">
-          <span>Executed in 18ms</span>
-          <span className="font-mono text-primary">0 errors / 24,000 runs</span>
+          <span>{t("executed")}</span>
+          <span className="font-mono text-primary">{t("errors")}</span>
         </div>
       </div>
     </Frame>

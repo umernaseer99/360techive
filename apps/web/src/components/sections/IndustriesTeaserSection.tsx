@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ShoppingCart,
   HeartPulse,
@@ -6,34 +8,32 @@ import {
   Truck,
   Briefcase,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LinkArrow } from "@/components/ui/LinkArrow";
 import { IconBox } from "@/components/ui/IconBox";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 
 const industries = [
-  { label: "E-commerce", icon: ShoppingCart },
-  { label: "Healthcare", icon: HeartPulse },
-  { label: "Finance", icon: Building2 },
-  { label: "Real Estate", icon: Warehouse },
-  { label: "Logistics", icon: Truck },
-  { label: "Professional Services", icon: Briefcase },
+  { key: "ecommerce", icon: ShoppingCart },
+  { key: "healthcare", icon: HeartPulse },
+  { key: "finance", icon: Building2 },
+  { key: "realEstate", icon: Warehouse },
+  { key: "logistics", icon: Truck },
+  { key: "professional", icon: Briefcase },
 ];
 
 export function IndustriesTeaserSection() {
+  const t = useTranslations("teasers.industries");
+  const tIndustries = useTranslations("industries.items");
+
   return (
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <RevealOnScroll>
           <div className="mb-12 max-w-2xl">
-            <SectionHeading
-              title="Built for"
-              accent="regulated and fast-moving industries."
-            />
-            <p className="mt-4 text-muted">
-              Our agents adapt to industry-specific workflows, compliance
-              requirements, and tool ecosystems.
-            </p>
+            <SectionHeading title={t("title")} accent={t("accent")} />
+            <p className="mt-4 text-muted">{t("body")}</p>
           </div>
         </RevealOnScroll>
 
@@ -41,13 +41,13 @@ export function IndustriesTeaserSection() {
           {industries.map((ind, i) => {
             const Icon = ind.icon;
             return (
-              <RevealOnScroll key={ind.label} delay={i * 0.05}>
+              <RevealOnScroll key={ind.key} delay={i * 0.05}>
                 <div className="flex items-center gap-3 rounded-2xl border border-border/15 bg-surface/60 px-5 py-3">
                   <IconBox color="surface">
                     <Icon className="size-4" />
                   </IconBox>
                   <span className="text-sm font-medium text-foreground">
-                    {ind.label}
+                    {tIndustries(ind.key + ".title")}
                   </span>
                 </div>
               </RevealOnScroll>
@@ -56,7 +56,7 @@ export function IndustriesTeaserSection() {
         </div>
 
         <RevealOnScroll>
-          <LinkArrow href="/industries">View all industries we serve</LinkArrow>
+          <LinkArrow href="/industries">{t("link")}</LinkArrow>
         </RevealOnScroll>
       </div>
     </section>

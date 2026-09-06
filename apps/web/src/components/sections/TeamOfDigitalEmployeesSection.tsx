@@ -2,6 +2,7 @@
 
 import type { LucideIcon } from "lucide-react";
 import { Headphones, TrendingUp, Wallet, Search, FileText, Crown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { NodeNetworkDiagram } from "@/components/ui/NodeNetworkDiagram";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
@@ -16,33 +17,29 @@ const iconMap: Record<string, LucideIcon> = {
   Crown,
 };
 
-const diagramNodes = agents.map((a) => ({
-  id: a.slug,
-  label: a.name.replace(" Agent", ""),
-  icon: iconMap[a.icon] ?? FileText,
-  href: `/ai-employees/${a.slug}`,
-}));
-
 export function TeamOfDigitalEmployeesSection() {
+  const t = useTranslations("team");
+  const tAgents = useTranslations("agents");
+
+  const diagramNodes = agents.map((a) => ({
+    id: a.slug,
+    label: tAgents(a.slug + ".short"),
+    icon: iconMap[a.icon] ?? FileText,
+    href: `/ai-employees/${a.slug}`,
+  }));
+
   return (
     <section className="border-y border-border/10 px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <RevealOnScroll direction="left">
-            <SectionHeading
-              title="A team of"
-              accent="digital employees."
-            />
-            <p className="mt-4 text-muted">
-              We build precisely the AI Employees your business needs —
-              individually developed for each department, not off-the-shelf.
-              Coordinated, autonomous, and working around the clock.
-            </p>
+            <SectionHeading title={t("title")} accent={t("accent")} />
+            <p className="mt-4 text-muted">{t("body")}</p>
           </RevealOnScroll>
 
           <RevealOnScroll direction="right" className="flex justify-center">
             <NodeNetworkDiagram
-              centerLabel="Your Company"
+              centerLabel={t("centerLabel")}
               nodes={diagramNodes}
               variant="orbit"
               animated

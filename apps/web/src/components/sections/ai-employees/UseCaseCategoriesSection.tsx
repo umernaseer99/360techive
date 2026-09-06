@@ -5,50 +5,26 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { IconBox } from "@/components/ui/IconBox";
 
-const categories: {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-}[] = [
-  {
-    title: "Lead Qualification & CRM Upkeep",
-    description:
-      "Agents that engage inbound leads, score them against your ICP, update CRM records, and hand off warm conversations to your closers — no manual data entry.",
-    icon: Users,
-  },
-  {
-    title: "Data Extraction & Reporting",
-    description:
-      "Pull structured data from documents, emails, and spreadsheets. Generate reports, summaries, and dashboards on demand without waiting on a data team.",
-    icon: FileSearch,
-  },
-  {
-    title: "Always-On Customer Support",
-    description:
-      "Handle tier-1 tickets around the clock. Answer from your knowledge base, triage by urgency, and escalate only when a human touch is required.",
-    icon: Headphones,
-  },
-  {
-    title: "Content & Workflow Automation",
-    description:
-      "Draft proposals, generate invoices, schedule meetings, and route approvals — agents that own the workflow from trigger to completion.",
-    icon: Zap,
-  },
+const categories: { key: string; icon: LucideIcon }[] = [
+  { key: "leads", icon: Users },
+  { key: "reporting", icon: FileSearch },
+  { key: "support", icon: Headphones },
+  { key: "workflow", icon: Zap },
 ];
 
 export function UseCaseCategoriesSection() {
+  const t = useTranslations("aiEmployees.useCases");
+
   return (
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
-          <SectionHeading
-            title="What businesses"
-            accent="have us build for."
-          />
+          <SectionHeading title={t("title")} accent={t("accent")} />
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -56,16 +32,16 @@ export function UseCaseCategoriesSection() {
             const Icon = cat.icon;
             return (
               <Card
-                key={cat.title}
+                key={cat.key}
                 icon={
                   <IconBox color="primary">
                     <Icon className="size-5" />
                   </IconBox>
                 }
-                title={cat.title}
+                title={t("items." + cat.key + ".title")}
               >
                 <p className="text-sm leading-relaxed text-muted">
-                  {cat.description}
+                  {t("items." + cat.key + ".description")}
                 </p>
               </Card>
             );

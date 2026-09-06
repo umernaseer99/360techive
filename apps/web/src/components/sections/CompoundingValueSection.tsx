@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -16,37 +17,13 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
  * radius, so the four mini-charts read as one instrument with four readings.
  */
 const BAR_COUNT = 6;
-const stages: {
-  when: string;
-  title: string;
-  body: string;
-  /** How many of the BAR_COUNT slots are filled at this stage. */
-  filled: number;
-}[] = [
-  {
-    when: "Month 1",
-    title: "First agent live",
-    body: "The use case that pays for itself fastest. The knowledge base starts here.",
-    filled: 1,
-  },
-  {
-    when: "Month 3",
-    title: "Two more join",
-    body: "Each new agent inherits what the first one already learned about your business.",
-    filled: 3,
-  },
-  {
-    when: "Month 6",
-    title: "Departments connect",
-    body: "Agents hand work to each other. The knowledge base is now the asset.",
-    filled: 5,
-  },
-  {
-    when: "Year 1+",
-    title: "Compounding",
-    body: "A structure a competitor starting today still has twelve months of work to reach.",
-    filled: 6,
-  },
+
+/** Order and fill level only; the wording comes from the catalogue. */
+const stages: { key: string; filled: number }[] = [
+  { key: "monthOne", filled: 1 },
+  { key: "monthThree", filled: 3 },
+  { key: "monthSix", filled: 5 },
+  { key: "yearOne", filled: 6 },
 ];
 
 /**
@@ -62,29 +39,33 @@ const BAR_STAGGER = 0.07;
 const BAR_DURATION = 0.42;
 
 export function CompoundingValueSection() {
+  const t = useTranslations("aiAutomation.compounding");
   const reduced = useReducedMotion();
 
   return (
     <Section>
       <Reveal>
         <SectionHeading
-          eyebrow="Why it pays to start now"
-          title="The longer it runs,"
-          accent="the stronger it gets."
-          lead="An agent system isn't a one-off project — it accumulates. Every new agent inherits what the existing ones have already learned about your business. Start today and in a year you're operating on a foundation a competitor still has to build from scratch."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 
       <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {stages.map((stage, stageIndex) => (
-          <RevealItem key={stage.when} className="h-full">
+          <RevealItem key={stage.key} className="h-full">
             <div className="flex h-full flex-col gap-4 rounded-2xl border border-border/10 bg-surface/30 p-6">
-              <Eyebrow tone="primary">{stage.when}</Eyebrow>
+              <Eyebrow tone="primary">{t("stages." + stage.key + ".when")}</Eyebrow>
 
               <div
                 className="flex h-16 items-stretch gap-1.5"
                 role="img"
-                aria-label={`${stage.filled} of ${BAR_COUNT} departments covered`}
+                aria-label={t("coverage", {
+                  filled: stage.filled,
+                  total: BAR_COUNT,
+                })}
               >
                 {Array.from({ length: BAR_COUNT }, (_, i) =>
                   i < stage.filled ? (
@@ -120,9 +101,11 @@ export function CompoundingValueSection() {
               </div>
 
               <h3 className="text-[15px] font-semibold text-foreground">
-                {stage.title}
+                {t("stages." + stage.key + ".title")}
               </h3>
-              <p className="text-sm leading-relaxed text-muted">{stage.body}</p>
+              <p className="text-sm leading-relaxed text-muted">
+                {t("stages." + stage.key + ".body")}
+              </p>
             </div>
           </RevealItem>
         ))}

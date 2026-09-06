@@ -1,38 +1,25 @@
 "use client";
 
 import { ArrowRight, ArrowDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 
-const chaos = [
-  "Email threads",
-  "Inbound calls",
-  "Invoices",
-  "Documents",
-  "Chat requests",
-  "Admin",
-  "Follow-ups",
-  "Reporting",
-];
-
-const order = [
-  "Routine runs autonomously",
-  "You see every outcome",
-  "Exceptions escalate to you",
-  "Capacity scales without hiring",
-];
-
 export function TransformationSection() {
+  const t = useTranslations("aiAutomation.transformation");
+  const chaos: string[] = t.raw("today.items");
+  const order: string[] = t.raw("withAgents.items");
+
   return (
     <Section>
       <Reveal>
         <SectionHeading
-          eyebrow="The shift"
-          title="From doing the work to"
-          accent="directing it."
-          lead="Today everything lands on your desk and you react. With an agent layer, the routine runs itself and you supervise from above."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 
@@ -40,13 +27,12 @@ export function TransformationSection() {
         {/* today */}
         <Reveal>
           <div className="flex h-full flex-col rounded-2xl border border-border/10 bg-surface/30 p-8">
-            <Eyebrow>Today &middot; in the business</Eyebrow>
+            <Eyebrow>{t("today.eyebrow")}</Eyebrow>
             <h3 className="mt-3 text-xl font-semibold text-foreground">
-              Everything routes through you.
+              {t("today.title")}
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Requests arrive from every direction with no order of priority.
-              The work gets done, but nobody is steering.
+              {t("today.body")}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-2">
@@ -77,13 +63,12 @@ export function TransformationSection() {
         {/* with agents */}
         <Reveal delay={0.08}>
           <div className="flex h-full flex-col rounded-2xl border border-primary/25 bg-primary/[0.03] p-8">
-            <Eyebrow tone="primary">With agents &middot; on the business</Eyebrow>
+            <Eyebrow tone="primary">{t("withAgents.eyebrow")}</Eyebrow>
             <h3 className="mt-3 text-xl font-semibold text-foreground">
-              You see the whole board.
+              {t("withAgents.title")}
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              Agents own the repeatable work end to end. You set direction,
-              review outcomes, and decide where to push next.
+              {t("withAgents.body")}
             </p>
 
             <ul className="mt-8 flex flex-col gap-3">

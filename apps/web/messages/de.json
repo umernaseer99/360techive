@@ -1,0 +1,1922 @@
+{
+  "meta": {
+    "home": {
+      "title": "360 Techive | Software, digitale Produkte und intelligente Systeme",
+      "description": "Wir konzipieren und entwickeln individuelle Web- und Mobile-Anwendungen, Interfaces, KI-Agenten, Automatisierung und eigene digitale Produkte."
+    },
+    "services": {
+      "title": "Leistungen — 360 Techive",
+      "description": "Entwicklung, Integration und laufende Verbesserung individueller KI-Mitarbeiter — von der Analyse bis zum Betrieb."
+    },
+    "industries": {
+      "title": "Branchen — 360 Techive",
+      "description": "KI-Mitarbeiter, entwickelt für E-Commerce, Gesundheitswesen, Finanzwesen, Immobilien, Logistik und Professional Services."
+    },
+    "howItWorks": {
+      "title": "So arbeiten wir — 360 Techive",
+      "description": "Von der Analyse über den Rollout bis zum laufenden Betrieb: unser vierstufiger Prozess für individuelle KI-Mitarbeiter."
+    },
+    "pricing": {
+      "title": "Preise — 360 Techive",
+      "description": "Individuelle Preise für individuelle KI-Mitarbeiter. Jede Umsetzung wird eigens erfasst, kalkuliert und auf Ihre Abläufe und Systeme zugeschnitten."
+    },
+    "contact": {
+      "title": "Kontakt | 360 Techive",
+      "description": "Individuelle Software, digitale Produkte und Automatisierung beauftragen. Sagen Sie uns, was Sie bauen wollen, und wir sagen Ihnen, was dafür nötig ist."
+    },
+    "aiAutomation": {
+      "title": "KI-Automatisierung | 360 Techive",
+      "description": "KI-Agenten und Automatisierung, die Ihrem Team die Routinearbeit abnehmen."
+    },
+    "aiEmployees": {
+      "title": "KI-Mitarbeiter — 360 Techive",
+      "description": "Sechs KI-Mitarbeiter für Service, Vertrieb, Finanzen, Research, Dokumente und Geschäftsleitung. Jeder Agent übernimmt eine ganze Unternehmensfunktion."
+    }
+  },
+  "nav": {
+    "primary": "Hauptnavigation",
+    "cta": "Projekt starten",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "links": {
+      "services": "Leistungen",
+      "aiAutomation": "KI-Automatisierung",
+      "products": "Produkte",
+      "work": "Referenzen",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "language": {
+      "label": "Sprache",
+      "en": "Englisch",
+      "de": "Deutsch"
+    }
+  },
+  "footer": {
+    "tagline": "Wir entwickeln individuelle Software, digitale Produkte und intelligente Systeme.",
+    "rights": "Alle Rechte vorbehalten.",
+    "columns": {
+      "explore": "Entdecken",
+      "company": "Unternehmen",
+      "legal": "Rechtliches"
+    },
+    "links": {
+      "customSolutions": "Individuelle Lösungen",
+      "products": "Unsere Produkte",
+      "work": "Ausgewählte Projekte",
+      "about": "Über uns",
+      "contact": "Kontakt",
+      "aiAutomation": "KI-Automatisierung",
+      "aiEmployees": "KI-Mitarbeiter",
+      "howItWorks": "So arbeiten wir",
+      "pricing": "Preise",
+      "privacy": "Datenschutz",
+      "terms": "AGB"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Software, digitale Produkte und intelligente Systeme",
+      "headline": {
+        "first": "Wir bauen Software,",
+        "second": "auf der Unternehmen",
+        "accent": "wirklich",
+        "third": "laufen."
+      },
+      "body": "Wir machen aus Ideen, komplizierten Abläufen und geschäftlichen Problemen Software, die Menschen tatsächlich nutzen. Individuelle Web- und Mobile-Anwendungen, Interface-Design, KI-Agenten, Automatisierung und eigene digitale Produkte.",
+      "primaryCta": "Projekt starten",
+      "secondaryCta": "Referenzen ansehen",
+      "footnote": "Bringen Sie uns ein fertiges Lastenheft oder ein Problem, für das Sie noch keine Lösung haben. Beides ist ein guter Anfang."
+    },
+    "whatWeDo": {
+      "eyebrow": "Was wir tun",
+      "headline": {
+        "first": "Von der Idee zu etwas,",
+        "second": "das Menschen",
+        "accent": "nutzen."
+      },
+      "body": "Wir arbeiten an Strategie, Design, Entwicklung, Automatisierung und KI. Manche Kunden kommen mit einer fertigen Spezifikation. Andere kommen mit einem Problem und der Vermutung, dass Software helfen könnte. Beides passt.",
+      "stages": {
+        "problem": {
+          "name": "Problem",
+          "line": "Das Geschäft und das eigentliche Problem verstehen.",
+          "note": "Wir beginnen damit, wie die Arbeit heute läuft, wer sie macht und wo sie hakt."
+        },
+        "design": {
+          "name": "Design",
+          "line": "Aus der Idee ein klares Nutzungserlebnis machen.",
+          "note": "Abläufe, Screens und die Form des Produkts, abgestimmt bevor die erste Zeile Code entsteht."
+        },
+        "build": {
+          "name": "Entwicklung",
+          "line": "Software und Technik umsetzen.",
+          "note": "In lauffähigen Teilstücken, die Sie nutzen und kommentieren können, statt monatelanger Funkstille."
+        },
+        "launch": {
+          "name": "Launch",
+          "line": "Das Produkt in die Hände echter Nutzer geben.",
+          "note": "Ausrollen, beobachten wie es genutzt wird, und auch nach dem ersten Tag weiter verbessern."
+        }
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Individuelle Lösungen",
+      "headline": {
+        "first": "Software rund um",
+        "accent": "Ihr",
+        "second": "Geschäft."
+      },
+      "body": "Jedes Unternehmen arbeitet anders. Wir bauen Software um Ihre tatsächlichen Abläufe herum, statt Ihre Prozesse an ein Werkzeug anzupassen, das jemand anderes entworfen hat.",
+      "counter": "{current} von {total}",
+      "items": {
+        "web-apps": {
+          "name": "Webanwendungen",
+          "description": "Leistungsfähige Webanwendungen, gebaut auf echten fachlichen Anforderungen: vom ersten internen Tool bis zur Plattform, auf der das ganze Unternehmen läuft.",
+          "detail": [
+            "Dashboards",
+            "Workflows",
+            "Rollen"
+          ]
+        },
+        "mobile": {
+          "name": "Mobile Anwendungen",
+          "description": "Mobile Anwendungen für Kunden, Teams und den Arbeitsalltag, für iOS und Android.",
+          "detail": [
+            "iOS",
+            "Android",
+            "Offline"
+          ]
+        },
+        "web": {
+          "name": "Webentwicklung",
+          "description": "Schnelle, moderne und skalierbare Websites und digitale Plattformen, die auch bei wachsenden Inhalten und Zugriffszahlen schnell bleiben.",
+          "detail": [
+            "Marketing",
+            "CMS",
+            "Commerce"
+          ]
+        },
+        "design": {
+          "name": "UI- und UX-Design",
+          "description": "Oberflächen, die verständlich und angenehm zu bedienen sind, entworfen bevor jemand Code schreibt.",
+          "detail": [
+            "Research",
+            "Prototypen",
+            "Designsysteme"
+          ]
+        },
+        "agents": {
+          "name": "KI-Agenten und Chatbots",
+          "description": "Intelligente Systeme, die ein Gespräch führen, mit Ihren Informationen arbeiten und die wiederkehrenden Teile einer Aufgabe übernehmen.",
+          "detail": [
+            "Assistenten",
+            "Retrieval",
+            "Aktionen"
+          ]
+        },
+        "automation": {
+          "name": "Geschäftsautomatisierung",
+          "description": "Bestehende Systeme verbinden, wiederholte manuelle Schritte entfernen und aus einem Prozess etwas machen, das von allein läuft.",
+          "detail": [
+            "Integrationen",
+            "Trigger",
+            "Reporting"
+          ]
+        }
+      }
+    },
+    "automation": {
+      "eyebrow": "KI-Automatisierung",
+      "headline": {
+        "first": "Wenn Software",
+        "second": "die Arbeit",
+        "accent": "übernimmt.",
+        "third": ""
+      },
+      "body": "Wir entwickeln KI-Agenten und Automatisierung, die in den Prozessen arbeiten, die ein Unternehmen bereits hat. Vom Beantworten von Anfragen über die Verarbeitung von Informationen bis zum Übertragen zwischen Systemen: Abläufe, die einem Team spürbar weniger Routine im Wochenverlauf lassen.",
+      "cta": "KI-Automatisierung entdecken",
+      "diagramLabel": "Ein automatisierter Ablauf: Eingang, KI-Agent, Entscheidung, Aktion, Ergebnis",
+      "footnote": "Alles, bei dem sich der Agent nicht sicher ist, geht an einen Menschen",
+      "steps": {
+        "input": {
+          "label": "Eingang",
+          "note": "Eine Nachricht, ein Formular, eine Datei, ein Ereignis"
+        },
+        "agent": {
+          "label": "KI-Agent",
+          "note": "Prüft den Vorgang gegen das Wissen Ihres Unternehmens"
+        },
+        "decision": {
+          "label": "Entscheidung",
+          "note": "Selbst erledigen oder an einen Menschen übergeben"
+        },
+        "action": {
+          "label": "Aktion",
+          "note": "Aktualisiert die Systeme, die Sie bereits nutzen"
+        },
+        "result": {
+          "label": "Ergebnis",
+          "note": "Erledigt, mit einem Protokoll des Vorgangs"
+        }
+      }
+    },
+    "products": {
+      "eyebrow": "Unsere Produkte",
+      "headline": {
+        "first": "Wir bauen auch eigene",
+        "accent": "Produkte."
+      },
+      "body": "Manche unserer besten Ideen entstehen nicht aus einem Kundenbriefing, sondern aus einem Problem, das uns in der eigenen Arbeit oder bei unseren Kunden immer wieder begegnet. Diese Ideen haben wir konsequent zu Ende gebaut.",
+      "counter": "{current} von {total}",
+      "viewProject": "Projekt ansehen",
+      "featured": "Referenz: {name}",
+      "ownedByUs": "Von uns entwickelt und betrieben",
+      "status": {
+        "building": "In Entwicklung",
+        "beta": "In der Beta",
+        "research": "Forschungsphase",
+        "live": "Live"
+      },
+      "items": {
+        "waAgent": {
+          "category": "KI-Automatisierung",
+          "description": "Ein KI-Agent für WhatsApp, der Konversationen automatisiert, häufige Fragen beantwortet und wiederkehrende Kundenanliegen direkt in WhatsApp bearbeitet. Gebaut für Unternehmen, die Support und Vertrieb ohnehin über Messenger abwickeln."
+        },
+        "chatbots": {
+          "category": "KI-Produkte",
+          "description": "Konfigurierbare KI-Chatbots, die Sie in Ihre eigene Website oder Anwendung einbinden. Jeder Bot wird auf Ihre Inhalte trainiert und auf Ihre Fachdomäne abgestimmt, übernimmt den Kundenservice und erfasst rund um die Uhr Anfragen."
+        },
+        "websites": {
+          "category": "Webentwicklung",
+          "description": "Individuelle Web-Projekte von der Marketing-Website bis zur vollwertigen Webanwendung mit Live-Daten und Nutzerkonten. Unser Referenzprojekt CoinStudy ist eine Research-Plattform für halal Kryptowerte, die Coins anhand eines mehrstufigen Bewertungsmodells auf Schariakonformität prüft, mit Live-Marktdaten und einem KI-gestützten Asset-Check."
+        },
+        "ecommerce": {
+          "category": "E-Commerce",
+          "description": "Online-Shops mit Produktkatalog, Checkout und Kundenkonten, aufgebaut oder angepasst auf das reale Sortiment und die Abläufe eines Kunden. Unser Referenzprojekt AQ Gimel ist ein vollständiger E-Commerce-Aufbau für einen Private-Label-Hersteller veganer Kosmetik, mit mehrstufigem Katalog, Checkout in mehreren Währungen und einer Mitgliedsstufe für wiederkehrende Geschäftskunden."
+        },
+        "management": {
+          "category": "Business-Tools",
+          "description": "Interne Software, die Tabellen und manuelle Listen für Bereiche wie Lagerbestand, Personalakten und Einsatzplanung ablöst. Jedes System entsteht entlang der tatsächlichen Abläufe eines Unternehmens, nicht als Standardvorlage."
+        }
+      }
+    },
+    "lab": {
+      "eyebrow": "Das Labor",
+      "headline": {
+        "first": "Woran wir als",
+        "accent": "Nächstes arbeiten."
+      },
+      "exploring": "Aktuell in Arbeit",
+      "footnote": "Ein Teil davon wird Kundenarbeit. Ein Teil wird ein Produkt. Das meiste beginnt mit der Frage, warum etwas so lange dauert.",
+      "areas": {
+        "agents": {
+          "name": "KI-Agenten",
+          "note": "Systeme, die eine Aufgabe bis zum Ende bringen."
+        },
+        "automation": {
+          "name": "Geschäftsautomatisierung",
+          "note": "Schritte entfernen, die niemand zweimal machen sollte."
+        },
+        "webApps": {
+          "name": "Webanwendungen",
+          "note": "Plattformen, in denen Teams den ganzen Tag arbeiten."
+        },
+        "mobile": {
+          "name": "Mobile Produkte",
+          "note": "Software, die mit der Arbeit unterwegs ist."
+        },
+        "internalTools": {
+          "name": "Interne Business-Tools",
+          "note": "Die unscheinbare Software, die ein Unternehmen am Laufen hält."
+        },
+        "customerExperience": {
+          "name": "KI-gestützte Kundenerlebnisse",
+          "note": "Service und Vertrieb, die wirklich antworten."
+        },
+        "workflows": {
+          "name": "Intelligente Workflows",
+          "note": "Prozesse, die entscheiden statt nur weiterzuleiten."
+        },
+        "platforms": {
+          "name": "Digitale Plattformen",
+          "note": "Produkte mit mehr als einer Nutzergruppe."
+        }
+      }
+    },
+    "work": {
+      "eyebrow": "Ausgewählte Projekte",
+      "headline": {
+        "first": "Gebaut für",
+        "accent": "echte",
+        "second": "Probleme."
+      },
+      "body": "Eine Auswahl der Probleme, die man uns bringt, und was wir gebaut haben, um sie zu lösen.",
+      "fields": {
+        "problem": "Das Problem",
+        "built": "Was wir gebaut haben",
+        "approach": "Technologie",
+        "outcome": "Was sich geändert hat"
+      },
+      "projects": {
+        "operations": {
+          "title": "Betriebsplattform für einen Dienstleister",
+          "sector": "Außendienst",
+          "problem": "Aufträge wurden in einem System angelegt, in einer Tabelle geplant und an dritter Stelle abgerechnet. Niemand konnte sagen, wie weit ein Auftrag tatsächlich war.",
+          "built": "Eine Webanwendung für Buchung, Einsatzplanung, Auftragshistorie und Rechnungsstellung, mit einer mobilen Ansicht für das Team vor Ort.",
+          "outcome": "Ein Ort, an dem der Stand jedes Auftrags steht, und ein Innendienst, der dieselben Angaben nicht mehr dreimal abtippt."
+        },
+        "support": {
+          "title": "Assistent für den Kundenservice",
+          "sector": "E-Commerce",
+          "problem": "Jeden Tag kamen dieselben Fragen zu Lieferung, Rückgabe und Größen, und das kleine Serviceteam beantwortete jede einzelne von Hand.",
+          "built": "Ein Assistent, trainiert auf den eigenen Richtlinien und Produktdaten des Unternehmens, der alles Ungewöhnliche mit der vollständigen Historie an einen Menschen übergibt.",
+          "outcome": "Routinefragen werden sofort beantwortet, und das Serviceteam verbringt seinen Tag mit den Fällen, die eine Einschätzung brauchen."
+        },
+        "approvals": {
+          "title": "Interner Freigabeprozess",
+          "sector": "Professional Services",
+          "problem": "Freigaben lagen in E-Mail-Verläufen. Anfragen gingen unter, und niemand konnte nachvollziehen, wer was freigegeben hatte.",
+          "built": "Ein Workflow-Tool mit strukturierten Anfragen, klarer Zuständigkeit in jedem Schritt und einem dauerhaften Protokoll jeder Entscheidung.",
+          "outcome": "Anfragen, die von allein weiterlaufen, und ein Prüfpfad, den niemand pflegen muss."
+        }
+      }
+    },
+    "technology": {
+      "eyebrow": "Technologie",
+      "headline": {
+        "first": "Die Technik ändert sich.",
+        "second": "Das",
+        "accent": "Denken",
+        "third": "dahinter nicht."
+      },
+      "body": "Wir wählen Werkzeuge, die zum Problem, zum Budget und zu denen passen, die das Ergebnis nach uns pflegen. Der spannende Teil der Arbeit war noch nie das Framework.",
+      "groups": {
+        "build": {
+          "label": "Produkt und Oberfläche",
+          "note": "Was Menschen täglich sehen und benutzen."
+        },
+        "platform": {
+          "label": "Plattform und Daten",
+          "note": "Wo Geschäftslogik und Datenbestand liegen."
+        },
+        "intelligence": {
+          "label": "Intelligenz und Infrastruktur",
+          "note": "Was Software verstehen und zuverlässig laufen lässt."
+        }
+      }
+    },
+    "principles": {
+      "eyebrow": "Warum wir",
+      "headline": {
+        "first": "Gute Software beginnt",
+        "second": "mit dem Verständnis",
+        "third": "des",
+        "accent": "Problems."
+      },
+      "body": "Die meiste gescheiterte Software war sauber gebaut. Sie hat nur das Falsche gelöst. Deshalb nehmen wir uns echte Zeit für den Teil vor dem Code.",
+      "items": {
+        "understand": {
+          "title": "Wir verstehen zuerst das Geschäft",
+          "body": "Bevor etwas entworfen wird, wollen wir wissen, wie die Arbeit heute abläuft, wer daran beteiligt ist und was tatsächlich schiefgeht."
+        },
+        "design": {
+          "title": "Wir gestalten, bevor wir bauen",
+          "body": "Zu entscheiden, wie etwas funktionieren soll, ist auf dem Bildschirm günstiger als im Code. Im Design werden die Diskussionen geführt."
+        },
+        "grow": {
+          "title": "Wir bauen Systeme, die mitwachsen",
+          "body": "Die erste Version sollte nicht die sein, die man wegwerfen muss. Wir bauen so, dass das zweite Jahr leichter wird als das erste."
+        },
+        "automate": {
+          "title": "Wir automatisieren dort, wo es sinnvoll ist",
+          "body": "Automatisierung lohnt sich, wenn ein Prozess wiederkehrend und gut verstanden ist. Wenn nicht, verdeckt KI das Problem nur."
+        },
+        "maintain": {
+          "title": "Wir schreiben Software, die andere pflegen können",
+          "body": "Sie sollen nicht dauerhaft auf uns angewiesen sein. Klare Struktur, sinnvolle Benennung und Dokumentation gehören zur Arbeit, sie sind kein Gefallen."
+        },
+        "closely": {
+          "title": "Wir arbeiten eng mit Ihnen zusammen",
+          "body": "Kurze Feedbackschleifen, früh lauffähige Software und ehrliche Antworten dazu, was schwierig ist. Keine langen Funkstillen."
+        }
+      }
+    },
+    "about": {
+      "eyebrow": "Über uns",
+      "headline": {
+        "first": "Ein Softwareteam, das",
+        "second": "gerne Dinge",
+        "accent": "baut.",
+        "third": ""
+      },
+      "bodyOne": "360 Techive ist ein Software-Haus. Wir vereinen Design, Entwicklung, Software Engineering, KI und Produktdenken unter einem Dach. Das heißt: ein Projekt wandert nicht durch vier Firmen, bevor es bei jemandem ankommt, der damit arbeiten kann.",
+      "bodyTwo": "Wir arbeiten mit Unternehmen, denen ihre Tabellen zu eng geworden sind, und mit Gründerinnen und Gründern, die eine Idee haben und jemanden brauchen, der sie umsetzt. Wir bauen außerdem eigene Produkte, was uns ehrlich hält, wie lange Dinge wirklich dauern.",
+      "disciplines": {
+        "design": {
+          "label": "Design",
+          "note": "Oberflächen und Produktdenken"
+        },
+        "engineering": {
+          "label": "Entwicklung",
+          "note": "Web-, Mobile- und Backend-Systeme"
+        },
+        "ai": {
+          "label": "KI",
+          "note": "Agenten, Assistenten und Automatisierung"
+        },
+        "product": {
+          "label": "Produkt",
+          "note": "Eigene Software, im Haus entwickelt"
+        }
+      }
+    },
+    "start": {
+      "eyebrow": "Hier beginnen",
+      "headline": {
+        "first": "Eine Idee, ein Problem",
+        "second": "oder etwas, das",
+        "accent": "besser laufen sollte?"
+      },
+      "body": "Erzählen Sie uns, was Sie bauen wollen. Wir helfen Ihnen herauszufinden, was der nächste Schritt ist, auch wenn er kleiner ausfällt als gedacht.",
+      "primaryCta": "Gespräch beginnen",
+      "secondaryCta": "Ansehen, was wir bauen",
+      "footnote": "Kein Pitch Deck nötig. Ein Absatz über das Problem reicht."
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Wir bauen KI-Mitarbeiter —",
+      "accent": "keine Software von der Stange.",
+      "body": "Dies ist keine Self-Service-Plattform. Wir konzipieren, entwickeln, integrieren und betreiben individuelle KI-Agenten für jede Abteilung — passend zu Ihren Systemen, Ihren Abläufen und Ihren Standards."
+    },
+    "items": {
+      "development": {
+        "title": "Individuelle Agentenentwicklung",
+        "description": "Wir entwickeln KI-Mitarbeiter für jede Abteilung Ihres Unternehmens — keine generischen Chatbots, sondern eigenständige Agenten mit Zugriff auf Ihre Systeme, Daten und Abläufe. Jeder Agent wird auf Ihre Prozesse, Entscheidungslogiken und Eskalationswege zugeschnitten und vor dem Rollout an realen Szenarien getestet."
+      },
+      "integration": {
+        "title": "Integration und Datenanbindung",
+        "description": "Ihre neuen KI-Mitarbeiter docken direkt an die Systeme an, die Ihr Team bereits nutzt: CRM, Helpdesk, Buchhaltung, Kalender, Dokumentenablage und interne Schnittstellen. Wir übernehmen Authentifizierung, Datenabbildung und beidseitige Synchronisation, damit Agenten in Ihrer bestehenden Landschaft lesen, schreiben und handeln können, ohne den Betrieb zu stören."
+      },
+      "operation": {
+        "title": "Betrieb und laufende Verbesserung",
+        "description": "Der Rollout ist erst der Anfang. Wir überwachen die Leistung jedes Agenten, trainieren mit neuen Daten nach und liefern wöchentlich Verbesserungen aus. Ihr Team erhält ein Dashboard mit Lösungsquoten, eingesparter Zeit und Wirtschaftlichkeit je Abteilung. Wir passen das Verhalten der Agenten an, wenn sich Ihr Geschäft verändert — ohne Übergabe, ohne Anbieterbindung."
+      }
+    },
+    "included": {
+      "title": "Was",
+      "accent": "enthalten ist.",
+      "body": "Jedes Projekt umfasst Architektur, Integration, Monitoring und volle Transparenz — keine versteckten Kosten, keine Übergaben.",
+      "items": {
+        "architecture": "Eigene Agentenarchitektur — jeder KI-Mitarbeiter wird für Ihre konkreten Abläufe entworfen, nicht aus einer Standardvorlage",
+        "integration": "Nahtlose Integration in Ihre bestehenden Systeme — CRM, Helpdesk, Buchhaltung, Kalender und interne Schnittstellen",
+        "monitoring": "Laufendes Monitoring und wöchentliche Verbesserungszyklen — Agenten werden mit der Zeit von allein besser",
+        "noLockIn": "Keine Anbieterbindung — volle Einsicht in die Arbeitsweise Ihrer Agenten und die Möglichkeit, Konfigurationen anzupassen",
+        "engineer": "Feste Ansprechperson im Support, die Ihrem Account für die gesamte Projektdauer zugeordnet ist",
+        "roi": "Dashboard zur Wirtschaftlichkeit mit eingesparter Zeit, Lösungsquoten und Kosten je Abteilung"
+      }
+    }
+  },
+  "industries": {
+    "hero": {
+      "title": "KI-Mitarbeiter für",
+      "accent": "jede Branche.",
+      "body": "Jede Abteilung hat wiederkehrende Abläufe. Unsere Agenten übernehmen sie, damit Ihr Team sich auf die Arbeit konzentrieren kann, auf die es ankommt."
+    },
+    "items": {
+      "ecommerce": {
+        "title": "E-Commerce",
+        "description": "Online-Händler bearbeiten täglich große Mengen an Bestellungen, Serviceanfragen und Bestandsänderungen. KI-Mitarbeiter halten den Betrieb am Laufen, ohne dass das Team wachsen muss.",
+        "useCases": [
+          "Der <agent>Service-Agent</agent> löst Bestellprobleme und Rücksendeanfragen eigenständig.",
+          "Der <agent>Vertriebs-Agent</agent> qualifiziert Anfragen und stößt Follow-ups bei abgebrochenen Warenkörben an.",
+          "Der <agent>Dokumenten-Agent</agent> erstellt und archiviert Rechnungen und Lieferscheine in großer Zahl."
+        ]
+      },
+      "healthcare": {
+        "title": "Gesundheitswesen",
+        "description": "Praxen und Health-Tech-Unternehmen arbeiten mit sensiblen Daten, komplexer Terminplanung und regulatorischen Abläufen. KI-Mitarbeiter übernehmen die Verwaltungslast sicher.",
+        "useCases": [
+          "Der <agent>Service-Agent</agent> sichtet Patientenanfragen und leitet dringende Fälle an das richtige Team weiter.",
+          "Die <agent>Assistenz der Geschäftsleitung</agent> koordiniert Behandlungspläne und die Vorbereitung von Terminen.",
+          "Der <agent>Dokumenten-Agent</agent> ordnet Patientenakten und Einwilligungen prüfungssicher."
+        ]
+      },
+      "finance": {
+        "title": "Finanzwesen",
+        "description": "Finanzteams verantworten heikle Abstimmungen, Berichtszyklen und die Kundenkommunikation. KI-Mitarbeiter senken den manuellen Aufwand und das Fehlerrisiko.",
+        "useCases": [
+          "Der <agent>Finanz-Agent</agent> automatisiert die Rechnungsverarbeitung und Zahlungserinnerungen.",
+          "Der <agent>Service-Agent</agent> bearbeitet Kontoanfragen und Anforderungen von Auszügen.",
+          "Der <agent>Research-Agent</agent> stellt Marktdaten zusammen und erstellt Compliance-Zusammenfassungen."
+        ]
+      },
+      "realEstate": {
+        "title": "Immobilien",
+        "description": "Maklerbüros und Hausverwaltungen jonglieren mit Exposés, Anfragen, Besichtigungen und Verträgen über Dutzende Objekte hinweg. KI-Mitarbeiter automatisieren die Koordination.",
+        "useCases": [
+          "Der <agent>Vertriebs-Agent</agent> qualifiziert Interessenten und vereinbart Besichtigungstermine automatisch.",
+          "Die <agent>Assistenz der Geschäftsleitung</agent> pflegt Kalender und Objektaktualisierungen.",
+          "Der <agent>Dokumenten-Agent</agent> erstellt Mietverträge und Unterlagenpakete."
+        ]
+      },
+      "logistics": {
+        "title": "Logistik",
+        "description": "Versand und Lagerhaltung leben von Sendungsverfolgung in Echtzeit, Routenoptimierung und dem Umgang mit Ausnahmen. KI-Mitarbeiter beobachten und reagieren rund um die Uhr.",
+        "useCases": [
+          "Der <agent>Service-Agent</agent> verfolgt Sendungen und klärt Zustellprobleme.",
+          "Der <agent>Finanz-Agent</agent> gleicht Speditionsrechnungen ab und wickelt Frachtzahlungen ab.",
+          "Der <agent>Research-Agent</agent> analysiert die Routeneffizienz und findet Einsparpotenziale."
+        ]
+      },
+      "professional": {
+        "title": "Professional Services",
+        "description": "Beratungen, Kanzleien und Wirtschaftsprüfer leben von abrechenbaren Stunden, Kundenkommunikation und präzisen Dokumenten. KI-Mitarbeiter verschlanken den Overhead.",
+        "useCases": [
+          "Die <agent>Assistenz der Geschäftsleitung</agent> koordiniert Kundentermine und die Vorbereitung im ganzen Haus.",
+          "Der <agent>Dokumenten-Agent</agent> entwirft Angebote, Mandatsschreiben und Statusberichte.",
+          "Der <agent>Research-Agent</agent> sammelt Wettbewerbsinformationen und Zusammenfassungen der Rechtsprechung."
+        ]
+      }
+    }
+  },
+  "howItWorks": {
+    "hero": {
+      "title": "Wie wir Ihre KI-Mitarbeiter",
+      "accent": "bauen und betreiben.",
+      "body": "Ein strukturierter Prozess in vier Phasen, von der Analyse bis zur laufenden Verbesserung — ausgelegt auf echte Ergebnisse im Betrieb, nicht auf Demos."
+    },
+    "phases": {
+      "title": "Was in",
+      "accent": "jeder Phase passiert.",
+      "items": {
+        "discovery": {
+          "title": "Analyse",
+          "content": "Jedes Projekt beginnt mit einer strukturierten Analysephase. In einem Workshop mit Ihren Abteilungsleitungen und den wichtigsten Beteiligten nehmen wir die heutigen Abläufe auf, finden Engpässe und dokumentieren Entscheidungspunkte und Datenquellen jedes Prozesses. Außerdem prüfen wir Ihre bestehende Systemlandschaft — CRM, Helpdesk, ERP, Kalender, Dokumentenablage — um zu verstehen, mit welchen Schnittstellen und Datenformaten die Agenten arbeiten müssen.",
+          "details": [
+            "Drei bis fünf besonders wirksame Abläufe je Abteilung identifizieren, die sich für Automatisierung eignen",
+            "Datenquellen, Systemberechtigungen und Sicherheitsanforderungen erfassen",
+            "Erfolgskennzahlen definieren und den heutigen Stand messen (Zeitaufwand, Fehlerquoten, Durchsatz)",
+            "Üblicher Zeitrahmen: 3–5 Arbeitstage"
+          ]
+        },
+        "architecture": {
+          "title": "Architektur der Agenten",
+          "content": "Auf Basis der Analyse erstellen wir für jeden KI-Mitarbeiter ein ausführliches Architekturdokument. Darin steht, an welche Systeme der Agent angebunden wird, wie er einen Ablauf durchdenkt, welche Entscheidungen er selbst trifft und welche er an einen Menschen übergibt, und woran seine Leistung gemessen wird. Ihr Team prüft und genehmigt die Architektur, bevor eine Zeile Code entsteht.",
+          "details": [
+            "Passendes KI-Modell und Reasoning-Framework für die Domäne jedes Agenten auswählen",
+            "Systemintegrationen und Datenflussdiagramme entwerfen",
+            "Eskalationsregeln, Konfidenzschwellen und Übergaben an Menschen festlegen",
+            "Üblicher Zeitrahmen: 3–5 Arbeitstage"
+          ]
+        },
+        "build": {
+          "title": "Entwicklung und Integration",
+          "content": "Jeder Agent entsteht iterativ in zweiwöchigen Sprints. Wir binden ihn an Ihre bestehenden Systeme an, bauen seine Wissensbasis aus Ihrer Dokumentation und historischen Daten auf und lassen ihn gegen reale Szenarien aus Ihrem Alltag laufen. Jede Integration wird auf Korrektheit, Antwortzeiten und Sonderfälle geprüft, bevor der Agent für den Abnahmetest auf einer Staging-Umgebung bereitsteht.",
+          "details": [
+            "Parallele Entwicklungssprints für jeden KI-Mitarbeiter im Projekt",
+            "Tests mit echten Daten in anonymisierten oder abgeschotteten Kopien Ihrer Systeme",
+            "Abnahmetests mit einer kleinen Gruppe aus Ihrem Team",
+            "Üblicher Zeitrahmen: 2–4 Wochen, je nach Anzahl der Agenten und Komplexität der Integrationen"
+          ]
+        },
+        "operate": {
+          "title": "Betrieb und Weiterentwicklung",
+          "content": "Der Go-live ist nicht die Ziellinie. Wir überwachen die Leistung jedes Agenten laufend, vergleichen Lösungsquoten und eingesparte Zeit mit den Ausgangswerten aus der Analyse und liefern wöchentlich Verbesserungen aus. Wenn sich Ihre Prozesse ändern, passen wir Konfigurationen an, ergänzen neue Integrationen und trainieren mit frischen Daten nach — ganz ohne Entwicklungsaufwand auf Ihrer Seite.",
+          "details": [
+            "Wöchentliche Leistungsbewertung und Ausspielen von Verbesserungen",
+            "Echtzeit-Dashboard mit Kennzahlen und Wirtschaftlichkeit je Abteilung",
+            "Quartalsgespräche mit Ihrer Geschäftsleitung",
+            "Keine Übergabe, keine Anbieterbindung — volle Einsicht in die Arbeitsweise jedes Agenten"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "title": "Ablauf und Zeitplan",
+      "accent": "Häufige Fragen.",
+      "items": {
+        "duration": {
+          "label": "Wie lange dauert ein typisches Projekt?",
+          "content": "Die meisten Projekte mit einem Agenten sind 2–4 Wochen nach Kickoff live. Projekte mit mehreren Agenten dauern in der Regel 4–8 Wochen, wobei die Agenten nacheinander ausgerollt werden, damit sich Ihr Team schrittweise umstellen kann. Der Zeitplan hängt vor allem von der Zahl der Integrationen und der Komplexität der Abläufe ab."
+        },
+        "preparation": {
+          "label": "Müssen wir vor der Analyse etwas vorbereiten?",
+          "content": "Nein, eine Vorbereitung ist nicht nötig. Unser Analyse-Workshop ist darauf ausgelegt, alles Nötige aus dem vorhandenen Wissen Ihres Teams zu holen. Wenn Sie vorarbeiten möchten, können Sie je Abteilung die drei bis fünf Abläufe notieren, die am wiederkehrendsten oder fehleranfälligsten wirken — nötig ist das aber nicht. Wir empfehlen lediglich, dass die Abteilungsleitungen an den Workshop-Terminen teilnehmen."
+        },
+        "afterLive": {
+          "label": "Was passiert, wenn ein Agent live ist?",
+          "content": "Dann beginnt der laufende Betrieb. Ihr Team erhält ein Leistungs-Dashboard, wir prüfen die Entscheidungen der Agenten täglich und liefern wöchentlich Verbesserungen aus. Ändert sich ein Ablauf — ein neues CRM-Feld, ein geänderter Freigabeweg, ein neues System — übernehmen wir die Anpassung. Sie müssen weder Code schreiben noch Infrastruktur betreiben."
+        },
+        "prototype": {
+          "label": "Können wir vor der Beauftragung einen Prototyp sehen?",
+          "content": "Ja. Nach der Analyse- und Architekturphase bauen wir einen lauffähigen Prototyp, der an Testkopien Ihrer Systeme angebunden ist. Ihr Team prüft ihn an realen Szenarien. Erst wenn Sie den Prototyp freigeben, gehen wir in den produktiven Rollout. So gibt es keine Überraschungen, und der Agent erfüllt Ihre Erwartungen vom ersten Tag an."
+        },
+        "stackChange": {
+          "label": "Was, wenn sich unsere Systemlandschaft während des Projekts ändert?",
+          "content": "Das ist normal. Wir entwerfen Agenten mit lose gekoppelten Integrationen, sodass der Wechsel eines CRM, Helpdesks oder einer Datenquelle eine Konfigurationsänderung ist und kein Neubau. Kommt während der Entwicklung ein neues System hinzu, passen wir Umfang und Zeitplan entsprechend an — ohne Zusatzkosten als Strafe, dafür mit klarer Kommunikation."
+        }
+      }
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Preise für",
+      "accent": "individuellen Umfang.",
+      "body": "Wir bauen maßgeschneiderte KI-Mitarbeiter, keine SaaS-Abos. Jede Umsetzung ist anders, deshalb wird jeder Preis auf Basis Ihrer tatsächlichen Anforderungen kalkuliert."
+    },
+    "factors": {
+      "title": "Was den Preis",
+      "accent": "bestimmt.",
+      "items": {
+        "count": {
+          "title": "Anzahl der KI-Mitarbeiter",
+          "description": "Eine Umsetzung für eine Abteilung kostet weniger als ein Rollout über Service, Vertrieb und Finanzen hinweg. Für Teams, die drei oder mehr Agenten gemeinsam einführen, gibt es eine gestaffelte Struktur."
+        },
+        "integration": {
+          "title": "Komplexität der Integration",
+          "description": "Die Anbindung an ein CRM mit gut dokumentierter Schnittstelle ist unkompliziert. Ein historisch gewachsenes ERP, mehrere Data Warehouses oder eigene interne Werkzeuge bedeuten zusätzlichen Entwicklungs- und Abstimmungsaufwand."
+        },
+        "volume": {
+          "title": "Datenmenge und Durchsatz",
+          "description": "Agenten, die täglich tausende Vorgänge bearbeiten, brauchen robustere Infrastruktur und Überwachung als Umsetzungen mit geringerem Volumen. Wir legen die Architektur auf Ihre tatsächliche Last aus."
+        },
+        "users": {
+          "title": "Anzahl der Nutzer und Abteilungen",
+          "description": "Ein Agent für ein zehnköpfiges Team wird anders konfiguriert als einer für 200 Nutzer in mehreren Regionen mit Rollenrechten und Eskalationsketten."
+        },
+        "support": {
+          "title": "Umfang von Support und Wartung",
+          "description": "Der Standard-Support umfasst wöchentliches Monitoring und Updates. Enterprise-Pakete enthalten feste Ansprechpersonen im Support, kürzere Reaktionszeiten und eigene Auswertungen."
+        }
+      }
+    },
+    "quote": {
+      "title": "So kommen Sie zu einem",
+      "accent": "belastbaren Angebot.",
+      "body": "Einen echten Preis gibt es nur, wenn der Umfang feststeht. Unsere <process>Analysephase</process> liefert ein ausführliches Architekturdokument und ein Festpreisangebot — ohne Lockangebote, ohne versteckte Kosten.",
+      "rangeLabel": "Richtwert",
+      "range": "Die meisten Umsetzungen für eine Abteilung beginnen im Bereich <amount>[X–Y]</amount>. Projekte mit mehreren Agenten und Enterprise-Umsetzungen richten sich nach dem Umfang. <note>(Hier stehen später Ihre echten Zahlen.)</note>"
+    },
+    "faq": {
+      "title": "Fragen zu",
+      "accent": "Preisen.",
+      "items": {
+        "minimum": {
+          "label": "Gibt es eine Mindestprojektgröße?",
+          "content": "Wir starten in der Regel mit mindestens einem vollständigen KI-Mitarbeiter. Es gibt keine Mindestzahl an Nutzern und keine Umsatzhürde: Wenn ein einzelner Agent Ihrem Team spürbar Stunden pro Woche spart, lohnt sich das Projekt. Unter unseren Kunden sind Teams mit zehn und mit tausend Personen."
+        },
+        "support": {
+          "label": "Bieten Sie laufende Supportverträge an?",
+          "content": "Ja. Jede Umsetzung enthält eine erste Betriebsphase als Teil der Entwicklung. Danach bieten wir monatliche Supportverträge mit Monitoring, Updates, Nachtraining und laufender Pflege der Integrationen. Enterprise-Verträge enthalten feste Ansprechpersonen und kürzere Reaktionszeiten."
+        },
+        "startSmall": {
+          "label": "Können wir mit einem KI-Mitarbeiter starten und später erweitern?",
+          "content": "Auf jeden Fall. Die meisten Kunden beginnen mit einer Abteilung — häufig Service oder Finanzen — und ergänzen weitere Agenten, sobald die Ergebnisse sichtbar sind. Spätere Agenten sind schneller und günstiger umzusetzen, weil die Grundlage der Integration bereits steht."
+        },
+        "included": {
+          "label": "Was ist im Entwicklungspreis enthalten?",
+          "content": "Der Entwicklungspreis umfasst Analyse-Workshops, den Entwurf der Agentenarchitektur, Entwicklung und Tests, die Integration in Ihre bestehenden Systeme, Abnahmetests und den Rollout. Ebenfalls enthalten sind der erste Betriebsmonat und das Leistungsmonitoring."
+        },
+        "contracts": {
+          "label": "Verlangen Sie langfristige Verträge?",
+          "content": "Nein. Nach der ersten Entwicklungsphase läuft die Zusammenarbeit monatlich. Wir sind überzeugt, dass der Nutzen der Agenten Kunden hält, nicht die Vertragsbindung. Sie können jederzeit ausbauen, reduzieren oder mit 30 Tagen Frist beenden."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, den Umfang zu klären?",
+      "body": "Sagen Sie uns, mit welcher Abteilung Sie starten wollen. Wir vereinbaren ein Analysegespräch und liefern innerhalb einer Woche ein Festpreisangebot.",
+      "primary": "Analysegespräch buchen",
+      "secondary": "Mehr zu unserem Vorgehen"
+    }
+  },
+  "process": {
+    "steps": {
+      "discovery": {
+        "title": "Analyse",
+        "description": "Wir prüfen, wie die Abteilung tatsächlich arbeitet — Systeme, Übergaben, Entscheidungspunkte — und bewerten, wo ein Agent den größten Hebel hat. Ihre Prozesse, keine Standardvorlage."
+      },
+      "architecture": {
+        "title": "Architektur",
+        "description": "Wir entwerfen das Agentensystem: welche Daten es liest, in welchen Systemen es handeln darf, wo es an einen Menschen übergibt und woran der Erfolg gemessen wird."
+      },
+      "build": {
+        "title": "Entwicklung und Training",
+        "description": "Wir bauen die Agenten und trainieren sie auf Ihren Daten, Prozessen und Ihrer Sprache. Jede Aktion ist nachvollziehbar, sodass Sie genau sehen, was der Agent getan hat und warum."
+      },
+      "operate": {
+        "title": "Betrieb und Verbesserung",
+        "description": "Wir betreiben die Agenten und entwickeln sie weiter. Agent-as-a-Service statt einmaliger Projektübergabe mit Handbuch."
+      }
+    }
+  },
+  "contactCta": {
+    "eyebrow": "Hier beginnen",
+    "agent": {
+      "lead": "Bereit für Ihren",
+      "accent": "{name}?"
+    },
+    "generic": {
+      "lead": "Welche Routine geben Sie",
+      "accent": "als Erstes ab?"
+    },
+    "body": "Ein kurzes Gespräch. Wir bestimmen den Agenten, der sich in Ihrem Unternehmen am schnellsten rechnet, und legen einen konkreten Plan für den Start vor.",
+    "primary": "Demo buchen",
+    "secondary": "Kontakt aufnehmen"
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Kontakt",
+      "title": "Sagen Sie uns, was Sie",
+      "accent": "bauen wollen.",
+      "body": "Wir arbeiten mit etablierten Marken, Führungsteams und Gründerinnen und Gründern, die Software auf einem Niveau brauchen, für das ihr Name stehen kann. Beginnen Sie mit dem Problem statt mit dem Lastenheft, und wir sagen Ihnen, was wirklich nötig ist.",
+      "emailLabel": "E-Mail"
+    },
+    "notes": {
+      "answered": "Jede Anfrage wird beantwortet, auch die, für die wir nicht das richtige Haus sind.",
+      "builders": "Sie sprechen mit den Menschen, die es bauen würden, nicht mit einem Account Manager.",
+      "private": "Was Sie teilen, bleibt bei uns und wird ohne Ihre Zustimmung nie veröffentlicht."
+    },
+    "engagements": {
+      "eyebrow": "Wo Projekte beginnen",
+      "title": "Die meisten Projekte beginnen an einer von",
+      "accent": "drei Stellen.",
+      "body": "Sagen Sie uns, welche Ihrer Situation entspricht, dann startet das Gespräch auf der richtigen Grundlage.",
+      "startHere": "Hier beginnen",
+      "items": {
+        "newProduct": {
+          "label": "Ein neues Produkt",
+          "description": "Eine Idee, ein Markt, den Sie kennen, und noch nichts Gebautes. Wir formen daraus etwas, das konkret genug zum Bauen und klein genug zum Starten ist.",
+          "subject": "Anfrage: neues Produkt"
+        },
+        "rebuild": {
+          "label": "Ein Neuaufbau",
+          "description": "Software, die Sie bis hierher getragen hat und Sie jetzt ausbremst. Wir bewerten den Bestand und ersetzen ihn, ohne das Geschäft anzuhalten, das darauf läuft.",
+          "subject": "Anfrage: Neuaufbau"
+        },
+        "continuing": {
+          "label": "Laufende Weiterentwicklung",
+          "description": "Ein Produkt, das bereits live ist und ein Team braucht, das es sauber weiterbaut — auf einem Niveau, für das Ihr Name stehen kann.",
+          "subject": "Anfrage: laufende Weiterentwicklung"
+        }
+      }
+    },
+    "conversation": {
+      "eyebrow": "Was danach passiert",
+      "title": "Wie das erste",
+      "subtitle": "Gespräch",
+      "accent": "abläuft.",
+      "body": "Kein Pitch Deck und keine kostenpflichtige Vorstudie, bevor Ihnen jemand etwas Nützliches sagt.",
+      "steps": {
+        "read": {
+          "title": "Jemand mit Erfahrung liest sie",
+          "body": "Ihre Anfrage geht an die Menschen, die die Arbeit machen würden. Es gibt kein Qualifizierungsgespräch und keinen Account Manager zwischen Ihnen und einer Antwort."
+        },
+        "business": {
+          "title": "Wir fragen nach dem Geschäft, nicht nach der Funktionsliste",
+          "body": "Wie die Arbeit heute läuft, wen sie ausbremst und was es kostet, wenn etwas schiefgeht. Die Anforderung, die sich zu bauen lohnt, liegt fast immer unter der, die man Ihnen genannt hat."
+        },
+        "view": {
+          "title": "Sie bekommen eine fundierte Einschätzung",
+          "body": "Was es aus unserer Sicht braucht, wo das Risiko liegt, was wir zuerst bauen würden und was später kommen kann. Auch dann, wenn die ehrliche Antwort lautet, dass Sie weniger brauchen als gedacht."
+        },
+        "proposal": {
+          "title": "Danach ein Angebot, wenn wir das richtige Haus sind",
+          "body": "Umfang, Reihenfolge und Kosten schriftlich, mit klar benannten Annahmen, damit auf halber Strecke nichts überraschend auftaucht."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Bevor Sie schreiben",
+      "title": "Fragen, die uns",
+      "subtitle": "zuerst gestellt",
+      "accent": "werden.",
+      "body": "Wenn Ihre nicht dabei ist, stellen Sie sie im Formular. Wir beantworten sie viel lieber jetzt als mitten im Projekt.",
+      "items": {
+        "ownTeam": {
+          "label": "Wir haben ein eigenes Team. Können Sie damit zusammenarbeiten?",
+          "content": "Ja, und oft ist das die bessere Lösung. Wir können ein Produkt, eine Plattform oder einen Teil des Systems übernehmen, während Ihr Team den Rest hält — nach Ihrem Review- und Release-Prozess, nicht nach unserem."
+        },
+        "inherited": {
+          "label": "Übernehmen Sie Software, die jemand anderes gebaut hat?",
+          "content": "Regelmäßig. Wir lesen die Codebasis und erfassen, was tatsächlich da ist, bevor wir etwas empfehlen. Danach sagen wir klar, ob sich Weiterbauen oder Ersetzen lohnt. Lieber verlieren wir den größeren Auftrag, als Ihnen beides in Rechnung zu stellen."
+        },
+        "ownership": {
+          "label": "Wem gehören Code und geistiges Eigentum?",
+          "content": "Ihnen, vollständig, ab dem ersten Commit. Sie erhalten Repositories, Infrastruktur und Dokumentation und können die Arbeit jederzeit an ein anderes Team geben. Es wird nichts als Druckmittel zurückgehalten."
+        },
+        "confidentiality": {
+          "label": "Wie wird Vertraulichkeit gehandhabt?",
+          "content": "Wir unterzeichnen Ihre Vereinbarung vor dem ersten inhaltlichen Gespräch oder stellen unsere zur Verfügung, wenn das einfacher ist. Ihre Arbeit wird ohne Ihre schriftliche Zustimmung nie gezeigt, erwähnt oder als Referenz veröffentlicht."
+        },
+        "brief": {
+          "label": "Brauchen wir ein fertiges Briefing, bevor wir Sie ansprechen?",
+          "content": "Nein. Ein Briefing hilft, aber eine klare Beschreibung des Problems ist mehr wert als eine Spezifikation, die um eine ungeprüfte Lösung herum geschrieben wurde. Wenn Sie beides nicht haben, ist genau das der Zweck des ersten Gesprächs."
+        },
+        "pricing": {
+          "label": "Wie werden Preise und Termine festgelegt?",
+          "content": "Klar abgegrenzte Arbeitspakete werden zum Festpreis angeboten. Laufende Produktarbeit läuft monatlich mit einem vereinbarten Team und einem Plan, den Sie in jedem Zyklus neu ausrichten können. In beiden Fällen stehen Zahlen und Reihenfolge fest, bevor etwas beginnt."
+        }
+      }
+    },
+    "form": {
+      "optional": "optional",
+      "choose": "Bitte wählen",
+      "submit": "Nachricht senden",
+      "directTo": "Geht direkt an {email}",
+      "mailSubject": "Neue Projektanfrage von {name}",
+      "fields": {
+        "name": {
+          "label": "Ihr Name"
+        },
+        "email": {
+          "label": "E-Mail"
+        },
+        "company": {
+          "label": "Unternehmen"
+        },
+        "projectType": {
+          "label": "Worum geht es"
+        },
+        "timeline": {
+          "label": "Zeitrahmen"
+        },
+        "message": {
+          "label": "Zum Projekt",
+          "hint": "Was Sie bauen wollen oder das Problem, das Ihnen immer wieder begegnet."
+        }
+      },
+      "projectTypes": {
+        "webApp": "Webanwendung",
+        "mobileApp": "Mobile Anwendung",
+        "website": "Website",
+        "design": "UI- und UX-Design",
+        "agents": "KI-Agenten und Chatbots",
+        "automation": "Geschäftsautomatisierung",
+        "unsure": "Noch offen"
+      },
+      "timelines": {
+        "asap": "So bald wie möglich",
+        "oneToThree": "In 1 bis 3 Monaten",
+        "threeToSix": "In 3 bis 6 Monaten",
+        "planning": "Noch in der Planung"
+      },
+      "errors": {
+        "name": "Bitte nennen Sie uns Ihren Namen.",
+        "emailMissing": "Wir brauchen eine Adresse für die Antwort.",
+        "emailInvalid": "Diese Adresse sieht nicht richtig aus.",
+        "message": "Ein bis zwei Sätze zum Problem genügen."
+      },
+      "sent": {
+        "title": "Ihre Nachricht ist fertig zum Senden.",
+        "body": "Wir haben sie mit allen Angaben in Ihrem E-Mail-Programm geöffnet. Senden Sie sie dort ab, dann erreicht sie uns unter {email}. Falls sich nichts geöffnet hat, blockiert Ihr Browser möglicherweise Mail-Links — schreiben Sie uns in dem Fall direkt.",
+        "retry": "E-Mail-Programm erneut öffnen",
+        "again": "Weitere Nachricht schreiben"
+      }
+    }
+  },
+  "aiAutomation": {
+    "hero": {
+      "eyebrow": "KI-Mitarbeiter für jede Abteilung",
+      "headline": {
+        "first": "Hören Sie auf,",
+        "accentOne": "im",
+        "second": "Unternehmen zu arbeiten. Arbeiten Sie",
+        "accentTwo": "am",
+        "third": "Unternehmen."
+      },
+      "body": "Eigenständige Agenten, die selbst handeln, statt auf Anweisungen zu warten. Wir konzipieren, bauen und betreiben die Agenten-Infrastruktur, die Ihrem Team die Routine abnimmt — Service, Vertrieb, Finanzen, Research, Dokumente und Koordination.",
+      "primaryCta": "Demo buchen",
+      "secondaryCta": "So funktioniert es",
+      "footnote": "Für Sie gebaut, integriert und betrieben — kein Werkzeug, für das Sie erst Personal brauchen."
+    },
+    "transformation": {
+      "eyebrow": "Der Wechsel",
+      "title": "Von der Arbeit selbst zur",
+      "accent": "Steuerung der Arbeit.",
+      "lead": "Heute landet alles auf Ihrem Schreibtisch und Sie reagieren. Mit einer Agentenebene läuft die Routine von selbst und Sie behalten den Überblick.",
+      "today": {
+        "eyebrow": "Heute · im Unternehmen",
+        "title": "Alles läuft über Sie.",
+        "body": "Anfragen kommen aus allen Richtungen, ohne Reihenfolge und Priorität. Die Arbeit wird erledigt, aber niemand steuert.",
+        "items": [
+          "E-Mail-Verläufe",
+          "Eingehende Anrufe",
+          "Rechnungen",
+          "Dokumente",
+          "Chat-Anfragen",
+          "Verwaltung",
+          "Nachfassen",
+          "Reporting"
+        ]
+      },
+      "withAgents": {
+        "eyebrow": "Mit Agenten · am Unternehmen",
+        "title": "Sie sehen das ganze Spielfeld.",
+        "body": "Agenten verantworten die wiederkehrende Arbeit von Anfang bis Ende. Sie geben die Richtung vor, prüfen Ergebnisse und entscheiden, wo es weitergeht.",
+        "items": [
+          "Routine läuft eigenständig",
+          "Sie sehen jedes Ergebnis",
+          "Ausnahmen kommen zu Ihnen",
+          "Kapazität wächst ohne Neueinstellungen"
+        ]
+      }
+    },
+    "showcase": {
+      "eyebrow": "Das Team",
+      "title": "Ein Team aus",
+      "accent": "digitalen Mitarbeitern.",
+      "lead": "Wir bauen die Agenten mit dem größten Hebel in Ihrem Unternehmen — entwickelt für Ihre Prozesse, nicht von der Stange gekauft. Untereinander abgestimmt und rund um die Uhr im Einsatz."
+    },
+    "compounding": {
+      "eyebrow": "Warum sich ein früher Start lohnt",
+      "title": "Je länger es läuft,",
+      "accent": "desto stärker wird es.",
+      "lead": "Ein Agentensystem ist kein einmaliges Projekt, es baut auf. Jeder neue Agent erbt, was die bestehenden bereits über Ihr Unternehmen gelernt haben. Wer heute startet, arbeitet in einem Jahr auf einer Grundlage, die ein Wettbewerber erst noch aufbauen muss.",
+      "coverage": "{filled} von {total} Abteilungen abgedeckt",
+      "stages": {
+        "monthOne": {
+          "when": "Monat 1",
+          "title": "Erster Agent live",
+          "body": "Der Anwendungsfall, der sich am schnellsten rechnet. Hier beginnt die Wissensbasis."
+        },
+        "monthThree": {
+          "when": "Monat 3",
+          "title": "Zwei weitere kommen dazu",
+          "body": "Jeder neue Agent erbt, was der erste bereits über Ihr Unternehmen gelernt hat."
+        },
+        "monthSix": {
+          "when": "Monat 6",
+          "title": "Abteilungen verbinden sich",
+          "body": "Agenten übergeben Arbeit aneinander. Die Wissensbasis ist jetzt das eigentliche Kapital."
+        },
+        "yearOne": {
+          "when": "Ab Jahr 1",
+          "title": "Zinseszins",
+          "body": "Eine Struktur, für die ein Wettbewerber mit heutigem Start noch zwölf Monate Arbeit vor sich hat."
+        }
+      }
+    },
+    "impact": {
+      "eyebrow": "Was sich ändert",
+      "title": "Die Kennzahlen, die sich bewegen, wenn Agenten",
+      "accent": "die Routine übernehmen.",
+      "lead": "Zielwerte, modelliert an einem realen Agenten-Einsatz — was passiert, wenn wiederkehrende Arbeit keinen Menschen mehr beschäftigt.",
+      "disclaimer": "Beispielhafte Prognosen auf Basis modellierter Abläufe. Die Werte hängen von Prozess, Datenqualität und Volumen ab — wir prüfen sie in der Analysephase an Ihren eigenen Zahlen.",
+      "metrics": {
+        "drafting": {
+          "label": "Zeit für Dokumentenentwürfe",
+          "detail": "Der Dokumenten-Agent erstellt strukturierte Entwürfe in Ihrer Hausform. Ihr Team prüft den Inhalt, statt bei null anzufangen."
+        },
+        "search": {
+          "label": "Zeit für die Suche",
+          "detail": "Die Suche in natürlicher Sprache liefert die passende Stelle in Ihrer Wissensbasis sofort, statt ein Dutzend Dateien zu öffnen."
+        },
+        "onboarding": {
+          "label": "Dauer des Kunden-Onboardings",
+          "detail": "Neue Konten werden automatisch erfasst, angereichert und eingerichtet — produktiv am ersten Tag statt nach drei Wochen."
+        },
+        "capacity": {
+          "label": "Kapazität pro Teammitglied",
+          "detail": "Jede Person betreut ein Vielfaches der heutigen Kundenzahl. Wachstum entsteht durch Durchsatz, nicht durch Personalaufbau."
+        },
+        "responsiveness": {
+          "label": "Reaktionsgeschwindigkeit bei Änderungen",
+          "detail": "Markt-, Preis- und Regulierungsänderungen werden täglich erkannt und den betroffenen Kunden zugeordnet."
+        },
+        "audit": {
+          "label": "Vorbereitung von Prüfungen",
+          "detail": "Nachweise und Unterlagen stellen sich aus der Wissensbasis selbst zusammen, Vollständigkeit ist strukturell erzwungen."
+        }
+      }
+    },
+    "costs": {
+      "eyebrow": "Der ehrliche Vergleich",
+      "title": "Eine Einstellung kostet mehr als",
+      "accent": "das Gehalt.",
+      "lead": "Hinter jeder Stelle steht ein Bündel fixer Kosten und Risiken. Ein Agent bringt keines davon mit.",
+      "employee": {
+        "eyebrow": "Pro Mitarbeiter",
+        "title": "Fixkosten und Risiko",
+        "gone": "Entfällt",
+        "items": [
+          "Gehalt und jährliche Erhöhungen",
+          "Lohnnebenkosten und Sozialabgaben",
+          "Zusatzleistungen und Altersvorsorge",
+          "Bezahlter Urlaub",
+          "Krankheitstage und Vertretung",
+          "Recruiting und Einarbeitung",
+          "Anlaufzeit bis zur vollen Produktivität",
+          "Eine feste Zahl an Arbeitsstunden"
+        ]
+      },
+      "agent": {
+        "eyebrow": "Pro Agent",
+        "title": "Eine Investition, kein Gehalt",
+        "items": [
+          "Läuft rund um die Uhr, ohne Urlaub und Ausfall",
+          "Keine Lohnnebenkosten und Zusatzleistungen",
+          "In Minuten dupliziert, wenn Kapazität fehlt",
+          "Gleichbleibende, prüfbare Ergebnisqualität",
+          "Wird mit jeder Modellgeneration besser",
+          "Produktiv ab dem ersten Tag"
+        ]
+      }
+    },
+    "calculator": {
+      "eyebrow": "Rechnen Sie mit Ihren Zahlen",
+      "title": "Was würde eine Abteilung wie Ihre",
+      "accent": "tatsächlich sparen?",
+      "lead": "Legen Sie Größe und Kosten der Funktion fest und wie viel ihrer Arbeit wiederkehrend ist. Die Hochrechnung läuft über zehn Jahre mit 3 % Gehaltssteigerung.",
+      "projected": "Hochgerechnet auf {years} Jahre",
+      "cta": "Lassen Sie uns das gemeinsam prüfen",
+      "disclaimer": "Eine Hochrechnung, kein Angebot. Sie setzt voraus, dass der wiederkehrende Anteil tatsächlich abgebbar ist und der Umfang der Agenten stabil bleibt. In der Analysephase rechnen wir das mit Ihren echten Prozessdaten neu.",
+      "result": {
+        "saving": "Nettoersparnis gegenüber dem heutigen Betrieb der Funktion",
+        "moreExpensive": "teurer als der heutige Zustand bei diesen Eingaben"
+      },
+      "fields": {
+        "headcount": {
+          "label": "Personen in der Funktion",
+          "hint": "Das Team, dessen Routinearbeit Agenten übernehmen würden."
+        },
+        "salary": {
+          "label": "Durchschnittsgehalt",
+          "hint": "Grundgehalt. Wir rechnen {loading} % für Abgaben, Zusatzleistungen und Gemeinkosten hinzu."
+        },
+        "automatable": {
+          "label": "Anteil wiederkehrender Arbeit",
+          "hint": "Sichtung, Nachschlagen, Entwürfe, Datenerfassung, Reporting — die Arbeit, die ein Agent übernehmen kann."
+        },
+        "agentCost": {
+          "label": "Jährliche Kosten des Agentenprogramms",
+          "hint": "Entwicklung, Integration und laufender Betrieb, alles inklusive."
+        }
+      },
+      "rows": {
+        "loadedCost": "Vollkosten der Funktion, Jahr 1",
+        "repeatable": "Wiederkehrende Arbeit pro Jahr",
+        "annualSaving": "Nettoersparnis pro Jahr",
+        "humanTotal": "Personalkosten über {years} Jahre",
+        "agentTotal": "Agentenprogramm über {years} Jahre"
+      }
+    },
+    "brain": {
+      "eyebrow": "Der eigentliche Hebel",
+      "title": "Keine einzelnen Bots, sondern ein",
+      "accent": "Unternehmensgedächtnis.",
+      "lead": "Wir übergeben Ihnen keine sechs unverbundenen Chatbots. Wir bauen eine Wissensbasis, die Ihnen gehört — trainiert auf Ihre Prozesse, Ihre Daten und Ihre Sprache — und jeder Agent liest daraus und schreibt zurück.",
+      "body": "Das ist das eigentliche Kapital. Es macht Agent Nummer sechs schneller einsatzbereit als Agent Nummer eins, und es wird jeden Monat wertvoller, statt zu veralten.",
+      "diagramLabel": "Sechs Agenten, die alle aus einer gemeinsamen Wissensbasis des Unternehmens schöpfen",
+      "oneSource": "Jeder Agent schöpft aus einer Quelle",
+      "brainLabel": "Unternehmensgedächtnis",
+      "brainSub": "Ihre Prozesse · Ihre Daten · Ihre Sprache",
+      "guarantees": [
+        "Ihre Daten bleiben Ihre, in Ihrer Infrastruktur",
+        "Jede Antwort eines Agenten ist bis zur Quelle nachvollziehbar",
+        "Übersteht Modellwechsel — Sie bauen nichts neu"
+      ]
+    },
+    "generations": {
+      "eyebrow": "Gebaut, um an Wert zu gewinnen",
+      "title": "Stärker mit jeder",
+      "accent": "Modellgeneration.",
+      "lead": "Die Struktur, die Sie heute aufbauen, läuft auf den deutlich leistungsfähigeren Modellen von morgen, ohne neu gebaut zu werden. Wer sie jetzt schafft, vervielfacht ihren Wert mit jeder weiteren Generation.",
+      "footnote": "Immer dieselbe Agentenstruktur — nur das Modell darunter wechselt.",
+      "items": {
+        "today": {
+          "when": "Heute",
+          "sub": "aktuelle Modelle",
+          "body": "Ihre Agenten laufen zuverlässig auf dem, was heute verfügbar ist. Nichts Spekulatives."
+        },
+        "next": {
+          "when": "Nächste",
+          "sub": "Generation",
+          "body": "Dieselben Agenten übernehmen längere, weniger überwachte Aufgaben. Ohne Neubau."
+        },
+        "after": {
+          "when": "Danach",
+          "sub": "Generation",
+          "body": "Arbeit, die Sie heute im Haus behalten, weil man sie keinem Modell anvertrauen konnte."
+        },
+        "onward": {
+          "when": "Weiter",
+          "sub": "in Richtung allgemeiner Fähigkeiten",
+          "body": "Ihre Struktur steht bereits. Spätere Einsteiger beginnen dort, wo Sie in Monat eins standen."
+        }
+      }
+    },
+    "curve": {
+      "eyebrow": "Die Trendlinie",
+      "title": "Die Fähigkeitskurve verläuft",
+      "accent": "exponentiell.",
+      "lead": "METR stellt fest, dass sich die Länge einer Aufgabe, die ein KI-Agent eigenständig abschließt, etwa alle sieben Monate verdoppelt — seit 2024 eher alle vier. Wer die Struktur jetzt aufbaut, profitiert von jeder Verdopplung.",
+      "chartLabel": "Logarithmische Darstellung der Aufgabenlänge autonomer KI, von Sekunden im Jahr 2019 bis zu Stunden heute, mit einer prognostizierten Fortsetzung in Tage und Wochen",
+      "projected": "Prognose",
+      "caption": "Aufgabenlänge, die ein KI-Agent bei 50 % Erfolgsquote eigenständig bewältigt, logarithmische Skala. Quelle: METR, <source>Measuring AI Ability to Complete Long Tasks</source> (2025). Die gestrichelte Fortsetzung ist eine beispielhafte Projektion, keine Prognose von METR.",
+      "axis": {
+        "seconds": "Sekunden",
+        "minutes": "Minuten",
+        "hours": "Stunden",
+        "days": "Tage",
+        "weeks": "Wochen"
+      },
+      "points": {
+        "y2019": {
+          "note": "Sekunden"
+        },
+        "y2020": {
+          "note": "< 1 Min."
+        },
+        "y2023": {
+          "note": "Minuten"
+        },
+        "y2025": {
+          "note": "~1 Stunde"
+        },
+        "today": {
+          "note": "Stunden",
+          "year": "Heute"
+        }
+      }
+    },
+    "quote": {
+      "eyebrow": "Unsere These",
+      "quote": "Der Vorteil ist nicht das Modell — alle bekommen dieselben Modelle. Der Vorteil ist, die Struktur zu haben, wenn das nächste erscheint.",
+      "attribution": "Agenten, für Sie konzipiert, gebaut und betrieben"
+    },
+    "process": {
+      "eyebrow": "So arbeiten wir",
+      "title": "Vom ersten Gespräch zum",
+      "accent": "laufenden Betrieb.",
+      "lead": "Wir übergeben keinen Bot und verschwinden. Vier Phasen machen aus einer Abteilung einen messbaren, sich laufend verbessernden autonomen Betrieb."
+    },
+    "faq": {
+      "eyebrow": "Bevor Sie fragen",
+      "title": "Häufig gestellte",
+      "accent": "Fragen.",
+      "items": {
+        "fit": {
+          "label": "Für welche Unternehmen lohnt sich das wirklich?",
+          "content": "Für etablierte Unternehmen mit wiederkehrenden, wissensintensiven Prozessen — Vertrieb, Service, Finanzen, Betrieb. Branchenunabhängig. Entscheidend ist nicht Ihre Branche, sondern ob dieselbe Art von Arbeit immer wieder anfällt."
+        },
+        "vsChatbot": {
+          "label": "Was unterscheidet einen KI-Mitarbeiter von einem Chatbot?",
+          "content": "Ein Chatbot beantwortet Fragen in einem Chatfenster. Ein KI-Mitarbeiter ist ein dauerhaft laufender, eigenständiger Agent mit Zugriff auf Ihre Systeme: Er legt Tickets an, pflegt CRM-Datensätze, erstellt Rechnungen und vereinbart Termine über mehrere Systeme hinweg, ohne dass ein Mensch dazwischensteht. Ein Teammitglied, keine FAQ-Oberfläche."
+        },
+        "timeline": {
+          "label": "Wie lange dauert es, bis wirklich etwas läuft?",
+          "content": "Der erste produktive Agent ist meist in zwei bis vier Wochen live. Wir starten mit dem Anwendungsfall, der sich am schnellsten rechnet, und bauen von dort aus weiter. Analyse und Architektur passieren in Woche eins."
+        },
+        "data": {
+          "label": "Was passiert mit unseren Daten?",
+          "content": "Ihre Daten bleiben Ihre. Jeder Agent arbeitet in Ihrer eigenen Infrastruktur oder einer dedizierten Private Cloud, rund um eine Wissensbasis, die Ihnen gehört. Verschlüsselt bei der Übertragung und im Ruhezustand, mit klaren Zugriffs- und Aufbewahrungsregeln. Wir trainieren keine Basismodelle mit Ihren Daten."
+        },
+        "expertise": {
+          "label": "Brauchen wir KI-Fachwissen im Team?",
+          "content": "Nein. Wir bauen, betreiben und verbessern die Agenten für Sie — Agent-as-a-Service. Sie behalten die Kontrolle über Umfang und Richtlinien, ohne Modell-Engineering einstellen zu müssen."
+        },
+        "vsChatGpt": {
+          "label": "Ist das nur ChatGPT mit anderer Oberfläche?",
+          "content": "Nein. Das sind maßgeschneiderte Multi-Agenten-Systeme, angebunden an Ihre Systeme und Daten und trainiert auf Ihre Prozesse. Der Wert liegt in der Integration und der Wissensbasis darunter, nicht im Modell."
+        }
+      }
+    }
+  },
+  "agents": {
+    "learnMore": "Mehr erfahren",
+    "support": {
+      "name": "Service-Agent",
+      "short": "Service",
+      "tagline": "Anfragen lösen, bevor sie eskalieren",
+      "description": "Ein eigenständiger Helpdesk-Agent, der eingehende Anfragen sichtet, häufige Fragen aus Ihrer Wissensbasis beantwortet und nur dann übergibt, wenn menschliches Urteil gefragt ist. Aus gelösten Tickets lernt er und wird mit der Zeit treffsicherer.",
+      "features": [
+        "Sichtung und Kategorisierung von Tickets",
+        "Automatische Antwort aus der Wissensbasis",
+        "Eskalation an die richtige Stelle",
+        "Antworten mit Gespür für die Stimmung"
+      ],
+      "responsibilities": [
+        "Kundenfragen aus Ihrer Dokumentation und den FAQ beantworten",
+        "Support-Tickets über den gesamten Verlauf verfolgen und aktualisieren",
+        "Komplexe oder heikle Fälle an das richtige Team übergeben",
+        "Wiederkehrende Probleme sichtbar machen, damit Ihr Produktteam die Ursache beheben kann"
+      ],
+      "businessBenefits": [
+        "Kunden in Sekunden antworten statt in Stunden",
+        "Ticketaufkommen um 40–60 % senken",
+        "Erfahrene Fachkräfte von der Erstsichtung entlasten"
+      ],
+      "useCases": [
+        "Ein SaaS-Anbieter leitet alle einfachen Abrechnungs- und Kontofragen an den Service-Agenten und senkt die durchschnittliche Erstantwortzeit von 4 Stunden auf 30 Sekunden.",
+        "Eine E-Commerce-Marke setzt den Agenten im Hilfebereich ein, um Sendungsabfragen und Rücksendewünsche rund um die Uhr zu bearbeiten."
+      ]
+    },
+    "sales": {
+      "name": "Vertriebs-Agent",
+      "short": "Vertrieb",
+      "tagline": "Anfragen qualifizieren und Termine buchen",
+      "description": "Ein KI-Vertriebsmitarbeiter, der Website-Besucher anspricht, Produktfragen beantwortet, eingehende Anfragen gegen Ihr Wunschkundenprofil qualifiziert und Demotermine vereinbart — ohne dass ein Mensch eingreifen muss, bis der Termin beginnt.",
+      "features": [
+        "Qualifizierung und Bewertung von Anfragen",
+        "Ansprache über mehrere Kanäle",
+        "Terminbuchung und Verschiebung",
+        "CRM-Abgleich (HubSpot, Salesforce)"
+      ],
+      "responsibilities": [
+        "Ihre Leistungen erklären und die passende Lösung empfehlen",
+        "Anfragen gegen Ihr Wunschkundenprofil qualifizieren",
+        "Termine und Demos mit der richtigen Vertriebsperson vereinbaren",
+        "Bei ins Stocken geratenen Gesprächen automatisch nachfassen"
+      ],
+      "businessBenefits": [
+        "Mehr eingehenden Traffic in qualifizierte Termine verwandeln",
+        "Den Vertriebszyklus mit sofortigen, fundierten Antworten verkürzen",
+        "Ihre Abschlussstärksten führen das letzte Gespräch, nicht die ersten fünfzig"
+      ],
+      "useCases": [
+        "Eine B2B-Agentur setzt den Vertriebs-Agenten auf ihrer Preisseite ein: Er beantwortet technische Fragen und bucht 15-minütige Erstgespräche, was die monatliche Terminpipeline verdoppelt.",
+        "Ein Softwareanbieter begleitet damit Testnutzer, beantwortet Fragen zu Funktionen und führt sie zu einem bezahlten Abo."
+      ]
+    },
+    "finance": {
+      "name": "Finanz-Agent",
+      "short": "Finanzen",
+      "tagline": "Abstimmen, berichten, planen",
+      "description": "Ein KI-Finanzanalyst, der sich mit Ihrer Buchhaltung verbindet, Kosten- und Umsatzberichte erstellt, Auffälligkeiten meldet und Fragen zu Ihren Finanzdaten in natürlicher Sprache beantwortet.",
+      "features": [
+        "Kategorisierung und Zusammenfassung von Ausgaben",
+        "Umsatzberichte und Abweichungsanalysen",
+        "Rechnungssuche und Zahlungserinnerungen",
+        "Erkennung auffälliger Buchungen"
+      ],
+      "responsibilities": [
+        "Ausgaben nach Kategorie, Abteilung oder Projekt zusammenfassen",
+        "Wöchentliche und monatliche Umsatzberichte mit Vergleichswerten erstellen",
+        "Rechnungen, Zahlungsstatus und Lieferantenhistorie nachschlagen",
+        "Automatische Zahlungserinnerungen an überfällige Konten senden"
+      ],
+      "businessBenefits": [
+        "Schnellerer Monatsabschluss — kein Warten auf manuelle Tabellenkonsolidierung",
+        "Sofortige Antworten auf Finanzfragen, ohne einen Bericht zu ziehen",
+        "Abrechnungsfehler erkennen, bevor sie sich summieren"
+      ],
+      "useCases": [
+        "Eine mittelständische Agentur fragt den Finanz-Agenten nach den Werbeausgaben des Vormonats je Kanal und erhält die Aufschlüsselung in Sekunden statt auf Zuruf aus der Buchhaltung.",
+        "Eine Beratungsgesellschaft automatisiert die wöchentliche Umsatzabstimmung: Der Agent gleicht jeden Montagmorgen Stripe, Bankeingänge und Rechnungen ab."
+      ]
+    },
+    "research": {
+      "name": "Research-Agent",
+      "short": "Research",
+      "tagline": "Tiefe Recherche in Maschinengeschwindigkeit",
+      "description": "Ein KI-Research-Assistent, der Informationen aus dem Web, aus Dokumenten und Datenbanken sammelt, verdichtet und zusammenfasst. Er erstellt strukturierte Briefings, Wettbewerbsanalysen und Trendberichte auf Abruf oder nach Zeitplan.",
+      "features": [
+        "Recherche über mehrere Quellen mit Quellenangabe",
+        "Wettbewerbs- und Marktanalyse",
+        "Trends erkennen und zusammenfassen",
+        "Wiederkehrende Berichte nach Zeitplan"
+      ],
+      "responsibilities": [
+        "Marktrecherche zu Branchen, Wettbewerbern und aufkommenden Trends durchführen",
+        "Wettbewerbsanalysen mit Preisen, Positionierung und Funktionsvergleich erstellen",
+        "Trends aus Nachrichten, Berichten und sozialen Signalen erkennen",
+        "Kompakte Briefings für die Geschäftsleitung erstellen"
+      ],
+      "businessBenefits": [
+        "Recherche-Briefings in Minuten statt Tagen",
+        "Wettbewerber laufend beobachten statt quartalsweise",
+        "Ihr Strategieteam von stundenlangem Lesen und Exzerpieren entlasten"
+      ],
+      "useCases": [
+        "Eine Unternehmensberatung lässt den Research-Agenten KI-Compliance-Rahmenwerke in der EU, den USA und Großbritannien vergleichen und erhält in fünf Minuten ein strukturiertes Briefing mit Quellen.",
+        "Eine Investmentgesellschaft plant wöchentliche Berichte zu Wettbewerbsbewegungen; der Agent verfolgt Nachrichten, Pflichtmeldungen und Pressemitteilungen automatisch."
+      ]
+    },
+    "document": {
+      "name": "Dokumenten-Agent",
+      "short": "Dokumente",
+      "tagline": "Entwerfen, prüfen, verteilen",
+      "description": "Ein KI-Dokumentenspezialist, der Angebote, Berichte und Verträge aus Vorlagen und strukturierten Daten erstellt. Er fasst lange Dokumente zusammen, extrahiert zentrale Klauseln und führt die Versionshistorie Ihrer Ablage.",
+      "features": [
+        "Dokumentenerstellung aus Vorlagen",
+        "Zusammenfassung langer Dokumente",
+        "Extraktion und Vergleich zentraler Begriffe",
+        "Versionsverfolgung und Änderungsprotokolle"
+      ],
+      "responsibilities": [
+        "Angebote, Kostenvoranschläge und Rechnungen aus strukturierten Daten erzeugen",
+        "Umfangreiche Berichte, Verträge und Artikel zusammenfassen",
+        "Zentrale Klauseln und Pflichten aus Verträgen herauslösen",
+        "Eine versionierte Bibliothek der erzeugten Dokumente pflegen"
+      ],
+      "businessBenefits": [
+        "Zeit für Dokumentenentwürfe um 70 % senken",
+        "Kopierfehler in Angeboten und Verträgen vermeiden",
+        "Automatisch eine durchsuchbare, versionierte Dokumentenhistorie führen"
+      ],
+      "useCases": [
+        "Eine Beratungsgesellschaft erzeugt Kundenangebote aus standardisierten Bausteinen: Der Agent füllt Preise, Umfang und Termine in unter einer Minute aus dem CRM.",
+        "Eine Rechtsabteilung übergibt eingehende Verträge dem Dokumenten-Agenten, der Kündigungsklauseln, Verlängerungsfristen und Haftungsgrenzen in eine Vergleichstabelle überführt."
+      ]
+    },
+    "executive-assistant": {
+      "name": "Assistenz der Geschäftsleitung",
+      "short": "Assistenz",
+      "tagline": "Ihr KI-Stabschef",
+      "description": "Eine KI-Assistenz, die Termine koordiniert, Korrespondenz entwirft, Erinnerungen setzt und sichtbar macht, was Ihre Aufmerksamkeit braucht — über Kalender, E-Mail und Aufgabenwerkzeuge hinweg, damit Sie sich auf Entscheidungen konzentrieren statt auf Organisation.",
+      "features": [
+        "Terminfindung über mehrere Kalender inklusive Konfliktlösung",
+        "Entwurf von E-Mails und Erinnerungen zum Nachfassen",
+        "Priorisierung von Posteingang und Aufgaben",
+        "Briefings und Zusammenfassungen zu Terminen"
+      ],
+      "responsibilities": [
+        "Termine planen, indem freie Zeiten aller Beteiligten gefunden und gebucht werden",
+        "E-Mails, Agenden und Nachfassnachrichten entwerfen",
+        "Erinnerungen für Fristen, Reviews und Rückmeldungen anlegen und verfolgen",
+        "Besprechungen organisieren, inklusive Agenda und Verteilung der Notizen"
+      ],
+      "businessBenefits": [
+        "Stunden pro Woche zurückgewinnen, die heute in Terminabstimmung fließen",
+        "Kein Nachfassen und keine Frist mehr übersehen",
+        "Zu jedem Termin mit fertigem Briefing erscheinen"
+      ],
+      "useCases": [
+        "Eine Führungskraft bittet den Agenten, kommende Woche je 30 Minuten mit jeder Abteilungsleitung zu finden — er gleicht die Kalender ab und bucht fünf Termine in einem Durchgang.",
+        "Eine vielbeschäftigte Gründerin lässt den Agenten wöchentliche Statusmails an den Beirat entwerfen, inklusive Projektstand aus dem Aufgabensystem."
+      ]
+    }
+  },
+  "agentDetail": {
+    "back": "Alle KI-Mitarbeiter",
+    "tryDemo": "Demo ausprobieren",
+    "bookCall": "Gespräch buchen",
+    "departments": {
+      "customer-support": "Service",
+      "sales": "Vertrieb",
+      "finance": "Finanzen",
+      "research": "Research",
+      "documents": "Dokumente",
+      "executive": "Geschäftsleitung"
+    },
+    "responsibilities": {
+      "title": "Was dieser Agent",
+      "accent": "täglich übernimmt."
+    },
+    "features": {
+      "title": "Zentrale Fähigkeiten",
+      "accent": "im Agenten."
+    },
+    "benefits": {
+      "title": "Was Ihr Unternehmen",
+      "accent": "durch diesen Agenten gewinnt."
+    },
+    "useCases": {
+      "title": "Reale Situationen,",
+      "accent": "die dieser Agent löst.",
+      "scenario": "Szenario {number}"
+    },
+    "related": {
+      "title": "Weitere",
+      "accent": "KI-Mitarbeiter."
+    },
+    "demo": {
+      "title": "Live-Vorschau",
+      "accent": "dieses Agenten.",
+      "disclaimer": "Demo-Vorschau — die gezeigten Antworten sind beispielhaft und stammen nicht aus einem laufenden KI-System.",
+      "panelTitle": "{name} — Live-Vorschau",
+      "empty": "Schreiben Sie eine Nachricht, um zu sehen, wie {name} antwortet.",
+      "inputLabel": "Nachricht an den Agenten schreiben",
+      "placeholder": "Nachricht schreiben ...",
+      "send": "Nachricht senden"
+    }
+  },
+  "aiEmployees": {
+    "hero": {
+      "badge": "Sechs spezialisierte Agenten",
+      "title": "Ihre künftige",
+      "accent": "KI-Belegschaft.",
+      "body": "Jeder KI-Mitarbeiter ist für eine Abteilung gebaut, an Ihre bestehenden Systeme angebunden und arbeitet eigenständig — von der Sichtung von Serviceanfragen bis zur Abstimmung von Finanzberichten."
+    },
+    "demoBanner": {
+      "badge": "Live-Demo · in Kürze",
+      "body": "Testen Sie einen echten KI-Mitarbeiter direkt auf dieser Seite."
+    },
+    "useCases": {
+      "title": "Wofür Unternehmen uns",
+      "accent": "bauen lassen.",
+      "items": {
+        "leads": {
+          "title": "Lead-Qualifizierung und CRM-Pflege",
+          "description": "Agenten, die eingehende Anfragen ansprechen, gegen Ihr Wunschkundenprofil bewerten, CRM-Datensätze pflegen und warme Gespräche an Ihren Vertrieb übergeben — ohne manuelle Datenerfassung."
+        },
+        "reporting": {
+          "title": "Datenextraktion und Reporting",
+          "description": "Strukturierte Daten aus Dokumenten, E-Mails und Tabellen ziehen. Berichte, Zusammenfassungen und Dashboards auf Abruf erstellen, ohne auf ein Datenteam zu warten."
+        },
+        "support": {
+          "title": "Kundenservice rund um die Uhr",
+          "description": "Einfache Anfragen jederzeit bearbeiten: aus der Wissensbasis antworten, nach Dringlichkeit sortieren und nur dann übergeben, wenn ein Mensch gebraucht wird."
+        },
+        "workflow": {
+          "title": "Inhalte und Prozessautomatisierung",
+          "description": "Angebote entwerfen, Rechnungen erzeugen, Termine planen und Freigaben steuern — Agenten, die den Ablauf vom Auslöser bis zum Abschluss verantworten."
+        }
+      }
+    },
+    "lifecycle": {
+      "title": "Wie wir jeden Agenten",
+      "accent": "bauen und ausrollen.",
+      "body": "Jeder KI-Mitarbeiter durchläuft denselben Zyklus in vier Phasen — vom Verständnis Ihrer Abläufe bis zum laufenden Betrieb und der Verbesserung."
+    },
+    "grid": {
+      "title": "Agenten für",
+      "accent": "Ihre Abteilung.",
+      "body": "Nach Abteilung filtern oder alle sechs KI-Mitarbeiter unten ansehen.",
+      "all": "Alle"
+    },
+    "cases": {
+      "title": "Erste",
+      "accent": "Fälle.",
+      "body": "Wir veröffentlichen Fallstudien nur mit Zustimmung des Kunden. Hier ein anonymisiertes Beispiel unserer Arbeit.",
+      "study": {
+        "title": "Compliance im Finanzsektor (anonymisiert)",
+        "body": "Eine Finanzberatung setzt unseren Dokumenten- und Research-Agenten ein, um die Prüfung regulatorischer Meldungen und die Wettbewerbsbeobachtung zu automatisieren. Die Agenten verarbeiten heute über 200 Dokumente pro Woche und machen Compliance-Risiken in Stunden statt Tagen sichtbar.",
+        "note": "Ein beispielhafter Fall auf Basis eines Kundenprojekts. Kundenidentität und konkrete Zahlen wurden anonymisiert."
+      },
+      "more": {
+        "title": "Weitere Fallstudien folgen",
+        "body": "Ausführliche Fallstudien veröffentlichen wir erst nach Freigabe durch den Kunden. Wenn Sie dabei sein möchten, freuen wir uns über Ihre Nachricht."
+      }
+    }
+  },
+  "resources": {
+    "title": "Tiefer",
+    "accent": "einsteigen.",
+    "body": "Artikel, Leitfäden und Erklärstücke, die zeigen, wie eigenständige Abteilungsagenten arbeiten und was sie für Ihr Unternehmen leisten können.",
+    "comingSoon": "In Kürze",
+    "article": "Artikel",
+    "topics": {
+      "what-is-an-ai-employee": {
+        "title": "Was ist ein KI-Mitarbeiter?",
+        "description": "Anders als ein Chatbot, der Fragen beantwortet, ist ein KI-Mitarbeiter ein dauerhaft laufender Agent, der in Ihren Systemen handelt: Tickets anlegen, Datensätze pflegen, Berichte erstellen und mehr."
+      },
+      "how-we-build-agents": {
+        "title": "Wie wir Agenten bauen",
+        "description": "Jeder Agent wird für eine Abteilung gebaut, mit modularer Architektur: Wahrnehmungsschicht, Reasoning-Engine, Systemintegrationen und einer Eskalationsstufe zu menschlichen Prüfern."
+      },
+      "data-security-and-compliance": {
+        "title": "Datensicherheit und Compliance",
+        "description": "Agenten laufen in dedizierten Private Clouds, verschlüsselt bei Übertragung und im Ruhezustand. Wir trainieren keine Basismodelle mit Ihren Daten, und Sie steuern die Aufbewahrungsfristen."
+      },
+      "costs-and-roi": {
+        "title": "Kosten und Wirtschaftlichkeit",
+        "description": "Abgerechnet wird je Agent und Monat, mit Staffelung nach Volumen. Die meisten Kunden sehen im ersten Quartal einen positiven Effekt durch geringere Personalkosten und höheren Durchsatz."
+      },
+      "ai-employee-vs-chatbot": {
+        "title": "KI-Mitarbeiter vs. Chatbot",
+        "description": "Ein Chatbot wartet auf Fragen. Ein KI-Mitarbeiter verantwortet Ergebnisse: Er beobachtet Systeme, wird selbst aktiv, eskaliert mit Augenmaß und lernt aus Rückmeldungen, ohne von vorn trainiert zu werden."
+      },
+      "glossary": {
+        "title": "Glossar",
+        "description": "Von Retrieval-Augmented Generation (RAG) und Tool-Calling bis zu Eskalationsstufen und Konfidenzschwellen — verständliche Definitionen der Begriffe hinter autonomen Agenten."
+      },
+      "build-vs-buy": {
+        "title": "Selbst bauen oder beauftragen",
+        "description": "Ein eigener KI-Agent bedeutet ML-Fachkräfte einstellen, Infrastruktur betreiben und monatelang iterieren. Unsere Agenten sind in Wochen im Einsatz und verbessern sich laufend."
+      },
+      "roi-calculator": {
+        "title": "Wirtschaftlichkeit verstehen",
+        "description": "Einsparungen aus Abteilungsautomatisierung schätzen: zurückgewonnene Stunden, weniger Eskalationen, schnellere Reaktionszeiten und weniger Fehler — ab Woche eins messbar."
+      },
+      "readiness-check": {
+        "title": "Sind Sie bereit für einen KI-Mitarbeiter?",
+        "description": "Die besten Voraussetzungen: dokumentierte Abläufe, strukturierte Datenquellen, wiederkehrende, regelbasierte Aufgaben und ein klarer Punkt, an dem menschliches Urteil gefragt ist."
+      }
+    }
+  },
+  "growth": {
+    "title": "Mit einem starten.",
+    "accent": "Abteilung für Abteilung wachsen.",
+    "body": "Die meisten Kunden beginnen mit einem einzelnen KI-Mitarbeiter — häufig Service oder Finanzen — und weiten die Abdeckung dann Schritt für Schritt aus. Jeder weitere Agent ist schneller angebunden, weil die Grundlage bereits steht.",
+    "centerLabel": "Ihr Unternehmen",
+    "illustrative": "Beispielhafte Darstellung"
+  },
+  "team": {
+    "title": "Ein Team aus",
+    "accent": "digitalen Mitarbeitern.",
+    "body": "Wir bauen genau die KI-Mitarbeiter, die Ihr Unternehmen braucht — einzeln für jede Abteilung entwickelt, nicht von der Stange. Abgestimmt, eigenständig und rund um die Uhr im Einsatz.",
+    "centerLabel": "Ihr Unternehmen"
+  },
+  "teasers": {
+    "services": {
+      "title": "Mehr als der Agent:",
+      "accent": "Strategie, Integration und Betrieb.",
+      "body": "Wir konzipieren und bauen KI-Agenten, zugeschnitten auf Ihre Abläufe und Ihre Systemlandschaft. Jede Umsetzung enthält die Anbindung an Ihre bestehenden Systeme, laufendes Monitoring und kontinuierliche Verbesserung — Ihre Agenten werden also besser, ohne Zusatzaufwand für Ihr Team.",
+      "link": "Unser gesamtes Leistungsangebot ansehen"
+    },
+    "industries": {
+      "title": "Gebaut für",
+      "accent": "regulierte und schnelle Branchen.",
+      "body": "Unsere Agenten passen sich branchenspezifischen Abläufen, regulatorischen Anforderungen und Systemlandschaften an.",
+      "link": "Alle Branchen ansehen"
+    }
+  },
+  "testimonials": {
+    "title": "Was Teams über die",
+    "accent": "Zusammenarbeit sagen.",
+    "items": {
+      "support": {
+        "quote": "Wir hatten den Service-Agenten in zwei Wochen im Einsatz. Unsere Erstantwortzeit ist von vier Stunden auf unter eine Minute gefallen, und unser Serviceteam kann sich endlich um komplexe Fälle kümmern statt um Passwort-Resets.",
+        "attribution": "Kundenname, Leitung Kundenerlebnis"
+      },
+      "sales": {
+        "quote": "Der Vertriebs-Agent bucht pro Woche mehr qualifizierte Termine als unsere beiden früheren Vertriebsmitarbeitenden zusammen. Er übernimmt die ersten drei Kontaktpunkte automatisch und übergibt warme Kontakte direkt an unseren Abschluss.",
+        "attribution": "Kundenname, Vertriebsleitung"
+      },
+      "finance": {
+        "quote": "Wir haben den Finanz-Agenten nach einer Umsatzaufschlüsselung je Produktlinie gefragt und sie in fünf Sekunden bekommen. Früher hat das einen Analysten einen halben Tag gekostet. Heute ist es unser Standard-Dashboard.",
+        "attribution": "Kundenname, Leitung Finanzen"
+      }
+    }
+  },
+  "mockups": {
+    "ops": {
+      "title": "Auftragsübersicht — diese Woche",
+      "synced": "Alles synchron",
+      "photoAlt": "Servicetechniker mit Schutzhelm bei der Arbeit an einer Anlage vor Ort",
+      "columns": {
+        "job": "Auftrag",
+        "crew": "Team",
+        "due": "Fällig",
+        "status": "Status"
+      },
+      "stats": {
+        "jobs": {
+          "label": "Aufträge diese Woche",
+          "sub": "6 mehr als letzte"
+        },
+        "invoice": {
+          "label": "Zeit bis zur Rechnung",
+          "value": "1,2 Tage",
+          "sub": "vorher 6 Tage"
+        },
+        "utilisation": {
+          "label": "Teamauslastung",
+          "sub": "5 Teams im Einsatz"
+        }
+      },
+      "status": {
+        "invoiced": "Berechnet",
+        "inProgress": "In Arbeit",
+        "scheduled": "Geplant",
+        "awaitingParts": "Wartet auf Teile"
+      },
+      "dates": {
+        "first": "14.03.",
+        "second": "15.03.",
+        "third": "18.03.",
+        "fourth": "19.03."
+      }
+    },
+    "support": {
+      "title": "Service-Assistent",
+      "resolved": "68 % heute ohne Menschen gelöst",
+      "online": "Online",
+      "photoAlt": "Serviceteam am Schreibtisch bei der Bearbeitung von Kundenanfragen",
+      "order": {
+        "title": "Bestellung #4521 · Versandt",
+        "detail": "2 Artikel · DHL Express · Ankunft 16.03.",
+        "status": "Unterwegs"
+      },
+      "thread": {
+        "questionOne": "Fallen die Wollsocken klein aus?",
+        "answerOne": "Sie fallen normal aus — das Merinopaar steht in der Größentabelle als EU 42-44.",
+        "questionTwo": "Wo ist meine Bestellung #4521?",
+        "answerTwo": "Bestellung #4521 wurde gestern versandt — hier ist Ihr Sendungslink. Zustellung am Samstag."
+      },
+      "actions": {
+        "track": "Sendung verfolgen ↗",
+        "address": "Lieferadresse ändern"
+      },
+      "handoff": "Rückerstattung an Amira übergeben · vollständiger Verlauf angehängt"
+    },
+    "approvals": {
+      "title": "Anträge · Q3",
+      "waiting": "4 warten auf Sie",
+      "photoAlt": "Person prüft unterschriebene Unterlagen am Schreibtisch",
+      "currentApprover": "Zuständig · {name}",
+      "requests": {
+        "contract": "Lieferantenvertrag Q3 — Rechtsprüfung",
+        "laptops": "Laptops für neue Kolleginnen — 2.400 £",
+        "travel": "Kundenreise — Standortbesuch Rotterdam",
+        "marketing": "Marketingbudget — Kampagne Q3"
+      },
+      "status": {
+        "approved": "Freigegeben",
+        "pending": "Offen",
+        "rejected": "Abgelehnt"
+      },
+      "trail": {
+        "submitted": "Eingereicht",
+        "reviewed": "Geprüft",
+        "approved": "Freigegeben",
+        "logged": "Heute um 14:02 von A. Karim freigegeben · automatisch protokolliert"
+      }
+    },
+    "products": {
+      "wa": {
+        "contact": "Kunden-Concierge",
+        "online": "online",
+        "incoming": "Hallo, können Sie mir den Stand unseres Sprints bestätigen?",
+        "reply": "Sprint 3 liegt im Plan. 14 Aufgaben fertig, QA-Prüfung abgeschlossen.",
+        "chips": {
+          "board": "Sprint-Board ansehen",
+          "sync": "Abstimmung planen"
+        },
+        "input": "Antwort schreiben ...",
+        "photoAlt": "Person nutzt ein Smartphone zum Schreiben von Nachrichten",
+        "caption": {
+          "title": "Direkt über WhatsApp",
+          "sub": "Kundenkommunikation in Echtzeit"
+        }
+      },
+      "chatbot": {
+        "widgetTitle": "Service-Assistent",
+        "greeting": "Willkommen! Wobei können wir Ihnen heute helfen?",
+        "question": "Ich möchte unseren eigenen Webhook anbinden.",
+        "answer": "Hier sind der Doku-Link und ein Beispiel-Payload. 🚀",
+        "input": "Hier antworten ...",
+        "photoAlt": "Arbeitsplatz eines Kundenserviceteams mit Headsets",
+        "caption": {
+          "title": "Service rund um die Uhr",
+          "sub": "Kein Ticketstau"
+        }
+      },
+      "websites": {
+        "title": "Marktpuls",
+        "trend": "+4,2 % bullisch",
+        "metrics": {
+          "volume": "Volumenindex",
+          "liquidity": "Liquidität",
+          "sentiment": "Stimmung"
+        },
+        "sentimentValue": "Gier",
+        "photoAlt": "Finanzcharts zu Krypto- und Aktienkursen mit Echtzeit-Marktdaten",
+        "caption": {
+          "title": "Marktanalyse",
+          "sub": "Tiefe Auswertung"
+        }
+      },
+      "ecommerce": {
+        "store": "Shop",
+        "catalog": "Katalog",
+        "cart": "Warenkorb (2)",
+        "preview": "PRODUKTVORSCHAU",
+        "add": "Hinzufügen +",
+        "items": {
+          "watch": {
+            "title": "Chronograph-Uhr",
+            "badge": "Bestseller"
+          },
+          "headphones": {
+            "title": "Studio-Kopfhörer",
+            "badge": "Neu"
+          }
+        },
+        "shipping": "Weltweit versandkostenfrei",
+        "checkout": "99,8 % erfolgreiche Bestellungen",
+        "photoAlt": "Ausgewählte Produkte und Ladenfläche eines Boutique-Händlers",
+        "caption": {
+          "title": "Moderner Handel",
+          "sub": "Auf Conversion ausgelegt"
+        }
+      },
+      "management": {
+        "title": "Betriebssteuerung",
+        "healthy": "System stabil",
+        "kpis": {
+          "orders": {
+            "label": "Aktive Aufträge",
+            "sub": "98,6 % pünktlich"
+          },
+          "fleet": {
+            "label": "Flottenauslastung",
+            "sub": "18 Fahrzeuge unterwegs"
+          },
+          "approvals": {
+            "label": "Offene Freigaben",
+            "sub": "Prüfung nötig"
+          }
+        },
+        "columns": {
+          "task": "Vorgang",
+          "owner": "Zuständig",
+          "status": "Status"
+        },
+        "rows": {
+          "logistics": {
+            "task": "Logistikabgleich #401",
+            "owner": "Auto-Disposition",
+            "status": "Erledigt"
+          },
+          "inventory": {
+            "task": "Bestand auffüllen",
+            "owner": "Betriebsteam",
+            "status": "In Arbeit"
+          },
+          "audit": {
+            "task": "Prüfpipeline",
+            "owner": "Sicherheits-Agent",
+            "status": "Geplant"
+          }
+        },
+        "photoAlt": "Aufgeräumter moderner Büroarbeitsplatz mit Einsatzplanung",
+        "caption": {
+          "title": "Betriebskontrolle",
+          "sub": "Zentral gesteuert"
+        }
+      }
+    },
+    "capabilities": {
+      "webApps": {
+        "live": "Live",
+        "nav": {
+          "dashboard": "Dashboard",
+          "analytics": "Auswertung",
+          "customers": "Kunden",
+          "settings": "Einstellungen"
+        },
+        "stats": {
+          "users": "Nutzer",
+          "revenue": "Umsatz",
+          "conversion": "Conversion"
+        }
+      },
+      "mobile": {
+        "header": "Empfohlene Apps",
+        "badge": "Pro",
+        "cards": {
+          "alpine": {
+            "title": "Alpine Explorer",
+            "category": "Reisen & Touren"
+          },
+          "studio": {
+            "title": "Studio Acoustics",
+            "category": "Audio-Streaming"
+          },
+          "dev": {
+            "title": "Dev Workspace",
+            "category": "Produktivität"
+          }
+        },
+        "assetAlt": "Illustration: zwei Entwickler bauen eine mobile App rund um ein großes Smartphone"
+      },
+      "web": {
+        "preview": "Vorschau",
+        "heroTitle": "Live-Kennzahlen auf einem Screen",
+        "heroSub": "Vor 4 Sekunden aktualisiert",
+        "loadTime": "Ladezeit",
+        "lighthouse": "Lighthouse",
+        "assetAlt": "Illustration: eine Website auf einem Monitor, umgeben von Symbolen für Programmierung, Design, Inhalte, SEO und Optimierung",
+        "assetCaption": "Was ein Projekt umfasst"
+      },
+      "design": {
+        "system": "Designsystem",
+        "wireframe": "Wireframe",
+        "polished": "Ausgearbeitet",
+        "step": "Kasse · Schritt 2",
+        "delivery": "Lieferdaten",
+        "fields": "3 Felder · Button",
+        "question": "Wohin soll es gehen?",
+        "shipping": "Versandfrei ab 50 £",
+        "action": "Weiter zur Zahlung",
+        "photoAlt": "Dashboard-Oberfläche für Rechnungen mit Umsatzdiagramm, Kundenkennzahlen und einer Tabelle aktueller Rechnungen",
+        "caption": "Produkt-UI"
+      },
+      "agents": {
+        "title": "Agent",
+        "online": "· Online",
+        "latency": "Latenz 42 ms",
+        "userMessage": "Kannst du den monatlichen Kundenbericht erstellen?",
+        "agentMessage": "Bericht erstellt. 1.240 Datensätze mit 99,4 % Genauigkeit ausgewertet.",
+        "input": "Frag mich etwas ...",
+        "send": "Senden",
+        "chips": {
+          "csv": "CSV herunterladen ↗",
+          "followUp": "Nachfassen planen"
+        },
+        "userAlt": "Porträtbild eines Nutzers",
+        "agentAlt": "Porträtbild des KI-Assistenten",
+        "assetAlt": "Illustration: ein KI-Assistent begrüßt einen Kunden vom Laptop aus, mit Hinweisen zu Support, Kundenbindung, Leads und Automatisierung"
+      },
+      "automation": {
+        "title": "Pipeline-Architektur",
+        "health": "Aktiv · 100 % Verfügbarkeit",
+        "nodes": {
+          "trigger": {
+            "title": "Auslöser",
+            "sub": "Webhook"
+          },
+          "condition": {
+            "title": "Bedingung",
+            "sub": "Filtern & prüfen"
+          },
+          "action": {
+            "title": "Aktion",
+            "sub": "Daten verarbeiten"
+          },
+          "output": {
+            "title": "Ergebnis",
+            "sub": "Ausgeliefert"
+          }
+        },
+        "executed": "Ausgeführt in 18 ms",
+        "errors": "0 Fehler / 24.000 Durchläufe"
+      }
+    },
+    "hero": {
+      "label": {
+        "webApp": "Webanwendung",
+        "mobile": "Mobile",
+        "agent": "KI-Agent",
+        "automation": "Automatisierung",
+        "product": "Produkt"
+      },
+      "diagramLabel": "Eine Webanwendung, eine mobile Anwendung, ein KI-Agent, ein Automatisierungsablauf und ein Produkt, verbunden zu einem System",
+      "webApp": {
+        "stats": {
+          "active": "Aktiv",
+          "growth": "Wachstum",
+          "uptime": "Verfügbar"
+        },
+        "series": {
+          "signups": "Anmeldungen",
+          "revenue": "Umsatz",
+          "churn": "Abwanderung",
+          "refunds": "Erstattungen"
+        }
+      },
+      "mobile": {
+        "header": "Aktivität",
+        "cards": {
+          "nutrition": {
+            "title": "Ernährungslog",
+            "sub": "Vor 4 Std. erfasst"
+          },
+          "coffee": {
+            "title": "Morgenröstung",
+            "sub": "Bestellung fertig"
+          },
+          "core": {
+            "title": "Core-Einheit",
+            "sub": "Abgeschlossen"
+          }
+        }
+      },
+      "agent": {
+        "online": "online",
+        "question": "Datenbank-Kennzahlen abgleichen?",
+        "answer": "4 Dienste abgeglichen ✓",
+        "avatarAlt": "Porträtbild des KI-Agenten"
+      },
+      "automation": {
+        "mail": "Mail",
+        "calendar": "Kalender",
+        "database": "Datenbank"
+      }
+    },
+    "network": {
+      "hub": "HUB",
+      "diagramLabel": "KI-Agenten, die Arbeit von einer zentralen Stelle erhalten und fertige Ergebnisse zurückgeben",
+      "nodes": {
+        "support": {
+          "label": "Service",
+          "task": "Ticket #4821"
+        },
+        "sales": {
+          "label": "Vertrieb",
+          "task": "Neue Anfrage"
+        },
+        "finance": {
+          "label": "Finanzen",
+          "task": "Rechnungslauf"
+        },
+        "research": {
+          "label": "Research",
+          "task": "Marktbriefing"
+        },
+        "document": {
+          "label": "Dokumente",
+          "task": "Angebotsentwurf"
+        },
+        "assistant": {
+          "label": "Assistenz",
+          "task": "Termin abstimmen"
+        }
+      }
+    }
+  }
+}

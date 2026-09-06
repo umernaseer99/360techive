@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 /**
  * Product interface mockups with real supporting photography.
@@ -30,6 +31,7 @@ export function ProductMock({ mockId }: { mockId: string }) {
 
 /** 1. WhatsApp-style chat interface for WA Agent + supporting messaging photo. */
 function WAAgentMock() {
+  const t = useTranslations("mockups.products.wa");
   const photoUrl =
     "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80";
 
@@ -45,11 +47,13 @@ function WAAgentMock() {
             </div>
             <div className="min-w-0 flex-1">
               <div className="truncate text-[8.5px] font-semibold text-foreground">
-                Client Concierge
+                {t("contact")}
               </div>
               <div className="flex items-center gap-1">
                 <span className="size-1 rounded-full bg-emerald-500" />
-                <span className="text-[7px] text-emerald-600 dark:text-emerald-400 font-medium">online</span>
+                <span className="text-[7px] text-emerald-600 dark:text-emerald-400 font-medium">
+                  {t("online")}
+                </span>
               </div>
             </div>
             <div className="flex gap-1.5 text-muted">
@@ -68,7 +72,7 @@ function WAAgentMock() {
               className="flex max-w-[85%] flex-col rounded-lg rounded-tl-xs border border-border/10 bg-background px-2.5 py-1.5 shadow-xs"
             >
               <span className="text-[7.5px] text-foreground/85">
-                Hi, can I confirm our project sprint status?
+                {t("incoming")}
               </span>
               <span className="mt-0.5 text-right text-[6px] text-muted">10:42 AM</span>
             </motion.div>
@@ -81,7 +85,7 @@ function WAAgentMock() {
               className="ml-auto flex max-w-[85%] flex-col rounded-lg rounded-tr-xs border border-emerald-500/20 bg-emerald-500/10 dark:bg-emerald-950/40 px-2.5 py-1.5 shadow-xs"
             >
               <span className="text-[7.5px] font-medium text-foreground">
-                Sprint 3 is on track. 14 tasks finished, QA verification complete.
+                {t("reply")}
               </span>
               <div className="mt-1 flex items-center justify-end gap-1">
                 <span className="text-[6px] text-muted">10:42 AM</span>
@@ -92,10 +96,10 @@ function WAAgentMock() {
             {/* Quick interactive action chips */}
             <div className="flex gap-1.5 pt-0.5">
               <span className="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[6.5px] font-medium text-primary">
-                View Sprint Board
+                {t("chips.board")}
               </span>
               <span className="rounded-full border border-border/15 bg-background px-2 py-0.5 text-[6.5px] text-muted">
-                Schedule Sync
+                {t("chips.sync")}
               </span>
             </div>
           </div>
@@ -104,7 +108,7 @@ function WAAgentMock() {
           <div className="flex items-center gap-1.5 border-t border-border/10 bg-surface px-2 py-1.5">
             <span className="text-[10px] text-muted">😊</span>
             <div className="h-5 flex-1 rounded-full border border-border/10 bg-background px-2 text-[7px] text-muted flex items-center">
-              Type a reply...
+              {t("input")}
             </div>
             <span className="flex size-5 items-center justify-center rounded-full bg-emerald-600 text-white text-[8px]">
               ➤
@@ -116,17 +120,17 @@ function WAAgentMock() {
         <div className="relative w-[32%] shrink-0 overflow-hidden rounded-lg border border-border/15">
           <Image
             src={photoUrl}
-            alt="Person using smartphone for messaging"
+            alt={t("photoAlt")}
             fill
             sizes="(max-width: 768px) 33vw, 220px"
             className="object-cover dark:brightness-90"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-2">
             <span className="block text-[7.5px] font-semibold text-foreground">
-              Direct WhatsApp
+              {t("caption.title")}
             </span>
             <span className="block text-[6.5px] text-muted">
-              Real-time customer comms
+              {t("caption.sub")}
             </span>
           </div>
         </div>
@@ -137,6 +141,7 @@ function WAAgentMock() {
 
 /** 2. Embeddable chat widget for Chatbots + supporting customer support photo. */
 function ChatbotMock() {
+  const t = useTranslations("mockups.products.chatbot");
   const photoUrl =
     "https://images.unsplash.com/photo-1541976844346-f18aeac57b06?auto=format&fit=crop&w=600&q=80";
 
@@ -175,7 +180,9 @@ function ChatbotMock() {
             <div className="flex items-center justify-between border-b border-border/10 bg-primary/10 px-2.5 py-1.5">
               <div className="flex items-center gap-1.5">
                 <span className="size-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[7.5px] font-semibold text-foreground">Support Assistant</span>
+                <span className="text-[7.5px] font-semibold text-foreground">
+                  {t("widgetTitle")}
+                </span>
               </div>
               <span className="text-[8px] text-muted">✕</span>
             </div>
@@ -183,20 +190,20 @@ function ChatbotMock() {
             {/* Widget conversation */}
             <div className="flex flex-col gap-1.5 p-2">
               <div className="rounded-lg rounded-tl-xs border border-border/10 bg-background/80 p-1.5 text-[7px] text-foreground/80 leading-tight">
-                Welcome! How can I help resolve your inquiry today?
+                {t("greeting")}
               </div>
               <div className="ml-auto rounded-lg rounded-tr-xs bg-primary p-1.5 text-[7px] text-white font-medium leading-tight">
-                I need to integrate with our custom webhook.
+                {t("question")}
               </div>
               <div className="rounded-lg rounded-tl-xs border border-border/10 bg-background/80 p-1.5 text-[7px] text-foreground/80 leading-tight">
-                Here is the docs link and starter payload. 🚀
+                {t("answer")}
               </div>
             </div>
 
             {/* Widget input */}
             <div className="flex items-center gap-1 border-t border-border/10 px-2 py-1">
               <div className="h-4 flex-1 rounded border border-border/10 bg-background px-1.5 text-[6.5px] text-muted flex items-center">
-                Reply here...
+                {t("input")}
               </div>
               <span className="flex size-4 items-center justify-center rounded bg-primary text-[7px] text-white">
                 ➤
@@ -209,17 +216,17 @@ function ChatbotMock() {
         <div className="relative w-[32%] shrink-0 overflow-hidden rounded-lg border border-border/15">
           <Image
             src={photoUrl}
-            alt="Customer support team workspace with headsets"
+            alt={t("photoAlt")}
             fill
             sizes="(max-width: 768px) 33vw, 220px"
             className="object-cover dark:brightness-90"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-2">
             <span className="block text-[7.5px] font-semibold text-foreground">
-              Always-On Support
+              {t("caption.title")}
             </span>
             <span className="block text-[6.5px] text-muted">
-              Zero ticket backlog
+              {t("caption.sub")}
             </span>
           </div>
         </div>
@@ -230,6 +237,7 @@ function ChatbotMock() {
 
 /** 3. Research/data platform mockup for Websites (CoinStudy) + supporting finance photo. */
 function WebsitesMock() {
+  const t = useTranslations("mockups.products.websites");
   const photoUrl =
     "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80";
 
@@ -253,9 +261,9 @@ function WebsitesMock() {
           {/* Research platform header with time filters */}
           <div className="flex items-center justify-between pt-1">
             <div className="flex items-center gap-1.5">
-              <span className="text-[9px] font-semibold text-foreground">Market Pulse</span>
+              <span className="text-[9px] font-semibold text-foreground">{t("title")}</span>
               <span className="rounded bg-emerald-500/10 px-1 text-[6.5px] font-semibold text-emerald-500">
-                +4.2% Bullish
+                {t("trend")}
               </span>
             </div>
             <div className="flex gap-1 text-[6.5px] font-mono text-muted">
@@ -268,9 +276,13 @@ function WebsitesMock() {
           {/* 3 Metric cards with mini trendlines */}
           <div className="grid grid-cols-3 gap-1.5 py-1">
             {[
-              { label: "Vol Index", val: "$3.4B", change: "+14%" },
-              { label: "Liquidity", val: "94.8", change: "+2.1%" },
-              { label: "Sentiment", val: "78/100", change: "Greed" },
+              { label: t("metrics.volume"), val: "$3.4B", change: "+14%" },
+              { label: t("metrics.liquidity"), val: "94.8", change: "+2.1%" },
+              {
+                label: t("metrics.sentiment"),
+                val: "78/100",
+                change: t("sentimentValue"),
+              },
             ].map((m, i) => (
               <div key={i} className="rounded-md border border-border/10 bg-background/60 p-1.5">
                 <span className="block text-[6.5px] text-muted">{m.label}</span>
@@ -304,17 +316,17 @@ function WebsitesMock() {
         <div className="relative w-[32%] shrink-0 overflow-hidden rounded-lg border border-border/15">
           <Image
             src={photoUrl}
-            alt="Financial crypto and stock candlestick charts and real-time market data"
+            alt={t("photoAlt")}
             fill
             sizes="(max-width: 768px) 33vw, 220px"
             className="object-cover dark:brightness-90"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-2">
             <span className="block text-[7.5px] font-semibold text-foreground">
-              Market Intelligence
+              {t("caption.title")}
             </span>
             <span className="block text-[6.5px] text-muted">
-              Deep analytics engine
+              {t("caption.sub")}
             </span>
           </div>
         </div>
@@ -325,6 +337,7 @@ function WebsitesMock() {
 
 /** 4. Storefront mockup for E-commerce (AQ Gimel) + supporting retail photo. */
 function EcommerceMock() {
+  const t = useTranslations("mockups.products.ecommerce");
   const photoUrl =
     "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80";
 
@@ -337,12 +350,12 @@ function EcommerceMock() {
           <div className="flex items-center justify-between border-b border-border/10 pb-2">
             <div className="flex items-center gap-1.5">
               <span className="font-serif font-bold italic text-primary text-[9px]">AQ Gimel</span>
-              <span className="text-[7px] text-muted">Store</span>
+              <span className="text-[7px] text-muted">{t("store")}</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-[7px] text-muted">Catalog</span>
+              <span className="text-[7px] text-muted">{t("catalog")}</span>
               <span className="rounded-full bg-primary/15 px-1.5 py-0.5 text-[6.5px] font-semibold text-primary">
-                Cart (2)
+                {t("cart")}
               </span>
             </div>
           </div>
@@ -351,16 +364,14 @@ function EcommerceMock() {
           <div className="grid flex-1 grid-cols-2 gap-2 py-1.5">
             {[
               {
-                title: "Chronograph Watch",
-                category: "Edition 01",
+                title: t("items.watch.title"),
                 price: "$180",
-                badge: "Best Seller",
+                badge: t("items.watch.badge"),
               },
               {
-                title: "Studio Headphones",
-                category: "Noise Cancelling",
+                title: t("items.headphones.title"),
                 price: "$240",
-                badge: "New",
+                badge: t("items.headphones.badge"),
               },
             ].map((p, i) => (
               <div
@@ -374,7 +385,9 @@ function EcommerceMock() {
                   <span className="text-[7px] text-muted">♡</span>
                 </div>
                 <div className="my-1.5 flex h-10 items-center justify-center rounded bg-surface/50 border border-border/10">
-                  <span className="text-[8px] font-mono text-muted/60">PRODUCT PREVIEW</span>
+                  <span className="text-[8px] font-mono text-muted/60">
+                    {t("preview")}
+                  </span>
                 </div>
                 <div>
                   <span className="block truncate text-[7.5px] font-semibold text-foreground">
@@ -383,7 +396,7 @@ function EcommerceMock() {
                   <div className="mt-0.5 flex items-center justify-between">
                     <span className="text-[7.5px] font-bold text-foreground">{p.price}</span>
                     <span className="rounded bg-primary px-1.5 py-0.5 text-[6px] font-medium text-white">
-                      Add +
+                      {t("add")}
                     </span>
                   </div>
                 </div>
@@ -393,8 +406,8 @@ function EcommerceMock() {
 
           {/* Bottom store stats */}
           <div className="flex items-center justify-between border-t border-border/10 pt-1.5 text-[6.5px] text-muted">
-            <span>Free Global Shipping</span>
-            <span className="text-emerald-500 font-medium">99.8% Checkout Success</span>
+            <span>{t("shipping")}</span>
+            <span className="text-emerald-500 font-medium">{t("checkout")}</span>
           </div>
         </div>
 
@@ -402,17 +415,17 @@ function EcommerceMock() {
         <div className="relative w-[32%] shrink-0 overflow-hidden rounded-lg border border-border/15">
           <Image
             src={photoUrl}
-            alt="Curated retail boutique products and storefront"
+            alt={t("photoAlt")}
             fill
             sizes="(max-width: 768px) 33vw, 220px"
             className="object-cover dark:brightness-90"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-2">
             <span className="block text-[7.5px] font-semibold text-foreground">
-              Modern Commerce
+              {t("caption.title")}
             </span>
             <span className="block text-[6.5px] text-muted">
-              Optimized for conversion
+              {t("caption.sub")}
             </span>
           </div>
         </div>
@@ -423,6 +436,7 @@ function EcommerceMock() {
 
 /** 5. Dashboard/table mockup for Management System + supporting operations photo. */
 function ManagementMock() {
+  const t = useTranslations("mockups.products.management");
   const photoUrl =
     "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80";
 
@@ -435,19 +449,31 @@ function ManagementMock() {
           <div className="flex items-center justify-between border-b border-border/10 pb-2">
             <div className="flex items-center gap-1.5">
               <span className="size-2 rounded-sm bg-primary" />
-              <span className="text-[9px] font-semibold text-foreground">Enterprise Operations</span>
+              <span className="text-[9px] font-semibold text-foreground">{t("title")}</span>
             </div>
             <span className="rounded bg-emerald-500/10 px-1.5 py-0.5 text-[6.5px] font-medium text-emerald-500">
-              System Healthy
+              {t("healthy")}
             </span>
           </div>
 
           {/* 3 Metric Cards */}
           <div className="grid grid-cols-3 gap-1.5 py-1">
             {[
-              { label: "Active Orders", val: "342", sub: "98.6% on-time" },
-              { label: "Fleet Capacity", val: "84%", sub: "18 vehicles out" },
-              { label: "Pending Approvals", val: "12", sub: "Require review" },
+              {
+                label: t("kpis.orders.label"),
+                val: "342",
+                sub: t("kpis.orders.sub"),
+              },
+              {
+                label: t("kpis.fleet.label"),
+                val: "84%",
+                sub: t("kpis.fleet.sub"),
+              },
+              {
+                label: t("kpis.approvals.label"),
+                val: "12",
+                sub: t("kpis.approvals.sub"),
+              },
             ].map((kpi, i) => (
               <div key={i} className="rounded-md border border-border/10 bg-background/60 p-1.5">
                 <span className="block text-[6.5px] text-muted">{kpi.label}</span>
@@ -462,14 +488,29 @@ function ManagementMock() {
           {/* Operations Table */}
           <div className="flex flex-1 flex-col justify-between rounded border border-border/10 bg-background/40 p-1.5">
             <div className="flex items-center justify-between border-b border-border/10 pb-1 text-[6.5px] font-mono text-muted uppercase">
-              <span>Task / Entity</span>
-              <span>Owner</span>
-              <span>Status</span>
+              <span>{t("columns.task")}</span>
+              <span>{t("columns.owner")}</span>
+              <span>{t("columns.status")}</span>
             </div>
             {[
-              { task: "Logistics Sync #401", owner: "Auto-Dispatch", status: "Completed", color: "text-emerald-500 bg-emerald-500/10" },
-              { task: "Inventory Restock", owner: "Ops Team", status: "In Progress", color: "text-amber-500 bg-amber-500/10" },
-              { task: "Audit Pipeline", owner: "Security Agent", status: "Scheduled", color: "text-primary bg-primary/10" },
+              {
+                task: t("rows.logistics.task"),
+                owner: t("rows.logistics.owner"),
+                status: t("rows.logistics.status"),
+                color: "text-emerald-500 bg-emerald-500/10",
+              },
+              {
+                task: t("rows.inventory.task"),
+                owner: t("rows.inventory.owner"),
+                status: t("rows.inventory.status"),
+                color: "text-amber-500 bg-amber-500/10",
+              },
+              {
+                task: t("rows.audit.task"),
+                owner: t("rows.audit.owner"),
+                status: t("rows.audit.status"),
+                color: "text-primary bg-primary/10",
+              },
             ].map((row, i) => (
               <div key={i} className="flex items-center justify-between py-1 text-[7px] border-b border-border/5 last:border-b-0">
                 <span className="font-medium text-foreground">{row.task}</span>
@@ -486,17 +527,17 @@ function ManagementMock() {
         <div className="relative w-[32%] shrink-0 overflow-hidden rounded-lg border border-border/15">
           <Image
             src={photoUrl}
-            alt="Organized modern corporate office workspace and operations planning"
+            alt={t("photoAlt")}
             fill
             sizes="(max-width: 768px) 33vw, 220px"
             className="object-cover dark:brightness-90"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/95 via-background/60 to-transparent p-2">
             <span className="block text-[7.5px] font-semibold text-foreground">
-              Operations Control
+              {t("caption.title")}
             </span>
             <span className="block text-[6.5px] text-muted">
-              Centralized efficiency
+              {t("caption.sub")}
             </span>
           </div>
         </div>

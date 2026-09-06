@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView, useScroll, useSpring } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
@@ -17,6 +18,7 @@ import { stages } from "@/config/company";
  * usual four card grid says nothing about sequence.
  */
 export function WhatWeDoSection() {
+  const t = useTranslations("home.whatWeDo");
   const railRef = useRef<HTMLOListElement>(null);
   const { scrollYProgress } = useScroll({
     target: railRef,
@@ -32,22 +34,20 @@ export function WhatWeDoSection() {
     <Section id="what-we-do" glow="right" glowStrength="soft">
       <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
         <div className="lg:sticky lg:top-32 lg:self-start">
-          <Eyebrow>What we do</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>From an idea to</LineReveal>
+            <LineReveal>{t("headline.first")}</LineReveal>
             <LineReveal delay={0.08}>
-              something people{" "}
+              {t("headline.second")}{" "}
               <span className="font-serif font-normal italic text-primary">
-                use.
+                {t("headline.accent")}
               </span>
             </LineReveal>
           </h2>
 
           <Reveal tier="quiet" delay={0.12}>
             <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted">
-              We work across strategy, design, development, automation and AI.
-              Some clients arrive with a full specification. Others arrive with
-              a problem and a rough sense that software could fix it. Both work.
+              {t("body")}
             </p>
           </Reveal>
         </div>
@@ -66,7 +66,13 @@ export function WhatWeDoSection() {
           />
 
           {stages.map((stage, i) => (
-            <Stage key={stage.name} index={i} {...stage} />
+            <Stage
+              key={stage}
+              index={i}
+              name={t(`stages.${stage}.name`)}
+              line={t(`stages.${stage}.line`)}
+              note={t(`stages.${stage}.note`)}
+            />
           ))}
         </ol>
       </div>

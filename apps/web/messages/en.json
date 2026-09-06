@@ -1,0 +1,1922 @@
+{
+  "meta": {
+    "home": {
+      "title": "360 Techive | Software, digital products and intelligent systems",
+      "description": "We design and build custom web and mobile applications, interfaces, AI agents, automation and our own digital products."
+    },
+    "services": {
+      "title": "Services — 360 Techive",
+      "description": "Custom AI Employee development, integration, and ongoing improvement — from discovery to deployment and beyond."
+    },
+    "industries": {
+      "title": "Industries — 360 Techive",
+      "description": "AI Employees purpose-built for E-commerce, Healthcare, Finance, Real Estate, Logistics, and Professional Services."
+    },
+    "howItWorks": {
+      "title": "How It Works — 360 Techive",
+      "description": "From discovery to deployment and beyond — our four-phase process for building and operating custom AI Employees."
+    },
+    "pricing": {
+      "title": "Pricing — 360 Techive",
+      "description": "Custom pricing for custom AI Employees. Every deployment is scoped, quoted, and built to match your specific workflows and tools."
+    },
+    "contact": {
+      "title": "Contact | 360 Techive",
+      "description": "Commission custom software, digital products and automation. Tell us what you are building and we will tell you what it takes."
+    },
+    "aiAutomation": {
+      "title": "AI Automation | 360 Techive",
+      "description": "AI agents and automation systems that take routine work off your team."
+    },
+    "aiEmployees": {
+      "title": "AI Employees — 360 Techive",
+      "description": "Meet six purpose-built AI Employees for Support, Sales, Finance, Research, Documents, and Executive departments. Each agent automates an entire business function."
+    }
+  },
+  "nav": {
+    "primary": "Primary navigation",
+    "cta": "Start a project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "links": {
+      "services": "Services",
+      "aiAutomation": "AI Automation",
+      "products": "Products",
+      "work": "Work",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "language": {
+      "label": "Language",
+      "en": "English",
+      "de": "German"
+    }
+  },
+  "footer": {
+    "tagline": "We build custom software, digital products and intelligent systems.",
+    "rights": "All rights reserved.",
+    "columns": {
+      "explore": "Explore",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "links": {
+      "customSolutions": "Custom solutions",
+      "products": "Our products",
+      "work": "Selected work",
+      "about": "About",
+      "contact": "Contact",
+      "aiAutomation": "AI Automation",
+      "aiEmployees": "AI Employees",
+      "howItWorks": "How it works",
+      "pricing": "Pricing",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Software, digital products and intelligent systems",
+      "headline": {
+        "first": "We build software",
+        "second": "businesses",
+        "accent": "actually",
+        "third": "run on."
+      },
+      "body": "We turn ideas, complicated workflows and business problems into software people can actually use. Custom web and mobile applications, interface design, AI agents, automation, and digital products of our own.",
+      "primaryCta": "Start a project",
+      "secondaryCta": "Explore our work",
+      "footnote": "Bring us a finished specification or a problem you have not solved yet. Both are a good place to start."
+    },
+    "whatWeDo": {
+      "eyebrow": "What we do",
+      "headline": {
+        "first": "From an idea to",
+        "second": "something people",
+        "accent": "use."
+      },
+      "body": "We work across strategy, design, development, automation and AI. Some clients arrive with a full specification. Others arrive with a problem and a rough sense that software could fix it. Both work.",
+      "stages": {
+        "problem": {
+          "name": "Problem",
+          "line": "Understanding the business and the real problem.",
+          "note": "We start with how the work happens today, who does it and where it breaks."
+        },
+        "design": {
+          "name": "Design",
+          "line": "Turning the idea into a clear experience.",
+          "note": "Flows, screens and the shape of the product, agreed before code starts."
+        },
+        "build": {
+          "name": "Build",
+          "line": "Developing the software and the technology.",
+          "note": "Built in working pieces you can use and react to, not one long silence."
+        },
+        "launch": {
+          "name": "Launch",
+          "line": "Putting the product into the hands of real users.",
+          "note": "Release, watch how it is used, and keep improving it after day one."
+        }
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Custom solutions",
+      "headline": {
+        "first": "Software built around",
+        "accent": "your",
+        "second": "business."
+      },
+      "body": "Every business works differently. We build software around the way yours actually works, instead of bending your process to fit a tool somebody else designed.",
+      "counter": "{current} of {total}",
+      "items": {
+        "web-apps": {
+          "name": "Web Applications",
+          "description": "Powerful web applications built around real business requirements, from the first internal tool to the platform your whole company runs on.",
+          "detail": [
+            "Dashboards",
+            "Workflows",
+            "Roles"
+          ]
+        },
+        "mobile": {
+          "name": "Mobile Applications",
+          "description": "Mobile experiences designed for customers, teams and everyday workflows, on both iOS and Android.",
+          "detail": [
+            "iOS",
+            "Android",
+            "Offline"
+          ]
+        },
+        "web": {
+          "name": "Web Development",
+          "description": "Fast, modern, scalable websites and digital platforms that stay quick as the content and the traffic grow.",
+          "detail": [
+            "Marketing",
+            "CMS",
+            "Commerce"
+          ]
+        },
+        "design": {
+          "name": "UI and UX Design",
+          "description": "Interfaces that are simple to understand and enjoyable to use, designed before anyone writes code.",
+          "detail": [
+            "Research",
+            "Prototypes",
+            "Systems"
+          ]
+        },
+        "agents": {
+          "name": "AI Agents and Chatbots",
+          "description": "Intelligent systems that can hold a conversation, work with your information and handle the repetitive parts of a job.",
+          "detail": [
+            "Assistants",
+            "Retrieval",
+            "Actions"
+          ]
+        },
+        "automation": {
+          "name": "Business Automation",
+          "description": "Connect the systems you already use, remove repeated manual steps and turn a process into something that runs on its own.",
+          "detail": [
+            "Integrations",
+            "Triggers",
+            "Reporting"
+          ]
+        }
+      }
+    },
+    "automation": {
+      "eyebrow": "AI automation",
+      "headline": {
+        "first": "When software",
+        "second": "starts",
+        "accent": "doing",
+        "third": "the work."
+      },
+      "body": "We build AI agents and automation that work inside the processes a business already has. From answering questions to processing information and moving it between systems, these are workflows that let a team spend less of the week on repetition.",
+      "cta": "Explore AI Automation",
+      "diagramLabel": "An automated workflow: input, AI agent, decision, action, result",
+      "footnote": "Anything the agent is unsure about goes to a person",
+      "steps": {
+        "input": {
+          "label": "Input",
+          "note": "A message, a form, a file, an event"
+        },
+        "agent": {
+          "label": "AI agent",
+          "note": "Reads it against what your business knows"
+        },
+        "decision": {
+          "label": "Decision",
+          "note": "Handle it, or pass it to a person"
+        },
+        "action": {
+          "label": "Action",
+          "note": "Updates the systems you already use"
+        },
+        "result": {
+          "label": "Result",
+          "note": "Done, with a record of what happened"
+        }
+      }
+    },
+    "products": {
+      "eyebrow": "Our products",
+      "headline": {
+        "first": "We build products",
+        "accent": "too."
+      },
+      "body": "Some of our best ideas do not start with a client brief. They start with a problem we keep running into, in our own work or in the businesses we build for. These are the ones we decided were worth solving properly.",
+      "counter": "{current} of {total}",
+      "viewProject": "View Project",
+      "featured": "Featured: {name}",
+      "ownedByUs": "Built and owned by us",
+      "status": {
+        "building": "In development",
+        "beta": "In beta",
+        "research": "Research stage",
+        "live": "Live"
+      },
+      "items": {
+        "waAgent": {
+          "category": "AI Automation",
+          "description": "A WhatsApp based AI agent that automates conversations, answers frequently asked questions and handles routine customer interactions directly inside WhatsApp. Built for businesses that already run their support and sales through messaging."
+        },
+        "chatbots": {
+          "category": "AI Products",
+          "description": "Configurable AI chatbots you can embed on your own website or application. Each one is trained on your content and tuned for your domain, handling customer support and capturing leads around the clock."
+        },
+        "websites": {
+          "category": "Web Development",
+          "description": "Custom web builds ranging from marketing sites to full web applications with live data and user accounts. Our featured project, CoinStudy, is a halal crypto research platform that screens cryptocurrencies against a multi factor Shariah compliance scoring framework, with live market data and an AI assisted asset checker."
+        },
+        "ecommerce": {
+          "category": "E-commerce",
+          "description": "Online storefronts with product catalogs, checkout and customer accounts, built or customized around a client's actual catalog and operations. Our featured project, AQ Gimel, is a full e-commerce build for a private label vegan cosmetics manufacturer, with a multi category product catalog, multi currency checkout and a membership tier for repeat business customers."
+        },
+        "management": {
+          "category": "Business Tools",
+          "description": "Internal operations software that replaces spreadsheets and manual tracking for things like inventory, staff records and scheduling. Each system is built around the way a specific business actually runs, not a generic template."
+        }
+      }
+    },
+    "lab": {
+      "eyebrow": "The lab",
+      "headline": {
+        "first": "What we are building",
+        "accent": "next."
+      },
+      "exploring": "Currently exploring",
+      "footnote": "Some of this becomes client work. Some of it becomes a product. Most of it starts as a question about why something takes so long.",
+      "areas": {
+        "agents": {
+          "name": "AI Agents",
+          "note": "Systems that carry a task through to the end."
+        },
+        "automation": {
+          "name": "Business Automation",
+          "note": "Removing the steps nobody should do twice."
+        },
+        "webApps": {
+          "name": "Web Applications",
+          "note": "Platforms teams live in all day."
+        },
+        "mobile": {
+          "name": "Mobile Products",
+          "note": "Software that travels with the work."
+        },
+        "internalTools": {
+          "name": "Internal Business Tools",
+          "note": "The unglamorous software that runs a company."
+        },
+        "customerExperience": {
+          "name": "AI Powered Customer Experiences",
+          "note": "Support and sales that answer properly."
+        },
+        "workflows": {
+          "name": "Intelligent Workflows",
+          "note": "Processes that decide, not just forward."
+        },
+        "platforms": {
+          "name": "Digital Platforms",
+          "note": "Products with more than one kind of user."
+        }
+      }
+    },
+    "work": {
+      "eyebrow": "Selected work",
+      "headline": {
+        "first": "Built for",
+        "accent": "real",
+        "second": "problems."
+      },
+      "body": "A few of the kinds of problems we get asked to solve, and what we built to solve them.",
+      "fields": {
+        "problem": "The problem",
+        "built": "What we built",
+        "approach": "Approach",
+        "outcome": "What changed"
+      },
+      "projects": {
+        "operations": {
+          "title": "Operations platform for a service business",
+          "sector": "Field services",
+          "problem": "Jobs were booked in one system, scheduled in a spreadsheet and invoiced in a third place. Nobody could answer where a job actually stood.",
+          "built": "One web application covering bookings, scheduling, job history and invoicing, with a mobile view for the crew on site.",
+          "outcome": "One place to look for the state of any job, and an office team that stopped rekeying the same details three times."
+        },
+        "support": {
+          "title": "Customer support assistant",
+          "sector": "Ecommerce",
+          "problem": "The same questions arrived every day about delivery, returns and sizing, and the small support team answered each one by hand.",
+          "built": "An assistant trained on the company's own policies and product data, handing anything unusual to a person with the full history attached.",
+          "outcome": "Routine questions answered immediately, and a support team that now spends its day on the cases that need judgement."
+        },
+        "approvals": {
+          "title": "Internal approval workflow",
+          "sector": "Professional services",
+          "problem": "Approvals lived in email threads. Requests were missed, and no one could reconstruct who signed off on what.",
+          "built": "A workflow tool with structured requests, clear ownership at every step and a permanent record of each decision.",
+          "outcome": "Requests that move on their own and an audit trail that exists without anyone maintaining it."
+        }
+      }
+    },
+    "technology": {
+      "eyebrow": "Technology",
+      "headline": {
+        "first": "The technology changes.",
+        "second": "The",
+        "accent": "thinking",
+        "third": "does not."
+      },
+      "body": "We pick tools that fit the problem, the budget and whoever has to maintain the thing after us. The interesting part of the job was never the framework.",
+      "groups": {
+        "build": {
+          "label": "Product and interface",
+          "note": "What people see and use every day."
+        },
+        "platform": {
+          "label": "Platform and data",
+          "note": "Where the business logic and the records live."
+        },
+        "intelligence": {
+          "label": "Intelligence and infrastructure",
+          "note": "What makes software understand and keep running."
+        }
+      }
+    },
+    "principles": {
+      "eyebrow": "Why us",
+      "headline": {
+        "first": "Good software starts",
+        "second": "with understanding",
+        "third": "the",
+        "accent": "problem."
+      },
+      "body": "Most software that fails was built correctly. It just solved the wrong thing. So we spend real time on the part before the code.",
+      "items": {
+        "understand": {
+          "title": "We understand the business first",
+          "body": "Before anything gets designed we want to know how the work happens now, who touches it and what actually goes wrong."
+        },
+        "design": {
+          "title": "We design before we build",
+          "body": "Deciding how something should work is cheaper on a screen than in code. The design is where the arguments happen."
+        },
+        "grow": {
+          "title": "We build systems that can grow",
+          "body": "The first version should not be the thing that has to be thrown away. We build so the second year is easier than the first."
+        },
+        "automate": {
+          "title": "We automate where it makes sense",
+          "body": "Automation is worth it when a process is repetitive and well understood. When it is not, adding AI just hides the problem."
+        },
+        "maintain": {
+          "title": "We write software other people can maintain",
+          "body": "You should not need us forever. Clear structure, sensible naming and documentation are part of the work, not a favour."
+        },
+        "closely": {
+          "title": "We work closely with you",
+          "body": "Short feedback loops, working software early and honest answers about what is hard. No long silences."
+        }
+      }
+    },
+    "about": {
+      "eyebrow": "About us",
+      "headline": {
+        "first": "A software team that",
+        "second": "likes",
+        "accent": "building",
+        "third": "things."
+      },
+      "bodyOne": "360 Techive is a software house. We combine design, development, software engineering, AI and product thinking under one roof, which means a project does not get passed between four companies before it reaches anyone who can use it.",
+      "bodyTwo": "We work with businesses that have outgrown their spreadsheets, and with founders who have an idea and need someone to make it real. We also build our own products, which keeps us honest about how long things take.",
+      "disciplines": {
+        "design": {
+          "label": "Design",
+          "note": "Interfaces and product thinking"
+        },
+        "engineering": {
+          "label": "Engineering",
+          "note": "Web, mobile and backend systems"
+        },
+        "ai": {
+          "label": "AI",
+          "note": "Agents, assistants and automation"
+        },
+        "product": {
+          "label": "Product",
+          "note": "Our own software, built in house"
+        }
+      }
+    },
+    "start": {
+      "eyebrow": "Start here",
+      "headline": {
+        "first": "Have an idea, a problem,",
+        "second": "or something that should",
+        "accent": "work better?"
+      },
+      "body": "Tell us what you are trying to build. We will help you figure out what comes next, even if that turns out to be something smaller than you expected.",
+      "primaryCta": "Start a conversation",
+      "secondaryCta": "See what we build",
+      "footnote": "No pitch deck required. A paragraph about the problem is enough."
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "We build AI Employees —",
+      "accent": "not software.",
+      "body": "This is not a self-serve platform. We design, build, integrate, and operate custom AI agents for each department — matching your tools, your workflows, and your standards."
+    },
+    "items": {
+      "development": {
+        "title": "Custom Agent Development",
+        "description": "We build purpose-built AI Employees for each department in your business — not generic chatbots, but autonomous agents with access to your tools, data, and workflows. Each agent is designed around your specific processes, decision trees, and escalation paths, and is fully tested against real scenarios before deployment."
+      },
+      "integration": {
+        "title": "Integration & Data Connection",
+        "description": "Your new AI Employees connect directly to the tools your team already uses — CRM, helpdesk, accounting platforms, calendars, document storage, and internal APIs. We handle authentication, data mapping, and bidirectional sync so agents can read, write, and take action within your existing ecosystem without disruptions."
+      },
+      "operation": {
+        "title": "Operation & Ongoing Improvement",
+        "description": "Deployment is just the start. We monitor every agent's performance, retrain on new data, and ship improvements weekly. Your team gets a dashboard showing resolution rates, time saved, and ROI per department. We adapt agent behavior as your business evolves — no handoff, no vendor lock-in."
+      }
+    },
+    "included": {
+      "title": "What's",
+      "accent": "included.",
+      "body": "Every engagement includes architecture, integration, monitoring, and full transparency — no hidden fees or handoffs.",
+      "items": {
+        "architecture": "Dedicated agent architecture — each AI Employee is designed for your specific workflows, not a one-size-fits-all template",
+        "integration": "Seamless integration with your existing tools — CRM, helpdesk, accounting, calendars, and internal APIs",
+        "monitoring": "Ongoing monitoring and weekly improvement cycles — agents improve automatically over time",
+        "noLockIn": "No vendor lock-in — full visibility into how your agents work and the ability to adjust configurations",
+        "engineer": "Dedicated support engineer assigned to your account for the duration of the engagement",
+        "roi": "ROI tracking dashboard showing time saved, resolution rates, and cost per department"
+      }
+    }
+  },
+  "industries": {
+    "hero": {
+      "title": "AI Employees for",
+      "accent": "every industry.",
+      "body": "Every department has repetitive workflows. Our agents handle them so your team can focus on the work that matters."
+    },
+    "items": {
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Online retailers handle high volumes of orders, support tickets, and inventory updates daily. AI Employees keep operations running without scaling headcount.",
+        "useCases": [
+          "The <agent>Support Agent</agent> resolves order issues and return requests autonomously.",
+          "The <agent>Sales Agent</agent> qualifies leads and triggers abandoned-cart follow-ups.",
+          "The <agent>Documents Agent</agent> generates and files invoices and packing slips at scale."
+        ]
+      },
+      "healthcare": {
+        "title": "Healthcare",
+        "description": "Clinics and health-tech companies deal with sensitive data, complex scheduling, and regulatory workflows. AI Employees handle the administrative load securely.",
+        "useCases": [
+          "The <agent>Support Agent</agent> triages patient inquiries and routes urgent requests to the right team.",
+          "The <agent>Executive Assistant</agent> coordinates provider schedules and meeting preparation.",
+          "The <agent>Documents Agent</agent> organizes patient records and consent forms for audit readiness."
+        ]
+      },
+      "finance": {
+        "title": "Finance",
+        "description": "Finance teams manage high-stakes reconciliations, reporting cycles, and client communications. AI Employees reduce manual effort and error risk.",
+        "useCases": [
+          "The <agent>Finance Agent</agent> automates invoice processing and payment reminders.",
+          "The <agent>Support Agent</agent> handles client account inquiries and statement requests.",
+          "The <agent>Research Agent</agent> compiles market data and generates compliance summaries."
+        ]
+      },
+      "realEstate": {
+        "title": "Real Estate",
+        "description": "Agencies and property managers juggle listings, inquiries, showings, and contracts across dozens of properties. AI Employees automate the coordination.",
+        "useCases": [
+          "The <agent>Sales Agent</agent> qualifies leads and schedules property viewings automatically.",
+          "The <agent>Executive Assistant</agent> manages agent calendars and listing updates.",
+          "The <agent>Documents Agent</agent> generates lease agreements and disclosure packets."
+        ]
+      },
+      "logistics": {
+        "title": "Logistics",
+        "description": "Shipping and warehousing operations depend on real-time tracking, route optimization, and exception handling. AI Employees monitor and respond around the clock.",
+        "useCases": [
+          "The <agent>Support Agent</agent> tracks shipments and resolves delivery exceptions.",
+          "The <agent>Finance Agent</agent> reconciles carrier invoices and processes freight payments.",
+          "The <agent>Research Agent</agent> analyzes route efficiency and identifies cost-saving opportunities."
+        ]
+      },
+      "professional": {
+        "title": "Professional Services",
+        "description": "Consulting, legal, and advisory firms rely on billable hours, client communication, and document precision. AI Employees streamline the overhead.",
+        "useCases": [
+          "The <agent>Executive Assistant</agent> manages client scheduling and meeting prep across the firm.",
+          "The <agent>Documents Agent</agent> drafts proposals, engagement letters, and status reports.",
+          "The <agent>Research Agent</agent> gathers competitive intelligence and case law summaries."
+        ]
+      }
+    }
+  },
+  "howItWorks": {
+    "hero": {
+      "title": "How we build and operate",
+      "accent": "your AI Employees.",
+      "body": "A structured four-phase process from discovery to ongoing improvement — built for real business outcomes, not theoretical demos."
+    },
+    "phases": {
+      "title": "What happens in",
+      "accent": "each phase.",
+      "items": {
+        "discovery": {
+          "title": "Discovery",
+          "content": "Every engagement begins with a structured discovery phase. We conduct a workshop with your department heads and key stakeholders to map out current workflows, identify bottlenecks, and document the decision points and data sources involved in each process. We also audit your existing tool stack — CRM, helpdesk, ERP, calendars, document storage — to understand what APIs and data formats the agents will need to work with.",
+          "details": [
+            "Identify 3–5 high-impact workflows per department that are candidates for automation",
+            "Map data sources, tool permissions, and security requirements",
+            "Define success metrics and baseline current performance (time spent, error rates, throughput)",
+            "Typical timeframe: 3–5 business days"
+          ]
+        },
+        "architecture": {
+          "title": "Agent Architecture Design",
+          "content": "Based on the discovery findings, we produce a detailed architecture document for each AI Employee. This specifies which tools the agent connects to, how it reasons through each workflow, which decisions it can make autonomously versus escalate to a human, and how its performance is measured. The architecture is reviewed and signed off by your team before any code is written.",
+          "details": [
+            "Select the appropriate AI model and reasoning framework for each agent's domain",
+            "Design tool integrations and data flow diagrams",
+            "Define escalation rules, confidence thresholds, and human-in-the-loop handoffs",
+            "Typical timeframe: 3–5 business days"
+          ]
+        },
+        "build": {
+          "title": "Build & Integrate",
+          "content": "Each agent is built iteratively in two-week sprints. We connect the agent to your existing tools, configure its knowledge base from your documentation and historical data, and run it against real scenarios from your team. Every integration is tested for correctness, latency, and edge cases before the agent is deployed to a staging environment for user acceptance testing.",
+          "details": [
+            "Concurrent build sprints for each AI Employee in the engagement",
+            "Real-data testing using anonymized or sandboxed versions of your tools",
+            "User acceptance testing with a small group of your team members",
+            "Typical timeframe: 2–4 weeks depending on number of agents and integration complexity"
+          ]
+        },
+        "operate": {
+          "title": "Operate & Iterate",
+          "content": "Go-live is not the finish line. We monitor every agent's performance continuously, track resolution rates and time saved against the baselines established in discovery, and ship improvements on a weekly cycle. As your business processes evolve, we update agent configurations, add new tool integrations, and retrain on fresh data — all without any engineering work on your side.",
+          "details": [
+            "Weekly performance reviews and improvement deployments",
+            "Real-time dashboard showing agent metrics and ROI per department",
+            "Quarterly business reviews with your leadership team",
+            "No handoff, no vendor lock-in — full visibility into how every agent operates"
+          ]
+        }
+      }
+    },
+    "faq": {
+      "title": "Process & timeline",
+      "accent": "FAQs.",
+      "items": {
+        "duration": {
+          "label": "How long does a typical build take?",
+          "content": "Most single-agent deployments are live within 2–4 weeks from kickoff. Multi-agent engagements typically take 4–8 weeks, with agents rolling out one at a time so your team can adapt gradually. The timeline depends primarily on the number of integrations and the complexity of the workflows being automated."
+        },
+        "preparation": {
+          "label": "Do we need to prepare anything before Discovery?",
+          "content": "No preparation is required. Our discovery workshop is designed to extract everything we need from your team's existing knowledge. If you want to get a head start, you can list the top 3–5 workflows per department that feel most repetitive or error-prone, but even that is optional. We do recommend having department heads available for the workshop sessions."
+        },
+        "afterLive": {
+          "label": "What happens after an agent goes live?",
+          "content": "We transition into the ongoing operations phase. Your team gets a performance dashboard, we monitor agent decisions daily, and we ship improvements on a weekly cycle. If a workflow changes — a new CRM field, a modified approval process, a new tool — we handle the configuration update. You never need to write code or manage infrastructure."
+        },
+        "prototype": {
+          "label": "Can we see a prototype before committing?",
+          "content": "Yes. After the discovery and architecture phases, we build a working prototype connected to sandbox versions of your tools. Your team tests it against real scenarios. Only after you approve the prototype do we proceed to production deployment. This ensures there are no surprises and the agent meets your expectations from day one."
+        },
+        "stackChange": {
+          "label": "What if our tool stack changes mid-engagement?",
+          "content": "That's normal. We design agents with loosely coupled integrations so that swapping a CRM, helpdesk, or data source is a configuration change, not a rebuild. If a new tool is introduced during the build phase, we adjust the integration scope and timeline accordingly — no penalties, just clear communication."
+        }
+      }
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Pricing built for",
+      "accent": "custom scope.",
+      "body": "We build bespoke AI Employees — not SaaS subscriptions. Every deployment is different, so every price is quoted based on your actual requirements."
+    },
+    "factors": {
+      "title": "What determines",
+      "accent": "the cost.",
+      "items": {
+        "count": {
+          "title": "Number of AI Employees",
+          "description": "A single-department deployment costs less than a multi-agent rollout across Support, Sales, and Finance. We offer volume structuring for teams deploying 3+ agents together."
+        },
+        "integration": {
+          "title": "Integration Complexity",
+          "description": "Connecting to one CRM with a well-documented API is straightforward. Connecting to a legacy ERP, multiple data warehouses, or custom internal tools requires additional engineering and scoping."
+        },
+        "volume": {
+          "title": "Data Volume & Throughput",
+          "description": "Agents handling thousands of transactions per day require more robust infrastructure and monitoring than lower-volume deployments. We right-size the architecture to match your actual load."
+        },
+        "users": {
+          "title": "Number of Users & Departments",
+          "description": "An agent serving a 10-person team is configured differently than one supporting 200 users across multiple regions with role-based access and escalation chains."
+        },
+        "support": {
+          "title": "Support & Maintenance Level",
+          "description": "Standard ongoing support includes weekly monitoring and updates. Enterprise plans include dedicated support engineers, faster response SLAs, and custom reporting."
+        }
+      }
+    },
+    "quote": {
+      "title": "Getting an accurate",
+      "accent": "quote.",
+      "body": "The only way to get a real price is to scope your requirements. Our <process>discovery process</process> produces a detailed architecture document and a fixed-price quote — no bait-and-switch, no hidden fees.",
+      "rangeLabel": "Range indicator",
+      "range": "Most single-department deployments start in the <amount>[X–Y]</amount> range. Multi-agent and enterprise deployments vary based on scope. <note>(Your real numbers go here.)</note>"
+    },
+    "faq": {
+      "title": "Pricing",
+      "accent": "FAQs.",
+      "items": {
+        "minimum": {
+          "label": "Is there a minimum project size?",
+          "content": "We typically start engagements with at least one full AI Employee deployment. There is no minimum seat count or revenue requirement — if a single agent can save your team meaningful hours per week, the engagement makes sense. We have clients with 10-person teams and clients with 1,000-person teams."
+        },
+        "support": {
+          "label": "Do you offer ongoing support contracts?",
+          "content": "Yes. Every deployment includes an initial operations period as part of the build. After that, we offer monthly support contracts that cover monitoring, updates, retraining, and ongoing integration maintenance. Enterprise contracts include dedicated support engineers and faster response times."
+        },
+        "startSmall": {
+          "label": "Can we start with one AI Employee and add more later?",
+          "content": "Absolutely. Most clients start with one department — Support or Finance are common first choices — and expand to additional agents after seeing results. Adding agents later is faster and more cost-effective because the integration foundation is already in place."
+        },
+        "included": {
+          "label": "What is included in the build cost?",
+          "content": "The build cost covers discovery workshops, agent architecture design, development and testing, integration with your existing tools, user acceptance testing, and deployment. It also includes the first month of operations and performance monitoring."
+        },
+        "contracts": {
+          "label": "Do you require long-term contracts?",
+          "content": "No. Engagements are structured month-to-month after the initial build. We believe the value of the agents keeps clients on board — not lock-in clauses. You can scale up, scale down, or conclude the engagement at any time with 30 days' notice."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to scope your deployment?",
+      "body": "Tell us which department you want to start with. We'll schedule a discovery call and deliver a fixed-price quote within a week.",
+      "primary": "Book a Discovery Call",
+      "secondary": "Learn About Our Process"
+    }
+  },
+  "process": {
+    "steps": {
+      "discovery": {
+        "title": "Discovery & analysis",
+        "description": "We audit how the department actually works — tools, handoffs, decision points — and rank where an agent has the biggest lever. Your processes, not a generic template."
+      },
+      "architecture": {
+        "title": "Architecture",
+        "description": "We design the agent system: which data it reads, which tools it can act in, where it escalates to a human, and how success gets measured."
+      },
+      "build": {
+        "title": "Build & training",
+        "description": "We build the agents and train them on your data, processes and language. Every action is traceable, so you can see exactly what the agent did and why."
+      },
+      "operate": {
+        "title": "Operate & improve",
+        "description": "We run the agents and keep developing them. Agent-as-a-service — not a one-off project handover with a manual attached."
+      }
+    }
+  },
+  "contactCta": {
+    "eyebrow": "Start here",
+    "agent": {
+      "lead": "Ready to bring on your",
+      "accent": "{name}?"
+    },
+    "generic": {
+      "lead": "Which routine do you hand over",
+      "accent": "first?"
+    },
+    "body": "One short call. We identify the agent that pays for itself fastest in your business and lay out a concrete plan to get it running.",
+    "primary": "Book a Demo",
+    "secondary": "Contact Us"
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "Tell us what you are",
+      "accent": "building.",
+      "body": "We work with established brands, leadership teams and founders who need software built to a standard their name can sit behind. Begin with the problem rather than the specification, and we will tell you what it actually takes.",
+      "emailLabel": "Email"
+    },
+    "notes": {
+      "answered": "Every enquiry is answered, including the ones we are not the right firm for.",
+      "builders": "You will speak with the people who would build it, not an account manager.",
+      "private": "What you share stays with us and is never published without your approval."
+    },
+    "engagements": {
+      "eyebrow": "Where work begins",
+      "title": "Most engagements start in one of",
+      "accent": "three places.",
+      "body": "Tell us which one describes your situation and the conversation starts on the right footing.",
+      "startHere": "Start here",
+      "items": {
+        "newProduct": {
+          "label": "A new product",
+          "description": "An idea, a market you understand, and nothing built yet. We shape it into something specific enough to build and small enough to launch.",
+          "subject": "New product enquiry"
+        },
+        "rebuild": {
+          "label": "A rebuild",
+          "description": "Software that carried you this far and now holds you back. We assess what exists, then replace it without stopping the business that depends on it.",
+          "subject": "Rebuild enquiry"
+        },
+        "continuing": {
+          "label": "Continuing work",
+          "description": "A product already live that needs a team to keep building it properly, at a standard your name can sit behind.",
+          "subject": "Continuing work enquiry"
+        }
+      }
+    },
+    "conversation": {
+      "eyebrow": "What follows",
+      "title": "How the first",
+      "subtitle": "conversation",
+      "accent": "goes.",
+      "body": "No pitch deck, and no paid discovery exercise before anyone tells you anything useful.",
+      "steps": {
+        "read": {
+          "title": "Someone senior reads it",
+          "body": "Your enquiry goes to the people who would do the work. There is no qualification call and no account manager between you and an answer."
+        },
+        "business": {
+          "title": "We ask about the business, not the feature list",
+          "body": "How the work is done today, who it slows down, what it costs when it goes wrong. The requirement worth building is almost always underneath the one you were given."
+        },
+        "view": {
+          "title": "You get a considered view",
+          "body": "What we believe it takes, where the risk sits, what we would build first and what we would leave until later. Including when the honest answer is that you need less than you were told."
+        },
+        "proposal": {
+          "title": "Then a proposal, if we are the right firm",
+          "body": "Scope, sequence and cost set out in writing, with the assumptions stated plainly so nothing is discovered halfway through."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Before you write",
+      "title": "Questions we get",
+      "subtitle": "asked",
+      "accent": "first.",
+      "body": "If yours is not here, ask it in the form. We would far rather answer it now than halfway through a project.",
+      "items": {
+        "ownTeam": {
+          "label": "We have our own team. Can you work alongside them?",
+          "content": "Yes, and it is often the better arrangement. We can take one product, one platform or one part of the system while your team holds the rest, working to the review and release process you already run rather than imposing ours."
+        },
+        "inherited": {
+          "label": "Can you take on software somebody else built?",
+          "content": "Regularly. We read the codebase and map what is actually there before recommending anything, then tell you plainly whether it is worth continuing or worth replacing. We would rather lose the larger piece of work than bill you for both."
+        },
+        "ownership": {
+          "label": "Who owns the code and the intellectual property?",
+          "content": "You do, in full, from the first commit. You receive the repositories, the infrastructure and the documentation, and you are free to take the work to another team at any point. Nothing is held back as leverage."
+        },
+        "confidentiality": {
+          "label": "How is confidentiality handled?",
+          "content": "We will sign your agreement before the first detailed conversation, or provide ours if that is simpler. Your work is never shown, referenced or published as a case study without your written approval."
+        },
+        "brief": {
+          "label": "Do we need a finished brief before approaching you?",
+          "content": "No. A brief is useful, but a clear account of the problem is worth more than a specification written around a solution nobody has tested yet. If you have neither, that is precisely what the first conversation is for."
+        },
+        "pricing": {
+          "label": "How is work priced and scheduled?",
+          "content": "Defined pieces of work are quoted as fixed scope. Continuing product work runs on a monthly basis with an agreed team and a plan you can redirect each cycle. Either way, the numbers and the sequence are agreed before anything begins."
+        }
+      }
+    },
+    "form": {
+      "optional": "optional",
+      "choose": "Choose one",
+      "submit": "Send message",
+      "directTo": "Goes straight to {email}",
+      "mailSubject": "New project enquiry from {name}",
+      "fields": {
+        "name": {
+          "label": "Your name"
+        },
+        "email": {
+          "label": "Email"
+        },
+        "company": {
+          "label": "Company"
+        },
+        "projectType": {
+          "label": "What do you need"
+        },
+        "timeline": {
+          "label": "Timeline"
+        },
+        "message": {
+          "label": "About the project",
+          "hint": "What you are trying to build, or the problem you keep running into."
+        }
+      },
+      "projectTypes": {
+        "webApp": "Web application",
+        "mobileApp": "Mobile application",
+        "website": "Website",
+        "design": "UI and UX design",
+        "agents": "AI agents and chatbots",
+        "automation": "Business automation",
+        "unsure": "Not sure yet"
+      },
+      "timelines": {
+        "asap": "As soon as possible",
+        "oneToThree": "Within 1 to 3 months",
+        "threeToSix": "Within 3 to 6 months",
+        "planning": "Still planning"
+      },
+      "errors": {
+        "name": "Please tell us your name.",
+        "emailMissing": "We need an address to reply to.",
+        "emailInvalid": "That address does not look right.",
+        "message": "A sentence or two about the problem is enough."
+      },
+      "sent": {
+        "title": "Your message is ready to send.",
+        "body": "We opened it in your mail app with everything filled in. Press send there and it reaches us at {email}. If nothing opened, your browser may be blocking mail links, so email us directly and we will pick it up from there.",
+        "retry": "Open your mail app again",
+        "again": "Write another message"
+      }
+    }
+  },
+  "aiAutomation": {
+    "hero": {
+      "eyebrow": "AI Employees for every department",
+      "headline": {
+        "first": "Stop working",
+        "accentOne": "in",
+        "second": "the business. Start working",
+        "accentTwo": "on",
+        "third": "it."
+      },
+      "body": "Autonomous agents that act on their own, rather than waiting to be asked. We design, build and run the agent infrastructure that takes the routine off your team — support, sales, finance, research, documents and coordination.",
+      "primaryCta": "Book a Demo",
+      "secondaryCta": "See How It Works",
+      "footnote": "Built, integrated and operated for you — not a tool you have to staff."
+    },
+    "transformation": {
+      "eyebrow": "The shift",
+      "title": "From doing the work to",
+      "accent": "directing it.",
+      "lead": "Today everything lands on your desk and you react. With an agent layer, the routine runs itself and you supervise from above.",
+      "today": {
+        "eyebrow": "Today · in the business",
+        "title": "Everything routes through you.",
+        "body": "Requests arrive from every direction with no order of priority. The work gets done, but nobody is steering.",
+        "items": [
+          "Email threads",
+          "Inbound calls",
+          "Invoices",
+          "Documents",
+          "Chat requests",
+          "Admin",
+          "Follow-ups",
+          "Reporting"
+        ]
+      },
+      "withAgents": {
+        "eyebrow": "With agents · on the business",
+        "title": "You see the whole board.",
+        "body": "Agents own the repeatable work end to end. You set direction, review outcomes, and decide where to push next.",
+        "items": [
+          "Routine runs autonomously",
+          "You see every outcome",
+          "Exceptions escalate to you",
+          "Capacity scales without hiring"
+        ]
+      }
+    },
+    "showcase": {
+      "eyebrow": "The team",
+      "title": "A team of",
+      "accent": "digital employees.",
+      "lead": "We build the agents that have the biggest lever in your business — developed for your processes, not bought off the shelf. Coordinated with each other, working around the clock."
+    },
+    "compounding": {
+      "eyebrow": "Why it pays to start now",
+      "title": "The longer it runs,",
+      "accent": "the stronger it gets.",
+      "lead": "An agent system isn't a one-off project — it accumulates. Every new agent inherits what the existing ones have already learned about your business. Start today and in a year you're operating on a foundation a competitor still has to build from scratch.",
+      "coverage": "{filled} of {total} departments covered",
+      "stages": {
+        "monthOne": {
+          "when": "Month 1",
+          "title": "First agent live",
+          "body": "The use case that pays for itself fastest. The knowledge base starts here."
+        },
+        "monthThree": {
+          "when": "Month 3",
+          "title": "Two more join",
+          "body": "Each new agent inherits what the first one already learned about your business."
+        },
+        "monthSix": {
+          "when": "Month 6",
+          "title": "Departments connect",
+          "body": "Agents hand work to each other. The knowledge base is now the asset."
+        },
+        "yearOne": {
+          "when": "Year 1+",
+          "title": "Compounding",
+          "body": "A structure a competitor starting today still has twelve months of work to reach."
+        }
+      }
+    },
+    "impact": {
+      "eyebrow": "What changes",
+      "title": "The numbers that move when agents take",
+      "accent": "the routine.",
+      "lead": "Projected targets modelled on a real agent deployment — what happens when the repeatable work stops touching a human.",
+      "disclaimer": "Illustrative projections based on modelled workflows. Figures vary by process, data quality and volume — we validate them against your own numbers during discovery.",
+      "metrics": {
+        "drafting": {
+          "label": "Document drafting time",
+          "detail": "The Document Agent produces structured drafts in your house style. Your team reviews for substance instead of writing from scratch."
+        },
+        "search": {
+          "label": "Time spent searching",
+          "detail": "Natural-language search across your knowledge base returns the relevant passage immediately, instead of opening a dozen files."
+        },
+        "onboarding": {
+          "label": "Client onboarding time",
+          "detail": "New accounts are captured, enriched and set up automatically — productive on day one rather than after three weeks."
+        },
+        "capacity": {
+          "label": "Capacity per team member",
+          "detail": "Each person supports a multiple of the accounts they can today. Growth comes from throughput, not headcount."
+        },
+        "responsiveness": {
+          "label": "Speed of response to change",
+          "detail": "Market, pricing and regulatory changes are detected daily and matched to the accounts they affect."
+        },
+        "audit": {
+          "label": "Audit preparation",
+          "detail": "Evidence and documentation assemble themselves from the knowledge base, with completeness enforced structurally."
+        }
+      }
+    },
+    "costs": {
+      "eyebrow": "The real comparison",
+      "title": "A hire costs more than",
+      "accent": "their salary.",
+      "lead": "Every role carries a bundle of fixed costs and risks behind it. An agent carries none of them.",
+      "employee": {
+        "eyebrow": "Per employee",
+        "title": "Fixed costs and risk",
+        "gone": "Gone",
+        "items": [
+          "Salary and annual increases",
+          "Employer taxes and contributions",
+          "Benefits and pension",
+          "Paid leave",
+          "Sick days and cover",
+          "Recruitment and onboarding",
+          "Ramp-up before productivity",
+          "A fixed number of working hours"
+        ]
+      },
+      "agent": {
+        "eyebrow": "Per agent",
+        "title": "An investment, not a salary",
+        "items": [
+          "Runs 24/7 with no leave or downtime",
+          "No employer taxes or benefits load",
+          "Duplicated in minutes to scale",
+          "Consistent, auditable output quality",
+          "Improves with every model generation",
+          "Productive from the first day"
+        ]
+      }
+    },
+    "calculator": {
+      "eyebrow": "Run your own numbers",
+      "title": "What would a department like yours",
+      "accent": "actually save?",
+      "lead": "Set the size of the function, what it costs, and how much of its work is repeatable. The projection runs over ten years with 3% salary growth.",
+      "projected": "Projected over {years} years",
+      "cta": "Pressure-test this with us",
+      "disclaimer": "A projection, not a quote. It assumes the repeatable share is genuinely removable and that agent scope stays fixed. We rebuild this with your real process data during discovery.",
+      "result": {
+        "saving": "net saving against running the function as it is today",
+        "moreExpensive": "more expensive than the status quo at these inputs"
+      },
+      "fields": {
+        "headcount": {
+          "label": "People in the function",
+          "hint": "The team whose routine work agents would take over."
+        },
+        "salary": {
+          "label": "Average salary",
+          "hint": "Base salary. We add {loading}% for taxes, benefits and overhead."
+        },
+        "automatable": {
+          "label": "Share of work that is repeatable",
+          "hint": "Triage, lookups, drafting, data entry, reporting — the work an agent can own."
+        },
+        "agentCost": {
+          "label": "Annual agent programme cost",
+          "hint": "Build, integration and ongoing operation, all in."
+        }
+      },
+      "rows": {
+        "loadedCost": "Loaded cost of the function, year 1",
+        "repeatable": "Repeatable work, per year",
+        "annualSaving": "Net saving, per year",
+        "humanTotal": "Human cost over {years} years",
+        "agentTotal": "Agent programme over {years} years"
+      }
+    },
+    "brain": {
+      "eyebrow": "The real lever",
+      "title": "Not isolated bots — one",
+      "accent": "company brain.",
+      "lead": "We don't hand you six disconnected chatbots. We build a knowledge base you own — trained on your processes, your data and your language — and every agent reads from it and writes back to it.",
+      "body": "That's the asset. It's what makes agent number six faster to deploy than agent number one, and it's what gets more valuable every month instead of going stale.",
+      "diagramLabel": "Six agents all drawing from a single shared company knowledge base",
+      "oneSource": "Every agent draws from one source",
+      "brainLabel": "Company Brain",
+      "brainSub": "your processes · your data · your language",
+      "guarantees": [
+        "Your data stays yours, in your infrastructure",
+        "Every agent answer is traceable to a source",
+        "Survives model changes — you don't rebuild"
+      ]
+    },
+    "generations": {
+      "eyebrow": "Built to appreciate",
+      "title": "Stronger with every",
+      "accent": "model generation.",
+      "lead": "The structure you build today runs on tomorrow's far more capable models without being rebuilt. Put the structure in place now and every subsequent generation multiplies what it's worth.",
+      "footnote": "Same agent structure throughout — only the underlying model changes.",
+      "items": {
+        "today": {
+          "when": "Today",
+          "sub": "current models",
+          "body": "Your agents run reliably on what's available now. Nothing speculative."
+        },
+        "next": {
+          "when": "Next",
+          "sub": "generation",
+          "body": "The same agents handle longer, less supervised tasks. No rebuild."
+        },
+        "after": {
+          "when": "After that",
+          "sub": "generation",
+          "body": "Work you currently keep in-house because no model could be trusted with it."
+        },
+        "onward": {
+          "when": "Onward",
+          "sub": "toward general capability",
+          "body": "Your structure is already there. Latecomers start where you did in month one."
+        }
+      }
+    },
+    "curve": {
+      "eyebrow": "The trend line",
+      "title": "The capability curve is",
+      "accent": "exponential.",
+      "lead": "METR finds that the length of task an AI agent can complete on its own has been doubling roughly every seven months — and since 2024, closer to every four. Whoever builds the structure now compounds with every doubling.",
+      "chartLabel": "Logarithmic chart showing autonomous AI task length rising from seconds in 2019 to hours today, with a projected continuation into days and weeks",
+      "projected": "Projected",
+      "caption": "Task length an AI agent completes autonomously at a 50% success rate, logarithmic scale. Source: METR, <source>Measuring AI Ability to Complete Long Tasks</source> (2025). The dashed continuation is an illustrative projection, not a METR forecast.",
+      "axis": {
+        "seconds": "Seconds",
+        "minutes": "Minutes",
+        "hours": "Hours",
+        "days": "Days",
+        "weeks": "Weeks"
+      },
+      "points": {
+        "y2019": {
+          "note": "seconds"
+        },
+        "y2020": {
+          "note": "< 1 min"
+        },
+        "y2023": {
+          "note": "minutes"
+        },
+        "y2025": {
+          "note": "~1 hour"
+        },
+        "today": {
+          "note": "hours",
+          "year": "Today"
+        }
+      }
+    },
+    "quote": {
+      "eyebrow": "The thesis",
+      "quote": "The advantage isn't the model — everyone gets the same models. It's having the structure in place when the next one arrives.",
+      "attribution": "Agents designed, built and operated for you"
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "From first conversation to",
+      "accent": "running operation.",
+      "lead": "We don't hand over a bot and leave. Four phases turn a department into a measurable, continuously improving autonomous operation."
+    },
+    "faq": {
+      "eyebrow": "Before you ask",
+      "title": "Frequently asked",
+      "accent": "questions.",
+      "items": {
+        "fit": {
+          "label": "Which businesses is this actually worth it for?",
+          "content": "Established businesses with recurring, knowledge-heavy processes — sales, support, finance, operations. Industry-agnostic. The test isn't your sector, it's whether the same kind of work happens repeatedly."
+        },
+        "vsChatbot": {
+          "label": "What's the difference between an AI Employee and a chatbot?",
+          "content": "A chatbot answers questions in a chat window. An AI Employee is a persistent autonomous agent connected to your tools — it creates tickets, updates CRM records, generates invoices and schedules meetings across multiple systems without a human in the loop. A team member, not an FAQ interface."
+        },
+        "timeline": {
+          "label": "How long until something is actually running?",
+          "content": "The first productive agent is typically live within two to four weeks. We start with the use case that pays for itself fastest and build outward from there. Discovery and architecture happen in week one."
+        },
+        "data": {
+          "label": "What happens to our data?",
+          "content": "Your data stays yours. Each agent operates within your own infrastructure or a dedicated private cloud, around a knowledge base you own. Encrypted at rest and in transit, with explicit access and retention rules. We never train base models on your data."
+        },
+        "expertise": {
+          "label": "Do we need AI expertise on the team?",
+          "content": "No. We build, operate and improve the agents for you — agent-as-a-service. You keep control of scope and policy without having to hire for model engineering."
+        },
+        "vsChatGpt": {
+          "label": "Is this just ChatGPT with a different interface?",
+          "content": "No. These are custom multi-agent systems connected to your tools and data and trained on your processes. The value is in the integration and the knowledge base underneath, not the model."
+        }
+      }
+    }
+  },
+  "agents": {
+    "learnMore": "Learn more",
+    "support": {
+      "name": "Support Agent",
+      "short": "Support",
+      "tagline": "Resolve tickets before they escalate",
+      "description": "An autonomous helpdesk agent that triages incoming requests, answers common questions from your knowledge base, and escalates only when human judgment is needed. It learns from resolved tickets to improve its own accuracy over time.",
+      "features": [
+        "Ticket triage and categorization",
+        "Knowledge-base auto-reply",
+        "Escalation routing",
+        "Sentiment-aware responses"
+      ],
+      "responsibilities": [
+        "Answer customer questions from your documentation and FAQ",
+        "Track and update support tickets across their lifecycle",
+        "Escalate complex or sensitive issues to the right human team",
+        "Surface recurring problems so your product team can fix root causes"
+      ],
+      "businessBenefits": [
+        "Respond to customers in seconds, not hours",
+        "Reduce support ticket volume by 40–60%",
+        "Free senior engineers from tier-1 triage"
+      ],
+      "useCases": [
+        "A SaaS company routes all tier-1 billing and account questions to the Support Agent, cutting average first-reply time from 4 hours to 30 seconds.",
+        "An e-commerce brand deploys the agent on its help center to handle order-status lookups and return requests around the clock."
+      ]
+    },
+    "sales": {
+      "name": "Sales Agent",
+      "short": "Sales",
+      "tagline": "Qualify leads and book meetings",
+      "description": "An AI sales development representative that engages website visitors, answers product questions, qualifies inbound leads against your ICP, and schedules demos — all without a human in the loop until the meeting starts.",
+      "features": [
+        "Lead qualification and scoring",
+        "Multi-channel outreach sequences",
+        "Calendar booking and rescheduling",
+        "CRM sync (HubSpot, Salesforce)"
+      ],
+      "responsibilities": [
+        "Explain your services and recommend the right solution for each prospect",
+        "Qualify leads against your ideal customer profile",
+        "Schedule meetings and demos with the right sales rep",
+        "Follow up on stalled conversations automatically"
+      ],
+      "businessBenefits": [
+        "Convert more inbound traffic into qualified meetings",
+        "Shorten the sales cycle with instant, informed responses",
+        "Let your closers focus on the final conversation, not the first fifty"
+      ],
+      "useCases": [
+        "A B2B agency installs the Sales Agent on its pricing page; it answers technical questions and books 15-minute discovery calls, doubling the monthly meeting pipeline.",
+        "A software company uses the agent to nurture trial users, answering feature questions and converting them to paid subscriptions."
+      ]
+    },
+    "finance": {
+      "name": "Finance Agent",
+      "short": "Finance",
+      "tagline": "Reconcile, report, forecast",
+      "description": "An AI finance analyst that connects to your accounting stack, generates expense summaries and revenue reports, flags anomalies, and answers natural-language questions about your financial data.",
+      "features": [
+        "Expense categorization and summary",
+        "Revenue reporting and variance analysis",
+        "Invoice lookup and payment reminders",
+        "Anomaly detection on transactions"
+      ],
+      "responsibilities": [
+        "Summarize expenses by category, department, or project",
+        "Generate weekly and monthly revenue reports with comparisons",
+        "Look up invoices, payment status, and vendor history",
+        "Send automated payment reminders to overdue accounts"
+      ],
+      "businessBenefits": [
+        "Close the books faster — no waiting for manual spreadsheet consolidation",
+        "Get instant answers to financial questions without pulling a report",
+        "Catch billing anomalies before they compound"
+      ],
+      "useCases": [
+        "A mid-market agency asks the Finance Agent for 'last month's ad spend by channel' and gets a categorized breakdown in seconds instead of waiting for accounting.",
+        "A professional services firm automates weekly revenue reconciliation by having the agent cross-check Stripe, bank deposits, and invoices every Monday morning."
+      ]
+    },
+    "research": {
+      "name": "Research Agent",
+      "short": "Research",
+      "tagline": "Deep research at machine speed",
+      "description": "An AI research associate that gathers, synthesizes, and summarizes information from the web, documents, and databases. It produces structured briefs, competitor analyses, and trend reports on demand or on a schedule.",
+      "features": [
+        "Multi-source web research and citation",
+        "Competitor and market landscape analysis",
+        "Trend identification and summarization",
+        "Scheduled recurring report generation"
+      ],
+      "responsibilities": [
+        "Conduct market research on industries, competitors, and emerging trends",
+        "Produce competitor analysis with pricing, positioning, and feature comparisons",
+        "Identify trends from news, reports, and social signals",
+        "Generate concise business insight briefs for leadership"
+      ],
+      "businessBenefits": [
+        "Get research briefs in minutes instead of days",
+        "Track competitors continuously instead of quarterly",
+        "Free your strategy team from hours of manual reading and note-taking"
+      ],
+      "useCases": [
+        "A management consultancy asks the Research Agent to 'compare AI compliance frameworks across the EU, US, and UK' and receives a sourced, structured brief within five minutes.",
+        "An investment firm schedules weekly competitor-movement reports; the agent monitors news, SEC filings, and press releases automatically."
+      ]
+    },
+    "document": {
+      "name": "Document Agent",
+      "short": "Documents",
+      "tagline": "Draft, review, distribute",
+      "description": "An AI document specialist that drafts proposals, reports, and contracts from templates and structured data. It can summarize long documents, extract key terms, and maintain version history across your document repository.",
+      "features": [
+        "Template-based document generation",
+        "Long-document summarization",
+        "Key-term extraction and comparison",
+        "Version tracking and change logs"
+      ],
+      "responsibilities": [
+        "Generate quotations, proposals, and invoices from structured data",
+        "Summarize lengthy reports, contracts, and articles",
+        "Extract key clauses and obligations from legal documents",
+        "Maintain a versioned library of generated documents"
+      ],
+      "businessBenefits": [
+        "Reduce document drafting time by 70%",
+        "Eliminate copy-paste errors in proposals and contracts",
+        "Keep a searchable, version-controlled document history automatically"
+      ],
+      "useCases": [
+        "A professional services firm generates client proposals from a set of standardized modules — the agent populates pricing, scope, and timelines from the CRM in under a minute.",
+        "A legal department feeds incoming contracts to the Document Agent, which extracts termination clauses, renewal dates, and liability caps into a comparison table."
+      ]
+    },
+    "executive-assistant": {
+      "name": "Executive Assistant Agent",
+      "short": "Assistant",
+      "tagline": "Your AI chief of staff",
+      "description": "An AI executive assistant that coordinates schedules, drafts correspondence, sets reminders, and surfaces what needs your attention — across calendars, email, and task tools — so you can focus on decisions, not logistics.",
+      "features": [
+        "Cross-calendar scheduling and conflict resolution",
+        "Email drafting and follow-up reminders",
+        "Priority triage across inbox and tasks",
+        "Meeting preparation briefs and summaries"
+      ],
+      "responsibilities": [
+        "Manage schedules by finding availability across attendees and booking time",
+        "Draft emails, meeting agendas, and follow-up messages",
+        "Create and track reminders for deadlines, reviews, and follow-ups",
+        "Organize meetings including agenda preparation and note distribution"
+      ],
+      "businessBenefits": [
+        "Recover hours per week spent on calendar wrangling",
+        "Never miss a follow-up or deadline again",
+        "Walk into every meeting with a prep brief already written"
+      ],
+      "useCases": [
+        "An executive asks the agent to 'find time next week for a 30-minute sync with each department head' — it cross-references calendars and books five slots in one request.",
+        "A busy founder has the agent draft weekly status emails to the board, pulling in project updates from the task management system automatically."
+      ]
+    }
+  },
+  "agentDetail": {
+    "back": "All AI Employees",
+    "tryDemo": "Try the Demo",
+    "bookCall": "Book a Call",
+    "departments": {
+      "customer-support": "Support",
+      "sales": "Sales",
+      "finance": "Finance",
+      "research": "Research",
+      "documents": "Documents",
+      "executive": "Executive"
+    },
+    "responsibilities": {
+      "title": "What this agent",
+      "accent": "handles day-to-day."
+    },
+    "features": {
+      "title": "Key capabilities",
+      "accent": "built into the agent."
+    },
+    "benefits": {
+      "title": "What your business",
+      "accent": "gains from this agent."
+    },
+    "useCases": {
+      "title": "Real scenarios",
+      "accent": "this agent handles.",
+      "scenario": "Scenario {number}"
+    },
+    "related": {
+      "title": "Explore other",
+      "accent": "AI Employees."
+    },
+    "demo": {
+      "title": "Try a live preview",
+      "accent": "of this agent.",
+      "disclaimer": "Demo preview — responses shown are illustrative and not generated by a live AI system.",
+      "panelTitle": "{name} — Live Preview",
+      "empty": "Send a message to see how {name} responds.",
+      "inputLabel": "Type a message to the agent",
+      "placeholder": "Type a message...",
+      "send": "Send message"
+    }
+  },
+  "aiEmployees": {
+    "hero": {
+      "badge": "Six specialized agents",
+      "title": "Meet your future",
+      "accent": "AI workforce.",
+      "body": "Each AI Employee is purpose-built for one department, connects to your existing tools, and operates autonomously — from triaging support tickets to reconciling financial reports."
+    },
+    "demoBanner": {
+      "badge": "Live demo · coming soon",
+      "body": "Try a real AI Employee, right on this page."
+    },
+    "useCases": {
+      "title": "What businesses",
+      "accent": "have us build for.",
+      "items": {
+        "leads": {
+          "title": "Lead Qualification & CRM Upkeep",
+          "description": "Agents that engage inbound leads, score them against your ICP, update CRM records, and hand off warm conversations to your closers — no manual data entry."
+        },
+        "reporting": {
+          "title": "Data Extraction & Reporting",
+          "description": "Pull structured data from documents, emails, and spreadsheets. Generate reports, summaries, and dashboards on demand without waiting on a data team."
+        },
+        "support": {
+          "title": "Always-On Customer Support",
+          "description": "Handle tier-1 tickets around the clock. Answer from your knowledge base, triage by urgency, and escalate only when a human touch is required."
+        },
+        "workflow": {
+          "title": "Content & Workflow Automation",
+          "description": "Draft proposals, generate invoices, schedule meetings, and route approvals — agents that own the workflow from trigger to completion."
+        }
+      }
+    },
+    "lifecycle": {
+      "title": "How we build",
+      "accent": "and deploy each agent.",
+      "body": "Every AI Employee follows the same four-phase lifecycle — from understanding your workflows to ongoing operation and improvement."
+    },
+    "grid": {
+      "title": "Agents for",
+      "accent": "your department.",
+      "body": "Browse by department or explore all six AI Employees below.",
+      "all": "All"
+    },
+    "cases": {
+      "title": "First",
+      "accent": "cases.",
+      "body": "We publish case studies only with client approval. Here is one anonymized example of the work we do.",
+      "study": {
+        "title": "Financial services compliance (anonymized)",
+        "body": "A financial advisory firm deployed our Document and Research agents to automate regulatory filing reviews and competitor monitoring. The agents now process 200+ documents per week and surface compliance risks in hours instead of days.",
+        "note": "This is an illustrative example based on a client engagement. The client identity and specific figures have been anonymized."
+      },
+      "more": {
+        "title": "More case studies coming soon",
+        "body": "We publish detailed case studies only after receiving client approval. If you'd like to be featured, we'd love to hear from you."
+      }
+    }
+  },
+  "resources": {
+    "title": "Dive",
+    "accent": "deeper.",
+    "body": "Articles, guides, and explainers to help you understand how autonomous department agents work and what they can do for your business.",
+    "comingSoon": "Coming soon",
+    "article": "Article",
+    "topics": {
+      "what-is-an-ai-employee": {
+        "title": "What Is an AI Employee?",
+        "description": "Unlike a chatbot that answers questions, an AI Employee is a persistent autonomous agent that takes action across your tools — creating tickets, updating records, generating reports, and more."
+      },
+      "how-we-build-agents": {
+        "title": "How We Build Agents",
+        "description": "Each agent is purpose-built for one department using a modular architecture: perception layer, reasoning engine, tool integrations, and an escalation gate to human reviewers."
+      },
+      "data-security-and-compliance": {
+        "title": "Data Security & Compliance",
+        "description": "Agents operate in dedicated virtual private clouds with encryption at rest and in transit. We never train base models on your data, and you control retention policies."
+      },
+      "costs-and-roi": {
+        "title": "Costs & ROI",
+        "description": "Pricing is per-agent per-month with volume discounts. Most clients see a positive return within the first quarter from reduced staffing costs and faster throughput."
+      },
+      "ai-employee-vs-chatbot": {
+        "title": "AI Employee vs. Chatbot",
+        "description": "A chatbot waits for questions. An AI Employee owns outcomes — it monitors systems, initiates actions, escalates intelligently, and improves from feedback without retraining from scratch."
+      },
+      "glossary": {
+        "title": "Glossary of Terms",
+        "description": "From retrieval-augmented generation (RAG) and tool-calling to escalation gates and confidence thresholds — plain-English definitions of the concepts behind autonomous agents."
+      },
+      "build-vs-buy": {
+        "title": "Build vs. Buy",
+        "description": "Building an in-house AI agent means hiring ML engineers, maintaining infrastructure, and iterating for months. Our agents deploy in weeks and improve continuously."
+      },
+      "roi-calculator": {
+        "title": "Understanding ROI",
+        "description": "Estimating savings from department automation: hours reclaimed, reduced escalation volume, faster response times, and fewer errors — all measurable from week one."
+      },
+      "readiness-check": {
+        "title": "Are You Ready for an AI Employee?",
+        "description": "The best candidates have documented workflows, structured data sources, repetitive but rule-based tasks, and a clear handoff point where human judgment is required."
+      }
+    }
+  },
+  "growth": {
+    "title": "Start with one.",
+    "accent": "Scale department by department.",
+    "body": "Most clients begin with a single AI Employee — Support or Finance are common first choices — then expand coverage across additional departments over time. Each new agent integrates faster because the foundation is already in place.",
+    "centerLabel": "Your Company",
+    "illustrative": "Illustrative example"
+  },
+  "team": {
+    "title": "A team of",
+    "accent": "digital employees.",
+    "body": "We build precisely the AI Employees your business needs — individually developed for each department, not off-the-shelf. Coordinated, autonomous, and working around the clock.",
+    "centerLabel": "Your Company"
+  },
+  "teasers": {
+    "services": {
+      "title": "Beyond the agent:",
+      "accent": "strategy, integration, and operations.",
+      "body": "We design and build custom AI agents tailored to your specific workflows and tech stack. Every deployment includes integration with your existing tools, ongoing monitoring, and continuous improvement — so your agents get smarter over time without extra work from your team.",
+      "link": "Explore our full service offering"
+    },
+    "industries": {
+      "title": "Built for",
+      "accent": "regulated and fast-moving industries.",
+      "body": "Our agents adapt to industry-specific workflows, compliance requirements, and tool ecosystems.",
+      "link": "View all industries we serve"
+    }
+  },
+  "testimonials": {
+    "title": "What teams say about",
+    "accent": "working with us.",
+    "items": {
+      "support": {
+        "quote": "We deployed the Support Agent in two weeks. Our first-reply time dropped from four hours to under a minute, and our support team can finally focus on complex cases instead of password resets.",
+        "attribution": "Client Name, Head of Customer Experience"
+      },
+      "sales": {
+        "quote": "The Sales Agent books more qualified meetings per week than our previous two SDRs combined. It handles the first three touchpoints automatically and passes warm leads straight to our closers.",
+        "attribution": "Client Name, VP of Sales"
+      },
+      "finance": {
+        "quote": "We asked the Finance Agent for a revenue breakdown by product line and got it in five seconds. That used to take a human analyst half a day. It's become our default dashboard.",
+        "attribution": "Client Name, Finance Director"
+      }
+    }
+  },
+  "mockups": {
+    "ops": {
+      "title": "Jobs board — this week",
+      "synced": "All synced",
+      "photoAlt": "Service technician in a hard hat working on equipment on site",
+      "columns": {
+        "job": "Job",
+        "crew": "Crew",
+        "due": "Due",
+        "status": "Status"
+      },
+      "stats": {
+        "jobs": {
+          "label": "Jobs this week",
+          "sub": "6 more than last"
+        },
+        "invoice": {
+          "label": "Time to invoice",
+          "value": "1.2 days",
+          "sub": "was 6 days"
+        },
+        "utilisation": {
+          "label": "Crew utilisation",
+          "sub": "5 crews out"
+        }
+      },
+      "status": {
+        "invoiced": "Invoiced",
+        "inProgress": "In progress",
+        "scheduled": "Scheduled",
+        "awaitingParts": "Awaiting parts"
+      },
+      "dates": {
+        "first": "14 Mar",
+        "second": "15 Mar",
+        "third": "18 Mar",
+        "fourth": "19 Mar"
+      }
+    },
+    "support": {
+      "title": "Support assistant",
+      "resolved": "68% resolved without a human today",
+      "online": "Online",
+      "photoAlt": "Support team at a desk working through customer conversations",
+      "order": {
+        "title": "Order #4521 · Shipped",
+        "detail": "2 items · DHL Express · arrives 16 Mar",
+        "status": "In transit"
+      },
+      "thread": {
+        "questionOne": "Do the wool socks run small?",
+        "answerOne": "They run true to size — the merino pair is on the size chart as EU 42-44 for a UK 8.",
+        "questionTwo": "Where's my order #4521?",
+        "answerTwo": "Order #4521 shipped yesterday — here's your tracking link. It is out for delivery on Saturday."
+      },
+      "actions": {
+        "track": "Track parcel ↗",
+        "address": "Change delivery address"
+      },
+      "handoff": "Refund request handed to Amira · full thread attached"
+    },
+    "approvals": {
+      "title": "Requests · Q3",
+      "waiting": "4 waiting on you",
+      "photoAlt": "Person reviewing signed paperwork at a desk",
+      "currentApprover": "Current approver · {name}",
+      "requests": {
+        "contract": "Q3 vendor contract — Legal review",
+        "laptops": "New hire laptops — £2,400",
+        "travel": "Client travel — Rotterdam site visit",
+        "marketing": "Marketing spend — Q3 campaign uplift"
+      },
+      "status": {
+        "approved": "Approved",
+        "pending": "Pending",
+        "rejected": "Rejected"
+      },
+      "trail": {
+        "submitted": "Submitted",
+        "reviewed": "Reviewed",
+        "approved": "Approved",
+        "logged": "Approved 14:02 today by A. Karim · logged automatically"
+      }
+    },
+    "products": {
+      "wa": {
+        "contact": "Client Concierge",
+        "online": "online",
+        "incoming": "Hi, can I confirm our project sprint status?",
+        "reply": "Sprint 3 is on track. 14 tasks finished, QA verification complete.",
+        "chips": {
+          "board": "View Sprint Board",
+          "sync": "Schedule Sync"
+        },
+        "input": "Type a reply...",
+        "photoAlt": "Person using smartphone for messaging",
+        "caption": {
+          "title": "Direct WhatsApp",
+          "sub": "Real-time customer comms"
+        }
+      },
+      "chatbot": {
+        "widgetTitle": "Support Assistant",
+        "greeting": "Welcome! How can I help resolve your inquiry today?",
+        "question": "I need to integrate with our custom webhook.",
+        "answer": "Here is the docs link and starter payload. 🚀",
+        "input": "Reply here...",
+        "photoAlt": "Customer support team workspace with headsets",
+        "caption": {
+          "title": "Always-On Support",
+          "sub": "Zero ticket backlog"
+        }
+      },
+      "websites": {
+        "title": "Market Pulse",
+        "trend": "+4.2% Bullish",
+        "metrics": {
+          "volume": "Vol Index",
+          "liquidity": "Liquidity",
+          "sentiment": "Sentiment"
+        },
+        "sentimentValue": "Greed",
+        "photoAlt": "Financial crypto and stock candlestick charts and real-time market data",
+        "caption": {
+          "title": "Market Intelligence",
+          "sub": "Deep analytics engine"
+        }
+      },
+      "ecommerce": {
+        "store": "Store",
+        "catalog": "Catalog",
+        "cart": "Cart (2)",
+        "preview": "PRODUCT PREVIEW",
+        "add": "Add +",
+        "items": {
+          "watch": {
+            "title": "Chronograph Watch",
+            "badge": "Best Seller"
+          },
+          "headphones": {
+            "title": "Studio Headphones",
+            "badge": "New"
+          }
+        },
+        "shipping": "Free Global Shipping",
+        "checkout": "99.8% Checkout Success",
+        "photoAlt": "Curated retail boutique products and storefront",
+        "caption": {
+          "title": "Modern Commerce",
+          "sub": "Optimized for conversion"
+        }
+      },
+      "management": {
+        "title": "Enterprise Operations",
+        "healthy": "System Healthy",
+        "kpis": {
+          "orders": {
+            "label": "Active Orders",
+            "sub": "98.6% on-time"
+          },
+          "fleet": {
+            "label": "Fleet Capacity",
+            "sub": "18 vehicles out"
+          },
+          "approvals": {
+            "label": "Pending Approvals",
+            "sub": "Require review"
+          }
+        },
+        "columns": {
+          "task": "Task / Entity",
+          "owner": "Owner",
+          "status": "Status"
+        },
+        "rows": {
+          "logistics": {
+            "task": "Logistics Sync #401",
+            "owner": "Auto-Dispatch",
+            "status": "Completed"
+          },
+          "inventory": {
+            "task": "Inventory Restock",
+            "owner": "Ops Team",
+            "status": "In Progress"
+          },
+          "audit": {
+            "task": "Audit Pipeline",
+            "owner": "Security Agent",
+            "status": "Scheduled"
+          }
+        },
+        "photoAlt": "Organized modern corporate office workspace and operations planning",
+        "caption": {
+          "title": "Operations Control",
+          "sub": "Centralized efficiency"
+        }
+      }
+    },
+    "capabilities": {
+      "webApps": {
+        "live": "Live",
+        "nav": {
+          "dashboard": "Dashboard",
+          "analytics": "Analytics",
+          "customers": "Customers",
+          "settings": "Settings"
+        },
+        "stats": {
+          "users": "Users",
+          "revenue": "Revenue",
+          "conversion": "Conversion"
+        }
+      },
+      "mobile": {
+        "header": "Featured Apps",
+        "badge": "Pro",
+        "cards": {
+          "alpine": {
+            "title": "Alpine Explorer",
+            "category": "Travel & Tours"
+          },
+          "studio": {
+            "title": "Studio Acoustics",
+            "category": "Audio Streaming"
+          },
+          "dev": {
+            "title": "Dev Workspace",
+            "category": "Productivity"
+          }
+        },
+        "assetAlt": "Illustration of two developers building a mobile app around a large phone screen"
+      },
+      "web": {
+        "preview": "Preview",
+        "heroTitle": "Live metrics, one screen",
+        "heroSub": "Updated 4 seconds ago",
+        "loadTime": "Load time",
+        "lighthouse": "Lighthouse",
+        "assetAlt": "Illustration of a website on a monitor surrounded by programming, design, content, SEO and optimisation icons",
+        "assetCaption": "What a build covers"
+      },
+      "design": {
+        "system": "Design System",
+        "wireframe": "Wireframe",
+        "polished": "Polished",
+        "step": "Checkout · step 2",
+        "delivery": "Delivery details",
+        "fields": "3 fields · button",
+        "question": "Where should it go?",
+        "shipping": "Free delivery over £50",
+        "action": "Continue to payment",
+        "photoAlt": "Invoicing dashboard interface with revenue chart, client stats and a recent invoices table",
+        "caption": "Product UI"
+      },
+      "agents": {
+        "title": "Agent",
+        "online": "· Online",
+        "latency": "latency 42ms",
+        "userMessage": "Can you generate the monthly customer report?",
+        "agentMessage": "Report compiled. 1,240 records analyzed with 99.4% accuracy.",
+        "input": "Ask anything...",
+        "send": "Send",
+        "chips": {
+          "csv": "Download CSV ↗",
+          "followUp": "Schedule follow-up"
+        },
+        "userAlt": "User headshot avatar",
+        "agentAlt": "AI assistant headshot avatar",
+        "assetAlt": "Illustration of an AI assistant greeting a customer from a laptop screen, with support, engagement, lead and automation labels"
+      },
+      "automation": {
+        "title": "Pipeline Architecture",
+        "health": "Active · 100% health",
+        "nodes": {
+          "trigger": {
+            "title": "Trigger",
+            "sub": "Webhook"
+          },
+          "condition": {
+            "title": "Condition",
+            "sub": "Filter & Validate"
+          },
+          "action": {
+            "title": "Action",
+            "sub": "Process Payload"
+          },
+          "output": {
+            "title": "Output",
+            "sub": "Dispatched"
+          }
+        },
+        "executed": "Executed in 18ms",
+        "errors": "0 errors / 24,000 runs"
+      }
+    },
+    "hero": {
+      "label": {
+        "webApp": "Web app",
+        "mobile": "Mobile",
+        "agent": "AI agent",
+        "automation": "Automation",
+        "product": "Product"
+      },
+      "diagramLabel": "A web application, a mobile application, an AI agent, an automation flow and a product, connected as one system",
+      "webApp": {
+        "stats": {
+          "active": "Active",
+          "growth": "Growth",
+          "uptime": "Uptime"
+        },
+        "series": {
+          "signups": "Signups",
+          "revenue": "Revenue",
+          "churn": "Churn",
+          "refunds": "Refunds"
+        }
+      },
+      "mobile": {
+        "header": "Activity",
+        "cards": {
+          "nutrition": {
+            "title": "Nutrition Log",
+            "sub": "Logged 4h ago"
+          },
+          "coffee": {
+            "title": "Morning Roast",
+            "sub": "Order ready"
+          },
+          "core": {
+            "title": "Core Session",
+            "sub": "Completed"
+          }
+        }
+      },
+      "agent": {
+        "online": "online",
+        "question": "Sync database metrics?",
+        "answer": "4 services synced ✓",
+        "avatarAlt": "AI Agent Avatar"
+      },
+      "automation": {
+        "mail": "mail",
+        "calendar": "calendar",
+        "database": "database"
+      }
+    },
+    "network": {
+      "hub": "HUB",
+      "diagramLabel": "AI agents receiving work from a central hub and returning completed results",
+      "nodes": {
+        "support": {
+          "label": "Support",
+          "task": "Ticket #4821"
+        },
+        "sales": {
+          "label": "Sales",
+          "task": "Inbound lead"
+        },
+        "finance": {
+          "label": "Finance",
+          "task": "Invoice batch"
+        },
+        "research": {
+          "label": "Research",
+          "task": "Market brief"
+        },
+        "document": {
+          "label": "Documents",
+          "task": "Draft proposal"
+        },
+        "assistant": {
+          "label": "Assistant",
+          "task": "Schedule sync"
+        }
+      }
+    }
+  }
+}

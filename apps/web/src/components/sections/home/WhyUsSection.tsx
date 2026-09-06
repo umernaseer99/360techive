@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
@@ -14,32 +15,33 @@ import { principles } from "@/config/company";
  * the same gesture used by the capability index.
  */
 export function WhyUsSection() {
+  const t = useTranslations("home.principles");
+
   return (
     <Section id="why-us" glow="top-right" glowStrength="medium">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
-          <Eyebrow>Why us</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>Good software starts</LineReveal>
-            <LineReveal delay={0.08}>with understanding</LineReveal>
+            <LineReveal>{t("headline.first")}</LineReveal>
+            <LineReveal delay={0.08}>{t("headline.second")}</LineReveal>
             <LineReveal delay={0.16}>
-              the{" "}
+              {t("headline.third")}{" "}
               <span className="font-serif font-normal italic text-primary">
-                problem.
+                {t("headline.accent")}
               </span>
             </LineReveal>
           </h2>
           <Reveal tier="quiet" delay={0.16}>
             <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted">
-              Most software that fails was built correctly. It just solved the
-              wrong thing. So we spend real time on the part before the code.
+              {t("body")}
             </p>
           </Reveal>
         </div>
 
         <RevealGroup className="grid gap-x-10 gap-y-8 sm:grid-cols-2" stagger={0.06}>
           {principles.map((p, i) => (
-            <RevealItem key={p.title}>
+            <RevealItem key={p}>
               <div className="group relative pl-5">
                 <span
                   aria-hidden="true"
@@ -53,10 +55,10 @@ export function WhyUsSection() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-1.5 text-[17px] font-semibold tracking-tight text-foreground">
-                  {p.title}
+                  {t(`items.${p}.title`)}
                 </h3>
                 <p className="mt-2 text-pretty text-sm leading-relaxed text-muted">
-                  {p.body}
+                  {t(`items.${p}.body`)}
                 </p>
               </div>
             </RevealItem>

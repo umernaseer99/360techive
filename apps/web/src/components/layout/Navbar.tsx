@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import {
   AnimatePresence,
   motion,
@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import { Button } from "../ui/Button";
 import { ThemeToggle } from "../ui/ThemeToggle";
+import { LanguageSwitcher } from "../ui/LanguageSwitcher";
 import { siteConfig } from "@/config/site";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
@@ -33,6 +34,7 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const reduced = useSafeReducedMotion();
   const pathname = usePathname();
+  const t = useTranslations("nav");
 
   useMotionValueEvent(scrollY, "change", (y) => {
     const previous = scrollY.getPrevious() ?? 0;
@@ -59,7 +61,7 @@ export function Navbar() {
         animate={{ paddingTop: condensed ? 10 : 16, paddingBottom: condensed ? 10 : 16 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-8"
-        aria-label="Primary navigation"
+        aria-label={t("primary")}
       >
         <Link
           href="/"
@@ -72,7 +74,7 @@ export function Navbar() {
         <div className="hidden items-center gap-8 lg:flex">
           {siteConfig.navLinks.map((link) => (
             <Link
-              key={link.href}
+              key={link.key}
               href={link.href}
               className={`group relative py-1 text-sm font-medium transition-colors duration-200 ${
                 isActive(link.href)
@@ -80,7 +82,7 @@ export function Navbar() {
                   : "text-foreground/65 hover:text-foreground"
               }`}
             >
-              {link.label}
+              {t(`links.${link.key}`)}
               <span
                 aria-hidden="true"
                 className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-primary transition-transform duration-300 ease-out motion-reduce:transition-none ${
@@ -93,10 +95,11 @@ export function Navbar() {
           ))}
 
           <div className="flex items-center gap-2 pl-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <Link href="/contact">
               <Button size="sm" variant="primary">
-                Start a project
+                {t("cta")}
               </Button>
             </Link>
           </div>
@@ -104,11 +107,12 @@ export function Navbar() {
 
         {/* Mobile */}
         <div className="flex items-center gap-1 lg:hidden">
+          <LanguageSwitcher />
           <ThemeToggle />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex size-10 items-center justify-center rounded-lg text-muted transition-colors hover:text-foreground"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-label={isOpen ? t("closeMenu") : t("openMenu")}
             aria-expanded={isOpen}
           >
             {/* two rules that cross rather than a swapped icon */}
@@ -149,7 +153,7 @@ export function Navbar() {
             >
               {siteConfig.navLinks.map((link) => (
                 <motion.div
-                  key={link.href}
+                  key={link.key}
                   variants={{
                     hidden: reduced ? { opacity: 0 } : { opacity: 0, y: 8 },
                     visible: { opacity: 1, y: 0 },
@@ -161,7 +165,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="flex items-center justify-between rounded-lg px-3 py-3 text-base font-medium text-foreground/80 transition-colors hover:bg-foreground/5 hover:text-foreground"
                   >
-                    {link.label}
+                    {t(`links.${link.key}`)}
                     <span aria-hidden="true" className="text-muted/50">
                       &rarr;
                     </span>
@@ -179,7 +183,7 @@ export function Navbar() {
               >
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   <Button size="lg" variant="primary" className="w-full">
-                    Start a project
+                    {t("cta")}
                   </Button>
                 </Link>
               </motion.div>

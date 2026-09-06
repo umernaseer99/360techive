@@ -5,6 +5,7 @@ import {
   AnimatePresence,
   motion,
 } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
@@ -24,6 +25,7 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * order instead of a squashed two column grid.
  */
 export function CustomSolutionsSection() {
+  const t = useTranslations("home.capabilities");
   const [activeIndex, setActiveIndex] = useState(0);
   const reduced = useSafeReducedMotion();
   const active = capabilities[activeIndex];
@@ -31,21 +33,19 @@ export function CustomSolutionsSection() {
   return (
     <Section id="services" tone="tinted" glow="top-left" glowStrength="medium">
       <div className="flex flex-col gap-4">
-        <Eyebrow>Custom solutions</Eyebrow>
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-          <LineReveal>Software built around</LineReveal>
+          <LineReveal>{t("headline.first")}</LineReveal>
           <LineReveal delay={0.08}>
             <span className="font-serif font-normal italic text-primary">
-              your
+              {t("headline.accent")}
             </span>{" "}
-            business.
+            {t("headline.second")}
           </LineReveal>
         </h2>
         <Reveal tier="quiet" delay={0.1}>
           <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-            Every business works differently. We build software around the way
-            yours actually works, instead of bending your process to fit a tool
-            somebody else designed.
+            {t("body")}
           </p>
         </Reveal>
       </div>
@@ -89,15 +89,15 @@ export function CustomSolutionsSection() {
                             : "text-foreground/70"
                         } motion-reduce:transform-none`}
                       >
-                        {c.name}
+                        {t(`items.${c.id}.name`)}
                       </h3>
 
                       <p className="mt-2 max-w-lg text-pretty text-sm leading-relaxed text-muted">
-                        {c.description}
+                        {t(`items.${c.id}.description`)}
                       </p>
 
                       <div className="mt-3 flex flex-wrap gap-2">
-                        {c.detail.map((d) => (
+                        {t.raw(`items.${c.id}.detail`).map((d: string) => (
                           <span
                             key={d}
                             className={`rounded-full border px-2.5 py-0.5 text-[11px] tracking-wide transition-colors duration-200 ${
@@ -155,11 +155,13 @@ export function CustomSolutionsSection() {
 
             <div className="mt-4 flex items-center justify-between">
               <span className="text-sm font-medium text-foreground">
-                {active.name}
+                {t(`items.${active.id}.name`)}
               </span>
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                {String(activeIndex + 1).padStart(2, "0")} of{" "}
-                {String(capabilities.length).padStart(2, "0")}
+                {t("counter", {
+                  current: String(activeIndex + 1).padStart(2, "0"),
+                  total: String(capabilities.length).padStart(2, "0"),
+                })}
               </span>
             </div>
           </div>

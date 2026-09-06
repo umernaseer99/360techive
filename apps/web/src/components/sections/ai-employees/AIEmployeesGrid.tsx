@@ -2,22 +2,25 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { AgentCard } from "@/components/sections/AgentCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { agents } from "@/config/agents";
 import type { Department } from "@ai-software-house/shared-types";
 
-const departments: { label: string; value: Department | "all" }[] = [
-  { label: "All", value: "all" },
-  { label: "Support", value: "customer-support" },
-  { label: "Sales", value: "sales" },
-  { label: "Finance", value: "finance" },
-  { label: "Research", value: "research" },
-  { label: "Documents", value: "documents" },
-  { label: "Executive", value: "executive" },
+const departments: (Department | "all")[] = [
+  "all",
+  "customer-support",
+  "sales",
+  "finance",
+  "research",
+  "documents",
+  "executive",
 ];
 
 export function AIEmployeesGrid() {
+  const t = useTranslations("aiEmployees.grid");
+  const tDetail = useTranslations("agentDetail.departments");
   const [activeDept, setActiveDept] = useState<Department | "all">("all");
 
   const filtered =
@@ -29,29 +32,24 @@ export function AIEmployeesGrid() {
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
-          <SectionHeading
-            title="Agents for"
-            accent="your department."
-          />
-          <p className="mt-4 text-muted">
-            Browse by department or explore all six AI Employees below.
-          </p>
+          <SectionHeading title={t("title")} accent={t("accent")} />
+          <p className="mt-4 text-muted">{t("body")}</p>
         </div>
 
         <div className="mb-10 flex flex-wrap gap-2" role="tablist">
           {departments.map((dept) => (
             <button
-              key={dept.value}
-              onClick={() => setActiveDept(dept.value)}
+              key={dept}
+              onClick={() => setActiveDept(dept)}
               role="tab"
-              aria-selected={activeDept === dept.value}
+              aria-selected={activeDept === dept}
               className={`rounded-full border px-4 py-1.5 text-xs font-medium uppercase tracking-wider transition-colors ${
-                activeDept === dept.value
+                activeDept === dept
                   ? "border-primary bg-primary/10 text-primary"
                   : "border-border/15 text-muted hover:border-foreground/20 hover:text-foreground"
               }`}
             >
-              {dept.label}
+              {dept === "all" ? t("all") : tDetail(dept)}
             </button>
           ))}
         </div>

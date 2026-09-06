@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import {
   Headphones,
   TrendingUp,
@@ -24,8 +25,8 @@ import {
  */
 
 type Node = {
+  /** Message key under mockups.network.nodes. */
   id: string;
-  label: string;
   icon: LucideIcon;
   /** SVG-space coordinates in a 280x280 box. */
   x: number;
@@ -33,23 +34,23 @@ type Node = {
   /** Percentage position for the HTML chip overlay. */
   left: string;
   top: string;
-  task: string;
 };
 
 const CENTER = { x: 140, y: 140 };
 
 const NODES: Node[] = [
-  { id: "support", label: "Support", icon: Headphones, x: 140, y: 35, left: "50%", top: "12.5%", task: "Ticket #4821" },
-  { id: "sales", label: "Sales", icon: TrendingUp, x: 231, y: 87, left: "82.5%", top: "31.25%", task: "Inbound lead" },
-  { id: "finance", label: "Finance", icon: Wallet, x: 231, y: 193, left: "82.5%", top: "68.75%", task: "Invoice batch" },
-  { id: "research", label: "Research", icon: Search, x: 140, y: 245, left: "50%", top: "87.5%", task: "Market brief" },
-  { id: "document", label: "Documents", icon: FileText, x: 49, y: 193, left: "17.5%", top: "68.75%", task: "Draft proposal" },
-  { id: "assistant", label: "Assistant", icon: Crown, x: 49, y: 87, left: "17.5%", top: "31.25%", task: "Schedule sync" },
+  { id: "support", icon: Headphones, x: 140, y: 35, left: "50%", top: "12.5%" },
+  { id: "sales", icon: TrendingUp, x: 231, y: 87, left: "82.5%", top: "31.25%" },
+  { id: "finance", icon: Wallet, x: 231, y: 193, left: "82.5%", top: "68.75%" },
+  { id: "research", icon: Search, x: 140, y: 245, left: "50%", top: "87.5%" },
+  { id: "document", icon: FileText, x: 49, y: 193, left: "17.5%", top: "68.75%" },
+  { id: "assistant", icon: Crown, x: 49, y: 87, left: "17.5%", top: "31.25%" },
 ];
 
 const CYCLE_MS = 2600;
 
 export function AgentNetworkVisual() {
+  const t = useTranslations("mockups.network");
   const reduced = useReducedMotion();
   const [active, setActive] = useState(0);
 
@@ -68,7 +69,7 @@ export function AgentNetworkVisual() {
     <div
       className="relative aspect-square w-full max-w-[420px]"
       role="img"
-      aria-label="AI agents receiving work from a central hub and returning completed results"
+      aria-label={t("diagramLabel")}
     >
       <svg
         viewBox="0 0 280 280"
@@ -189,7 +190,7 @@ export function AgentNetworkVisual() {
                   labelAbove ? "bottom-full mb-2" : "top-full mt-2"
                 } ${isActive ? "text-foreground" : "text-muted/60"}`}
               >
-                {n.label}
+                {t(`nodes.${n.id}.label`)}
               </span>
             </div>
           </div>
@@ -204,7 +205,7 @@ export function AgentNetworkVisual() {
           className="flex size-16 items-center justify-center rounded-full border-2 border-primary bg-background"
         >
           <span className="text-[11px] font-semibold tracking-wide text-primary">
-            HUB
+            {t("hub")}
           </span>
         </motion.div>
       </div>
@@ -218,7 +219,8 @@ export function AgentNetworkVisual() {
           transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="rounded-full border border-border/10 bg-surface/70 px-3 py-1 font-mono text-[11px] text-muted backdrop-blur"
         >
-          {activeNode.task} &rarr; {activeNode.label}
+          {t(`nodes.${activeNode.id}.task`)} &rarr;{" "}
+          {t(`nodes.${activeNode.id}.label`)}
         </motion.span>
       </div>
     </div>

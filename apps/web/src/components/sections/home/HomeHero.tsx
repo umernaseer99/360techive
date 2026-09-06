@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   motion,
 } from "framer-motion";
@@ -23,6 +24,7 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * The visual runs its own entrance in parallel so nothing waits on it.
  */
 export function HomeHero() {
+  const t = useTranslations("home.hero");
   const reduced = useSafeReducedMotion();
 
   return (
@@ -40,21 +42,21 @@ export function HomeHero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
           >
-            <Eyebrow>Software, digital products and intelligent systems</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
           </motion.div>
 
           <h1 className="text-balance text-[2.6rem] font-semibold leading-[1.04] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.1rem]">
             <LineReveal trigger="mount" delay={0.08}>
-              We build software
+              {t("headline.first")}
             </LineReveal>
             <LineReveal trigger="mount" delay={0.19}>
-              businesses{" "}
+              {t("headline.second")}{" "}
               <span className="font-serif font-normal italic text-primary">
-                actually
+                {t("headline.accent")}
               </span>
             </LineReveal>
             <LineReveal trigger="mount" delay={0.3}>
-              run on.
+              {t("headline.third")}
             </LineReveal>
           </h1>
 
@@ -64,10 +66,7 @@ export function HomeHero() {
             transition={{ duration: 0.5, delay: 0.44, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-xl text-pretty text-base leading-relaxed text-muted md:text-lg"
           >
-            We turn ideas, complicated workflows and business problems into
-            software people can actually use. Custom web and mobile
-            applications, interface design, AI agents, automation, and digital
-            products of our own.
+            {t("body")}
           </motion.p>
 
           <motion.div
@@ -78,12 +77,12 @@ export function HomeHero() {
           >
             <Link href="/#contact" className="w-full sm:w-auto">
               <Button size="lg" variant="primary" className="w-full sm:w-auto">
-                Start a project
+                {t("primaryCta")}
               </Button>
             </Link>
             <Link href="/#work" className="w-full sm:w-auto">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                Explore our work
+                {t("secondaryCta")}
               </Button>
             </Link>
           </motion.div>
@@ -94,8 +93,7 @@ export function HomeHero() {
             transition={{ duration: 0.5, delay: 0.64 }}
             className="pt-3 text-sm text-muted/70"
           >
-            Bring us a finished specification or a problem you have not solved
-            yet. Both are a good place to start.
+            {t("footnote")}
           </motion.p>
         </div>
 

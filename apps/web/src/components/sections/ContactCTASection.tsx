@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -8,6 +10,8 @@ interface ContactCTASectionProps {
 }
 
 export function ContactCTASection({ agentName }: ContactCTASectionProps) {
+  const t = useTranslations("contactCta");
+
   return (
     <Section>
       <Reveal>
@@ -18,39 +22,41 @@ export function ContactCTASection({ agentName }: ContactCTASectionProps) {
           />
 
           <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-5">
-            <Eyebrow tone="primary">Start here</Eyebrow>
+            <Eyebrow tone="primary">{t("eyebrow")}</Eyebrow>
 
             <h2 className="text-balance text-3xl font-semibold leading-[1.12] tracking-tight text-foreground md:text-[2.6rem]">
               {agentName ? (
                 <>
-                  Ready to bring on your{" "}
+                  {t("agent.lead")}{" "}
                   <span className="font-serif font-normal italic text-primary">
-                    {agentName}?
+                    {t("agent.accent", { name: agentName })}
                   </span>
                 </>
               ) : (
                 <>
-                  Which routine do you hand over{" "}
+                  {t("generic.lead")}{" "}
                   <span className="font-serif font-normal italic text-primary">
-                    first?
+                    {t("generic.accent")}
                   </span>
                 </>
               )}
             </h2>
 
             <p className="text-pretty text-base leading-relaxed text-muted">
-              One short call. We identify the agent that pays for itself
-              fastest in your business and lay out a concrete plan to get it
-              running.
+              {t("body")}
             </p>
 
             <div className="mt-3 flex flex-wrap justify-center gap-3">
-              <Button size="lg" variant="primary">
-                Book a Demo
-              </Button>
-              <Button size="lg" variant="secondary">
-                Contact Us
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" variant="primary">
+                  {t("primary")}
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button size="lg" variant="secondary">
+                  {t("secondary")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

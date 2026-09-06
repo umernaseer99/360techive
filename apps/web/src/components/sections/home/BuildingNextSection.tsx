@@ -6,6 +6,7 @@ import {
   motion,
   useInView,
 } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
@@ -27,6 +28,7 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 const DWELL = 2600;
 
 export function BuildingNextSection() {
+  const t = useTranslations("home.lab");
   const reduced = useSafeReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: false, margin: "-120px" });
@@ -52,12 +54,12 @@ export function BuildingNextSection() {
     <Section id="lab" glow="left" glowStrength="medium">
       <div ref={ref} className="flex flex-col gap-10">
         <div className="flex flex-col gap-4">
-          <Eyebrow>The lab</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
             <LineReveal>
-              What we are building{" "}
+              {t("headline.first")}{" "}
               <span className="font-serif font-normal italic text-primary">
-                next.
+                {t("headline.accent")}
               </span>
             </LineReveal>
           </h2>
@@ -69,7 +71,7 @@ export function BuildingNextSection() {
             {labAreas.map((area, i) => {
               const isActive = i === activeIndex;
               return (
-                <li key={area.name}>
+                <li key={area}>
                   <button
                     type="button"
                     onMouseEnter={() => setPinned(i)}
@@ -88,7 +90,7 @@ export function BuildingNextSection() {
                       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                       className="block text-2xl font-semibold tracking-tight md:text-[2.1rem]"
                     >
-                      {area.name}
+                      {t(`areas.${area}.name`)}
                     </motion.span>
 
                     {/* underline that draws under whichever area currently leads */}
@@ -122,32 +124,31 @@ export function BuildingNextSection() {
                 <span className="relative size-1.5 rounded-full bg-primary" />
               </span>
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                Currently exploring
+                {t("exploring")}
               </span>
             </div>
 
             <div className="relative mt-5 min-h-[6.5rem]">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={active.name}
+                  key={active}
                   initial={reduced ? { opacity: 0 } : { opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={reduced ? { opacity: 0 } : { opacity: 0, y: -10 }}
                   transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <p className="text-base font-medium text-foreground">
-                    {active.name}
+                    {t(`areas.${active}.name`)}
                   </p>
                   <p className="mt-2 text-pretty text-sm leading-relaxed text-muted">
-                    {active.note}
+                    {t(`areas.${active}.note`)}
                   </p>
                 </motion.div>
               </AnimatePresence>
             </div>
 
             <p className="mt-6 border-t border-border/10 pt-5 text-pretty text-sm leading-relaxed text-muted/80">
-              Some of this becomes client work. Some of it becomes a product.
-              Most of it starts as a question about why something takes so long.
+              {t("footnote")}
             </p>
           </div>
         </div>

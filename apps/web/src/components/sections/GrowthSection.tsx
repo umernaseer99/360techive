@@ -2,6 +2,7 @@
 
 import type { LucideIcon } from "lucide-react";
 import { Headphones, TrendingUp, Wallet, Search, FileText, Crown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { NodeNetworkDiagram } from "@/components/ui/NodeNetworkDiagram";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
@@ -16,41 +17,36 @@ const iconMap: Record<string, LucideIcon> = {
   Crown,
 };
 
-const diagramNodes = agents.map((a) => ({
-  id: a.slug,
-  label: a.name.replace(" Agent", ""),
-  icon: iconMap[a.icon] ?? FileText,
-  href: `/ai-employees/${a.slug}`,
-}));
-
 export function GrowthSection() {
+  const t = useTranslations("growth");
+  const tAgents = useTranslations("agents");
+
+  const diagramNodes = agents.map((a) => ({
+    id: a.slug,
+    label: tAgents(a.slug + ".short"),
+    icon: iconMap[a.icon] ?? FileText,
+    href: `/ai-employees/${a.slug}`,
+  }));
+
   return (
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <RevealOnScroll direction="left">
-            <SectionHeading
-              title="Start with one."
-              accent="Scale department by department."
-            />
-            <p className="mt-4 text-muted">
-              Most clients begin with a single AI Employee — Support or Finance
-              are common first choices — then expand coverage across additional
-              departments over time. Each new agent integrates faster because
-              the foundation is already in place.
-            </p>
+            <SectionHeading title={t("title")} accent={t("accent")} />
+            <p className="mt-4 text-muted">{t("body")}</p>
           </RevealOnScroll>
 
           <RevealOnScroll direction="right" className="flex flex-col items-center">
             <NodeNetworkDiagram
-              centerLabel="Your Company"
+              centerLabel={t("centerLabel")}
               nodes={diagramNodes}
               variant="orbit"
               animated
               activeNodeCycle={{ intervalMs: 2800 }}
             />
             <span className="mt-4 text-[10px] uppercase tracking-widest text-muted/40">
-              Illustrative example
+              {t("illustrative")}
             </span>
           </RevealOnScroll>
         </div>

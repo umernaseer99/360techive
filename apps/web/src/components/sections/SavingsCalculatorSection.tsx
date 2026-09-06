@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -14,12 +15,14 @@ const SALARY_GROWTH = 0.03;
 /** Fully-loaded cost multiplier on top of base salary (taxes, benefits, overhead). */
 const LOADING = 1.3;
 
-function currency(n: number) {
-  return new Intl.NumberFormat("en-US", {
+/** Formatted in the reader's locale: 62.000 $ in German, $62,000 in English. */
+function makeCurrency(locale: string) {
+  const format = new Intl.NumberFormat(locale, {
     style: "currency",
     currency: "USD",
     maximumFractionDigits: 0,
-  }).format(Math.round(n));
+  });
+  return (n: number) => format.format(Math.round(n));
 }
 
 interface FieldProps {
@@ -69,6 +72,9 @@ function Field({
 }
 
 export function SavingsCalculatorSection() {
+  const t = useTranslations("aiAutomation.calculator");
+  const locale = useLocale();
+  const currency = useMemo(() => makeCurrency(locale), [locale]);
   const [headcount, setHeadcount] = useState(6);
   const [salary, setSalary] = useState(62000);
   const [automatable, setAutomatable] = useState(55);
@@ -103,16 +109,16 @@ export function SavingsCalculatorSection() {
         <Reveal>
           <div className="flex flex-col gap-8">
             <SectionHeading
-              eyebrow="Run your own numbers"
-              title="What would a department like yours"
-              accent="actually save?"
-              lead="Set the size of the function, what it costs, and how much of its work is repeatable. The projection runs over ten years with 3% salary growth."
+              eyebrow={t("eyebrow")}
+              title={t("title")}
+              accent={t("accent")}
+              lead={t("lead")}
             />
 
             <div className="flex flex-col gap-7 rounded-2xl border border-border/10 bg-background p-7">
               <Field
-                label="People in the function"
-                hint="The team whose routine work agents would take over."
+                label={t("fields.headcount.label")}
+                hint={t("fields.headcount.hint")}
                 value={headcount}
                 min={1}
                 max={50}
@@ -121,10 +127,10 @@ export function SavingsCalculatorSection() {
                 onChange={setHeadcount}
               />
               <Field
-                label="Average salary"
-                hint={`Base salary. We add ${Math.round(
-                  (LOADING - 1) * 100
-                )}% for taxes, benefits and overhead.`}
+                label={t("fields.salary.label")}
+                hint={t("fields.salary.hint", {
+                  loading: Math.round((LOADING - 1) * 100),
+                })}
                 value={salary}
                 min={30000}
                 max={180000}
@@ -133,8 +139,8 @@ export function SavingsCalculatorSection() {
                 onChange={setSalary}
               />
               <Field
-                label="Share of work that is repeatable"
-                hint="Triage, lookups, drafting, data entry, reporting — the work an agent can own."
+                label={t("fields.automatable.label")}
+                hint={t("fields.automatable.hint")}
                 value={automatable}
                 min={10}
                 max={90}
@@ -143,8 +149,8 @@ export function SavingsCalculatorSection() {
                 onChange={setAutomatable}
               />
               <Field
-                label="Annual agent programme cost"
-                hint="Build, integration and ongoing operation, all in."
+                label={t("fields.agentCost.label")}
+                hint={t("fields.agentCost.hint")}
                 value={agentCost}
                 min={10000}
                 max={200000}
@@ -159,7 +165,7 @@ export function SavingsCalculatorSection() {
         <Reveal delay={0.08}>
           <div className="flex h-full flex-col justify-center gap-8 rounded-2xl border border-primary/25 bg-primary/[0.03] p-8 md:p-10">
             <div className="flex flex-col gap-2">
-              <Eyebrow tone="primary">Projected over {YEARS} years</Eyebrow>
+              <Eyebrow tone="primary">{t("projected", { years: YEARS })}</Eyebrow>
               <span
                 className={`font-serif text-5xl font-normal italic leading-none tabular-nums md:text-6xl ${
                   positive ? "text-primary" : "text-muted"
@@ -168,32 +174,30 @@ export function SavingsCalculatorSection() {
                 {currency(Math.abs(result.netSaving))}
               </span>
               <span className="text-sm text-muted">
-                {positive
-                  ? "net saving against running the function as it is today"
-                  : "more expensive than the status quo at these inputs"}
+                {positive ? t("result.saving") : t("result.moreExpensive")}
               </span>
             </div>
 
             <dl className="flex flex-col divide-y divide-border/10 border-y border-border/10">
               {[
                 {
-                  k: "Loaded cost of the function, year 1",
+                  k: t("rows.loadedCost"),
                   v: currency(result.loadedCostYear1),
                 },
                 {
-                  k: "Repeatable work, per year",
+                  k: t("rows.repeatable"),
                   v: currency(result.annualAutomatable),
                 },
                 {
-                  k: "Net saving, per year",
+                  k: t("rows.annualSaving"),
                   v: currency(result.annualSaving),
                 },
                 {
-                  k: `Human cost over ${YEARS} years`,
+                  k: t("rows.humanTotal", { years: YEARS }),
                   v: currency(result.humanTotal),
                 },
                 {
-                  k: `Agent programme over ${YEARS} years`,
+                  k: t("rows.agentTotal", { years: YEARS }),
                   v: currency(result.agentTotal),
                 },
               ].map((row) => (
@@ -211,12 +215,10 @@ export function SavingsCalculatorSection() {
 
             <div className="flex flex-col gap-4">
               <Button size="lg" variant="primary" className="self-start">
-                Pressure-test this with us
+                {t("cta")}
               </Button>
               <p className="text-xs leading-relaxed text-muted/60">
-                A projection, not a quote. It assumes the repeatable share is
-                genuinely removable and that agent scope stays fixed. We rebuild
-                this with your real process data during discovery.
+                {t("disclaimer")}
               </p>
             </div>
           </div>

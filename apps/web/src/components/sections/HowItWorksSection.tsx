@@ -1,17 +1,20 @@
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ProcessSteps } from "./ProcessSteps";
 
 export function HowItWorksSection() {
+  const t = useTranslations("aiAutomation.process");
+
   return (
     <Section id="how-it-works">
       <Reveal>
         <SectionHeading
-          eyebrow="How we work"
-          title="From first conversation to"
-          accent="running operation."
-          lead="We don't hand over a bot and leave. Four phases turn a department into a measurable, continuously improving autonomous operation."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 

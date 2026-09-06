@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   AnimatePresence,
   motion,
@@ -24,14 +25,8 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * a new tab.
  */
 
-const statusCopy: Record<ProductStatus, string> = {
-  building: "In development",
-  beta: "In beta",
-  research: "Research stage",
-  live: "Live",
-};
-
 export function ProductsSection() {
+  const t = useTranslations("home.products");
   const [activeIndex, setActiveIndex] = useState(0);
   const reduced = useSafeReducedMotion();
   const active = products[activeIndex];
@@ -39,21 +34,18 @@ export function ProductsSection() {
   return (
     <Section id="products" tone="tinted">
       <div className="flex flex-col gap-4">
-        <Eyebrow>Our products</Eyebrow>
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
           <LineReveal>
-            We build products{" "}
+            {t("headline.first")}{" "}
             <span className="font-serif font-normal italic text-primary">
-              too.
+              {t("headline.accent")}
             </span>
           </LineReveal>
         </h2>
         <Reveal tier="quiet" delay={0.08}>
           <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-            Some of our best ideas do not start with a client brief. They start
-            with a problem we keep running into, in our own work or in the
-            businesses we build for. These are the ones we decided were worth
-            solving properly.
+            {t("body")}
           </p>
         </Reveal>
       </div>
@@ -102,11 +94,11 @@ export function ProductsSection() {
                       </div>
 
                       <span className="mt-1 block text-[11px] uppercase tracking-[0.14em] text-muted">
-                        {product.category}
+                        {t(`items.${product.key}.category`)}
                       </span>
 
                       <p className="mt-2 max-w-lg text-pretty text-sm leading-relaxed text-muted">
-                        {product.description}
+                        {t(`items.${product.key}.description`)}
                       </p>
 
                       <ProductLinks product={product} />
@@ -165,8 +157,10 @@ export function ProductsSection() {
                 )}
               </div>
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                {String(activeIndex + 1).padStart(2, "0")} of{" "}
-                {String(products.length).padStart(2, "0")}
+                {t("counter", {
+                  current: String(activeIndex + 1).padStart(2, "0"),
+                  total: String(products.length).padStart(2, "0"),
+                })}
               </span>
             </div>
           </div>
@@ -177,11 +171,13 @@ export function ProductsSection() {
 }
 
 function ProductLinks({ product }: { product: Product }) {
+  const t = useTranslations("home.products");
+
   if (!product.url) {
     return (
       <div className="mt-3 flex items-center gap-2 text-sm text-foreground/50">
         <span className="h-px w-6 bg-border/30" />
-        <span>Built and owned by us</span>
+        <span>{t("ownedByUs")}</span>
       </div>
     );
   }
@@ -195,7 +191,7 @@ function ProductLinks({ product }: { product: Product }) {
         className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 px-3 py-1 text-xs font-medium text-primary transition-colors duration-200 hover:bg-primary/10"
         onClick={(e) => e.stopPropagation()}
       >
-        View Project
+        {t("viewProject")}
         <svg
           viewBox="0 0 12 12"
           className="size-3"
@@ -213,7 +209,7 @@ function ProductLinks({ product }: { product: Product }) {
       </Link>
       {product.projectName && (
         <span className="text-[11px] text-muted">
-          Featured: {product.projectName}
+          {t("featured", { name: product.projectName })}
         </span>
       )}
     </div>
@@ -221,6 +217,7 @@ function ProductLinks({ product }: { product: Product }) {
 }
 
 function StatusDot({ status }: { status: ProductStatus }) {
+  const t = useTranslations("home.products.status");
   const reduced = useSafeReducedMotion();
   const live = status === "live" || status === "beta";
 
@@ -241,7 +238,7 @@ function StatusDot({ status }: { status: ProductStatus }) {
         />
       </span>
       <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-        {statusCopy[status]}
+        {t(status)}
       </span>
     </span>
   );

@@ -2,17 +2,12 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 const agentMarks = ["SUP", "SAL", "FIN", "RES", "DOC", "ASST"];
-
-const guarantees = [
-  "Your data stays yours, in your infrastructure",
-  "Every agent answer is traceable to a source",
-  "Survives model changes — you don't rebuild",
-];
 
 /**
  * Data-flow timing. The six dots are offset by STAGGER and each dot's full
@@ -31,6 +26,8 @@ const CYCLE = agentMarks.length * STAGGER;
  * knowledge base that every agent reads from and writes back to.
  */
 export function CompanyBrainSection() {
+  const t = useTranslations("aiAutomation.brain");
+  const guarantees: string[] = t.raw("guarantees");
   const reduced = useReducedMotion();
   const visualRef = useRef<HTMLDivElement>(null);
   // once: false — the loops must stop again when the diagram scrolls away.
@@ -43,16 +40,14 @@ export function CompanyBrainSection() {
         <Reveal>
           <div className="flex flex-col gap-4">
             <SectionHeading
-              eyebrow="The real lever"
-              title="Not isolated bots — one"
-              accent="company brain."
-              lead="We don't hand you six disconnected chatbots. We build a knowledge base you own — trained on your processes, your data and your language — and every agent reads from it and writes back to it."
+              eyebrow={t("eyebrow")}
+              title={t("title")}
+              accent={t("accent")}
+              lead={t("lead")}
             />
 
             <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-              That&apos;s the asset. It&apos;s what makes agent number six faster
-              to deploy than agent number one, and it&apos;s what gets more
-              valuable every month instead of going stale.
+              {t("body")}
             </p>
 
             <ul className="mt-3 flex flex-col gap-3">
@@ -75,10 +70,10 @@ export function CompanyBrainSection() {
               ref={visualRef}
               className="flex w-full max-w-[440px] flex-col items-center gap-6"
               role="img"
-              aria-label="Six agents all drawing from a single shared company knowledge base"
+              aria-label={t("diagramLabel")}
             >
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                Every agent draws from one source
+                {t("oneSource")}
               </span>
 
               <div className="grid w-full grid-cols-6 gap-2">
@@ -165,10 +160,10 @@ export function CompanyBrainSection() {
 
                 <div className="relative flex w-full flex-col items-center gap-1 rounded-[999px] border border-primary/30 bg-primary/[0.06] px-8 py-7">
                   <span className="text-sm font-semibold text-foreground">
-                    Company Brain
+                    {t("brainLabel")}
                   </span>
                   <span className="text-[11px] text-muted">
-                    your processes &middot; your data &middot; your language
+                    {t("brainSub")}
                   </span>
                 </div>
               </div>

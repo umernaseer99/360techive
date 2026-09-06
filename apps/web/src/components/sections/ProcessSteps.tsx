@@ -1,46 +1,30 @@
+import { useTranslations } from "next-intl";
 import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
+/** Order only; the wording lives in messages under `process.steps`. */
 export const processSteps = [
-  {
-    num: "01",
-    title: "Discovery & analysis",
-    description:
-      "We audit how the department actually works — tools, handoffs, decision points — and rank where an agent has the biggest lever. Your processes, not a generic template.",
-  },
-  {
-    num: "02",
-    title: "Architecture",
-    description:
-      "We design the agent system: which data it reads, which tools it can act in, where it escalates to a human, and how success gets measured.",
-  },
-  {
-    num: "03",
-    title: "Build & training",
-    description:
-      "We build the agents and train them on your data, processes and language. Every action is traceable, so you can see exactly what the agent did and why.",
-  },
-  {
-    num: "04",
-    title: "Operate & improve",
-    description:
-      "We run the agents and keep developing them. Agent-as-a-service — not a one-off project handover with a manual attached.",
-  },
-];
+  "discovery",
+  "architecture",
+  "build",
+  "operate",
+] as const;
 
 export function ProcessSteps() {
+  const t = useTranslations("process");
+
   return (
     <RevealGroup className="grid gap-px overflow-hidden rounded-2xl border border-border/10 bg-border/10 md:grid-cols-2 lg:grid-cols-4">
-      {processSteps.map((step) => (
-        <RevealItem key={step.num} className="h-full">
+      {processSteps.map((step, i) => (
+        <RevealItem key={step} className="h-full">
           <div className="flex h-full flex-col gap-3 bg-background p-8">
             <span className="font-serif text-4xl font-normal italic leading-none text-primary">
-              {step.num}
+              {String(i + 1).padStart(2, "0")}
             </span>
             <h3 className="text-base font-semibold text-foreground">
-              {step.title}
+              {t(`steps.${step}.title`)}
             </h3>
             <p className="text-sm leading-relaxed text-muted">
-              {step.description}
+              {t(`steps.${step}.description`)}
             </p>
           </div>
         </RevealItem>

@@ -10,6 +10,7 @@ import {
   type MotionValue,
 } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
 /**
@@ -57,6 +58,7 @@ function useParallax(
 }
 
 export function BuildSystemVisual() {
+  const t = useTranslations("mockups.hero");
   const reduced = useSafeReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -106,7 +108,7 @@ export function BuildSystemVisual() {
       onPointerLeave={resetPointer}
       className="relative aspect-square w-full max-w-[520px] select-none"
       role="img"
-      aria-label="A web application, a mobile application, an AI agent, an automation flow and a product, connected as one system"
+      aria-label={t("diagramLabel")}
     >
       {/* backdrop grid, furthest plane */}
       <motion.div
@@ -286,10 +288,11 @@ function PanelLabel({ children }: { children: React.ReactNode }) {
 }
 
 function WebAppPanel({ still }: { still: boolean }) {
+  const t = useTranslations("mockups.hero");
   const stats = [
-    { label: "Active", val: "2.4k", icon: "●" },
-    { label: "Growth", val: "+18%", icon: "▲" },
-    { label: "Uptime", val: "99.9%", icon: "✓" },
+    { label: t("webApp.stats.active"), val: "2.4k", icon: "●" },
+    { label: t("webApp.stats.growth"), val: "+18%", icon: "▲" },
+    { label: t("webApp.stats.uptime"), val: "99.9%", icon: "✓" },
   ];
 
   return (
@@ -299,7 +302,7 @@ function WebAppPanel({ still }: { still: boolean }) {
         <span className="size-1.5 rounded-full bg-border/20" />
         <span className="size-1.5 rounded-full bg-border/20" />
         <span className="ml-1.5">
-          <PanelLabel>Web app</PanelLabel>
+          <PanelLabel>{t("label.webApp")}</PanelLabel>
         </span>
       </div>
 
@@ -324,10 +327,10 @@ function WebAppPanel({ still }: { still: boolean }) {
       <div className="flex gap-2 px-2.5 pb-2.5 pt-2">
         <div className="flex w-1/4 flex-col justify-between py-0.5">
           {[
-            { label: "Signups", active: false },
-            { label: "Revenue", active: true },
-            { label: "Churn", active: false },
-            { label: "Refunds", active: false },
+            { label: t("webApp.series.signups"), active: false },
+            { label: t("webApp.series.revenue"), active: true },
+            { label: t("webApp.series.churn"), active: false },
+            { label: t("webApp.series.refunds"), active: false },
           ].map((row) => (
             <span
               key={row.label}
@@ -367,23 +370,24 @@ function WebAppPanel({ still }: { still: boolean }) {
 }
 
 function MobilePanel({ still }: { still: boolean }) {
+  const t = useTranslations("mockups.hero");
   const cards = [
     {
       img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=120&q=80",
-      title: "Nutrition Log",
-      sub: "Logged 4h ago",
+      title: t("mobile.cards.nutrition.title"),
+      sub: t("mobile.cards.nutrition.sub"),
       active: false,
     },
     {
       img: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=120&q=80",
-      title: "Morning Roast",
-      sub: "Order ready",
+      title: t("mobile.cards.coffee.title"),
+      sub: t("mobile.cards.coffee.sub"),
       active: true,
     },
     {
       img: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=120&q=80",
-      title: "Core Session",
-      sub: "Completed",
+      title: t("mobile.cards.core.title"),
+      sub: t("mobile.cards.core.sub"),
       active: false,
     },
   ];
@@ -403,7 +407,9 @@ function MobilePanel({ still }: { still: boolean }) {
 
         {/* App header */}
         <div className="flex items-center justify-between border-b border-border/10 px-2 pb-1">
-          <span className="text-[7px] font-semibold text-foreground/80">Activity</span>
+          <span className="text-[7px] font-semibold text-foreground/80">
+            {t("mobile.header")}
+          </span>
           <span className="size-1.5 rounded-full bg-primary/80" />
         </div>
 
@@ -444,13 +450,14 @@ function MobilePanel({ still }: { still: boolean }) {
       </div>
 
       <div className="px-1 pb-0.5 pt-1.5 text-center">
-        <PanelLabel>Mobile</PanelLabel>
+        <PanelLabel>{t("label.mobile")}</PanelLabel>
       </div>
     </div>
   );
 }
 
 function AgentPanel({ still }: { still: boolean }) {
+  const t = useTranslations("mockups.hero");
   const avatarUrl =
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80";
 
@@ -468,9 +475,11 @@ function AgentPanel({ still }: { still: boolean }) {
             )}
             <span className="relative size-1.5 rounded-full bg-primary" />
           </span>
-          <PanelLabel>AI agent</PanelLabel>
+          <PanelLabel>{t("label.agent")}</PanelLabel>
         </div>
-        <span className="text-[7px] text-muted/70 font-mono">online</span>
+        <span className="text-[7px] text-muted/70 font-mono">
+          {t("agent.online")}
+        </span>
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -479,14 +488,14 @@ function AgentPanel({ still }: { still: boolean }) {
           <div className="relative size-4 shrink-0 overflow-hidden rounded-full ring-1 ring-border/20">
             <Image
               src={avatarUrl}
-              alt="AI Agent Avatar"
+              alt={t("agent.avatarAlt")}
               width={16}
               height={16}
               className="size-full object-cover dark:brightness-90"
             />
           </div>
           <div className="rounded-lg rounded-tl-xs border border-border/10 bg-surface/70 px-2 py-1 text-[7px] leading-tight text-foreground/75 shadow-xs">
-            Sync database metrics?
+            {t("agent.question")}
           </div>
         </div>
 
@@ -497,7 +506,7 @@ function AgentPanel({ still }: { still: boolean }) {
           transition={{ duration: 0.4, delay: 1.05 }}
           className="ml-auto rounded-lg rounded-br-xs bg-primary px-2 py-1 text-[7px] font-medium leading-tight text-white shadow-xs"
         >
-          4 services synced ✓
+          {t("agent.answer")}
         </motion.div>
       </div>
     </div>
@@ -505,9 +514,10 @@ function AgentPanel({ still }: { still: boolean }) {
 }
 
 function AutomationPanel({ still }: { still: boolean }) {
+  const t = useTranslations("mockups.hero");
   const sliders = [
     {
-      label: "mail",
+      label: t("automation.mail"),
       val: "72%",
       icon: (
         <path
@@ -519,7 +529,7 @@ function AutomationPanel({ still }: { still: boolean }) {
       active: false,
     },
     {
-      label: "calendar",
+      label: t("automation.calendar"),
       val: "48%",
       icon: (
         <path
@@ -531,7 +541,7 @@ function AutomationPanel({ still }: { still: boolean }) {
       active: false,
     },
     {
-      label: "database",
+      label: t("automation.database"),
       val: "86%",
       icon: (
         <path
@@ -547,7 +557,7 @@ function AutomationPanel({ still }: { still: boolean }) {
   return (
     <div className={`${panelClass} p-2.5`}>
       <div className="mb-2">
-        <PanelLabel>Automation</PanelLabel>
+        <PanelLabel>{t("label.automation")}</PanelLabel>
       </div>
 
       {/* Slider rows with leading icons (mail, calendar, database) */}
@@ -586,6 +596,8 @@ function AutomationPanel({ still }: { still: boolean }) {
 }
 
 function ProductCore({ still }: { still: boolean }) {
+  const t = useTranslations("mockups.hero");
+
   return (
     <div className="relative">
       {!still && (
@@ -600,7 +612,7 @@ function ProductCore({ still }: { still: boolean }) {
         <span className="font-serif text-lg italic leading-none text-primary">
           360
         </span>
-        <PanelLabel>Product</PanelLabel>
+        <PanelLabel>{t("label.product")}</PanelLabel>
       </div>
     </div>
   );

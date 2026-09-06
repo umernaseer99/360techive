@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   motion,
   useInView,
@@ -24,17 +25,19 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * loop while the diagram is on screen and stops when it is not.
  */
 
+/** Icons only; the labels come from the message catalogue. */
 const steps = [
-  { icon: Inbox, label: "Input", note: "A message, a form, a file, an event" },
-  { icon: Bot, label: "AI agent", note: "Reads it against what your business knows" },
-  { icon: GitBranch, label: "Decision", note: "Handle it, or pass it to a person" },
-  { icon: Zap, label: "Action", note: "Updates the systems you already use" },
-  { icon: CheckCircle2, label: "Result", note: "Done, with a record of what happened" },
+  { icon: Inbox, key: "input" },
+  { icon: Bot, key: "agent" },
+  { icon: GitBranch, key: "decision" },
+  { icon: Zap, key: "action" },
+  { icon: CheckCircle2, key: "result" },
 ];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function AutomationSection() {
+  const t = useTranslations("home.automation");
   const reduced = useSafeReducedMotion();
   const diagramRef = useRef<HTMLDivElement>(null);
   // once: false, so the loop stops when the diagram leaves the viewport.
@@ -45,25 +48,22 @@ export function AutomationSection() {
     <Section id="ai-automation" glow="right" glowStrength="strong">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="flex flex-col gap-5 lg:pt-4">
-          <Eyebrow tone="primary">AI automation</Eyebrow>
+          <Eyebrow tone="primary">{t("eyebrow")}</Eyebrow>
 
           <h2 className="text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>When software</LineReveal>
+            <LineReveal>{t("headline.first")}</LineReveal>
             <LineReveal delay={0.08}>
-              starts{" "}
+              {t("headline.second")}{" "}
               <span className="font-serif font-normal italic text-primary">
-                doing
+                {t("headline.accent")}
               </span>{" "}
-              the work.
+              {t("headline.third")}
             </LineReveal>
           </h2>
 
           <Reveal tier="quiet" delay={0.1}>
             <p className="max-w-lg text-pretty text-base leading-relaxed text-muted">
-              We build AI agents and automation that work inside the processes a
-              business already has. From answering questions to processing
-              information and moving it between systems, these are workflows
-              that let a team spend less of the week on repetition.
+              {t("body")}
             </p>
           </Reveal>
 
@@ -71,7 +71,7 @@ export function AutomationSection() {
             <div className="pt-2">
               <Link href="/ai-automation">
                 <Button size="lg" variant="secondary">
-                  Explore AI Automation
+                  {t("cta")}
                   <span aria-hidden="true">&rarr;</span>
                 </Button>
               </Link>
@@ -82,13 +82,13 @@ export function AutomationSection() {
         <div
           ref={diagramRef}
           role="img"
-          aria-label="An automated workflow: input, AI agent, decision, action, result"
+          aria-label={t("diagramLabel")}
           className="rounded-2xl border border-border/10 bg-surface/30 p-6 md:p-8"
         >
           <div className="flex flex-col gap-0 md:flex-row md:items-start">
             {steps.map((step, i) => (
               <div
-                key={step.label}
+                key={step.key}
                 className="flex flex-1 flex-row items-start gap-4 md:flex-col md:items-center md:gap-0"
               >
                 {/* node */}
@@ -145,10 +145,10 @@ export function AutomationSection() {
                   className="pb-8 md:px-2 md:pb-0 md:pt-4 md:text-center"
                 >
                   <p className="text-sm font-semibold text-foreground">
-                    {step.label}
+                    {t(`steps.${step.key}.label`)}
                   </p>
                   <p className="mt-1 text-pretty text-[13px] leading-relaxed text-muted">
-                    {step.note}
+                    {t(`steps.${step.key}.note`)}
                   </p>
                 </motion.div>
               </div>
@@ -167,7 +167,7 @@ export function AutomationSection() {
               <span className="relative size-1.5 rounded-full bg-primary" />
             </span>
             <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-              Anything the agent is unsure about goes to a person
+              {t("footnote")}
             </span>
           </div>
         </div>

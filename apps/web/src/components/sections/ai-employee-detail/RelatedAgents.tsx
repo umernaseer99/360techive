@@ -1,23 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AgentCard } from "@/components/sections/AgentCard";
-import { agents } from "@/config/agents";
-import type { AgentProfile } from "@ai-software-house/shared-types";
+import { agents, type AgentMeta } from "@/config/agents";
 
 interface RelatedAgentsProps {
-  current: AgentProfile;
+  current: AgentMeta;
 }
 
 export function RelatedAgents({ current }: RelatedAgentsProps) {
+  const t = useTranslations("agentDetail");
   const others = agents.filter((a) => a.slug !== current.slug).slice(0, 3);
 
   return (
     <section className="border-y border-border/10 px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">
-          <SectionHeading title="Explore other" accent="AI Employees." />
+          <SectionHeading title={t("related.title")} accent={t("related.accent")} />
         </div>
 
         <motion.div

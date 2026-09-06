@@ -1,9 +1,11 @@
-import Link from "next/link";
-import { siteConfig } from "@/config/site";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { siteConfig, type NavLink } from "@/config/site";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations("footer");
 
   return (
     <footer className="border-t border-border/10">
@@ -17,73 +19,62 @@ export function Footer() {
               <BrandLogo height={52} />
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-muted">
-              {siteConfig.tagline}
+              {t("tagline")}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3">
-            <div>
-              <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted">
-                Explore
-              </h3>
-              <ul className="space-y-3">
-                {siteConfig.footerLinks.explore.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted">
-                Company
-              </h3>
-              <ul className="space-y-3">
-                {siteConfig.footerLinks.company.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted">
-                Legal
-              </h3>
-              <ul className="space-y-3">
-                {siteConfig.footerLinks.legal.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <FooterColumn
+              heading={t("columns.explore")}
+              links={siteConfig.footerLinks.explore}
+            />
+            <FooterColumn
+              heading={t("columns.company")}
+              links={siteConfig.footerLinks.company}
+            />
+            <FooterColumn
+              heading={t("columns.legal")}
+              links={siteConfig.footerLinks.legal}
+            />
           </div>
         </div>
 
         <div className="mt-12 border-t border-border/10 pt-6">
           <p className="text-xs text-muted">
-            &copy; {currentYear} {siteConfig.name}. All rights reserved.
+            &copy; {currentYear} {siteConfig.name}. {t("rights")}
           </p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterColumn({
+  heading,
+  links,
+}: {
+  heading: string;
+  links: readonly NavLink[];
+}) {
+  const t = useTranslations("footer.links");
+
+  return (
+    <div>
+      <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted">
+        {heading}
+      </h3>
+      <ul className="space-y-3">
+        {links.map((link) => (
+          <li key={link.key}>
+            <Link
+              href={link.href}
+              className="text-sm text-muted transition-colors hover:text-foreground"
+            >
+              {t(link.key)}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

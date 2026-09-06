@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   motion,
   useScroll,
@@ -23,6 +24,7 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * ends where it started.
  */
 export function StartProjectSection() {
+  const t = useTranslations("home.start");
   const reduced = useSafeReducedMotion();
   const ref = useRef<HTMLElement>(null);
 
@@ -65,23 +67,21 @@ export function StartProjectSection() {
       />
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
-        <Eyebrow tone="primary">Start here</Eyebrow>
+        <Eyebrow tone="primary">{t("eyebrow")}</Eyebrow>
 
         <h2 className="mt-6 text-balance text-[2.1rem] font-semibold leading-[1.06] tracking-tight text-foreground sm:text-5xl md:text-[3.6rem]">
-          <LineReveal>Have an idea, a problem,</LineReveal>
+          <LineReveal>{t("headline.first")}</LineReveal>
           <LineReveal delay={0.09}>
-            or something that should{" "}
+            {t("headline.second")}{" "}
             <span className="font-serif font-normal italic text-primary">
-              work better?
+              {t("headline.accent")}
             </span>
           </LineReveal>
         </h2>
 
         <Reveal tier="quiet" delay={0.14}>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted md:text-lg">
-            Tell us what you are trying to build. We will help you figure out
-            what comes next, even if that turns out to be something smaller than
-            you expected.
+            {t("body")}
           </p>
         </Reveal>
 
@@ -89,12 +89,12 @@ export function StartProjectSection() {
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <Link href="/contact">
               <Button size="lg" variant="primary">
-                Start a conversation
+                {t("primaryCta")}
               </Button>
             </Link>
             <Link href="/#work">
               <Button size="lg" variant="secondary">
-                See what we build
+                {t("secondaryCta")}
               </Button>
             </Link>
           </div>
@@ -102,7 +102,7 @@ export function StartProjectSection() {
 
         <Reveal tier="quiet" delay={0.26}>
           <p className="mt-8 text-sm text-muted/70">
-            No pitch deck required. A paragraph about the problem is enough.
+            {t("footnote")}
           </p>
         </Reveal>
       </div>

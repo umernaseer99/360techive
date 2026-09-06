@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 import { siteConfig } from "@/config/site";
+import { projectTypes, timelines } from "@/config/contact";
 
 /**
  * The enquiry form.
@@ -19,23 +21,6 @@ import { siteConfig } from "@/config/site";
  * with a fetch to your API and keep everything else: the fields, the
  * validation and the sent state are all endpoint agnostic.
  */
-
-const projectTypes = [
-  "Web application",
-  "Mobile application",
-  "Website",
-  "UI and UX design",
-  "AI agents and chatbots",
-  "Business automation",
-  "Not sure yet",
-];
-
-const timelines = [
-  "As soon as possible",
-  "Within 1 to 3 months",
-  "Within 3 to 6 months",
-  "Still planning",
-];
 
 interface Values {
   name: string;
@@ -60,25 +45,31 @@ type Errors = Partial<Record<keyof Values, string>>;
 /** Deliberately permissive. The mail client and the reply are the real check. */
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function validate(values: Values): Errors {
+/** Validation messages come from the catalogue, so they translate too. */
+function validate(
+  values: Values,
+  messages: Record<"name" | "emailMissing" | "emailInvalid" | "message", string>
+): Errors {
   const errors: Errors = {};
-  if (!values.name.trim()) errors.name = "Please tell us your name.";
-  if (!values.email.trim()) errors.email = "We need an address to reply to.";
+  if (!values.name.trim()) errors.name = messages.name;
+  if (!values.email.trim()) errors.email = messages.emailMissing;
   else if (!EMAIL.test(values.email.trim()))
-    errors.email = "That address does not look right.";
-  if (values.message.trim().length < 20)
-    errors.message = "A sentence or two about the problem is enough.";
+    errors.email = messages.emailInvalid;
+  if (values.message.trim().length < 20) errors.message = messages.message;
   return errors;
 }
 
 /** Builds the message body. Blank optional fields are left out entirely. */
-function composeBody(values: Values): string {
+function composeBody(
+  values: Values,
+  labels: Record<"name" | "email" | "company" | "projectType" | "timeline" | "about", string>
+): string {
   const rows: [string, string][] = [
-    ["Name", values.name.trim()],
-    ["Email", values.email.trim()],
-    ["Company", values.company.trim()],
-    ["Project type", values.projectType],
-    ["Timeline", values.timeline],
+    [labels.name, values.name.trim()],
+    [labels.email, values.email.trim()],
+    [labels.company, values.company.trim()],
+    [labels.projectType, values.projectType],
+    [labels.timeline, values.timeline],
   ];
 
   const details = rows
@@ -86,10 +77,11 @@ function composeBody(values: Values): string {
     .map(([label, value]) => `${label}: ${value}`)
     .join("\n");
 
-  return `${details}\n\nAbout the project\n\n${values.message.trim()}\n`;
+  return `${details}\n\n${labels.about}\n\n${values.message.trim()}\n`;
 }
 
 export function ContactForm() {
+  const t = useTranslations("contact.form");
   const reduced = useSafeReducedMotion();
   const [values, setValues] = useState<Values>(empty);
   const [errors, setErrors] = useState<Errors>({});
@@ -107,7 +99,12 @@ export function ContactForm() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const found = validate(values);
+    const found = validate(values, {
+      name: t("errors.name"),
+      emailMissing: t("errors.emailMissing"),
+      emailInvalid: t("errors.emailInvalid"),
+      message: t("errors.message"),
+    });
     setErrors(found);
     if (Object.keys(found).length > 0) {
       const first = document.querySelector<HTMLElement>("[data-invalid='true']");
@@ -115,11 +112,20 @@ export function ContactForm() {
       return;
     }
 
-    const subject = `New project enquiry from ${values.name.trim()}`;
+    const subject = t("mailSubject", { name: values.name.trim() });
     const href =
       `mailto:${siteConfig.contactEmail}` +
       `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(composeBody(values))}`;
+      `&body=${encodeURIComponent(
+        composeBody(values, {
+          name: t("fields.name.label"),
+          email: t("fields.email.label"),
+          company: t("fields.company.label"),
+          projectType: t("fields.projectType.label"),
+          timeline: t("fields.timeline.label"),
+          about: t("fields.message.label"),
+        })
+      )}`;
 
     setMailtoHref(href);
     setSent(true);
@@ -150,20 +156,17 @@ export function ContactForm() {
             </span>
 
             <h3 className="text-xl font-semibold tracking-tight text-foreground">
-              Your message is ready to send.
+              {t("sent.title")}
             </h3>
 
             <p className="text-pretty text-[15px] leading-relaxed text-muted">
-              We opened it in your mail app with everything filled in. Press
-              send there and it reaches us at {siteConfig.contactEmail}. If
-              nothing opened, your browser may be blocking mail links, so email
-              us directly and we will pick it up from there.
+              {t("sent.body", { email: siteConfig.contactEmail })}
             </p>
 
             <div className="flex flex-wrap gap-3 pt-1">
               <a href={mailtoHref} data-testid="mailto-fallback">
                 <Button size="md" variant="secondary">
-                  Open your mail app again
+                  {t("sent.retry")}
                 </Button>
               </a>
               <Button
@@ -176,7 +179,7 @@ export function ContactForm() {
                   setMailtoHref("");
                 }}
               >
-                Write another message
+                {t("sent.again")}
               </Button>
             </div>
           </motion.div>
@@ -192,7 +195,7 @@ export function ContactForm() {
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <Field
-                label="Your name"
+                label={t("fields.name.label")}
                 id="name"
                 value={values.name}
                 error={errors.name}
@@ -201,7 +204,7 @@ export function ContactForm() {
                 required
               />
               <Field
-                label="Email"
+                label={t("fields.email.label")}
                 id="email"
                 type="email"
                 value={values.email}
@@ -213,9 +216,10 @@ export function ContactForm() {
             </div>
 
             <Field
-              label="Company"
+              label={t("fields.company.label")}
               id="company"
               optional
+              optionalLabel={t("optional")}
               value={values.company}
               onChange={(v) => update("company", v)}
               autoComplete="organization"
@@ -223,40 +227,44 @@ export function ContactForm() {
 
             <div className="grid gap-5 sm:grid-cols-2">
               <SelectField
-                label="What do you need"
+                label={t("fields.projectType.label")}
                 id="projectType"
                 optional
+                optionalLabel={t("optional")}
+                placeholder={t("choose")}
                 value={values.projectType}
-                options={projectTypes}
+                options={projectTypes.map((key) => t("projectTypes." + key))}
                 onChange={(v) => update("projectType", v)}
               />
               <SelectField
-                label="Timeline"
+                label={t("fields.timeline.label")}
                 id="timeline"
                 optional
+                optionalLabel={t("optional")}
+                placeholder={t("choose")}
                 value={values.timeline}
-                options={timelines}
+                options={timelines.map((key) => t("timelines." + key))}
                 onChange={(v) => update("timeline", v)}
               />
             </div>
 
             <Field
-              label="About the project"
+              label={t("fields.message.label")}
               id="message"
               value={values.message}
               error={errors.message}
               onChange={(v) => update("message", v)}
               textarea
               required
-              hint="What you are trying to build, or the problem you keep running into."
+              hint={t("fields.message.hint")}
             />
 
             <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
               <Button size="lg" variant="primary" type="submit" className="w-full sm:w-auto">
-                Send message
+                {t("submit")}
               </Button>
               <p className="text-[13px] leading-relaxed text-muted/70">
-                Goes straight to {siteConfig.contactEmail}
+                {t("directTo", { email: siteConfig.contactEmail })}
               </p>
             </div>
           </motion.form>
@@ -273,10 +281,12 @@ function Label({
   htmlFor,
   children,
   optional,
+  optionalLabel,
 }: {
   htmlFor: string;
   children: React.ReactNode;
   optional?: boolean;
+  optionalLabel?: string;
 }) {
   return (
     <label
@@ -286,7 +296,7 @@ function Label({
       {children}
       {optional && (
         <span className="text-[10px] normal-case tracking-normal text-muted/50">
-          optional
+          {optionalLabel}
         </span>
       )}
     </label>
@@ -320,6 +330,7 @@ function Field({
   optional = false,
   hint,
   autoComplete,
+  optionalLabel,
 }: {
   label: string;
   id: string;
@@ -332,6 +343,7 @@ function Field({
   optional?: boolean;
   hint?: string;
   autoComplete?: string;
+  optionalLabel?: string;
 }) {
   const invalid = Boolean(error);
   const describedBy = [hint ? `${id}-hint` : null, error ? `${id}-error` : null]
@@ -354,7 +366,7 @@ function Field({
 
   return (
     <div className="flex flex-col gap-2">
-      <Label htmlFor={id} optional={optional}>
+      <Label htmlFor={id} optional={optional} optionalLabel={optionalLabel}>
         {label}
       </Label>
 
@@ -386,6 +398,8 @@ function SelectField({
   options,
   onChange,
   optional = false,
+  optionalLabel,
+  placeholder,
 }: {
   label: string;
   id: string;
@@ -393,10 +407,12 @@ function SelectField({
   options: string[];
   onChange: (value: string) => void;
   optional?: boolean;
+  optionalLabel?: string;
+  placeholder: string;
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <Label htmlFor={id} optional={optional}>
+      <Label htmlFor={id} optional={optional} optionalLabel={optionalLabel}>
         {label}
       </Label>
 
@@ -410,7 +426,7 @@ function SelectField({
             value ? "text-foreground" : "text-muted/60"
           }`}
         >
-          <option value="">Choose one</option>
+          <option value="">{placeholder}</option>
           {options.map((option) => (
             <option key={option} value={option} className="text-foreground">
               {option}

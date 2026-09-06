@@ -9,9 +9,10 @@ import {
   Crown,
   type LucideIcon,
 } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { IconBox } from "@/components/ui/IconBox";
-import type { AgentProfile } from "@ai-software-house/shared-types";
+import type { AgentMeta } from "@/config/agents";
 
 const iconMap: Record<string, LucideIcon> = {
   Headphones,
@@ -23,12 +24,14 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 interface AgentCardProps {
-  agent: AgentProfile;
+  agent: AgentMeta;
   descriptionLength?: number;
 }
 
 export function AgentCard({ agent, descriptionLength = 140 }: AgentCardProps) {
+  const t = useTranslations("agents");
   const Icon = iconMap[agent.icon] ?? Headphones;
+  const description = t(agent.slug + ".description");
 
   return (
     <Link
@@ -40,17 +43,17 @@ export function AgentCard({ agent, descriptionLength = 140 }: AgentCardProps) {
       </IconBox>
 
       <h3 className="mt-5 text-lg font-semibold text-foreground">
-        {agent.name}
+        {t(agent.slug + ".name")}
       </h3>
-      <p className="mt-1 text-sm text-primary">{agent.tagline}</p>
+      <p className="mt-1 text-sm text-primary">{t(agent.slug + ".tagline")}</p>
 
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-        {agent.description.slice(0, descriptionLength)}
-        {agent.description.length > descriptionLength ? "\u2026" : ""}
+        {description.slice(0, descriptionLength)}
+        {description.length > descriptionLength ? "\u2026" : ""}
       </p>
 
       <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-        Learn more
+        {t("learnMore")}
         <span
           aria-hidden="true"
           className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transform-none"
