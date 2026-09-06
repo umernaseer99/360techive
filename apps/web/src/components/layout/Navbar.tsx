@@ -60,9 +60,10 @@ export function Navbar() {
       <motion.nav
         animate={{ paddingTop: condensed ? 10 : 16, paddingBottom: condensed ? 10 : 16 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="mx-auto flex max-w-7xl items-center justify-between px-4 md:px-8"
+        className="px-4 md:px-8"
         aria-label={t("primary")}
       >
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <Link
           href="/"
           className="group flex items-center text-foreground focus-visible:outline-none"
@@ -129,6 +130,7 @@ export function Navbar() {
               />
             </span>
           </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -149,7 +151,7 @@ export function Navbar() {
                 hidden: {},
                 visible: { transition: { staggerChildren: reduced ? 0 : 0.05, delayChildren: 0.05 } },
               }}
-              className="flex flex-col gap-1 px-4 py-5"
+              className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-4 py-5 md:px-8"
             >
               {siteConfig.navLinks.map((link) => (
                 <motion.div

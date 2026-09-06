@@ -9,7 +9,8 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/10">
-      <div className="mx-auto max-w-7xl px-4 py-16 md:px-8">
+      <div className="px-4 py-16 md:px-8">
+        <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link
@@ -43,6 +44,7 @@ export function Footer() {
           <p className="text-xs text-muted">
             &copy; {currentYear} {siteConfig.name}. {t("rights")}
           </p>
+        </div>
         </div>
       </div>
     </footer>
