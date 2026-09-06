@@ -341,42 +341,6 @@
         }
       }
     },
-    "principles": {
-      "eyebrow": "Why us",
-      "headline": {
-        "first": "Off the shelf",
-        "second": "solves",
-        "third": "somebody else's",
-        "accent": "problem."
-      },
-      "body": "Standard tools force your business to work the way the tool was designed. We do it the other way round, and put senior engineering into the decisions that make a solution fit.",
-      "items": {
-        "understand": {
-          "title": "We build around your business, not a template",
-          "body": "Every engagement starts with how your work happens now, who it touches and what it costs when it fails. The solution is shaped to that, and to nothing else."
-        },
-        "design": {
-          "title": "We decide the product before we build it",
-          "body": "Flows, interfaces and architecture are resolved and prototyped up front, where changing a decision costs an afternoon rather than a quarter."
-        },
-        "grow": {
-          "title": "We engineer for the second year, not the demo",
-          "body": "Tested, documented, properly architected systems that carry more load and more features without being rewritten."
-        },
-        "automate": {
-          "title": "We apply AI where it returns",
-          "body": "AI goes where it measurably improves the outcome, trained on your data and governed by your rules. Where a problem needs engineering instead of a model, we say so and build that."
-        },
-        "maintain": {
-          "title": "We hand over software your team can own",
-          "body": "Clear structure, documentation and a real handover. You keep the code, the infrastructure and the ability to take it anywhere."
-        },
-        "closely": {
-          "title": "We work as part of your team",
-          "body": "Short delivery cycles, working software early, and a direct line to the engineers building it. You always know where the project stands."
-        }
-      }
-    },
     "about": {
       "eyebrow": "About us",
       "headline": {
@@ -385,26 +349,29 @@
         "accent": "solution,",
         "third": "end to end."
       },
-      "bodyOne": "360 Techive is a software house. Design, engineering, AI and product thinking sit under one roof, so a custom solution is specified, built and delivered by the same team rather than passed between four companies.",
+      "bodyOne": "360 Techive is a software house. Design, engineering, AI and product thinking sit under one roof, so your solution is specified, built and delivered by one accountable team instead of being passed between agencies.",
       "bodyTwo": "We work with established businesses that have outgrown the tools they started on, and with founders building something that does not exist yet. In both cases the work is bespoke, and in both cases we own the result.",
       "disciplines": {
         "design": {
           "label": "Design",
-          "note": "Interfaces and product thinking"
+          "note": "Product thinking and interfaces people understand"
         },
         "engineering": {
           "label": "Engineering",
-          "note": "Web, mobile and backend systems"
+          "note": "Web, mobile and backend systems built to last"
         },
         "ai": {
           "label": "AI",
-          "note": "Trained on your data and your rules"
+          "note": "Agents and automation trained on your data"
         },
         "product": {
           "label": "Product",
-          "note": "Our own software, built in house"
+          "note": "Our own software, designed and shipped in house"
         }
-      }
+      },
+      "pullQuote": "One team from the first conversation to the system running your business.",
+      "gridLabel": "In house",
+      "cta": "Start a project"
     },
     "start": {
       "eyebrow": "Start here",

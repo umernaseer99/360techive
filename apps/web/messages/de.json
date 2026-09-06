@@ -341,42 +341,6 @@
         }
       }
     },
-    "principles": {
-      "eyebrow": "Warum wir",
-      "headline": {
-        "first": "Standardsoftware löst",
-        "second": "das Problem",
-        "third": "von",
-        "accent": "jemand anderem."
-      },
-      "body": "Fertige Werkzeuge zwingen Ihr Unternehmen in die Arbeitsweise des Werkzeugs. Wir machen es umgekehrt und investieren erfahrene Entwicklung in die Entscheidungen, die eine Lösung passend machen.",
-      "items": {
-        "understand": {
-          "title": "Wir bauen um Ihr Unternehmen, nicht um eine Vorlage",
-          "body": "Jedes Projekt beginnt damit, wie Ihre Arbeit heute abläuft, wen sie betrifft und was ein Fehler kostet. Danach richtet sich die Lösung, und nach nichts anderem."
-        },
-        "design": {
-          "title": "Wir entscheiden das Produkt, bevor wir es bauen",
-          "body": "Abläufe, Oberflächen und Architektur werden vorab geklärt und als Prototyp erprobt, wo eine Änderung einen Nachmittag statt ein Quartal kostet."
-        },
-        "grow": {
-          "title": "Wir entwickeln für das zweite Jahr, nicht für die Demo",
-          "body": "Getestete, dokumentierte und sauber architektierte Systeme, die mehr Last und mehr Funktionen tragen, ohne neu geschrieben zu werden."
-        },
-        "automate": {
-          "title": "Wir setzen KI dort ein, wo sie sich rechnet",
-          "body": "KI kommt dorthin, wo sie das Ergebnis messbar verbessert, trainiert auf Ihre Daten und geführt von Ihren Regeln. Wenn ein Problem Entwicklung statt eines Modells braucht, sagen wir das und bauen genau das."
-        },
-        "maintain": {
-          "title": "Wir übergeben Software, die Ihr Team besitzt",
-          "body": "Klare Struktur, Dokumentation und eine echte Übergabe. Code, Infrastruktur und die Freiheit, damit überall hinzugehen, bleiben bei Ihnen."
-        },
-        "closely": {
-          "title": "Wir arbeiten als Teil Ihres Teams",
-          "body": "Kurze Lieferzyklen, früh lauffähige Software und direkter Kontakt zu den Entwicklern. Sie wissen jederzeit, wo das Projekt steht."
-        }
-      }
-    },
     "about": {
       "eyebrow": "Über uns",
       "headline": {
@@ -385,26 +349,29 @@
         "accent": "Lösung,",
         "third": "von Anfang bis Ende."
       },
-      "bodyOne": "360 Techive ist ein Software-Haus. Design, Entwicklung, KI und Produktdenken sitzen unter einem Dach. Eine individuelle Lösung wird also von demselben Team spezifiziert, gebaut und geliefert, statt zwischen vier Firmen weitergereicht zu werden.",
+      "bodyOne": "360 Techive ist ein Software-Haus. Design, Entwicklung, KI und Produktdenken sitzen unter einem Dach. Ihre Lösung wird also von einem verantwortlichen Team spezifiziert, gebaut und geliefert, statt zwischen Agenturen weitergereicht zu werden.",
       "bodyTwo": "Wir arbeiten mit etablierten Unternehmen, die ihren bisherigen Werkzeugen entwachsen sind, und mit Gründern, die etwas bauen, das es noch nicht gibt. In beiden Fällen entsteht Maßarbeit, und in beiden Fällen verantworten wir das Ergebnis.",
       "disciplines": {
         "design": {
           "label": "Design",
-          "note": "Oberflächen und Produktdenken"
+          "note": "Produktdenken und Oberflächen, die man versteht"
         },
         "engineering": {
           "label": "Entwicklung",
-          "note": "Web-, Mobile- und Backend-Systeme"
+          "note": "Web-, Mobile- und Backend-Systeme, die halten"
         },
         "ai": {
           "label": "KI",
-          "note": "Trainiert auf Ihre Daten und Ihre Regeln"
+          "note": "Agenten und Automatisierung, trainiert auf Ihre Daten"
         },
         "product": {
           "label": "Produkt",
-          "note": "Eigene Software, im Haus entwickelt"
+          "note": "Eigene Software, im Haus entworfen und ausgeliefert"
         }
-      }
+      },
+      "pullQuote": "Ein Team vom ersten Gespräch bis zum System, das Ihr Geschäft trägt.",
+      "gridLabel": "Im Haus",
+      "cta": "Projekt starten"
     },
     "start": {
       "eyebrow": "Hier beginnen",

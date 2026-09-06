@@ -107,13 +107,3 @@ export const projects: Project[] = [
   { key: "approvals", approach: "Laravel, MySQL, integrations" },
 ];
 
-
-/** Section 9. */
-export const principles = [
-  "understand",
-  "design",
-  "grow",
-  "automate",
-  "maintain",
-  "closely",
-] as const;

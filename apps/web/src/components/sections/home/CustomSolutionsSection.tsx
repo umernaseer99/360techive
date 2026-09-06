@@ -31,7 +31,7 @@ export function CustomSolutionsSection() {
   const active = capabilities[activeIndex];
 
   return (
-    <Section id="services" tone="tinted" glow="top-left" glowStrength="medium">
+    <Section id="services" glow="top-left" glowStrength="medium">
       <div className="flex flex-col gap-4">
         <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">

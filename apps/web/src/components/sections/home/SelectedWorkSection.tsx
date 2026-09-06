@@ -26,7 +26,7 @@ export function SelectedWorkSection() {
   const t = useTranslations("home.work");
 
   return (
-    <Section id="work" glow="bottom" glowStrength="soft">
+    <Section id="work" tone="tinted" glow="bottom" glowStrength="soft">
       <div className="flex flex-col gap-4">
         <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">

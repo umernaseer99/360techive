@@ -26,7 +26,7 @@ import { BrandLogo } from "@/components/ui/BrandLogo";
  * Scrolling back up restores the roomy state before you reach the top, which
  * is what makes reaching for the nav feel immediate rather than delayed.
  * Links get a rule that grows from the left on hover, matching the accent
- * gesture used by the capability index and the principles list.
+ * gesture used by the capability index.
  */
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
