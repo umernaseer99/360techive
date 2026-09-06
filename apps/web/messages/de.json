@@ -76,17 +76,17 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Software, digitale Produkte und intelligente Systeme",
+      "eyebrow": "Individuelle Software, digitale Produkte und KI-Systeme",
       "headline": {
         "first": "Wir bauen Software,",
         "second": "auf der Unternehmen",
         "accent": "wirklich",
         "third": "laufen."
       },
-      "body": "Wir machen aus Ideen, komplizierten Abläufen und geschäftlichen Problemen Software, die Menschen tatsächlich nutzen. Individuelle Web- und Mobile-Anwendungen, Interface-Design, KI-Agenten, Automatisierung und eigene digitale Produkte.",
+      "body": "Wir konzipieren und entwickeln die Systeme, auf denen Unternehmen laufen. Webplattformen, mobile Anwendungen, Interface-Design, KI-Agenten und Automatisierung, umgesetzt von einem Team, das für das Ergebnis verantwortlich ist.",
       "primaryCta": "Projekt starten",
       "secondaryCta": "Referenzen ansehen",
-      "footnote": "Bringen Sie uns ein fertiges Lastenheft oder ein Problem, für das Sie noch keine Lösung haben. Beides ist ein guter Anfang."
+      "footnote": "Kommen Sie mit einem Lastenheft oder mit dem Problem. Wir sagen Ihnen, was die saubere Lösung erfordert."
     },
     "whatWeDo": {
       "eyebrow": "Was wir tun",
@@ -95,27 +95,27 @@
         "second": "das Menschen",
         "accent": "nutzen."
       },
-      "body": "Wir arbeiten an Strategie, Design, Entwicklung, Automatisierung und KI. Manche Kunden kommen mit einer fertigen Spezifikation. Andere kommen mit einem Problem und der Vermutung, dass Software helfen könnte. Beides passt.",
+      "body": "Strategie, Design, Entwicklung, Automatisierung und KI aus einer Hand. Wir übernehmen den gesamten Weg, vom ersten Gespräch bis zur Software im Produktivbetrieb.",
       "stages": {
         "problem": {
-          "name": "Problem",
-          "line": "Das Geschäft und das eigentliche Problem verstehen.",
-          "note": "Wir beginnen damit, wie die Arbeit heute läuft, wer sie macht und wo sie hakt."
+          "name": "Analyse",
+          "line": "Wir verstehen das Geschäft, bevor wir gestalten.",
+          "note": "Prozesse, Systeme, Nutzer und Ziele, dokumentiert. Sie erhalten eine klare Definition des Problems und seines wirtschaftlichen Werts."
         },
         "design": {
           "name": "Design",
-          "line": "Aus der Idee ein klares Nutzungserlebnis machen.",
-          "note": "Abläufe, Screens und die Form des Produkts, abgestimmt bevor die erste Zeile Code entsteht."
+          "line": "Das Produkt steht fest, bevor Code entsteht.",
+          "note": "Abläufe, Oberflächen und Architektur, abgestimmt und als Prototyp erprobt. Jede Entscheidung fällt dort, wo eine Änderung noch günstig ist."
         },
         "build": {
           "name": "Entwicklung",
-          "line": "Software und Technik umsetzen.",
-          "note": "In lauffähigen Teilstücken, die Sie nutzen und kommentieren können, statt monatelanger Funkstille."
+          "line": "Von Tag eins auf Produktionsniveau entwickelt.",
+          "note": "Getesteter, geprüfter und dokumentierter Code, geliefert in funktionsfähigen Schritten, die Sie nutzen und steuern können."
         },
         "launch": {
           "name": "Launch",
-          "line": "Das Produkt in die Hände echter Nutzer geben.",
-          "note": "Ausrollen, beobachten wie es genutzt wird, und auch nach dem ersten Tag weiter verbessern."
+          "line": "Ausgeliefert, gemessen und weiterentwickelt.",
+          "note": "Deployment, Monitoring, Übergabe und Dokumentation. Ihr Team kann das System betreiben, und wir verbessern es weiter."
         }
       }
     },
@@ -193,10 +193,10 @@
         "accent": "übernimmt.",
         "third": ""
       },
-      "body": "Wir entwickeln KI-Agenten und Automatisierung, die in den Prozessen arbeiten, die ein Unternehmen bereits hat. Vom Beantworten von Anfragen über die Verarbeitung von Informationen bis zum Übertragen zwischen Systemen: Abläufe, die einem Team spürbar weniger Routine im Wochenverlauf lassen.",
+      "body": "Wir bauen KI-Agenten und Automatisierung, die in Ihren bestehenden Prozessen arbeiten. Trainiert auf Ihre Daten, Ihre Regeln und Ihre Sprache, integriert in Ihre Systeme und verantwortlich für die Arbeit, die sie erledigen.",
       "cta": "KI-Automatisierung entdecken",
       "diagramLabel": "Ein automatisierter Ablauf: Eingang, KI-Agent, Entscheidung, Aktion, Ergebnis",
-      "footnote": "Alles, bei dem sich der Agent nicht sicher ist, geht an einen Menschen",
+      "footnote": "Jeder Workflow wird auf Ihren Prozess trainiert, folgt Ihren Regeln und ist vollständig nachvollziehbar",
       "steps": {
         "input": {
           "label": "Eingang",
@@ -204,19 +204,19 @@
         },
         "agent": {
           "label": "KI-Agent",
-          "note": "Prüft den Vorgang gegen das Wissen Ihres Unternehmens"
+          "note": "Trainiert auf Ihre Daten, Richtlinien und Tonalität"
         },
         "decision": {
           "label": "Entscheidung",
-          "note": "Selbst erledigen oder an einen Menschen übergeben"
+          "note": "Wendet Ihre Regeln an und löst den Fall"
         },
         "action": {
           "label": "Aktion",
-          "note": "Aktualisiert die Systeme, die Sie bereits nutzen"
+          "note": "Führt die Aktion in Ihren bestehenden Systemen aus"
         },
         "result": {
           "label": "Ergebnis",
-          "note": "Erledigt, mit einem Protokoll des Vorgangs"
+          "note": "Erledigt, protokolliert und messbar"
         }
       }
     },
@@ -226,7 +226,7 @@
         "first": "Wir bauen auch eigene",
         "accent": "Produkte."
       },
-      "body": "Manche unserer besten Ideen entstehen nicht aus einem Kundenbriefing, sondern aus einem Problem, das uns in der eigenen Arbeit oder bei unseren Kunden immer wieder begegnet. Diese Ideen haben wir konsequent zu Ende gebaut.",
+      "body": "Nicht jede Idee beginnt mit einem Kundenbriefing. Wir entwickeln eigene Produkte. Das hält uns nah an den Problemen, die unsere Kunden mitbringen, und zeigt, was unsere Entwicklung leistet.",
       "counter": "{current} von {total}",
       "viewProject": "Projekt ansehen",
       "featured": "Referenz: {name}",
@@ -267,7 +267,7 @@
         "accent": "Nächstes arbeiten."
       },
       "exploring": "Aktuell in Arbeit",
-      "footnote": "Ein Teil davon wird Kundenarbeit. Ein Teil wird ein Produkt. Das meiste beginnt mit der Frage, warum etwas so lange dauert.",
+      "footnote": "Ein Teil davon wird Kundenarbeit, ein Teil wird Produkt. Alles davon hält unsere Entwicklung auf dem aktuellen Stand.",
       "areas": {
         "agents": {
           "name": "KI-Agenten",
@@ -310,7 +310,7 @@
         "accent": "echte",
         "second": "Probleme."
       },
-      "body": "Eine Auswahl der Probleme, die man uns bringt, und was wir gebaut haben, um sie zu lösen.",
+      "body": "Repräsentative Projekte, die Probleme dahinter und die Systeme, die wir geliefert haben.",
       "fields": {
         "problem": "Das Problem",
         "built": "Was wir gebaut haben",
@@ -349,7 +349,7 @@
         "accent": "Denken",
         "third": "dahinter nicht."
       },
-      "body": "Wir wählen Werkzeuge, die zum Problem, zum Budget und zu denen passen, die das Ergebnis nach uns pflegen. Der spannende Teil der Arbeit war noch nie das Framework.",
+      "body": "Wir wählen den Stack, der zum Problem, zum Zeitplan und zum Team passt, das ihn übernimmt. Tiefe Expertise in jedem davon, ohne Bindung an einen einzelnen.",
       "groups": {
         "build": {
           "label": "Produkt und Oberfläche",
@@ -373,31 +373,31 @@
         "third": "des",
         "accent": "Problems."
       },
-      "body": "Die meiste gescheiterte Software war sauber gebaut. Sie hat nur das Falsche gelöst. Deshalb nehmen wir uns echte Zeit für den Teil vor dem Code.",
+      "body": "Die meiste gescheiterte Software war sauber gebaut und löste das falsche Problem. Wir investieren erfahrene Köpfe in die Entscheidungen vor dem Code. Deshalb hält, was wir liefern.",
       "items": {
         "understand": {
           "title": "Wir verstehen zuerst das Geschäft",
-          "body": "Bevor etwas entworfen wird, wollen wir wissen, wie die Arbeit heute abläuft, wer daran beteiligt ist und was tatsächlich schiefgeht."
+          "body": "Jedes Projekt beginnt damit, wie die Arbeit heute abläuft, wen sie betrifft und was ein Fehler kostet. Das macht die Lösung zur richtigen."
         },
         "design": {
-          "title": "Wir gestalten, bevor wir bauen",
-          "body": "Zu entscheiden, wie etwas funktionieren soll, ist auf dem Bildschirm günstiger als im Code. Im Design werden die Diskussionen geführt."
+          "title": "Wir entscheiden das Produkt, bevor wir es bauen",
+          "body": "Abläufe, Oberflächen und Architektur werden vorab geklärt und als Prototyp erprobt, wo eine Änderung einen Nachmittag statt ein Quartal kostet."
         },
         "grow": {
-          "title": "Wir bauen Systeme, die mitwachsen",
-          "body": "Die erste Version sollte nicht die sein, die man wegwerfen muss. Wir bauen so, dass das zweite Jahr leichter wird als das erste."
+          "title": "Wir entwickeln für das zweite Jahr, nicht für die Demo",
+          "body": "Getestete, dokumentierte und sauber architektierte Systeme, die mehr Last und mehr Funktionen tragen, ohne neu geschrieben zu werden."
         },
         "automate": {
-          "title": "Wir automatisieren dort, wo es sinnvoll ist",
-          "body": "Automatisierung lohnt sich, wenn ein Prozess wiederkehrend und gut verstanden ist. Wenn nicht, verdeckt KI das Problem nur."
+          "title": "Wir setzen KI dort ein, wo sie sich rechnet",
+          "body": "Automatisierung gehört dorthin, wo ein Prozess verstanden ist und sich wiederholt. Wir bauen die Entscheidungslogik in das System und sagen es, wenn ein Problem Entwicklung statt eines Modells braucht."
         },
         "maintain": {
-          "title": "Wir schreiben Software, die andere pflegen können",
-          "body": "Sie sollen nicht dauerhaft auf uns angewiesen sein. Klare Struktur, sinnvolle Benennung und Dokumentation gehören zur Arbeit, sie sind kein Gefallen."
+          "title": "Wir übergeben Software, die Ihr Team besitzt",
+          "body": "Klare Struktur, Dokumentation und eine echte Übergabe. Code, Infrastruktur und die Freiheit, damit überall hinzugehen, bleiben bei Ihnen."
         },
         "closely": {
-          "title": "Wir arbeiten eng mit Ihnen zusammen",
-          "body": "Kurze Feedbackschleifen, früh lauffähige Software und ehrliche Antworten dazu, was schwierig ist. Keine langen Funkstillen."
+          "title": "Wir arbeiten als Teil Ihres Teams",
+          "body": "Kurze Lieferzyklen, früh lauffähige Software und direkter Kontakt zu den Entwicklern. Sie wissen jederzeit, wo das Projekt steht."
         }
       }
     },
@@ -734,8 +734,8 @@
       "emailLabel": "E-Mail"
     },
     "notes": {
-      "answered": "Jede Anfrage wird beantwortet, auch die, für die wir nicht das richtige Haus sind.",
-      "builders": "Sie sprechen mit den Menschen, die es bauen würden, nicht mit einem Account Manager.",
+      "answered": "Jede Anfrage wird von einem erfahrenen Teammitglied beantwortet.",
+      "builders": "Sie sprechen direkt mit den Entwicklern, die das Projekt umsetzen.",
       "private": "Was Sie teilen, bleibt bei uns und wird ohne Ihre Zustimmung nie veröffentlicht."
     },
     "engagements": {
@@ -767,23 +767,23 @@
       "title": "Wie das erste",
       "subtitle": "Gespräch",
       "accent": "abläuft.",
-      "body": "Kein Pitch Deck und keine kostenpflichtige Vorstudie, bevor Ihnen jemand etwas Nützliches sagt.",
+      "body": "Keine Pitch-Präsentation und kein kostenpflichtiger Discovery-Workshop, bevor Sie eine klare Antwort bekommen.",
       "steps": {
         "read": {
-          "title": "Jemand mit Erfahrung liest sie",
-          "body": "Ihre Anfrage geht an die Menschen, die die Arbeit machen würden. Es gibt kein Qualifizierungsgespräch und keinen Account Manager zwischen Ihnen und einer Antwort."
+          "title": "Ein erfahrener Entwickler liest sie",
+          "body": "Ihre Anfrage geht direkt an die Menschen, die die Arbeit umsetzen. Kein Qualifizierungsgespräch und kein Account Manager dazwischen."
         },
         "business": {
           "title": "Wir fragen nach dem Geschäft, nicht nach der Funktionsliste",
-          "body": "Wie die Arbeit heute läuft, wen sie ausbremst und was es kostet, wenn etwas schiefgeht. Die Anforderung, die sich zu bauen lohnt, liegt fast immer unter der, die man Ihnen genannt hat."
+          "body": "Wie die Arbeit heute läuft, wen sie ausbremst und was ein Fehler kostet. Genau dort liegt die Anforderung, die sich zu bauen lohnt."
         },
         "view": {
-          "title": "Sie bekommen eine fundierte Einschätzung",
-          "body": "Was es aus unserer Sicht braucht, wo das Risiko liegt, was wir zuerst bauen würden und was später kommen kann. Auch dann, wenn die ehrliche Antwort lautet, dass Sie weniger brauchen als gedacht."
+          "title": "Sie erhalten eine klare technische Einschätzung",
+          "body": "Was die Umsetzung erfordert, wo die Risiken liegen, was wir zuerst liefern und in welcher Reihenfolge. Konkret genug für Planung und Budget."
         },
         "proposal": {
-          "title": "Danach ein Angebot, wenn wir das richtige Haus sind",
-          "body": "Umfang, Reihenfolge und Kosten schriftlich, mit klar benannten Annahmen, damit auf halber Strecke nichts überraschend auftaucht."
+          "title": "Danach ein Angebot",
+          "body": "Umfang, Reihenfolge, Team und Kosten schriftlich, mit klar benannten Annahmen, damit mitten in der Umsetzung nichts Neues auftaucht."
         }
       }
     },
@@ -800,7 +800,7 @@
         },
         "inherited": {
           "label": "Übernehmen Sie Software, die jemand anderes gebaut hat?",
-          "content": "Regelmäßig. Wir lesen die Codebasis und erfassen, was tatsächlich da ist, bevor wir etwas empfehlen. Danach sagen wir klar, ob sich Weiterbauen oder Ersetzen lohnt. Lieber verlieren wir den größeren Auftrag, als Ihnen beides in Rechnung zu stellen."
+          "content": "Regelmäßig. Wir auditieren die Codebasis und erfassen, was tatsächlich vorhanden ist. Danach erhalten Sie eine klare Empfehlung, ob erweitert oder ersetzt werden sollte, mit Begründung und den Kosten beider Wege."
         },
         "ownership": {
           "label": "Wem gehören Code und geistiges Eigentum?",

@@ -76,17 +76,17 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Software, digital products and intelligent systems",
+      "eyebrow": "Custom software, digital products and AI systems",
       "headline": {
         "first": "We build software",
         "second": "businesses",
         "accent": "actually",
         "third": "run on."
       },
-      "body": "We turn ideas, complicated workflows and business problems into software people can actually use. Custom web and mobile applications, interface design, AI agents, automation, and digital products of our own.",
+      "body": "We design and engineer the systems businesses run on. Web platforms, mobile applications, interface design, AI agents and automation, delivered end to end by one team that owns the outcome.",
       "primaryCta": "Start a project",
       "secondaryCta": "Explore our work",
-      "footnote": "Bring us a finished specification or a problem you have not solved yet. Both are a good place to start."
+      "footnote": "Come with a specification or come with the problem. We will tell you what it takes to solve it properly."
     },
     "whatWeDo": {
       "eyebrow": "What we do",
@@ -95,27 +95,27 @@
         "second": "something people",
         "accent": "use."
       },
-      "body": "We work across strategy, design, development, automation and AI. Some clients arrive with a full specification. Others arrive with a problem and a rough sense that software could fix it. Both work.",
+      "body": "Strategy, design, engineering, automation and AI under one roof. We take responsibility for the whole path, from the first conversation to software running in production.",
       "stages": {
         "problem": {
-          "name": "Problem",
-          "line": "Understanding the business and the real problem.",
-          "note": "We start with how the work happens today, who does it and where it breaks."
+          "name": "Discover",
+          "line": "We map the business before we design anything.",
+          "note": "Workflows, systems, users and commercial goals, documented. You get a clear definition of the problem and what solving it is worth."
         },
         "design": {
           "name": "Design",
-          "line": "Turning the idea into a clear experience.",
-          "note": "Flows, screens and the shape of the product, agreed before code starts."
+          "line": "The product is decided before code is written.",
+          "note": "Flows, interfaces and architecture, agreed and prototyped. Every decision is made where changing it is still cheap."
         },
         "build": {
           "name": "Build",
-          "line": "Developing the software and the technology.",
-          "note": "Built in working pieces you can use and react to, not one long silence."
+          "line": "Engineered to production standard from day one.",
+          "note": "Tested, reviewed and documented code, shipped in working increments you can use and direct as we go."
         },
         "launch": {
           "name": "Launch",
-          "line": "Putting the product into the hands of real users.",
-          "note": "Release, watch how it is used, and keep improving it after day one."
+          "line": "Released, measured and improved.",
+          "note": "Deployment, monitoring, handover and documentation. Your team can run it, and we keep improving it."
         }
       }
     },
@@ -193,10 +193,10 @@
         "accent": "doing",
         "third": "the work."
       },
-      "body": "We build AI agents and automation that work inside the processes a business already has. From answering questions to processing information and moving it between systems, these are workflows that let a team spend less of the week on repetition.",
+      "body": "We build AI agents and automation that run inside the processes your business already has. Trained on your data, your rules and your language, integrated with the systems you use, and accountable for the work they complete.",
       "cta": "Explore AI Automation",
       "diagramLabel": "An automated workflow: input, AI agent, decision, action, result",
-      "footnote": "Anything the agent is unsure about goes to a person",
+      "footnote": "Every workflow is trained on your process, governed by your rules and fully auditable",
       "steps": {
         "input": {
           "label": "Input",
@@ -204,19 +204,19 @@
         },
         "agent": {
           "label": "AI agent",
-          "note": "Reads it against what your business knows"
+          "note": "Trained on your data, policies and tone of voice"
         },
         "decision": {
-          "label": "Decision",
-          "note": "Handle it, or pass it to a person"
+          "label": "Judgement",
+          "note": "Applies your rules and resolves the case"
         },
         "action": {
           "label": "Action",
-          "note": "Updates the systems you already use"
+          "note": "Executes across the systems you already run"
         },
         "result": {
           "label": "Result",
-          "note": "Done, with a record of what happened"
+          "note": "Completed, logged and measurable"
         }
       }
     },
@@ -226,7 +226,7 @@
         "first": "We build products",
         "accent": "too."
       },
-      "body": "Some of our best ideas do not start with a client brief. They start with a problem we keep running into, in our own work or in the businesses we build for. These are the ones we decided were worth solving properly.",
+      "body": "Not every idea starts with a client brief. We build and own products of our own, which is how we stay sharp on the problems our clients bring us and how we prove what our engineering can do.",
       "counter": "{current} of {total}",
       "viewProject": "View Project",
       "featured": "Featured: {name}",
@@ -267,7 +267,7 @@
         "accent": "next."
       },
       "exploring": "Currently exploring",
-      "footnote": "Some of this becomes client work. Some of it becomes a product. Most of it starts as a question about why something takes so long.",
+      "footnote": "Some of this becomes client work and some becomes a product. All of it keeps our engineering current.",
       "areas": {
         "agents": {
           "name": "AI Agents",
@@ -310,7 +310,7 @@
         "accent": "real",
         "second": "problems."
       },
-      "body": "A few of the kinds of problems we get asked to solve, and what we built to solve them.",
+      "body": "Representative engagements, the problems behind them and the systems we delivered.",
       "fields": {
         "problem": "The problem",
         "built": "What we built",
@@ -349,7 +349,7 @@
         "accent": "thinking",
         "third": "does not."
       },
-      "body": "We pick tools that fit the problem, the budget and whoever has to maintain the thing after us. The interesting part of the job was never the framework.",
+      "body": "We choose the stack that fits the problem, the timeline and the team that inherits it. Deep expertise across each of them, and no attachment to any one of them.",
       "groups": {
         "build": {
           "label": "Product and interface",
@@ -373,31 +373,31 @@
         "third": "the",
         "accent": "problem."
       },
-      "body": "Most software that fails was built correctly. It just solved the wrong thing. So we spend real time on the part before the code.",
+      "body": "Most failed software was built competently and solved the wrong problem. We put senior time into the decisions that come before the code, which is why what we deliver holds up.",
       "items": {
         "understand": {
           "title": "We understand the business first",
-          "body": "Before anything gets designed we want to know how the work happens now, who touches it and what actually goes wrong."
+          "body": "Every engagement starts with how the work happens now, who it touches and what it costs when it fails. That is what makes the solution the right one."
         },
         "design": {
-          "title": "We design before we build",
-          "body": "Deciding how something should work is cheaper on a screen than in code. The design is where the arguments happen."
+          "title": "We decide the product before we build it",
+          "body": "Flows, interfaces and architecture are resolved and prototyped up front, where changing a decision costs an afternoon rather than a quarter."
         },
         "grow": {
-          "title": "We build systems that can grow",
-          "body": "The first version should not be the thing that has to be thrown away. We build so the second year is easier than the first."
+          "title": "We engineer for the second year, not the demo",
+          "body": "Tested, documented, properly architected systems that carry more load and more features without being rewritten."
         },
         "automate": {
-          "title": "We automate where it makes sense",
-          "body": "Automation is worth it when a process is repetitive and well understood. When it is not, adding AI just hides the problem."
+          "title": "We apply AI where it returns",
+          "body": "Automation goes where a process is well understood and repeats. We build the judgement into the system, and we say so when a problem needs engineering rather than a model."
         },
         "maintain": {
-          "title": "We write software other people can maintain",
-          "body": "You should not need us forever. Clear structure, sensible naming and documentation are part of the work, not a favour."
+          "title": "We hand over software your team can own",
+          "body": "Clear structure, documentation and a real handover. You keep the code, the infrastructure and the ability to take it anywhere."
         },
         "closely": {
-          "title": "We work closely with you",
-          "body": "Short feedback loops, working software early and honest answers about what is hard. No long silences."
+          "title": "We work as part of your team",
+          "body": "Short delivery cycles, working software early, and a direct line to the engineers building it. You always know where the project stands."
         }
       }
     },
@@ -734,8 +734,8 @@
       "emailLabel": "Email"
     },
     "notes": {
-      "answered": "Every enquiry is answered, including the ones we are not the right firm for.",
-      "builders": "You will speak with the people who would build it, not an account manager.",
+      "answered": "Every enquiry is answered by a senior member of the team.",
+      "builders": "You speak directly with the engineers who would build it.",
       "private": "What you share stays with us and is never published without your approval."
     },
     "engagements": {
@@ -767,23 +767,23 @@
       "title": "How the first",
       "subtitle": "conversation",
       "accent": "goes.",
-      "body": "No pitch deck, and no paid discovery exercise before anyone tells you anything useful.",
+      "body": "No pitch deck, and no paid discovery exercise before you get a straight answer.",
       "steps": {
         "read": {
-          "title": "Someone senior reads it",
-          "body": "Your enquiry goes to the people who would do the work. There is no qualification call and no account manager between you and an answer."
+          "title": "A senior engineer reads it",
+          "body": "Your enquiry goes straight to the people who would deliver the work. No qualification call and no account manager in between."
         },
         "business": {
           "title": "We ask about the business, not the feature list",
-          "body": "How the work is done today, who it slows down, what it costs when it goes wrong. The requirement worth building is almost always underneath the one you were given."
+          "body": "How the work is done today, who it slows down and what it costs when it goes wrong. That is where the requirement worth building is found."
         },
         "view": {
-          "title": "You get a considered view",
-          "body": "What we believe it takes, where the risk sits, what we would build first and what we would leave until later. Including when the honest answer is that you need less than you were told."
+          "title": "You get a clear technical assessment",
+          "body": "What it takes to build, where the risk sits, what we deliver first and in what order. Specific enough to plan and budget against."
         },
         "proposal": {
-          "title": "Then a proposal, if we are the right firm",
-          "body": "Scope, sequence and cost set out in writing, with the assumptions stated plainly so nothing is discovered halfway through."
+          "title": "Then a proposal",
+          "body": "Scope, sequence, team and cost in writing, with the assumptions stated plainly so nothing surfaces halfway through delivery."
         }
       }
     },
@@ -800,7 +800,7 @@
         },
         "inherited": {
           "label": "Can you take on software somebody else built?",
-          "content": "Regularly. We read the codebase and map what is actually there before recommending anything, then tell you plainly whether it is worth continuing or worth replacing. We would rather lose the larger piece of work than bill you for both."
+          "content": "Regularly. We audit the codebase and map what is actually there, then give you a clear recommendation on whether to extend it or replace it, with the reasoning and the cost of each path."
         },
         "ownership": {
           "label": "Who owns the code and the intellectual property?",
