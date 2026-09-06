@@ -81,7 +81,7 @@ export default async function LocaleLayout({
     >
       <body>
         <NextIntlClientProvider>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <Shell>{children}</Shell>
           </ThemeProvider>
         </NextIntlClientProvider>
