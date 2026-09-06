@@ -1,40 +1,67 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/config/site";
 
 interface BrandLogoProps {
   className?: string;
   showDot?: boolean;
+  /**
+   * Rendered height in pixels; the width follows the artwork's aspect ratio.
+   * Set as an inline style rather than a Tailwind class so a caller can pick
+   * any size without fighting the class already on the element.
+   */
+  height?: number;
 }
 
 /**
  * Brand Logo component.
  *
- * Expected logo location: apps/web/public/logo.svg (or /logo.png).
- * Once the user adds logo.svg to apps/web/public/, the image logo will display automatically.
- * If /logo.svg does not exist or fails to load, it cleanly falls back to the text wordmark
- * "360 Techive" without displaying any broken image icon.
+ * The mark lives at apps/web/public/brand/techive-logo.svg. That is the only
+ * copy: it is referenced by path rather than duplicated, so replacing that one
+ * file changes the logo everywhere it appears.
+ *
+ * If the file is missing or fails to load, this falls back to the text wordmark
+ * rather than showing a broken image icon.
+ *
+ * The mount check below is what makes that work. The logo is a small
+ * same-origin file, so it almost always finishes loading before React
+ * hydrates, which means `onLoad` never fires for it and the image would stay
+ * hidden behind the fallback forever. Asking the element on mount whether it
+ * already completed, and whether it has any intrinsic width, settles both the
+ * loaded and the failed case. The handlers then cover anything still in
+ * flight.
  */
-export function BrandLogo({ className = "", showDot = true }: BrandLogoProps) {
+export function BrandLogo({
+  className = "",
+  showDot = true,
+  height = 40,
+}: BrandLogoProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [imageFailed, setImageFailed] = useState(false);
+  const ref = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const img = ref.current;
+    if (!img || !img.complete) return;
+    if (img.naturalWidth > 0) setImageLoaded(true);
+    else setImageFailed(true);
+  }, []);
 
   return (
     <div className={`relative inline-flex items-center ${className}`}>
       {/*
-        Image logo pointing to /logo.svg (expected at apps/web/public/logo.svg).
-        Remains hidden until onLoad confirms it exists and is loaded successfully,
-        preventing any broken image placeholder if the file is absent.
+        Hidden until onLoad confirms the file resolved, so a missing asset never
+        flashes a broken image placeholder.
       */}
       {!imageFailed && (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src="/logo.svg"
+          ref={ref}
+          src="/brand/techive-logo.svg"
           alt={siteConfig.name}
-          width={130}
-          height={28}
-          className={`h-6 w-auto max-h-7 object-contain transition-opacity duration-200 ${
+          style={{ height }}
+          className={`w-auto object-contain transition-opacity duration-200 ${
             imageLoaded ? "opacity-100" : "hidden opacity-0"
           }`}
           onLoad={() => setImageLoaded(true)}
