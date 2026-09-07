@@ -707,7 +707,6 @@
       "optional": "optional",
       "choose": "Bitte wählen",
       "submit": "Nachricht senden",
-      "directTo": "Geht direkt an {email}",
       "mailSubject": "Neue Projektanfrage von {name}",
       "fields": {
         "name": {
@@ -752,10 +751,16 @@
         "message": "Ein bis zwei Sätze zum Problem genügen."
       },
       "sent": {
-        "title": "Ihre Nachricht ist fertig zum Senden.",
-        "body": "Wir haben sie mit allen Angaben in Ihrem E-Mail-Programm geöffnet. Senden Sie sie dort ab, dann erreicht sie uns unter {email}. Falls sich nichts geöffnet hat, blockiert Ihr Browser möglicherweise Mail-Links — schreiben Sie uns in dem Fall direkt.",
-        "retry": "E-Mail-Programm erneut öffnen",
-        "again": "Weitere Nachricht schreiben"
+        "title": "Nachricht gesendet.",
+        "body": "Vielen Dank. Ihre Anfrage ist bei uns angekommen. Ein erfahrenes Teammitglied antwortet an {email}, in der Regel innerhalb eines Werktags.",
+        "again": "Weitere Nachricht senden"
+      },
+      "sending": "Wird gesendet",
+      "failed": {
+        "title": "Das hat nicht geklappt.",
+        "body": "Auf unserer Seite ist etwas schiefgelaufen, Ihre Angaben sind aber nicht verloren. Senden Sie die Nachricht direkt an {email}, wir kümmern uns darum.",
+        "cta": "Direkt per E-Mail senden",
+        "retry": "Erneut versuchen"
       }
     }
   },

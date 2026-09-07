@@ -85,9 +85,13 @@ export function ContactForm() {
   const reduced = useSafeReducedMotion();
   const [values, setValues] = useState<Values>(empty);
   const [errors, setErrors] = useState<Errors>({});
-  const [sent, setSent] = useState(false);
-  // Kept so the fallback link can retry with the message intact rather than
-  // opening an empty draft.
+  // Bots fill every field they find; people never see this one.
+  const [honeypot, setHoneypot] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "failed">(
+    "idle"
+  );
+  // Only used when the server could not send: the visitor still gets their
+  // message out, with everything they typed already in the draft.
   const [mailtoHref, setMailtoHref] = useState("");
 
   function update<K extends keyof Values>(key: K, value: Values[K]) {
@@ -96,7 +100,7 @@ export function ContactForm() {
     setErrors((e) => (e[key] ? { ...e, [key]: undefined } : e));
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const found = validate(values, {
@@ -112,74 +116,107 @@ export function ContactForm() {
       return;
     }
 
-    const subject = t("mailSubject", { name: values.name.trim() });
-    const href =
-      `mailto:${siteConfig.contactEmail}` +
-      `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(
-        composeBody(values, {
-          name: t("fields.name.label"),
-          email: t("fields.email.label"),
-          company: t("fields.company.label"),
-          projectType: t("fields.projectType.label"),
-          timeline: t("fields.timeline.label"),
-          about: t("fields.message.label"),
-        })
-      )}`;
+    setStatus("sending");
 
-    setMailtoHref(href);
-    setSent(true);
-    window.location.href = href;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...values, website: honeypot }),
+      });
+
+      if (!response.ok) throw new Error(`contact endpoint returned ${response.status}`);
+      setStatus("sent");
+    } catch {
+      // Keep the visitor's work reachable rather than dropping it on the floor.
+      const subject = t("mailSubject", { name: values.name.trim() });
+      setMailtoHref(
+        `mailto:${siteConfig.contactEmail}` +
+          `?subject=${encodeURIComponent(subject)}` +
+          `&body=${encodeURIComponent(
+            composeBody(values, {
+              name: t("fields.name.label"),
+              email: t("fields.email.label"),
+              company: t("fields.company.label"),
+              projectType: t("fields.projectType.label"),
+              timeline: t("fields.timeline.label"),
+              about: t("fields.message.label"),
+            })
+          )}`
+      );
+      setStatus("failed");
+    }
   }
 
   return (
     <div className="rounded-2xl border border-border/10 bg-surface/40 p-6 md:p-9">
       <AnimatePresence mode="wait">
-        {sent ? (
+        {status === "sent" || status === "failed" ? (
           <motion.div
-            key="sent"
+            key={status}
             initial={reduced ? { opacity: 0 } : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col items-start gap-4 py-6"
           >
-            <span className="flex size-10 items-center justify-center rounded-full border border-primary/30 bg-primary/10">
-              <svg viewBox="0 0 20 20" className="size-5 text-primary" fill="none">
-                <path
-                  d="M4.5 10.5 8 14l7.5-8"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+            <span
+              className={`flex size-10 items-center justify-center rounded-full border ${
+                status === "sent"
+                  ? "border-primary/30 bg-primary/10"
+                  : "border-border/20 bg-surface"
+              }`}
+            >
+              {status === "sent" ? (
+                <svg viewBox="0 0 20 20" className="size-5 text-primary" fill="none">
+                  <path
+                    d="M4.5 10.5 8 14l7.5-8"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 20 20" className="size-5 text-muted" fill="none">
+                  <path
+                    d="M10 5.5v5m0 3.5h.01"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              )}
             </span>
 
             <h3 className="text-xl font-semibold tracking-tight text-foreground">
-              {t("sent.title")}
+              {status === "sent" ? t("sent.title") : t("failed.title")}
             </h3>
 
             <p className="text-pretty text-[15px] leading-relaxed text-muted">
-              {t("sent.body", { email: siteConfig.contactEmail })}
+              {status === "sent"
+                ? t("sent.body", { email: values.email.trim() })
+                : t("failed.body", { email: siteConfig.contactEmail })}
             </p>
 
             <div className="flex flex-wrap gap-3 pt-1">
-              <a href={mailtoHref} data-testid="mailto-fallback">
-                <Button size="md" variant="secondary">
-                  {t("sent.retry")}
-                </Button>
-              </a>
+              {status === "failed" && (
+                <a href={mailtoHref} data-testid="mailto-fallback">
+                  <Button size="md" variant="secondary">
+                    {t("failed.cta")}
+                  </Button>
+                </a>
+              )}
               <Button
                 size="md"
-                variant="ghost"
+                variant={status === "sent" ? "secondary" : "ghost"}
                 type="button"
                 onClick={() => {
-                  setSent(false);
-                  setValues(empty);
+                  setStatus("idle");
                   setMailtoHref("");
+                  if (status === "sent") setValues(empty);
                 }}
               >
-                {t("sent.again")}
+                {status === "sent" ? t("sent.again") : t("failed.retry")}
               </Button>
             </div>
           </motion.div>
@@ -193,6 +230,20 @@ export function ContactForm() {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col gap-5"
           >
+            {/* honeypot, moved off screen rather than hidden so bots still fill it */}
+            <div aria-hidden="true" className="absolute left-[-9999px] h-px w-px overflow-hidden">
+              <label htmlFor="website">Website</label>
+              <input
+                id="website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+            </div>
+
             <div className="grid gap-5 sm:grid-cols-2">
               <Field
                 label={t("fields.name.label")}
@@ -259,13 +310,16 @@ export function ContactForm() {
               hint={t("fields.message.hint")}
             />
 
-            <div className="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
-              <Button size="lg" variant="primary" type="submit" className="w-full sm:w-auto">
-                {t("submit")}
+            <div className="pt-1">
+              <Button
+                size="lg"
+                variant="primary"
+                type="submit"
+                disabled={status === "sending"}
+                className="w-full sm:w-auto"
+              >
+                {status === "sending" ? t("sending") : t("submit")}
               </Button>
-              <p className="text-[13px] leading-relaxed text-muted/70">
-                {t("directTo", { email: siteConfig.contactEmail })}
-              </p>
             </div>
           </motion.form>
         )}

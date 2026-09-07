@@ -707,7 +707,6 @@
       "optional": "optional",
       "choose": "Choose one",
       "submit": "Send message",
-      "directTo": "Goes straight to {email}",
       "mailSubject": "New project enquiry from {name}",
       "fields": {
         "name": {
@@ -752,10 +751,16 @@
         "message": "A sentence or two about the problem is enough."
       },
       "sent": {
-        "title": "Your message is ready to send.",
-        "body": "We opened it in your mail app with everything filled in. Press send there and it reaches us at {email}. If nothing opened, your browser may be blocking mail links, so email us directly and we will pick it up from there.",
-        "retry": "Open your mail app again",
-        "again": "Write another message"
+        "title": "Message sent.",
+        "body": "Thank you. Your enquiry has reached us and a senior member of the team will reply to {email}, usually within one working day.",
+        "again": "Send another message"
+      },
+      "sending": "Sending",
+      "failed": {
+        "title": "That did not send.",
+        "body": "Something went wrong on our side, so nothing was lost on yours. Send it straight to {email} and we will pick it up from there.",
+        "cta": "Email us instead",
+        "retry": "Try again"
       }
     }
   },
