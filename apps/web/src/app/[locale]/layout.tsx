@@ -74,7 +74,13 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  // The live property. A measurement id is public by design, it appears in
+  // the page source of every site that uses one, so it lives here rather than
+  // in an environment variable that has to be present at build time on every
+  // machine that compiles the site. NEXT_PUBLIC_GA_ID still overrides it, so a
+  // staging build can point somewhere else or switch analytics off with an
+  // empty value.
+  const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "G-7867YNSS39";
 
   return (
     <html
@@ -90,11 +96,13 @@ export default async function LocaleLayout({
         </NextIntlClientProvider>
 
         {/*
-          Google Analytics 4. The measurement id comes from the environment, so
-          nothing is hardcoded and a local or preview build stays out of the
-          production property. With NEXT_PUBLIC_GA_ID unset this renders
-          nothing at all, which is also what keeps development traffic from
-          being counted.
+          Google Analytics 4, property G-7867YNSS39.
+
+          This renders the same pair of tags as the snippet from the GA
+          console: the async gtag.js loader and the config call. Going through
+          the component rather than pasting raw script tags means Next controls
+          when the script is injected, and an inline script in the App Router
+          would otherwise need a nonce or a dangerouslySetInnerHTML block.
 
           Loaded through @next/third-parties, which defers gtag.js instead of
           blocking the first paint. Note that the component only installs the
