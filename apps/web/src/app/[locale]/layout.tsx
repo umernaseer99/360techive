@@ -4,6 +4,7 @@ import { Inter, Fraunces } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Shell } from "@/components/layout/Shell";
 import { routing } from "@/i18n/routing";
 import "@/styles/globals.css";
@@ -73,6 +74,8 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html
       lang={locale}
@@ -85,6 +88,21 @@ export default async function LocaleLayout({
             <Shell>{children}</Shell>
           </ThemeProvider>
         </NextIntlClientProvider>
+
+        {/*
+          Google Analytics 4. The measurement id comes from the environment, so
+          nothing is hardcoded and a local or preview build stays out of the
+          production property. With NEXT_PUBLIC_GA_ID unset this renders
+          nothing at all, which is also what keeps development traffic from
+          being counted.
+
+          Loaded through @next/third-parties, which defers gtag.js instead of
+          blocking the first paint. Note that the component only installs the
+          tag: page views for client side navigations come from GA4's own
+          enhanced measurement, which listens for history changes and is a
+          setting on the property rather than something in this code.
+        */}
+        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>
     </html>
   );
