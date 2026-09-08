@@ -44,6 +44,14 @@ export async function generateMetadata({
       template: "%s",
     },
     description: t("description"),
+    // Google Search Console ownership. Next renders this as
+    // <meta name="google-site-verification" ...>. It sits on the shared
+    // layout so every page in every locale carries it, which matters because
+    // "/" redirects to "/en" and Search Console checks whichever URL is
+    // submitted.
+    verification: {
+      google: "rmMFZ63adpf8MwkMdKxiRXRtWNyyXqZjCo5sWZ1q3zw",
+    },
     alternates: {
       canonical: `/${locale}`,
       languages: {
