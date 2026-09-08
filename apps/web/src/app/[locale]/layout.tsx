@@ -4,7 +4,6 @@ import { Inter, Fraunces } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { Shell } from "@/components/layout/Shell";
 import { routing } from "@/i18n/routing";
 import "@/styles/globals.css";
@@ -88,6 +87,37 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
+      {/*
+        Google Analytics 4, exactly the snippet the GA console gives you: the
+        async gtag.js loader followed by the dataLayer bootstrap and config.
+
+        These are written into <head> rather than installed by a component on
+        purpose. The component version injected the tag after hydration, so the
+        server rendered HTML held only a preload hint and anything reading the
+        raw response, a tag checker, a crawler, or view source, saw no
+        analytics at all. Here it is in the document as delivered.
+
+        gaId defaults to the live property and NEXT_PUBLIC_GA_ID overrides it,
+        so a staging build can point elsewhere or set it empty to opt out.
+      */}
+      <head>
+        {gaId ? (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}');`,
+              }}
+            />
+          </>
+        ) : null}
+      </head>
       <body>
         <NextIntlClientProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
@@ -95,22 +125,7 @@ export default async function LocaleLayout({
           </ThemeProvider>
         </NextIntlClientProvider>
 
-        {/*
-          Google Analytics 4, property G-7867YNSS39.
 
-          This renders the same pair of tags as the snippet from the GA
-          console: the async gtag.js loader and the config call. Going through
-          the component rather than pasting raw script tags means Next controls
-          when the script is injected, and an inline script in the App Router
-          would otherwise need a nonce or a dangerouslySetInnerHTML block.
-
-          Loaded through @next/third-parties, which defers gtag.js instead of
-          blocking the first paint. Note that the component only installs the
-          tag: page views for client side navigations come from GA4's own
-          enhanced measurement, which listens for history changes and is a
-          setting on the property rather than something in this code.
-        */}
-        {gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       </body>
     </html>
   );
