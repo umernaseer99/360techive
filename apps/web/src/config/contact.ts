@@ -5,6 +5,13 @@
  * these keys.
  */
 
+/**
+ * The enquiry form is hidden for now; enquiries go by email. Set to true to
+ * bring the form back beside the hero. The form, its API route and its
+ * copy are all still in place.
+ */
+export const SHOW_CONTACT_FORM = false;
+
 /** The three places client work begins. */
 export const engagements = ["newProduct", "rebuild", "continuing"] as const;
 

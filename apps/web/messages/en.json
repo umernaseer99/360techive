@@ -676,6 +676,7 @@
       "subtitle": "asked",
       "accent": "first.",
       "body": "If yours is not here, ask it in the form. We would far rather answer it now than halfway through a project.",
+      "bodyEmail": "If yours is not here, ask it by email. We would far rather answer it now than halfway through a project.",
       "items": {
         "ownTeam": {
           "label": "We have our own team. Can you work alongside them?",

@@ -14,6 +14,7 @@ import {
   conversationSteps,
   contactFaqs,
   contactNotes,
+  SHOW_CONTACT_FORM,
 } from "@/config/contact";
 
 export async function generateMetadata({
@@ -38,6 +39,9 @@ export async function generateMetadata({
  * code, how is confidentiality handled. The form stays at the top because
  * that is the point of the page. Everything beneath it exists to make sending
  * it feel like a considered decision rather than a risk.
+ *
+ * While SHOW_CONTACT_FORM is off, the hero drops the form and gives the email
+ * address the space instead.
  */
 export default async function ContactPage({
   params,
@@ -55,72 +59,7 @@ function ContactPageContent() {
 
   return (
     <>
-      <Section className="pb-10 pt-32 md:pb-14 md:pt-40">
-        <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-          <div className="flex flex-col gap-6 lg:sticky lg:top-32 lg:self-start">
-            <Eyebrow tone="primary">{t("hero.eyebrow")}</Eyebrow>
-
-            <h1 className="text-balance text-4xl font-semibold leading-[1.06] tracking-tight text-foreground md:text-[3.4rem]">
-              <LineReveal trigger="mount">{t("hero.title")}</LineReveal>
-              <LineReveal trigger="mount" delay={0.1}>
-                <span className="font-serif font-normal italic text-primary">
-                  {t("hero.accent")}
-                </span>
-              </LineReveal>
-            </h1>
-
-            <Reveal tier="quiet" delay={0.12}>
-              <p className="max-w-md text-pretty text-base leading-relaxed text-muted md:text-lg">
-                {t("hero.body")}
-              </p>
-            </Reveal>
-
-            <Reveal tier="quiet" delay={0.18}>
-              <div className="flex flex-col gap-2 pt-2">
-                <span className="text-[11px] uppercase tracking-[0.15em] text-muted">
-                  {t("hero.emailLabel")}
-                </span>
-                <a
-                  href={`mailto:${siteConfig.contactEmail}`}
-                  className="group inline-flex w-fit items-center gap-3 text-lg font-medium text-foreground"
-                >
-                  <span className="relative">
-                    {siteConfig.contactEmail}
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-x-0 -bottom-1 h-px origin-left bg-primary transition-transform duration-300 group-hover:scale-x-0 motion-reduce:transition-none"
-                    />
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="text-primary transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none"
-                  >
-                    &rarr;
-                  </span>
-                </a>
-              </div>
-            </Reveal>
-
-            <Reveal tier="quiet" delay={0.24}>
-              <ul className="mt-4 flex flex-col gap-3 border-t border-border/10 pt-6">
-                {contactNotes.map((note) => (
-                  <li
-                    key={note}
-                    className="flex gap-3 text-[15px] leading-relaxed text-muted"
-                  >
-                    <span className="mt-[9px] size-1 shrink-0 rounded-full bg-primary" />
-                    {t("notes." + note)}
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
-
-          <Reveal delay={0.1}>
-            <ContactForm />
-          </Reveal>
-        </div>
-      </Section>
+      {SHOW_CONTACT_FORM ? <HeroWithForm /> : <HeroEmailOnly />}
 
       {/* The three places client work begins, each arriving already labelled */}
       <Section tone="tinted">
@@ -237,7 +176,7 @@ function ContactPageContent() {
             </h2>
             <Reveal tier="quiet" delay={0.12}>
               <p className="mt-5 max-w-sm text-pretty text-base leading-relaxed text-muted">
-                {t("faq.body")}
+                {SHOW_CONTACT_FORM ? t("faq.body") : t("faq.bodyEmail")}
               </p>
             </Reveal>
           </div>
@@ -253,5 +192,137 @@ function ContactPageContent() {
         </div>
       </Section>
     </>
+  );
+}
+
+function HeroHeading() {
+  const t = useTranslations("contact");
+
+  return (
+    <>
+      <Eyebrow tone="primary">{t("hero.eyebrow")}</Eyebrow>
+
+      <h1 className="text-balance text-4xl font-semibold leading-[1.06] tracking-tight text-foreground md:text-[3.4rem]">
+        <LineReveal trigger="mount">{t("hero.title")}</LineReveal>
+        <LineReveal trigger="mount" delay={0.1}>
+          <span className="font-serif font-normal italic text-primary">
+            {t("hero.accent")}
+          </span>
+        </LineReveal>
+      </h1>
+
+      <Reveal tier="quiet" delay={0.12}>
+        <p className="max-w-md text-pretty text-base leading-relaxed text-muted md:text-lg">
+          {t("hero.body")}
+        </p>
+      </Reveal>
+    </>
+  );
+}
+
+function EmailLink({ size = "base" }: { size?: "base" | "large" }) {
+  return (
+    <a
+      href={`mailto:${siteConfig.contactEmail}`}
+      className={`group inline-flex w-fit max-w-full items-center gap-3 font-medium text-foreground ${
+        size === "large" ? "text-xl md:text-2xl" : "text-lg"
+      }`}
+    >
+      <span className="relative break-all">
+        {siteConfig.contactEmail}
+        <span
+          aria-hidden="true"
+          className="absolute inset-x-0 -bottom-1 h-px origin-left bg-primary transition-transform duration-300 group-hover:scale-x-0 motion-reduce:transition-none"
+        />
+      </span>
+      <span
+        aria-hidden="true"
+        className="text-primary transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none"
+      >
+        &rarr;
+      </span>
+    </a>
+  );
+}
+
+function ContactNotes({ className = "" }: { className?: string }) {
+  const t = useTranslations("contact");
+
+  return (
+    <ul className={`flex flex-col gap-3 ${className}`}>
+      {contactNotes.map((note) => (
+        <li
+          key={note}
+          className="flex gap-3 text-[15px] leading-relaxed text-muted"
+        >
+          <span className="mt-[9px] size-1 shrink-0 rounded-full bg-primary" />
+          {t("notes." + note)}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** The original layout: heading, email and notes on the left, form on the right. */
+function HeroWithForm() {
+  const t = useTranslations("contact");
+
+  return (
+    <Section className="pb-10 pt-32 md:pb-14 md:pt-40">
+      <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+        <div className="flex flex-col gap-6 lg:sticky lg:top-32 lg:self-start">
+          <HeroHeading />
+
+          <Reveal tier="quiet" delay={0.18}>
+            <div className="flex flex-col gap-2 pt-2">
+              <span className="text-[11px] uppercase tracking-[0.15em] text-muted">
+                {t("hero.emailLabel")}
+              </span>
+              <EmailLink />
+            </div>
+          </Reveal>
+
+          <Reveal tier="quiet" delay={0.24}>
+            <ContactNotes className="mt-4 border-t border-border/10 pt-6" />
+          </Reveal>
+        </div>
+
+        <Reveal delay={0.1}>
+          <ContactForm />
+        </Reveal>
+      </div>
+    </Section>
+  );
+}
+
+/**
+ * Form hidden: the heading keeps the left column and the email address moves
+ * into a card on the right, so the hero stays two balanced columns instead of
+ * a lone column with an empty half beside it.
+ */
+function HeroEmailOnly() {
+  const t = useTranslations("contact");
+
+  return (
+    <Section className="pb-10 pt-32 md:pb-14 md:pt-40">
+      <div className="grid items-end gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
+        <div className="flex flex-col gap-6">
+          <HeroHeading />
+        </div>
+
+        <Reveal delay={0.1}>
+          <div className="flex flex-col gap-6 rounded-2xl border border-border/10 bg-surface/40 p-7 md:p-9">
+            <div className="flex flex-col gap-3">
+              <span className="text-[11px] uppercase tracking-[0.15em] text-muted">
+                {t("hero.emailLabel")}
+              </span>
+              <EmailLink size="large" />
+            </div>
+
+            <ContactNotes className="border-t border-border/10 pt-6" />
+          </div>
+        </Reveal>
+      </div>
+    </Section>
   );
 }

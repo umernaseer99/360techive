@@ -676,6 +676,7 @@
       "subtitle": "zuerst gestellt",
       "accent": "werden.",
       "body": "Wenn Ihre nicht dabei ist, stellen Sie sie im Formular. Wir beantworten sie viel lieber jetzt als mitten im Projekt.",
+      "bodyEmail": "Wenn Ihre nicht dabei ist, stellen Sie sie uns per E-Mail. Wir beantworten sie viel lieber jetzt als mitten im Projekt.",
       "items": {
         "ownTeam": {
           "label": "Wir haben ein eigenes Team. Können Sie damit zusammenarbeiten?",
