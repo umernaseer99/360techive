@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { AgentProfile } from "@ai-software-house/shared-types";
 
@@ -7,14 +8,16 @@ interface AgentBusinessBenefitsProps {
 }
 
 export function AgentBusinessBenefits({ agent }: AgentBusinessBenefitsProps) {
+  const t = useTranslations("AgentDetail");
+
   return (
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-12 max-w-3xl">
           <SectionHeading
             align="center"
-            title="What your business"
-            accent="gains from this agent."
+            title={t("benefitsTitle")}
+            accent={t("benefitsAccent")}
           />
         </div>
 

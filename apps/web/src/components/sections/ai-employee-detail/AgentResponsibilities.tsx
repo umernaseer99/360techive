@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import type { AgentProfile } from "@ai-software-house/shared-types";
 
@@ -6,13 +7,15 @@ interface AgentResponsibilitiesProps {
 }
 
 export function AgentResponsibilities({ agent }: AgentResponsibilitiesProps) {
+  const t = useTranslations("AgentDetail");
+
   return (
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <SectionHeading
-            title="What this agent"
-            accent="handles day-to-day."
+            title={t("responsibilitiesTitle")}
+            accent={t("responsibilitiesAccent")}
           />
         </div>
 

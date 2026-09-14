@@ -1,19 +1,21 @@
+import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { IconBox } from "@/components/ui/IconBox";
 import { Badge } from "@/components/ui/Badge";
-import { resourceTopics } from "@/config/resources";
+import { getResourceTopics } from "@/config/resources";
 
 export function ResourcesGridSection() {
+  const t = useTranslations("AiEmployees.Resources");
+  const resourceTopics = getResourceTopics(useLocale());
+
   return (
     <section className="px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
-          <SectionHeading title="Dive" accent="deeper." />
+          <SectionHeading title={t("title")} accent={t("accent")} />
           <p className="mt-4 text-muted">
-            Articles, guides, and explainers to help you understand how
-            autonomous department agents work and what they can do for your
-            business.
+            {t("body")}
           </p>
         </div>
 
@@ -36,10 +38,10 @@ export function ResourcesGridSection() {
                 </p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-sm text-muted/40">
-                    Coming soon
+                    {t("comingSoon")}
                   </span>
                   <Badge className="text-[10px]">
-                    Article
+                    {t("article")}
                   </Badge>
                 </div>
               </Card>

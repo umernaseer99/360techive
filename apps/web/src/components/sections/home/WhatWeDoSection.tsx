@@ -2,11 +2,13 @@
 
 import { useRef } from "react";
 import { motion, useInView, useScroll, useSpring } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { accent } from "@/components/ui/Accent";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { Reveal } from "@/components/ui/Reveal";
-import { stages } from "@/config/company";
+import { getCompany } from "@/config/company";
 
 /**
  * Four stages, walked rather than listed.
@@ -17,6 +19,8 @@ import { stages } from "@/config/company";
  * usual four card grid says nothing about sequence.
  */
 export function WhatWeDoSection() {
+  const t = useTranslations("Home.WhatWeDo");
+  const { stages } = getCompany(useLocale());
   const railRef = useRef<HTMLOListElement>(null);
   const { scrollYProgress } = useScroll({
     target: railRef,
@@ -32,22 +36,17 @@ export function WhatWeDoSection() {
     <Section id="what-we-do">
       <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
         <div className="lg:sticky lg:top-32 lg:self-start">
-          <Eyebrow>What we do</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>From an idea to</LineReveal>
+            <LineReveal>{t.rich("line1", { em: accent })}</LineReveal>
             <LineReveal delay={0.08}>
-              something people{" "}
-              <span className="font-serif font-normal italic text-primary">
-                use.
-              </span>
+              {t.rich("line2", { em: accent })}
             </LineReveal>
           </h2>
 
           <Reveal tier="quiet" delay={0.12}>
             <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted">
-              We work across strategy, design, development, automation and AI.
-              Some clients arrive with a full specification. Others arrive with
-              a problem and a rough sense that software could fix it. Both work.
+              {t("body")}
             </p>
           </Reveal>
         </div>

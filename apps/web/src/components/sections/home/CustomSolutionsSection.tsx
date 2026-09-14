@@ -5,11 +5,13 @@ import {
   AnimatePresence,
   motion,
 } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { accent } from "@/components/ui/Accent";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { capabilities } from "@/config/company";
+import { getCompany } from "@/config/company";
 import { CapabilityPreview } from "./visuals/CapabilityPreview";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
@@ -26,26 +28,23 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 export function CustomSolutionsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.CustomSolutions");
+  const { capabilities } = getCompany(useLocale());
   const active = capabilities[activeIndex];
 
   return (
     <Section id="services" tone="tinted">
       <div className="flex flex-col gap-4">
-        <Eyebrow>Custom solutions</Eyebrow>
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-          <LineReveal>Software built around</LineReveal>
+          <LineReveal>{t.rich("line1", { em: accent })}</LineReveal>
           <LineReveal delay={0.08}>
-            <span className="font-serif font-normal italic text-primary">
-              your
-            </span>{" "}
-            business.
+            {t.rich("line2", { em: accent })}
           </LineReveal>
         </h2>
         <Reveal tier="quiet" delay={0.1}>
           <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-            Every business works differently. We build software around the way
-            yours actually works, instead of bending your process to fit a tool
-            somebody else designed.
+            {t("body")}
           </p>
         </Reveal>
       </div>
@@ -156,8 +155,10 @@ export function CustomSolutionsSection() {
                 {active.name}
               </span>
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                {String(activeIndex + 1).padStart(2, "0")} of{" "}
-                {String(capabilities.length).padStart(2, "0")}
+                {t("counter", {
+                  current: String(activeIndex + 1).padStart(2, "0"),
+                  total: String(capabilities.length).padStart(2, "0"),
+                })}
               </span>
             </div>
           </div>

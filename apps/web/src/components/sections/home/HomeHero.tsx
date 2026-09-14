@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import {
-  motion,
-} from "framer-motion";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { accent } from "@/components/ui/Accent";
 import { Button } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
@@ -24,6 +24,7 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  */
 export function HomeHero() {
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.Hero");
 
   return (
     <section className="relative overflow-hidden px-4 pb-20 pt-28 md:px-8 md:pb-28 md:pt-32">
@@ -40,21 +41,18 @@ export function HomeHero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
           >
-            <Eyebrow>Software, digital products and intelligent systems</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
           </motion.div>
 
           <h1 className="text-balance text-[2.6rem] font-semibold leading-[1.04] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[4.1rem]">
             <LineReveal trigger="mount" delay={0.08}>
-              We build software
+              {t.rich("line1", { em: accent })}
             </LineReveal>
             <LineReveal trigger="mount" delay={0.19}>
-              businesses{" "}
-              <span className="font-serif font-normal italic text-primary">
-                actually
-              </span>
+              {t.rich("line2", { em: accent })}
             </LineReveal>
             <LineReveal trigger="mount" delay={0.3}>
-              run on.
+              {t.rich("line3", { em: accent })}
             </LineReveal>
           </h1>
 
@@ -64,10 +62,7 @@ export function HomeHero() {
             transition={{ duration: 0.5, delay: 0.44, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-xl text-pretty text-base leading-relaxed text-muted md:text-lg"
           >
-            We turn ideas, complicated workflows and business problems into
-            software people can actually use. Custom web and mobile
-            applications, interface design, AI agents, automation, and digital
-            products of our own.
+            {t("body")}
           </motion.p>
 
           <motion.div
@@ -78,12 +73,12 @@ export function HomeHero() {
           >
             <Link href="/#work" className="w-full sm:w-auto">
               <Button size="lg" variant="primary" className="w-full sm:w-auto">
-                Explore our work
+                {t("primary")}
               </Button>
             </Link>
             <Link href="/#services" className="w-full sm:w-auto">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                See what we build
+                {t("secondary")}
               </Button>
             </Link>
           </motion.div>
@@ -94,8 +89,7 @@ export function HomeHero() {
             transition={{ duration: 0.5, delay: 0.64 }}
             className="pt-3 text-sm text-muted/70"
           >
-            Bring us a finished specification or a problem you have not solved
-            yet. Both are a good place to start.
+            {t("footnote")}
           </motion.p>
         </div>
 

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { use } from "react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   HeroSection,
   TransformationSection,
@@ -14,12 +16,21 @@ import {
   HowItWorksSection,
   FAQSection,
 } from "@/components/sections";
+import { toLocale } from "@/i18n/routing";
 
-export const metadata: Metadata = {
-  title: "AI Automation | 360 Techive",
-  description:
-    "AI agents and automation systems that take routine work off your team.",
-};
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = toLocale((await params).locale);
+  const t = await getTranslations({ locale, namespace: "AiAutomation" });
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+  };
+}
 
 /**
  * This page is the argument that used to live on the homepage. It is one
@@ -44,7 +55,10 @@ export const metadata: Metadata = {
  * The homepage now carries the whole company. AI automation is one of the
  * things we do, and this is where that story is told in full.
  */
-export default function AIAutomationPage() {
+export default function AIAutomationPage({ params }: Props) {
+  const locale = toLocale(use(params).locale);
+  setRequestLocale(locale);
+
   return (
     <>
       <HeroSection />

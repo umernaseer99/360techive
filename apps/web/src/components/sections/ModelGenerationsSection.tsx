@@ -1,49 +1,32 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 
-const generations = [
-  {
-    when: "Today",
-    sub: "current models",
-    width: "34%",
-    opacity: 1,
-    body: "Your agents run reliably on what's available now. Nothing speculative.",
-  },
-  {
-    when: "Next",
-    sub: "generation",
-    width: "56%",
-    opacity: 0.85,
-    body: "The same agents handle longer, less supervised tasks. No rebuild.",
-  },
-  {
-    when: "After that",
-    sub: "generation",
-    width: "78%",
-    opacity: 0.7,
-    body: "Work you currently keep in-house because no model could be trusted with it.",
-  },
-  {
-    when: "Onward",
-    sub: "toward general capability",
-    width: "100%",
-    opacity: 0.5,
-    body: "Your structure is already there. Latecomers start where you did in month one.",
-  },
+/** Bar shape per generation; copy comes from `AiAutomation.Generations.items`. */
+const bars = [
+  { width: "34%", opacity: 1 },
+  { width: "56%", opacity: 0.85 },
+  { width: "78%", opacity: 0.7 },
+  { width: "100%", opacity: 0.5 },
 ];
 
 export function ModelGenerationsSection() {
+  const t = useTranslations("AiAutomation.Generations");
+  const generations = (
+    t.raw("items") as { when: string; sub: string; body: string }[]
+  ).map((g, i) => ({ ...g, ...bars[i] }));
+
   return (
     <Section tone="tinted">
       <Reveal>
         <SectionHeading
-          eyebrow="Built to appreciate"
-          title="Stronger with every"
-          accent="model generation."
-          lead="The structure you build today runs on tomorrow's far more capable models without being rebuilt. Put the structure in place now and every subsequent generation multiplies what it's worth."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 
@@ -78,7 +61,7 @@ export function ModelGenerationsSection() {
 
       <Reveal tier="quiet">
         <p className="mt-6 text-xs text-muted/60">
-          Same agent structure throughout — only the underlying model changes.
+          {t("footnote")}
         </p>
       </Reveal>
     </Section>

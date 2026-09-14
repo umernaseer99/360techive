@@ -2,23 +2,30 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { AgentCard } from "@/components/sections/AgentCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { agents } from "@/config/agents";
+import { getAgents } from "@/config/agents";
 import type { Department } from "@ai-software-house/shared-types";
 
-const departments: { label: string; value: Department | "all" }[] = [
-  { label: "All", value: "all" },
-  { label: "Support", value: "customer-support" },
-  { label: "Sales", value: "sales" },
-  { label: "Finance", value: "finance" },
-  { label: "Research", value: "research" },
-  { label: "Documents", value: "documents" },
-  { label: "Executive", value: "executive" },
+const departments: Department[] = [
+  "customer-support",
+  "sales",
+  "finance",
+  "research",
+  "documents",
+  "executive",
 ];
 
 export function AIEmployeesGrid() {
   const [activeDept, setActiveDept] = useState<Department | "all">("all");
+  const t = useTranslations("AiEmployees.Grid");
+  const tDept = useTranslations("Departments");
+  const agents = getAgents(useLocale());
+  const filters: { label: string; value: Department | "all" }[] = [
+    { label: t("all"), value: "all" },
+    ...departments.map((value) => ({ label: tDept(value), value })),
+  ];
 
   const filtered =
     activeDept === "all"
@@ -30,16 +37,16 @@ export function AIEmployeesGrid() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <SectionHeading
-            title="Agents for"
-            accent="your department."
+            title={t("title")}
+            accent={t("accent")}
           />
           <p className="mt-4 text-muted">
-            Browse by department or explore all six AI Employees below.
+            {t("body")}
           </p>
         </div>
 
         <div className="mb-10 flex flex-wrap gap-2" role="tablist">
-          {departments.map((dept) => (
+          {filters.map((dept) => (
             <button
               key={dept.value}
               onClick={() => setActiveDept(dept.value)}

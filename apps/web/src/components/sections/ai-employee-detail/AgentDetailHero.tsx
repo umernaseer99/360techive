@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import {
   Headphones,
   TrendingUp,
@@ -28,6 +29,8 @@ interface AgentDetailHeroProps {
 
 export function AgentDetailHero({ agent }: AgentDetailHeroProps) {
   const Icon = iconMap[agent.icon] ?? Headphones;
+  const t = useTranslations("AgentDetail");
+  const tDept = useTranslations("Departments");
 
   return (
     <section className="px-4 pt-32 md:px-8">
@@ -36,12 +39,12 @@ export function AgentDetailHero({ agent }: AgentDetailHeroProps) {
           href="/ai-employees"
           className="mb-8 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
         >
-          &larr; All AI Employees
+          {t("back")}
         </Link>
 
         <div className="flex flex-col gap-6 md:max-w-3xl">
           <Badge icon={<span className="size-3 rounded-full bg-primary" />}>
-            {agent.department.replace("-", " ")}
+            {tDept(agent.department)}
           </Badge>
 
           <div className="flex items-center gap-4">
@@ -65,10 +68,10 @@ export function AgentDetailHero({ agent }: AgentDetailHeroProps) {
 
           <div className="flex flex-wrap gap-4">
             <Button size="lg" variant="primary">
-              Try the Demo
+              {t("tryDemo")}
             </Button>
             <Button size="lg" variant="secondary">
-              Book a Call
+              {t("bookCall")}
             </Button>
           </div>
         </div>

@@ -9,6 +9,7 @@ import {
   Clock,
   type LucideIcon,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { IconBox } from "@/components/ui/IconBox";
@@ -24,13 +25,15 @@ interface AgentFeaturesProps {
 }
 
 export function AgentFeatures({ agent }: AgentFeaturesProps) {
+  const t = useTranslations("AgentDetail");
+
   return (
     <section className="border-y border-border/10 px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <SectionHeading
-            title="Key capabilities"
-            accent="built into the agent."
+            title={t("featuresTitle")}
+            accent={t("featuresAccent")}
           />
         </div>
 

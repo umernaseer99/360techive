@@ -3,11 +3,13 @@
 import {
   motion,
 } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { accent } from "@/components/ui/Accent";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { Reveal } from "@/components/ui/Reveal";
-import { products, type Product, type ProductStatus } from "@/config/company";
+import { getCompany, type Product, type ProductStatus } from "@/config/company";
 import { ProductMock } from "./visuals/ProductMock";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
@@ -22,31 +24,20 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * Status is a small live indicator rather than a loud badge.
  */
 
-const statusCopy: Record<ProductStatus, string> = {
-  building: "In development",
-  beta: "In beta",
-  research: "Research stage",
-};
-
 export function ProductsSection() {
+  const t = useTranslations("Home.Products");
+  const { products } = getCompany(useLocale());
+
   return (
     <Section id="products" tone="tinted">
       <div className="flex flex-col gap-4">
-        <Eyebrow>Our products</Eyebrow>
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-          <LineReveal>
-            We build products{" "}
-            <span className="font-serif font-normal italic text-primary">
-              too.
-            </span>
-          </LineReveal>
+          <LineReveal>{t.rich("title", { em: accent })}</LineReveal>
         </h2>
         <Reveal tier="quiet" delay={0.08}>
           <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-            Some of our best ideas do not start with a client brief. They start
-            with a problem we keep running into, in our own work or in the
-            businesses we build for. These are the ones we decided were worth
-            solving properly.
+            {t("body")}
           </p>
         </Reveal>
       </div>
@@ -62,6 +53,7 @@ export function ProductsSection() {
 
 function ProductRow({ product, index }: { product: Product; index: number }) {
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.Products");
   const flipped = index % 2 === 1;
 
   return (
@@ -128,7 +120,7 @@ function ProductRow({ product, index }: { product: Product; index: number }) {
               className="flex items-center gap-2 pt-1 text-sm text-foreground/70"
             >
               <span className="h-px w-6 bg-primary" />
-              <span>Built and owned by us</span>
+              <span>{t("owned")}</span>
             </motion.div>
           </div>
         </Reveal>
@@ -139,6 +131,7 @@ function ProductRow({ product, index }: { product: Product; index: number }) {
 
 function StatusDot({ status }: { status: ProductStatus }) {
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.Products.status");
   const live = status !== "research";
 
   return (
@@ -158,7 +151,7 @@ function StatusDot({ status }: { status: ProductStatus }) {
         />
       </span>
       <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-        {statusCopy[status]}
+        {t(status)}
       </span>
     </span>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react";
 import type { AgentSlug } from "@ai-software-house/shared-types";
+import type { Locale } from "@/i18n/routing";
 
 interface Message {
   role: "user" | "agent";
@@ -15,7 +16,9 @@ interface UseAgentDemoReturn {
   reset: () => void;
 }
 
-const cannedResponses: Record<AgentSlug, { user: string; agent: string }[]> = {
+type Exchanges = Record<AgentSlug, { user: string; agent: string }[]>;
+
+const cannedResponsesEn: Exchanges = {
   support: [
     {
       user: "I need a refund for my subscription",
@@ -90,11 +93,102 @@ const cannedResponses: Record<AgentSlug, { user: string; agent: string }[]> = {
   ],
 };
 
+const cannedResponsesDe: Exchanges = {
+  support: [
+    {
+      user: "Ich möchte eine Rückerstattung für mein Abo",
+      agent:
+        "Gerne helfe ich Ihnen bei der Rückerstattung. Können Sie mir die E-Mail-Adresse Ihres Kontos oder Ihre Bestellnummer nennen, damit ich Ihr Abo finde?",
+    },
+    {
+      user: "Mein Konto ist gesperrt und ich kann mich nicht anmelden",
+      agent:
+        "Ich helfe Ihnen, Ihr Konto zu entsperren. Zuerst muss ich Ihre Identität prüfen. Können Sie die E-Mail-Adresse bestätigen, die mit Ihrem Konto verknüpft ist?",
+    },
+  ],
+  sales: [
+    {
+      user: "Was kostet der Enterprise-Tarif?",
+      agent:
+        "Der Enterprise-Tarif beginnt bei 2.500 € pro Monat und umfasst alle sechs KI-Mitarbeiter sowie dedizierten Support. Gerne vereinbare ich ein kurzes Gespräch mit unserem Team, um die Details für Ihren Anwendungsfall durchzugehen.",
+    },
+    {
+      user: "Kann ich den Support Agent vorher testen?",
+      agent:
+        "Selbstverständlich. Wir bieten eine kostenlose 14-tägige Testphase mit vollem Zugriff auf einen KI-Mitarbeiter Ihrer Wahl. Soll ich das für den Support Agent einrichten?",
+    },
+  ],
+  finance: [
+    {
+      user: "Zeig mir die Ausgaben des letzten Quartals nach Abteilung",
+      agent:
+        "Ich rufe den Bericht ab. Hier die Übersicht: Entwicklung 124.000 €, Marketing 89.000 €, Vertrieb 67.000 € und Betrieb 43.000 €. Auf Wunsch schlüssele ich das weiter nach Kategorien auf.",
+    },
+    {
+      user: "Gibt es diesen Monat ungewöhnliche Transaktionen?",
+      agent:
+        "Ich habe das Transaktionsprotokoll geprüft. Eine Zahlung ist auffällig: 12.500 € an einen neuen Lieferanten namens DataSync Pro, zu dem kein bestehender Vertrag hinterlegt ist. Soll ich das an Ihr Finanzteam melden?",
+    },
+  ],
+  research: [
+    {
+      user: "Was sind aktuell die wichtigsten KI-Trends im Gesundheitswesen?",
+      agent:
+        "Ich habe aktuelle Berichte ausgewertet. Drei Trends stechen heraus: (1) KI-gestützte Bildgebung in der Radiologie, (2) klinische Dokumentation mit Sprachmodellen und (3) prädiktive Analysen zu Wiederaufnahmen von Patienten. Auf Wunsch erstelle ich ein vollständiges Briefing mit Quellen.",
+    },
+    {
+      user: "Vergleiche die Preise unseres wichtigsten Wettbewerbers",
+      agent:
+        "Nach den neuesten verfügbaren Daten verlangt Wettbewerber A 299 € pro Monat für den Basistarif mit 3 Nutzerplätzen. Wettbewerber B bietet einen kostenlosen Tarif, begrenzt auf 1.000 Anfragen pro Monat. Gerne stelle ich eine detaillierte Vergleichstabelle zusammen.",
+    },
+  ],
+  document: [
+    {
+      user: "Erstelle ein Angebot für einen neuen Kunden",
+      agent:
+        "Ich kann einen Angebotsentwurf erstellen. Dafür brauche ich den Namen des Kunden, die angebotenen Leistungen, den geplanten Zeitrahmen und die Preisstruktur. Haben Sie diese Angaben zur Hand, oder soll ich eine aktuelle Vorlage verwenden?",
+    },
+    {
+      user: "Fasse den Aktionärsbericht für Q3 zusammen",
+      agent:
+        "Der Q3-Bericht umfasst 47 Seiten. Die wichtigsten Punkte: Der Umsatz stieg im Jahresvergleich um 18 % auf 4,2 Mio. €, die Betriebskosten sanken um 5 %, und das Unternehmen ist in zwei neue Märkte eingetreten. Auf Wunsch fasse ich den Bericht Abschnitt für Abschnitt zusammen.",
+    },
+  ],
+  "executive-assistant": [
+    {
+      user: "Plane morgen um 9 Uhr ein Team-Standup",
+      agent:
+        "Ich prüfe die Verfügbarkeit aller Beteiligten. Der Besprechungsraum ist frei, und alle Teammitglieder sind morgen um 9 Uhr verfügbar. Die Kalendereinladung mit dem üblichen Zoom-Link ist verschickt. Soll ich daraus einen wiederkehrenden Termin machen?",
+    },
+    {
+      user: "Was steht heute in meinem Kalender?",
+      agent:
+        "Ihr Tag: 9:30 Uhr Produktreview (30 Min.), 11:00 Uhr Kundengespräch mit Acme Corp (45 Min.), 13:00 Uhr Mittagspause, 14:30 Uhr Team-Sync (1 Std.). Außerdem haben Sie zwei offene Erinnerungen zum Budgetreview, das am Freitag fällig ist.",
+    },
+  ],
+};
+
+const fallbackResponsesDe: Record<AgentSlug, string> = {
+  support:
+    "Danke für Ihre Nachricht. Ich habe Ihr Anliegen notiert und helfe Ihnen, es zu lösen. Können Sie mir etwas mehr Details geben, damit ich Sie besser unterstützen kann?",
+  sales:
+    "Schön, dass Sie sich melden. Gerne zeige ich Ihnen, wie unsere KI-Mitarbeiter Ihr Team unterstützen können. Welcher Bereich interessiert Sie besonders?",
+  finance:
+    "Verstanden. Ich kümmere mich sofort darum. Können Sie relevante Details oder Kontoinformationen nennen, damit ich das Richtige finde?",
+  research:
+    "Ich beginne mit der Recherche. Damit die Ergebnisse möglichst relevant sind: Können Sie den Umfang oder den Zeitraum eingrenzen?",
+  document:
+    "Dabei helfe ich gerne. Nennen Sie mir die Details, und ich bereite das Dokument zur Prüfung vor.",
+  "executive-assistant":
+    "Wird erledigt. Ich prüfe Ihre Kalender, Aufgaben und Prioritäten. Sagen Sie mir Bescheid, falls etwas Bestimmtes Vorrang haben soll.",
+};
+
 function getCannedReply(
   slug: AgentSlug,
-  userMessage: string
+  userMessage: string,
+  locale: Locale
 ): string | null {
-  const exchanges = cannedResponses[slug];
+  const exchanges = (locale === "de" ? cannedResponsesDe : cannedResponsesEn)[slug];
   if (!exchanges) return null;
 
   const lower = userMessage.toLowerCase();
@@ -108,7 +202,7 @@ function getCannedReply(
   return null;
 }
 
-const fallbackResponses: Record<AgentSlug, string> = {
+const fallbackResponsesEn: Record<AgentSlug, string> = {
   support:
     "Thanks for your message. I've noted your request and will help resolve it. Could you provide a bit more detail so I can assist better?",
   sales:
@@ -123,7 +217,10 @@ const fallbackResponses: Record<AgentSlug, string> = {
     "On it. I'll check your calendars, tasks, and priorities. Let me know if there's anything specific you'd like me to prioritize.",
 };
 
-export function useAgentDemo(agentSlug: AgentSlug): UseAgentDemoReturn {
+export function useAgentDemo(
+  agentSlug: AgentSlug,
+  locale: Locale
+): UseAgentDemoReturn {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -136,14 +233,16 @@ export function useAgentDemo(agentSlug: AgentSlug): UseAgentDemoReturn {
       // Simulated delay — swap this for a real apiRequest() call later
       const delay = 600 + Math.random() * 400;
       setTimeout(() => {
+        const fallback =
+          locale === "de" ? fallbackResponsesDe : fallbackResponsesEn;
         const reply =
-          getCannedReply(agentSlug, text) ?? fallbackResponses[agentSlug];
+          getCannedReply(agentSlug, text, locale) ?? fallback[agentSlug];
         const agentMsg: Message = { role: "agent", content: reply };
         setMessages((prev) => [...prev, agentMsg]);
         setIsTyping(false);
       }, delay);
     },
-    [agentSlug]
+    [agentSlug, locale]
   );
 
   const reset = useCallback(() => {

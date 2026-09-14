@@ -6,10 +6,12 @@ import {
   motion,
   useInView,
 } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { accent } from "@/components/ui/Accent";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
-import { labAreas } from "@/config/company";
+import { getCompany } from "@/config/company";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
 /**
@@ -28,6 +30,8 @@ const DWELL = 2600;
 
 export function BuildingNextSection() {
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.Lab");
+  const { labAreas } = getCompany(useLocale());
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: false, margin: "-120px" });
 
@@ -43,7 +47,7 @@ export function BuildingNextSection() {
       DWELL
     );
     return () => clearInterval(timer);
-  }, [running]);
+  }, [running, labAreas.length]);
 
   const activeIndex = pinned ?? index;
   const active = labAreas[activeIndex];
@@ -52,14 +56,9 @@ export function BuildingNextSection() {
     <Section id="lab">
       <div ref={ref} className="flex flex-col gap-10">
         <div className="flex flex-col gap-4">
-          <Eyebrow>The lab</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>
-              What we are building{" "}
-              <span className="font-serif font-normal italic text-primary">
-                next.
-              </span>
-            </LineReveal>
+            <LineReveal>{t.rich("title", { em: accent })}</LineReveal>
           </h2>
         </div>
 
@@ -122,7 +121,7 @@ export function BuildingNextSection() {
                 <span className="relative size-1.5 rounded-full bg-primary" />
               </span>
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                Currently exploring
+                {t("exploring")}
               </span>
             </div>
 
@@ -146,8 +145,7 @@ export function BuildingNextSection() {
             </div>
 
             <p className="mt-6 border-t border-border/10 pt-5 text-pretty text-sm leading-relaxed text-muted/80">
-              Some of this becomes client work. Some of it becomes a product.
-              Most of it starts as a question about why something takes so long.
+              {t("footnote")}
             </p>
           </div>
         </div>

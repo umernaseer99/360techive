@@ -1,4 +1,7 @@
 import type { AgentProfile } from "@ai-software-house/shared-types";
+import { agentsDe } from "./agents.de";
+
+/** English copy. German lives in agents.de.ts; read through getAgents(locale). */
 
 export const agents: AgentProfile[] = [
   {
@@ -207,6 +210,13 @@ export const agents: AgentProfile[] = [
   },
 ];
 
-export function getAgentBySlug(slug: string): AgentProfile | undefined {
-  return agents.find((a) => a.slug === slug);
+export function getAgents(locale: string): AgentProfile[] {
+  return locale === "de" ? agentsDe : agents;
+}
+
+export function getAgentBySlug(
+  slug: string,
+  locale: string
+): AgentProfile | undefined {
+  return getAgents(locale).find((a) => a.slug === slug);
 }

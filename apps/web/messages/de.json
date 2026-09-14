@@ -1,0 +1,596 @@
+{
+  "Metadata": {
+    "title": "360 Techive | Software, digitale Produkte und intelligente Systeme",
+    "description": "Wir gestalten und entwickeln individuelle Web- und Mobile-Anwendungen, Benutzeroberflächen, KI-Agenten, Automatisierungen und eigene digitale Produkte."
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache",
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "Nav": {
+    "ariaLabel": "Hauptnavigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "toggleTheme": "Farbschema wechseln",
+    "links": {
+      "services": "Leistungen",
+      "aiAutomation": "KI-Automatisierung",
+      "products": "Produkte",
+      "work": "Projekte",
+      "about": "Über uns"
+    }
+  },
+  "Footer": {
+    "tagline": "Wir entwickeln individuelle Software, digitale Produkte und intelligente Systeme.",
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "rights": "Alle Rechte vorbehalten.",
+    "links": {
+      "whatWeDo": "Was wir tun",
+      "customSolutions": "Individuelle Lösungen",
+      "ourProducts": "Unsere Produkte",
+      "selectedWork": "Ausgewählte Projekte",
+      "about": "Über uns",
+      "aiAutomation": "KI-Automatisierung",
+      "allAiEmployees": "Alle KI-Mitarbeiter",
+      "support": "Support",
+      "sales": "Vertrieb",
+      "finance": "Finanzen",
+      "research": "Recherche",
+      "documents": "Dokumente",
+      "privacy": "Datenschutz",
+      "terms": "AGB"
+    }
+  },
+  "Home": {
+    "Hero": {
+      "eyebrow": "Software, digitale Produkte und intelligente Systeme",
+      "line1": "Wir bauen Software,",
+      "line2": "mit der Unternehmen",
+      "line3": "<em>wirklich</em> arbeiten.",
+      "body": "Wir machen aus Ideen, komplizierten Abläufen und geschäftlichen Problemen Software, die Menschen tatsächlich nutzen können. Individuelle Web- und Mobile-Anwendungen, Interface-Design, KI-Agenten, Automatisierung und eigene digitale Produkte.",
+      "primary": "Unsere Projekte ansehen",
+      "secondary": "Was wir bauen",
+      "footnote": "Bringen Sie uns ein fertiges Pflichtenheft oder ein Problem, das Sie noch nicht gelöst haben. Beides ist ein guter Anfang."
+    },
+    "Visual": {
+      "ariaLabel": "Eine Webanwendung, eine mobile App, ein KI-Agent, ein Automatisierungsablauf und ein Produkt, verbunden zu einem System",
+      "webApp": "Web-App",
+      "mobile": "Mobile",
+      "agent": "KI-Agent",
+      "automation": "Automatisierung",
+      "product": "Produkt"
+    },
+    "WhatWeDo": {
+      "eyebrow": "Was wir tun",
+      "line1": "Von der Idee zu etwas,",
+      "line2": "das Menschen <em>nutzen.</em>",
+      "body": "Wir arbeiten in Strategie, Design, Entwicklung, Automatisierung und KI. Manche Kunden kommen mit einem vollständigen Pflichtenheft. Andere mit einem Problem und der vagen Ahnung, dass Software es lösen könnte. Beides funktioniert."
+    },
+    "CustomSolutions": {
+      "eyebrow": "Individuelle Lösungen",
+      "line1": "Software, gebaut für",
+      "line2": "<em>Ihr</em> Unternehmen.",
+      "body": "Jedes Unternehmen arbeitet anders. Wir bauen Software um die Art herum, wie Ihres tatsächlich arbeitet, statt Ihre Prozesse an ein Tool anzupassen, das jemand anderes entworfen hat.",
+      "counter": "{current} von {total}"
+    },
+    "Automation": {
+      "eyebrow": "KI-Automatisierung",
+      "line1": "Wenn Software",
+      "line2": "die Arbeit <em>selbst erledigt.</em>",
+      "body": "Wir bauen KI-Agenten und Automatisierungen, die innerhalb der Prozesse arbeiten, die ein Unternehmen bereits hat. Vom Beantworten von Fragen über das Verarbeiten von Informationen bis zum Übertragen zwischen Systemen: Abläufe, mit denen ein Team weniger Zeit mit Wiederholungen verbringt.",
+      "cta": "KI-Automatisierung entdecken",
+      "diagramLabel": "Ein automatisierter Ablauf: Eingang, KI-Agent, Entscheidung, Aktion, Ergebnis",
+      "footnote": "Alles, bei dem der Agent unsicher ist, geht an einen Menschen",
+      "steps": [
+        { "label": "Eingang", "note": "Eine Nachricht, ein Formular, eine Datei, ein Ereignis" },
+        { "label": "KI-Agent", "note": "Gleicht es mit dem Wissen Ihres Unternehmens ab" },
+        { "label": "Entscheidung", "note": "Selbst erledigen oder an einen Menschen übergeben" },
+        { "label": "Aktion", "note": "Aktualisiert die Systeme, die Sie bereits nutzen" },
+        { "label": "Ergebnis", "note": "Erledigt, mit einem Protokoll des Ablaufs" }
+      ]
+    },
+    "Products": {
+      "eyebrow": "Unsere Produkte",
+      "title": "Wir bauen <em>auch</em> eigene Produkte.",
+      "body": "Einige unserer besten Ideen beginnen nicht mit einem Kundenauftrag. Sie beginnen mit einem Problem, auf das wir immer wieder stoßen, in unserer eigenen Arbeit oder in den Unternehmen, für die wir entwickeln. Diese hier wollten wir richtig lösen.",
+      "owned": "Von uns entwickelt und betrieben",
+      "status": {
+        "building": "In Entwicklung",
+        "beta": "In der Beta",
+        "research": "Forschungsphase"
+      },
+      "mock": {
+        "thisWeek": "Diese Woche",
+        "days": ["Mo", "Di", "Mi", "Do"]
+      }
+    },
+    "Lab": {
+      "eyebrow": "Das Labor",
+      "title": "Woran wir als <em>Nächstes</em> arbeiten.",
+      "exploring": "Aktuell im Fokus",
+      "footnote": "Manches davon wird zu Kundenprojekten. Manches zu einem Produkt. Das meiste beginnt mit der Frage, warum etwas so lange dauert."
+    },
+    "Work": {
+      "eyebrow": "Ausgewählte Projekte",
+      "title": "Gebaut für <em>echte</em> Probleme.",
+      "body": "Einige der Probleme, die wir lösen sollen, und was wir dafür gebaut haben.",
+      "problem": "Das Problem",
+      "built": "Was wir gebaut haben",
+      "approach": "Technologie",
+      "outcome": "Was sich verändert hat"
+    },
+    "Technology": {
+      "eyebrow": "Technologie",
+      "line1": "Die Technologie ändert sich.",
+      "line2": "Die <em>Denkweise</em> nicht.",
+      "body": "Wir wählen Werkzeuge, die zum Problem passen, zum Budget und zu denen, die das System nach uns pflegen. Der spannende Teil der Arbeit war nie das Framework.",
+      "groups": {
+        "build": {
+          "label": "Produkt und Oberfläche",
+          "note": "Was Menschen jeden Tag sehen und nutzen."
+        },
+        "platform": {
+          "label": "Plattform und Daten",
+          "note": "Wo Geschäftslogik und Datensätze liegen."
+        },
+        "intelligence": {
+          "label": "Intelligenz und Infrastruktur",
+          "note": "Was Software verstehen und zuverlässig laufen lässt."
+        }
+      }
+    },
+    "WhyUs": {
+      "eyebrow": "Warum wir",
+      "line1": "Gute Software beginnt",
+      "line2": "damit, das Problem",
+      "line3": "zu <em>verstehen.</em>",
+      "body": "Die meiste Software, die scheitert, wurde korrekt gebaut. Sie hat nur das Falsche gelöst. Deshalb nehmen wir uns echte Zeit für den Teil vor dem Code."
+    },
+    "About": {
+      "eyebrow": "Über uns",
+      "line1": "Ein Softwareteam, das",
+      "line2": "gerne Dinge <em>baut.</em>",
+      "body1": "360 Techive ist ein Softwarehaus. Wir vereinen Design, Entwicklung, Software Engineering, KI und Produktdenken unter einem Dach. Ein Projekt wird also nicht zwischen vier Firmen hin und her gereicht, bevor es bei jemandem ankommt, der es nutzen kann.",
+      "body2": "Wir arbeiten mit Unternehmen, denen ihre Tabellen über den Kopf gewachsen sind, und mit Gründern, die eine Idee haben und jemanden brauchen, der sie umsetzt. Außerdem entwickeln wir eigene Produkte. Das hält uns ehrlich, wenn es darum geht, wie lange Dinge dauern.",
+      "disciplines": [
+        { "label": "Design", "note": "Oberflächen und Produktdenken" },
+        { "label": "Engineering", "note": "Web, Mobile und Backend-Systeme" },
+        { "label": "KI", "note": "Agenten, Assistenten und Automatisierung" },
+        { "label": "Produkt", "note": "Eigene Software, im Haus entwickelt" }
+      ]
+    }
+  },
+  "AiAutomation": {
+    "metaTitle": "KI-Automatisierung | 360 Techive",
+    "metaDescription": "KI-Agenten und Automatisierungssysteme, die Ihrem Team Routinearbeit abnehmen.",
+    "Hero": {
+      "eyebrow": "KI-Mitarbeiter für jede Abteilung",
+      "title": "Arbeiten Sie nicht mehr <em>im</em> Unternehmen, sondern <em>am</em> Unternehmen.",
+      "body": "Autonome Agenten, die selbstständig handeln, statt auf Anweisungen zu warten. Wir entwerfen, bauen und betreiben die Agenten-Infrastruktur, die Ihrem Team die Routine abnimmt – Support, Vertrieb, Finanzen, Recherche, Dokumente und Koordination.",
+      "primary": "Demo buchen",
+      "secondary": "So funktioniert es",
+      "footnote": "Für Sie gebaut, integriert und betrieben – kein Tool, für das Sie Personal brauchen."
+    },
+    "Network": {
+      "ariaLabel": "KI-Agenten erhalten Aufgaben von einem zentralen Hub und liefern erledigte Ergebnisse zurück",
+      "hub": "HUB",
+      "nodes": {
+        "support": { "label": "Support", "task": "Ticket #4821" },
+        "sales": { "label": "Vertrieb", "task": "Neuer Lead" },
+        "finance": { "label": "Finanzen", "task": "Rechnungsstapel" },
+        "research": { "label": "Recherche", "task": "Marktbriefing" },
+        "document": { "label": "Dokumente", "task": "Angebotsentwurf" },
+        "assistant": { "label": "Assistenz", "task": "Termin-Sync" }
+      }
+    },
+    "Transformation": {
+      "eyebrow": "Der Wandel",
+      "title": "Von der Arbeit selbst zur",
+      "accent": "Steuerung der Arbeit.",
+      "lead": "Heute landet alles auf Ihrem Schreibtisch, und Sie reagieren. Mit einer Agenten-Ebene läuft die Routine von selbst, und Sie behalten den Überblick.",
+      "todayEyebrow": "Heute · im Unternehmen",
+      "todayTitle": "Alles läuft über Sie.",
+      "todayBody": "Anfragen kommen aus allen Richtungen, ohne klare Priorität. Die Arbeit wird erledigt, aber niemand steuert.",
+      "chaos": ["E-Mail-Verläufe", "Eingehende Anrufe", "Rechnungen", "Dokumente", "Chat-Anfragen", "Verwaltung", "Nachfassen", "Reporting"],
+      "agentsEyebrow": "Mit Agenten · am Unternehmen",
+      "agentsTitle": "Sie sehen das ganze Spielfeld.",
+      "agentsBody": "Agenten übernehmen die wiederkehrende Arbeit von Anfang bis Ende. Sie geben die Richtung vor, prüfen Ergebnisse und entscheiden, wo es weitergeht.",
+      "order": ["Routine läuft autonom", "Sie sehen jedes Ergebnis", "Ausnahmen werden an Sie eskaliert", "Kapazität wächst ohne Neueinstellungen"]
+    },
+    "Showcase": {
+      "eyebrow": "Das Team",
+      "title": "Ein Team aus",
+      "accent": "digitalen Mitarbeitern.",
+      "lead": "Wir bauen die Agenten mit dem größten Hebel in Ihrem Unternehmen – entwickelt für Ihre Prozesse, nicht von der Stange. Aufeinander abgestimmt und rund um die Uhr im Einsatz."
+    },
+    "Compounding": {
+      "eyebrow": "Warum es sich lohnt, jetzt zu starten",
+      "title": "Je länger es läuft,",
+      "accent": "desto stärker wird es.",
+      "lead": "Ein Agentensystem ist kein einmaliges Projekt – es wächst. Jeder neue Agent übernimmt, was die bestehenden bereits über Ihr Unternehmen gelernt haben. Starten Sie heute, und in einem Jahr arbeiten Sie auf einem Fundament, das ein Wettbewerber erst noch von Grund auf bauen muss.",
+      "barsLabel": "{filled} von {total} Abteilungen abgedeckt",
+      "stages": [
+        { "when": "Monat 1", "title": "Erster Agent live", "body": "Der Anwendungsfall, der sich am schnellsten bezahlt macht. Hier beginnt die Wissensbasis." },
+        { "when": "Monat 3", "title": "Zwei weitere kommen dazu", "body": "Jeder neue Agent übernimmt, was der erste bereits über Ihr Unternehmen gelernt hat." },
+        { "when": "Monat 6", "title": "Abteilungen vernetzen sich", "body": "Agenten übergeben sich gegenseitig Arbeit. Die Wissensbasis ist jetzt das eigentliche Kapital." },
+        { "when": "Ab Jahr 1", "title": "Zinseszinseffekt", "body": "Eine Struktur, für die ein Wettbewerber, der heute beginnt, noch zwölf Monate Arbeit braucht." }
+      ]
+    },
+    "Impact": {
+      "eyebrow": "Was sich verändert",
+      "title": "Die Kennzahlen, die sich bewegen, wenn Agenten",
+      "accent": "die Routine übernehmen.",
+      "lead": "Prognostizierte Zielwerte auf Basis eines realen Agenteneinsatzes – was passiert, wenn wiederkehrende Arbeit keinen Menschen mehr braucht.",
+      "disclaimer": "Beispielhafte Prognosen auf Basis modellierter Abläufe. Die Werte hängen von Prozess, Datenqualität und Volumen ab – wir prüfen sie in der Discovery-Phase anhand Ihrer eigenen Zahlen.",
+      "metrics": [
+        { "value": "−85 %", "label": "Zeit für Dokumententwürfe", "detail": "Der Document Agent erstellt strukturierte Entwürfe in Ihrem Hausstil. Ihr Team prüft den Inhalt, statt bei null anzufangen." },
+        { "value": "−90 %", "label": "Zeit für die Suche", "detail": "Die Suche in natürlicher Sprache über Ihre Wissensbasis liefert sofort die relevante Stelle, statt ein Dutzend Dateien zu öffnen." },
+        { "value": "−88 %", "label": "Zeit für Kunden-Onboarding", "detail": "Neue Kunden werden automatisch erfasst, angereichert und eingerichtet – produktiv ab dem ersten Tag statt nach drei Wochen." },
+        { "value": "4×", "label": "Kapazität pro Teammitglied", "detail": "Jede Person betreut ein Vielfaches der heutigen Kunden. Wachstum entsteht durch Durchsatz, nicht durch mehr Personal." },
+        { "value": "10×", "label": "Reaktionsgeschwindigkeit bei Veränderungen", "detail": "Markt-, Preis- und regulatorische Änderungen werden täglich erkannt und den betroffenen Kunden zugeordnet." },
+        { "value": "−85 %", "label": "Audit-Vorbereitung", "detail": "Nachweise und Dokumentation stellen sich aus der Wissensbasis selbst zusammen, mit strukturell abgesicherter Vollständigkeit." }
+      ]
+    },
+    "Cost": {
+      "eyebrow": "Der ehrliche Vergleich",
+      "title": "Eine Neueinstellung kostet mehr als",
+      "accent": "nur das Gehalt.",
+      "lead": "Hinter jeder Stelle stehen zahlreiche Fixkosten und Risiken. Ein Agent bringt keine davon mit.",
+      "employeeEyebrow": "Pro Mitarbeiter",
+      "employeeTitle": "Fixkosten und Risiko",
+      "gone": "Entfällt",
+      "employeeCosts": ["Gehalt und jährliche Erhöhungen", "Arbeitgeberanteile und Sozialabgaben", "Zusatzleistungen und Altersvorsorge", "Bezahlter Urlaub", "Krankheitstage und Vertretung", "Recruiting und Onboarding", "Einarbeitung bis zur vollen Produktivität", "Eine feste Anzahl an Arbeitsstunden"],
+      "agentEyebrow": "Pro Agent",
+      "agentTitle": "Eine Investition, kein Gehalt",
+      "agentTraits": ["Läuft rund um die Uhr, ohne Urlaub oder Ausfallzeiten", "Keine Arbeitgeberabgaben oder Zusatzleistungen", "In Minuten dupliziert, um zu skalieren", "Gleichbleibende, nachvollziehbare Qualität", "Wird mit jeder Modellgeneration besser", "Produktiv ab dem ersten Tag"]
+    },
+    "Savings": {
+      "eyebrow": "Rechnen Sie selbst",
+      "title": "Was würde eine Abteilung wie Ihre",
+      "accent": "wirklich sparen?",
+      "lead": "Legen Sie Größe, Kosten und den Anteil wiederkehrender Arbeit fest. Die Prognose läuft über zehn Jahre mit 3 % jährlicher Gehaltssteigerung.",
+      "headcount": "Personen in der Abteilung",
+      "headcountHint": "Das Team, dessen Routinearbeit Agenten übernehmen würden.",
+      "salary": "Durchschnittliches Gehalt",
+      "salaryHint": "Bruttogehalt. Wir rechnen {percent} % für Abgaben, Zusatzleistungen und Gemeinkosten hinzu.",
+      "automatable": "Anteil wiederkehrender Arbeit",
+      "automatableHint": "Triage, Recherchen, Entwürfe, Dateneingabe, Reporting – Arbeit, die ein Agent übernehmen kann.",
+      "agentCost": "Jährliche Kosten des Agentenprogramms",
+      "agentCostHint": "Aufbau, Integration und laufender Betrieb, alles inklusive.",
+      "projected": "Prognose über {years} Jahre",
+      "positive": "Nettoersparnis gegenüber dem heutigen Betrieb der Abteilung",
+      "negative": "teurer als der Status quo bei diesen Eingaben",
+      "rowLoaded": "Vollkosten der Abteilung, Jahr 1",
+      "rowRepeatable": "Wiederkehrende Arbeit pro Jahr",
+      "rowNetYear": "Nettoersparnis pro Jahr",
+      "rowHuman": "Personalkosten über {years} Jahre",
+      "rowAgent": "Agentenprogramm über {years} Jahre",
+      "cta": "Mit uns durchrechnen",
+      "disclaimer": "Eine Prognose, kein Angebot. Sie setzt voraus, dass der wiederkehrende Anteil tatsächlich entfallen kann und der Umfang der Agenten gleich bleibt. In der Discovery-Phase rechnen wir das mit Ihren echten Prozessdaten neu."
+    },
+    "Brain": {
+      "eyebrow": "Der eigentliche Hebel",
+      "title": "Keine isolierten Bots – ein",
+      "accent": "Unternehmensgehirn.",
+      "lead": "Wir liefern Ihnen keine sechs unverbundenen Chatbots. Wir bauen eine Wissensbasis, die Ihnen gehört – trainiert auf Ihre Prozesse, Ihre Daten und Ihre Sprache –, aus der jeder Agent liest und in die er zurückschreibt.",
+      "body": "Das ist das eigentliche Kapital. Deshalb ist Agent Nummer sechs schneller einsatzbereit als Agent Nummer eins, und deshalb wird es jeden Monat wertvoller, statt zu veralten.",
+      "guarantees": ["Ihre Daten bleiben Ihre, in Ihrer Infrastruktur", "Jede Antwort eines Agenten ist auf eine Quelle zurückführbar", "Übersteht Modellwechsel – Sie müssen nichts neu bauen"],
+      "ariaLabel": "Sechs Agenten greifen auf eine gemeinsame Wissensbasis des Unternehmens zu",
+      "caption": "Jeder Agent schöpft aus einer Quelle",
+      "marks": ["SUP", "VER", "FIN", "REC", "DOK", "ASS"],
+      "brain": "Unternehmensgehirn",
+      "brainSub": "Ihre Prozesse · Ihre Daten · Ihre Sprache"
+    },
+    "Generations": {
+      "eyebrow": "Gebaut, um an Wert zu gewinnen",
+      "title": "Stärker mit jeder",
+      "accent": "Modellgeneration.",
+      "lead": "Die Struktur, die Sie heute aufbauen, läuft ohne Neubau auf den deutlich leistungsfähigeren Modellen von morgen. Schaffen Sie die Struktur jetzt, und jede weitere Generation vervielfacht ihren Wert.",
+      "footnote": "Durchgehend dieselbe Agentenstruktur – nur das zugrunde liegende Modell ändert sich.",
+      "items": [
+        { "when": "Heute", "sub": "aktuelle Modelle", "body": "Ihre Agenten laufen zuverlässig auf dem, was heute verfügbar ist. Nichts Spekulatives." },
+        { "when": "Nächste", "sub": "Generation", "body": "Dieselben Agenten übernehmen längere Aufgaben mit weniger Aufsicht. Kein Neubau." },
+        { "when": "Übernächste", "sub": "Generation", "body": "Arbeit, die Sie heute intern behalten, weil man sie noch keinem Modell anvertrauen konnte." },
+        { "when": "Danach", "sub": "hin zu allgemeiner Leistungsfähigkeit", "body": "Ihre Struktur steht bereits. Nachzügler beginnen dort, wo Sie in Monat eins waren." }
+      ]
+    },
+    "Curve": {
+      "eyebrow": "Die Entwicklung",
+      "title": "Die Leistungskurve verläuft",
+      "accent": "exponentiell.",
+      "lead": "METR zeigt: Die Länge der Aufgaben, die ein KI-Agent selbstständig erledigen kann, hat sich etwa alle sieben Monate verdoppelt – seit 2024 eher alle vier. Wer die Struktur jetzt aufbaut, profitiert von jeder Verdopplung.",
+      "ariaLabel": "Logarithmisches Diagramm: Die Aufgabenlänge autonomer KI steigt von Sekunden im Jahr 2019 auf Stunden heute, mit einer prognostizierten Fortsetzung in Tage und Wochen",
+      "axis": ["Sekunden", "Minuten", "Stunden", "Tage", "Wochen"],
+      "years": ["2019", "2020", "2023", "2025", "Heute"],
+      "notes": ["Sekunden", "< 1 Min.", "Minuten", "~1 Stunde", "Stunden"],
+      "projected": "Prognose",
+      "caption": "Aufgabenlänge, die ein KI-Agent mit 50 % Erfolgsquote autonom erledigt, logarithmische Skala. Quelle: METR, <cite>Measuring AI Ability to Complete Long Tasks</cite> (2025). Die gestrichelte Fortsetzung ist eine beispielhafte Projektion, keine Prognose von METR."
+    },
+    "Quote": {
+      "eyebrow": "Unsere These",
+      "quote": "„Der Vorteil ist nicht das Modell – alle bekommen dieselben Modelle. Der Vorteil ist, die Struktur schon zu haben, wenn das nächste kommt.“",
+      "role": "Agenten, für Sie entworfen, gebaut und betrieben"
+    },
+    "HowItWorks": {
+      "eyebrow": "So arbeiten wir",
+      "title": "Vom ersten Gespräch zum",
+      "accent": "laufenden Betrieb.",
+      "lead": "Wir liefern keinen Bot ab und verschwinden. In vier Phasen wird eine Abteilung zu einem messbaren, sich ständig verbessernden autonomen Betrieb."
+    },
+    "Process": {
+      "steps": [
+      { "num": "01", "title": "Discovery und Analyse", "description": "Wir analysieren, wie die Abteilung tatsächlich arbeitet – Tools, Übergaben, Entscheidungspunkte – und bewerten, wo ein Agent den größten Hebel hat. Ihre Prozesse, keine generische Vorlage." },
+      { "num": "02", "title": "Architektur", "description": "Wir entwerfen das Agentensystem: welche Daten es liest, in welchen Tools es handeln darf, wo es an einen Menschen eskaliert und wie Erfolg gemessen wird." },
+      { "num": "03", "title": "Entwicklung und Training", "description": "Wir bauen die Agenten und trainieren sie auf Ihre Daten, Prozesse und Sprache. Jede Aktion ist nachvollziehbar, sodass Sie genau sehen, was der Agent getan hat und warum." },
+      { "num": "04", "title": "Betrieb und Verbesserung", "description": "Wir betreiben die Agenten und entwickeln sie laufend weiter. Agent-as-a-Service – keine einmalige Projektübergabe mit Handbuch." }
+      ]
+    },
+    "Faq": {
+      "eyebrow": "Bevor Sie fragen",
+      "title": "Häufig gestellte",
+      "accent": "Fragen.",
+      "items": [
+        { "label": "Für welche Unternehmen lohnt sich das wirklich?", "content": "Für etablierte Unternehmen mit wiederkehrenden, wissensintensiven Prozessen – Vertrieb, Support, Finanzen, Betrieb. Branchenunabhängig. Entscheidend ist nicht Ihre Branche, sondern ob dieselbe Art von Arbeit immer wieder anfällt." },
+        { "label": "Was ist der Unterschied zwischen einem KI-Mitarbeiter und einem Chatbot?", "content": "Ein Chatbot beantwortet Fragen in einem Chatfenster. Ein KI-Mitarbeiter ist ein dauerhaft aktiver, autonomer Agent, der mit Ihren Tools verbunden ist – er legt Tickets an, aktualisiert CRM-Datensätze, erstellt Rechnungen und plant Termine über mehrere Systeme hinweg, ohne dass ein Mensch eingreifen muss. Ein Teammitglied, keine FAQ-Oberfläche." },
+        { "label": "Wie lange dauert es, bis etwas wirklich läuft?", "content": "Der erste produktive Agent ist in der Regel innerhalb von zwei bis vier Wochen live. Wir beginnen mit dem Anwendungsfall, der sich am schnellsten bezahlt macht, und bauen von dort aus weiter. Discovery und Architektur finden in der ersten Woche statt." },
+        { "label": "Was passiert mit unseren Daten?", "content": "Ihre Daten bleiben Ihre. Jeder Agent arbeitet in Ihrer eigenen Infrastruktur oder in einer dedizierten Private Cloud, rund um eine Wissensbasis, die Ihnen gehört. Verschlüsselt im Ruhezustand und bei der Übertragung, mit klaren Zugriffs- und Aufbewahrungsregeln. Wir trainieren niemals Basismodelle mit Ihren Daten." },
+        { "label": "Brauchen wir KI-Know-how im Team?", "content": "Nein. Wir bauen, betreiben und verbessern die Agenten für Sie – Agent-as-a-Service. Sie behalten die Kontrolle über Umfang und Richtlinien, ohne Fachkräfte für Modellentwicklung einstellen zu müssen." },
+        { "label": "Ist das nur ChatGPT mit einer anderen Oberfläche?", "content": "Nein. Es handelt sich um individuelle Multi-Agenten-Systeme, die mit Ihren Tools und Daten verbunden und auf Ihre Prozesse trainiert sind. Der Wert liegt in der Integration und der Wissensbasis darunter, nicht im Modell." }
+      ]
+    }
+  },
+  "AiEmployees": {
+    "metaTitle": "KI-Mitarbeiter – 360 Techive",
+    "metaDescription": "Lernen Sie sechs spezialisierte KI-Mitarbeiter für Support, Vertrieb, Finanzen, Recherche, Dokumente und Geschäftsführung kennen. Jeder Agent automatisiert einen ganzen Geschäftsbereich.",
+    "ogDescription": "Lernen Sie sechs spezialisierte KI-Mitarbeiter für Support, Vertrieb, Finanzen, Recherche, Dokumente und Geschäftsführung kennen.",
+    "badge": "Sechs spezialisierte Agenten",
+    "title": "Lernen Sie Ihr künftiges <em>KI-Team</em> kennen.",
+    "body": "Jeder KI-Mitarbeiter ist für eine Abteilung gebaut, verbindet sich mit Ihren bestehenden Tools und arbeitet autonom – von der Einordnung von Supporttickets bis zum Abgleich von Finanzberichten.",
+    "LiveDemo": {
+      "badge": "Live-Demo · in Kürze",
+      "body": "Testen Sie einen echten KI-Mitarbeiter direkt auf dieser Seite."
+    },
+    "UseCases": {
+      "title": "Was Unternehmen",
+      "accent": "von uns bauen lassen.",
+      "items": [
+        { "title": "Lead-Qualifizierung und CRM-Pflege", "description": "Agenten, die eingehende Leads ansprechen, anhand Ihres idealen Kundenprofils bewerten, CRM-Datensätze aktualisieren und warme Gespräche an Ihren Vertrieb übergeben – ohne manuelle Dateneingabe." },
+        { "title": "Datenextraktion und Reporting", "description": "Strukturierte Daten aus Dokumenten, E-Mails und Tabellen ziehen. Berichte, Zusammenfassungen und Dashboards auf Abruf erstellen, ohne auf ein Datenteam zu warten." },
+        { "title": "Kundensupport rund um die Uhr", "description": "First-Level-Tickets rund um die Uhr bearbeiten. Antworten aus Ihrer Wissensbasis, Einordnung nach Dringlichkeit und Eskalation nur, wenn ein Mensch gefragt ist." },
+        { "title": "Content- und Workflow-Automatisierung", "description": "Angebote entwerfen, Rechnungen erstellen, Termine planen und Freigaben weiterleiten – Agenten, die den Ablauf vom Auslöser bis zum Abschluss übernehmen." }
+      ]
+    },
+    "HowWeBuild": {
+      "title": "Wie wir jeden Agenten",
+      "accent": "bauen und einführen.",
+      "body": "Jeder KI-Mitarbeiter durchläuft denselben vierstufigen Lebenszyklus – vom Verständnis Ihrer Abläufe bis zum laufenden Betrieb und zur Weiterentwicklung."
+    },
+    "Grid": {
+      "title": "Agenten für",
+      "accent": "Ihre Abteilung.",
+      "body": "Filtern Sie nach Abteilung oder entdecken Sie unten alle sechs KI-Mitarbeiter.",
+      "all": "Alle"
+    },
+    "Resources": {
+      "title": "Tiefer",
+      "accent": "einsteigen.",
+      "body": "Artikel, Leitfäden und Erklärungen, die zeigen, wie autonome Abteilungsagenten funktionieren und was sie für Ihr Unternehmen leisten können.",
+      "comingSoon": "In Kürze",
+      "article": "Artikel"
+    },
+    "CaseStudies": {
+      "title": "Erste",
+      "accent": "Fallbeispiele.",
+      "body": "Wir veröffentlichen Fallstudien nur mit Zustimmung unserer Kunden. Hier ist ein anonymisiertes Beispiel unserer Arbeit.",
+      "caseTitle": "Compliance bei Finanzdienstleistungen (anonymisiert)",
+      "caseBody": "Eine Finanzberatung hat unseren Document Agent und Research Agent eingeführt, um die Prüfung regulatorischer Meldungen und die Wettbewerbsbeobachtung zu automatisieren. Die Agenten verarbeiten heute über 200 Dokumente pro Woche und machen Compliance-Risiken in Stunden statt Tagen sichtbar.",
+      "caseNote": "Dies ist ein beispielhafter Fall auf Basis eines Kundenprojekts. Identität des Kunden und konkrete Zahlen wurden anonymisiert.",
+      "moreTitle": "Weitere Fallstudien folgen",
+      "moreBody": "Ausführliche Fallstudien veröffentlichen wir erst nach Freigabe durch den Kunden. Wenn Sie vorgestellt werden möchten, freuen wir uns, von Ihnen zu hören."
+    }
+  },
+  "Departments": {
+    "customer-support": "Support",
+    "sales": "Vertrieb",
+    "finance": "Finanzen",
+    "research": "Recherche",
+    "documents": "Dokumente",
+    "executive": "Geschäftsführung"
+  },
+  "AgentCard": {
+    "learnMore": "Mehr erfahren"
+  },
+  "AgentDetail": {
+    "metaTitle": "{name} – 360 Techive",
+    "notFound": "Nicht gefunden",
+    "back": "← Alle KI-Mitarbeiter",
+    "tryDemo": "Demo ausprobieren",
+    "bookCall": "Gespräch buchen",
+    "responsibilitiesTitle": "Was dieser Agent",
+    "responsibilitiesAccent": "täglich übernimmt.",
+    "featuresTitle": "Zentrale Fähigkeiten",
+    "featuresAccent": "des Agenten.",
+    "benefitsTitle": "Was Ihr Unternehmen",
+    "benefitsAccent": "durch diesen Agenten gewinnt.",
+    "useCasesTitle": "Echte Szenarien,",
+    "useCasesAccent": "die dieser Agent übernimmt.",
+    "scenario": "Szenario {number}",
+    "relatedTitle": "Weitere",
+    "relatedAccent": "KI-Mitarbeiter entdecken.",
+    "Demo": {
+      "title": "Testen Sie eine Live-Vorschau",
+      "accent": "dieses Agenten.",
+      "disclaimer": "Demo-Vorschau – die gezeigten Antworten sind beispielhaft und werden nicht von einem Live-KI-System erzeugt.",
+      "header": "{name} – Live-Vorschau",
+      "empty": "Senden Sie eine Nachricht, um zu sehen, wie {name} antwortet.",
+      "inputLabel": "Nachricht an den Agenten eingeben",
+      "placeholder": "Nachricht eingeben …",
+      "send": "Nachricht senden"
+    }
+  },
+  "HowItWorksPage": {
+    "metaTitle": "So funktioniert es – 360 Techive",
+    "metaDescription": "Von der Discovery über die Einführung bis darüber hinaus – unser vierstufiger Prozess für Aufbau und Betrieb individueller KI-Mitarbeiter.",
+    "title": "Wie wir Ihre KI-Mitarbeiter",
+    "accent": "bauen und betreiben.",
+    "body": "Ein strukturierter Prozess in vier Phasen, von der Discovery bis zur laufenden Verbesserung – ausgerichtet auf echte Geschäftsergebnisse, nicht auf theoretische Demos.",
+    "phasesTitle": "Was in jeder Phase",
+    "phasesAccent": "passiert.",
+    "faqTitle": "FAQ zu Prozess",
+    "faqAccent": "und Zeitplan.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Discovery",
+        "content": "Jedes Projekt beginnt mit einer strukturierten Discovery-Phase. In einem Workshop mit Ihren Abteilungsleitungen und wichtigen Stakeholdern erfassen wir die aktuellen Abläufe, identifizieren Engpässe und dokumentieren Entscheidungspunkte und Datenquellen jedes Prozesses. Außerdem prüfen wir Ihre bestehende Tool-Landschaft – CRM, Helpdesk, ERP, Kalender, Dokumentenablage –, um zu verstehen, mit welchen APIs und Datenformaten die Agenten arbeiten müssen.",
+        "details": ["3 bis 5 besonders wirkungsvolle Abläufe pro Abteilung identifizieren, die sich für Automatisierung eignen", "Datenquellen, Tool-Berechtigungen und Sicherheitsanforderungen erfassen", "Erfolgskennzahlen definieren und die aktuelle Leistung messen (Zeitaufwand, Fehlerquoten, Durchsatz)", "Typischer Zeitrahmen: 3 bis 5 Werktage"]
+      },
+      {
+        "num": "02",
+        "title": "Architektur der Agenten",
+        "content": "Auf Basis der Discovery-Ergebnisse erstellen wir für jeden KI-Mitarbeiter ein detailliertes Architekturdokument. Es legt fest, mit welchen Tools sich der Agent verbindet, wie er jeden Ablauf durchdenkt, welche Entscheidungen er selbstständig trifft und welche er an einen Menschen eskaliert und wie seine Leistung gemessen wird. Ihr Team prüft und genehmigt die Architektur, bevor die erste Zeile Code entsteht.",
+        "details": ["Das passende KI-Modell und Reasoning-Framework für den Bereich jedes Agenten auswählen", "Tool-Integrationen und Datenflussdiagramme entwerfen", "Eskalationsregeln, Konfidenzschwellen und Übergaben an Menschen definieren", "Typischer Zeitrahmen: 3 bis 5 Werktage"]
+      },
+      {
+        "num": "03",
+        "title": "Entwicklung und Integration",
+        "content": "Jeder Agent wird iterativ in zweiwöchigen Sprints gebaut. Wir verbinden ihn mit Ihren bestehenden Tools, richten seine Wissensbasis aus Ihrer Dokumentation und historischen Daten ein und testen ihn an echten Szenarien Ihres Teams. Jede Integration wird auf Korrektheit, Latenz und Grenzfälle geprüft, bevor der Agent in einer Staging-Umgebung für den Abnahmetest bereitgestellt wird.",
+        "details": ["Parallele Entwicklungssprints für jeden KI-Mitarbeiter im Projekt", "Tests mit echten Daten in anonymisierten oder abgeschotteten Versionen Ihrer Tools", "Abnahmetests mit einer kleinen Gruppe Ihrer Teammitglieder", "Typischer Zeitrahmen: 2 bis 4 Wochen, abhängig von der Anzahl der Agenten und der Komplexität der Integration"]
+      },
+      {
+        "num": "04",
+        "title": "Betrieb und Weiterentwicklung",
+        "content": "Der Go-live ist nicht das Ziel. Wir überwachen die Leistung jedes Agenten kontinuierlich, messen Lösungsquoten und eingesparte Zeit an den Ausgangswerten aus der Discovery und liefern wöchentlich Verbesserungen aus. Wenn sich Ihre Geschäftsprozesse ändern, passen wir Konfigurationen an, ergänzen neue Tool-Integrationen und trainieren mit aktuellen Daten nach – ganz ohne Entwicklungsaufwand auf Ihrer Seite.",
+        "details": ["Wöchentliche Leistungsreviews und Verbesserungen", "Echtzeit-Dashboard mit Agentenkennzahlen und ROI pro Abteilung", "Quartalsweise Business Reviews mit Ihrer Geschäftsführung", "Keine Übergabe, kein Vendor Lock-in – volle Transparenz darüber, wie jeder Agent arbeitet"]
+      }
+    ],
+    "faqs": [
+      { "label": "Wie lange dauert ein typisches Projekt?", "content": "Die meisten Einführungen eines einzelnen Agenten sind 2 bis 4 Wochen nach dem Kickoff live. Projekte mit mehreren Agenten dauern in der Regel 4 bis 8 Wochen, wobei die Agenten nacheinander eingeführt werden, damit sich Ihr Team schrittweise umstellen kann. Der Zeitplan hängt vor allem von der Anzahl der Integrationen und der Komplexität der automatisierten Abläufe ab." },
+      { "label": "Müssen wir vor der Discovery etwas vorbereiten?", "content": "Eine Vorbereitung ist nicht nötig. Unser Discovery-Workshop ist darauf ausgelegt, alles Nötige aus dem vorhandenen Wissen Ihres Teams zu gewinnen. Wer einen Vorsprung möchte, kann pro Abteilung die 3 bis 5 Abläufe notieren, die sich am repetitivsten oder fehleranfälligsten anfühlen – aber auch das ist optional. Wir empfehlen, dass die Abteilungsleitungen für die Workshops verfügbar sind." },
+      { "label": "Was passiert, nachdem ein Agent live ist?", "content": "Wir gehen in die laufende Betriebsphase über. Ihr Team erhält ein Leistungs-Dashboard, wir überwachen die Entscheidungen der Agenten täglich und liefern wöchentlich Verbesserungen aus. Ändert sich ein Ablauf – ein neues CRM-Feld, ein geänderter Freigabeprozess, ein neues Tool –, übernehmen wir die Anpassung. Sie müssen nie Code schreiben oder Infrastruktur verwalten." },
+      { "label": "Können wir einen Prototyp sehen, bevor wir uns festlegen?", "content": "Ja. Nach der Discovery- und Architekturphase bauen wir einen funktionierenden Prototyp, der mit Sandbox-Versionen Ihrer Tools verbunden ist. Ihr Team testet ihn an echten Szenarien. Erst wenn Sie den Prototyp freigeben, gehen wir in den Produktivbetrieb. So gibt es keine Überraschungen, und der Agent erfüllt Ihre Erwartungen vom ersten Tag an." },
+      { "label": "Was, wenn sich unsere Tool-Landschaft während des Projekts ändert?", "content": "Das ist normal. Wir entwerfen Agenten mit lose gekoppelten Integrationen, sodass der Wechsel eines CRM, Helpdesks oder einer Datenquelle eine Konfigurationsänderung ist und kein Neubau. Kommt während der Entwicklung ein neues Tool hinzu, passen wir Integrationsumfang und Zeitplan entsprechend an – ohne Strafen, mit klarer Kommunikation." }
+    ]
+  },
+  "IndustriesPage": {
+    "metaTitle": "Branchen – 360 Techive",
+    "metaDescription": "KI-Mitarbeiter speziell für E-Commerce, Gesundheitswesen, Finanzen, Immobilien, Logistik und professionelle Dienstleistungen.",
+    "title": "KI-Mitarbeiter für",
+    "accent": "jede Branche.",
+    "body": "Jede Abteilung hat wiederkehrende Abläufe. Unsere Agenten übernehmen sie, damit sich Ihr Team auf die Arbeit konzentrieren kann, die zählt.",
+    "items": [
+      {
+        "title": "E-Commerce",
+        "description": "Onlinehändler bearbeiten täglich große Mengen an Bestellungen, Supporttickets und Bestandsänderungen. KI-Mitarbeiter halten den Betrieb am Laufen, ohne dass das Team wachsen muss.",
+        "useCases": [
+          { "agent": "support", "before": "Der ", "link": "Support Agent", "after": " löst Bestellprobleme und bearbeitet Rücksendeanfragen selbstständig." },
+          { "agent": "sales", "before": "Der ", "link": "Sales Agent", "after": " qualifiziert Leads und stößt Erinnerungen bei abgebrochenen Warenkörben an." },
+          { "agent": "document", "before": "Der ", "link": "Document Agent", "after": " erstellt und archiviert Rechnungen und Lieferscheine in großem Umfang." }
+        ]
+      },
+      {
+        "title": "Gesundheitswesen",
+        "description": "Kliniken und Health-Tech-Unternehmen arbeiten mit sensiblen Daten, komplexer Terminplanung und regulatorischen Abläufen. KI-Mitarbeiter übernehmen den Verwaltungsaufwand sicher.",
+        "useCases": [
+          { "agent": "support", "before": "Der ", "link": "Support Agent", "after": " ordnet Patientenanfragen ein und leitet dringende Anliegen an das richtige Team weiter." },
+          { "agent": "executive-assistant", "before": "Der ", "link": "Executive Assistant", "after": " koordiniert Dienstpläne und die Vorbereitung von Besprechungen." },
+          { "agent": "document", "before": "Der ", "link": "Document Agent", "after": " organisiert Patientenakten und Einwilligungserklärungen prüfungssicher." }
+        ]
+      },
+      {
+        "title": "Finanzen",
+        "description": "Finanzteams verantworten kritische Abstimmungen, Berichtszyklen und die Kommunikation mit Kunden. KI-Mitarbeiter reduzieren manuellen Aufwand und Fehlerrisiko.",
+        "useCases": [
+          { "agent": "finance", "before": "Der ", "link": "Finance Agent", "after": " automatisiert Rechnungsverarbeitung und Zahlungserinnerungen." },
+          { "agent": "support", "before": "Der ", "link": "Support Agent", "after": " bearbeitet Kontoanfragen und Anforderungen von Kontoauszügen." },
+          { "agent": "research", "before": "Der ", "link": "Research Agent", "after": " stellt Marktdaten zusammen und erstellt Compliance-Zusammenfassungen." }
+        ]
+      },
+      {
+        "title": "Immobilien",
+        "description": "Makler und Hausverwaltungen jonglieren mit Inseraten, Anfragen, Besichtigungen und Verträgen für Dutzende Objekte. KI-Mitarbeiter automatisieren die Koordination.",
+        "useCases": [
+          { "agent": "sales", "before": "Der ", "link": "Sales Agent", "after": " qualifiziert Interessenten und vereinbart Besichtigungen automatisch." },
+          { "agent": "executive-assistant", "before": "Der ", "link": "Executive Assistant", "after": " verwaltet die Kalender der Makler und Aktualisierungen der Inserate." },
+          { "agent": "document", "before": "Der ", "link": "Document Agent", "after": " erstellt Mietverträge und Exposé-Unterlagen." }
+        ]
+      },
+      {
+        "title": "Logistik",
+        "description": "Versand und Lagerhaltung hängen von Echtzeit-Tracking, Routenoptimierung und dem Umgang mit Ausnahmen ab. KI-Mitarbeiter überwachen und reagieren rund um die Uhr.",
+        "useCases": [
+          { "agent": "support", "before": "Der ", "link": "Support Agent", "after": " verfolgt Sendungen und löst Zustellprobleme." },
+          { "agent": "finance", "before": "Der ", "link": "Finance Agent", "after": " gleicht Frachtrechnungen ab und wickelt Frachtzahlungen ab." },
+          { "agent": "research", "before": "Der ", "link": "Research Agent", "after": " analysiert die Effizienz von Routen und findet Einsparpotenziale." }
+        ]
+      },
+      {
+        "title": "Professionelle Dienstleistungen",
+        "description": "Beratungen, Kanzleien und Advisory-Firmen leben von abrechenbaren Stunden, Kundenkommunikation und präzisen Dokumenten. KI-Mitarbeiter verschlanken den Verwaltungsaufwand.",
+        "useCases": [
+          { "agent": "executive-assistant", "before": "Der ", "link": "Executive Assistant", "after": " koordiniert Kundentermine und Meeting-Vorbereitung im ganzen Unternehmen." },
+          { "agent": "document", "before": "Der ", "link": "Document Agent", "after": " entwirft Angebote, Mandatsvereinbarungen und Statusberichte." },
+          { "agent": "research", "before": "Der ", "link": "Research Agent", "after": " sammelt Wettbewerbsinformationen und fasst Rechtsprechung zusammen." }
+        ]
+      }
+    ]
+  },
+  "PricingPage": {
+    "metaTitle": "Preise – 360 Techive",
+    "metaDescription": "Individuelle Preise für individuelle KI-Mitarbeiter. Jede Einführung wird genau abgegrenzt, kalkuliert und passend zu Ihren Abläufen und Tools gebaut.",
+    "title": "Preise für",
+    "accent": "individuellen Umfang.",
+    "body": "Wir bauen maßgeschneiderte KI-Mitarbeiter – keine SaaS-Abos. Jede Einführung ist anders, deshalb wird jeder Preis auf Basis Ihrer tatsächlichen Anforderungen kalkuliert.",
+    "factorsTitle": "Was die Kosten",
+    "factorsAccent": "bestimmt.",
+    "factors": [
+      { "title": "Anzahl der KI-Mitarbeiter", "description": "Die Einführung für eine Abteilung kostet weniger als ein Rollout mehrerer Agenten über Support, Vertrieb und Finanzen. Für Teams, die drei oder mehr Agenten gemeinsam einführen, bieten wir Mengenkonditionen." },
+      { "title": "Komplexität der Integration", "description": "Die Anbindung an ein CRM mit gut dokumentierter API ist unkompliziert. Die Anbindung an ein Legacy-ERP, mehrere Data Warehouses oder eigene interne Tools erfordert zusätzliche Entwicklung und Planung." },
+      { "title": "Datenvolumen und Durchsatz", "description": "Agenten, die täglich Tausende Transaktionen verarbeiten, brauchen robustere Infrastruktur und Überwachung als Einsätze mit geringem Volumen. Wir dimensionieren die Architektur passend zu Ihrer tatsächlichen Last." },
+      { "title": "Anzahl der Nutzer und Abteilungen", "description": "Ein Agent für ein Team von 10 Personen wird anders konfiguriert als einer, der 200 Nutzer in mehreren Regionen mit rollenbasiertem Zugriff und Eskalationsketten unterstützt." },
+      { "title": "Umfang von Support und Wartung", "description": "Der Standard-Support umfasst wöchentliche Überwachung und Updates. Enterprise-Pakete beinhalten dedizierte Support Engineers, kürzere Reaktionszeiten und individuelles Reporting." }
+    ],
+    "quoteTitle": "So erhalten Sie ein",
+    "quoteAccent": "genaues Angebot.",
+    "quoteBody": "Einen echten Preis gibt es nur, wenn Ihre Anforderungen klar abgegrenzt sind. Unser <link>Discovery-Prozess</link> liefert ein detailliertes Architekturdokument und ein Festpreisangebot – ohne Lockangebote, ohne versteckte Kosten.",
+    "rangeLabel": "Preisrahmen",
+    "rangeBefore": "Die meisten Einführungen für eine Abteilung beginnen im Bereich von",
+    "rangeAfter": ". Einführungen mit mehreren Agenten und Enterprise-Projekte variieren je nach Umfang.",
+    "rangeNote": "(Hier stehen Ihre echten Zahlen.)",
+    "faqTitle": "FAQ zu",
+    "faqAccent": "Preisen.",
+    "faqs": [
+      { "label": "Gibt es eine Mindestprojektgröße?", "content": "In der Regel beginnen Projekte mit der Einführung mindestens eines vollständigen KI-Mitarbeiters. Es gibt keine Mindestanzahl an Nutzern und keine Umsatzvorgabe – wenn ein einzelner Agent Ihrem Team pro Woche spürbar Stunden spart, lohnt sich das Projekt. Wir haben Kunden mit Teams von 10 Personen und Kunden mit 1.000 Mitarbeitern." },
+      { "label": "Bieten Sie laufende Supportverträge an?", "content": "Ja. Jede Einführung enthält eine erste Betriebsphase als Teil des Projekts. Danach bieten wir monatliche Supportverträge für Überwachung, Updates, Nachtraining und die laufende Pflege der Integrationen an. Enterprise-Verträge beinhalten dedizierte Support Engineers und kürzere Reaktionszeiten." },
+      { "label": "Können wir mit einem KI-Mitarbeiter starten und später weitere hinzufügen?", "content": "Auf jeden Fall. Die meisten Kunden starten mit einer Abteilung – Support oder Finanzen sind häufige erste Wahl – und erweitern um weitere Agenten, sobald sich Ergebnisse zeigen. Spätere Agenten sind schneller und günstiger eingeführt, weil die Integrationsgrundlage bereits steht." },
+      { "label": "Was ist in den Entwicklungskosten enthalten?", "content": "Die Entwicklungskosten umfassen Discovery-Workshops, Architektur der Agenten, Entwicklung und Tests, Integration in Ihre bestehenden Tools, Abnahmetests und die Einführung. Außerdem enthalten sie den ersten Betriebsmonat inklusive Leistungsüberwachung." },
+      { "label": "Setzen Sie langfristige Verträge voraus?", "content": "Nein. Nach der ersten Entwicklung laufen Projekte monatlich kündbar. Wir sind überzeugt, dass der Nutzen der Agenten Kunden hält – nicht Vertragsklauseln. Sie können jederzeit mit 30 Tagen Frist aufstocken, reduzieren oder das Projekt beenden." }
+    ]
+  },
+  "ServicesPage": {
+    "metaTitle": "Leistungen – 360 Techive",
+    "metaDescription": "Entwicklung, Integration und laufende Verbesserung individueller KI-Mitarbeiter – von der Discovery über die Einführung bis darüber hinaus.",
+    "title": "Wir bauen KI-Mitarbeiter –",
+    "accent": "keine Software.",
+    "body": "Das ist keine Self-Service-Plattform. Wir entwerfen, bauen, integrieren und betreiben individuelle KI-Agenten für jede Abteilung – passend zu Ihren Tools, Ihren Abläufen und Ihren Standards.",
+    "services": [
+      { "title": "Individuelle Agentenentwicklung", "description": "Wir bauen spezialisierte KI-Mitarbeiter für jede Abteilung Ihres Unternehmens – keine generischen Chatbots, sondern autonome Agenten mit Zugriff auf Ihre Tools, Daten und Abläufe. Jeder Agent wird um Ihre konkreten Prozesse, Entscheidungswege und Eskalationspfade herum entworfen und vor der Einführung an echten Szenarien vollständig getestet." },
+      { "title": "Integration und Datenanbindung", "description": "Ihre neuen KI-Mitarbeiter verbinden sich direkt mit den Tools, die Ihr Team bereits nutzt – CRM, Helpdesk, Buchhaltung, Kalender, Dokumentenablage und interne APIs. Wir übernehmen Authentifizierung, Datenzuordnung und bidirektionale Synchronisierung, damit Agenten in Ihrer bestehenden Umgebung lesen, schreiben und handeln können, ohne Störungen." },
+      { "title": "Betrieb und laufende Verbesserung", "description": "Die Einführung ist erst der Anfang. Wir überwachen die Leistung jedes Agenten, trainieren mit neuen Daten nach und liefern wöchentlich Verbesserungen. Ihr Team erhält ein Dashboard mit Lösungsquoten, eingesparter Zeit und ROI pro Abteilung. Wir passen das Verhalten der Agenten an, wenn sich Ihr Unternehmen weiterentwickelt – keine Übergabe, kein Vendor Lock-in." }
+    ],
+    "includedTitle": "Was",
+    "includedAccent": "enthalten ist.",
+    "includedBody": "Jedes Projekt umfasst Architektur, Integration, Überwachung und volle Transparenz – ohne versteckte Kosten oder Übergaben.",
+    "included": [
+      "Eigene Agentenarchitektur – jeder KI-Mitarbeiter wird für Ihre konkreten Abläufe entworfen, nicht nach einer Einheitsvorlage",
+      "Nahtlose Integration in Ihre bestehenden Tools – CRM, Helpdesk, Buchhaltung, Kalender und interne APIs",
+      "Laufende Überwachung und wöchentliche Verbesserungszyklen – die Agenten werden mit der Zeit automatisch besser",
+      "Kein Vendor Lock-in – volle Transparenz darüber, wie Ihre Agenten arbeiten, und die Möglichkeit, Konfigurationen anzupassen",
+      "Ein fester Support Engineer für Ihr Konto während der gesamten Projektlaufzeit",
+      "ROI-Dashboard mit eingesparter Zeit, Lösungsquoten und Kosten pro Abteilung"
+    ]
+  }
+}

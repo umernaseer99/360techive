@@ -2,17 +2,13 @@
 
 import { useRef } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
-const agentMarks = ["SUP", "SAL", "FIN", "RES", "DOC", "ASST"];
-
-const guarantees = [
-  "Your data stays yours, in your infrastructure",
-  "Every agent answer is traceable to a source",
-  "Survives model changes — you don't rebuild",
-];
+/** One mark per agent; the labels themselves come from `AiAutomation.Brain.marks`. */
+const AGENT_COUNT = 6;
 
 /**
  * Data-flow timing. The six dots are offset by STAGGER and each dot's full
@@ -24,7 +20,7 @@ const guarantees = [
 const LINE_HEIGHT = 56; // matches h-14 on the connector line
 const STAGGER = 0.5;
 const TRAVEL = 1.3;
-const CYCLE = agentMarks.length * STAGGER;
+const CYCLE = AGENT_COUNT * STAGGER;
 
 /**
  * The differentiator section: not six disconnected bots, one owned
@@ -36,6 +32,9 @@ export function CompanyBrainSection() {
   // once: false — the loops must stop again when the diagram scrolls away.
   const inView = useInView(visualRef, { once: false, margin: "-100px" });
   const flowing = inView && !reduced;
+  const t = useTranslations("AiAutomation.Brain");
+  const agentMarks = t.raw("marks") as string[];
+  const guarantees = t.raw("guarantees") as string[];
 
   return (
     <Section>
@@ -43,16 +42,14 @@ export function CompanyBrainSection() {
         <Reveal>
           <div className="flex flex-col gap-4">
             <SectionHeading
-              eyebrow="The real lever"
-              title="Not isolated bots — one"
-              accent="company brain."
-              lead="We don't hand you six disconnected chatbots. We build a knowledge base you own — trained on your processes, your data and your language — and every agent reads from it and writes back to it."
+              eyebrow={t("eyebrow")}
+              title={t("title")}
+              accent={t("accent")}
+              lead={t("lead")}
             />
 
             <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-              That&apos;s the asset. It&apos;s what makes agent number six faster
-              to deploy than agent number one, and it&apos;s what gets more
-              valuable every month instead of going stale.
+              {t("body")}
             </p>
 
             <ul className="mt-3 flex flex-col gap-3">
@@ -75,10 +72,10 @@ export function CompanyBrainSection() {
               ref={visualRef}
               className="flex w-full max-w-[440px] flex-col items-center gap-6"
               role="img"
-              aria-label="Six agents all drawing from a single shared company knowledge base"
+              aria-label={t("ariaLabel")}
             >
               <span className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                Every agent draws from one source
+                {t("caption")}
               </span>
 
               <div className="grid w-full grid-cols-6 gap-2">
@@ -165,10 +162,10 @@ export function CompanyBrainSection() {
 
                 <div className="relative flex w-full flex-col items-center gap-1 rounded-[999px] border border-primary/30 bg-primary/[0.06] px-8 py-7">
                   <span className="text-sm font-semibold text-foreground">
-                    Company Brain
+                    {t("brain")}
                   </span>
                   <span className="text-[11px] text-muted">
-                    your processes &middot; your data &middot; your language
+                    {t("brainSub")}
                   </span>
                 </div>
               </div>

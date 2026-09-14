@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -16,38 +17,11 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
  * radius, so the four mini-charts read as one instrument with four readings.
  */
 const BAR_COUNT = 6;
-const stages: {
-  when: string;
-  title: string;
-  body: string;
-  /** How many of the BAR_COUNT slots are filled at this stage. */
-  filled: number;
-}[] = [
-  {
-    when: "Month 1",
-    title: "First agent live",
-    body: "The use case that pays for itself fastest. The knowledge base starts here.",
-    filled: 1,
-  },
-  {
-    when: "Month 3",
-    title: "Two more join",
-    body: "Each new agent inherits what the first one already learned about your business.",
-    filled: 3,
-  },
-  {
-    when: "Month 6",
-    title: "Departments connect",
-    body: "Agents hand work to each other. The knowledge base is now the asset.",
-    filled: 5,
-  },
-  {
-    when: "Year 1+",
-    title: "Compounding",
-    body: "A structure a competitor starting today still has twelve months of work to reach.",
-    filled: 6,
-  },
-];
+/**
+ * How many of the BAR_COUNT slots are filled at each stage. Stage copy
+ * (when, title, body) comes from `AiAutomation.Compounding.stages`.
+ */
+const FILLED = [1, 3, 5, 6];
 
 /**
  * The cards fill in temporal order rather than all at once, so the row reads
@@ -63,15 +37,19 @@ const BAR_DURATION = 0.42;
 
 export function CompoundingValueSection() {
   const reduced = useReducedMotion();
+  const t = useTranslations("AiAutomation.Compounding");
+  const stages = (
+    t.raw("stages") as { when: string; title: string; body: string }[]
+  ).map((stage, i) => ({ ...stage, filled: FILLED[i] }));
 
   return (
     <Section>
       <Reveal>
         <SectionHeading
-          eyebrow="Why it pays to start now"
-          title="The longer it runs,"
-          accent="the stronger it gets."
-          lead="An agent system isn't a one-off project — it accumulates. Every new agent inherits what the existing ones have already learned about your business. Start today and in a year you're operating on a foundation a competitor still has to build from scratch."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 
@@ -84,7 +62,10 @@ export function CompoundingValueSection() {
               <div
                 className="flex h-16 items-stretch gap-1.5"
                 role="img"
-                aria-label={`${stage.filled} of ${BAR_COUNT} departments covered`}
+                aria-label={t("barsLabel", {
+                  filled: stage.filled,
+                  total: BAR_COUNT,
+                })}
               >
                 {Array.from({ length: BAR_COUNT }, (_, i) =>
                   i < stage.filled ? (

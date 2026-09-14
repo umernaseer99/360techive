@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AgentCard } from "@/components/sections/AgentCard";
-import { agents } from "@/config/agents";
+import { getAgents } from "@/config/agents";
 import type { AgentProfile } from "@ai-software-house/shared-types";
 
 interface RelatedAgentsProps {
@@ -11,13 +12,16 @@ interface RelatedAgentsProps {
 }
 
 export function RelatedAgents({ current }: RelatedAgentsProps) {
-  const others = agents.filter((a) => a.slug !== current.slug).slice(0, 3);
+  const t = useTranslations("AgentDetail");
+  const others = getAgents(useLocale())
+    .filter((a) => a.slug !== current.slug)
+    .slice(0, 3);
 
   return (
     <section className="border-y border-border/10 px-4 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12">
-          <SectionHeading title="Explore other" accent="AI Employees." />
+          <SectionHeading title={t("relatedTitle")} accent={t("relatedAccent")} />
         </div>
 
         <motion.div

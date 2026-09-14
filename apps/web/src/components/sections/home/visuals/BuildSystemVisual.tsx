@@ -9,6 +9,7 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
 /**
@@ -57,6 +58,7 @@ function useParallax(
 
 export function BuildSystemVisual() {
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.Visual");
   const ref = useRef<HTMLDivElement>(null);
 
   const rawX = useMotionValue(0);
@@ -105,7 +107,7 @@ export function BuildSystemVisual() {
       onPointerLeave={resetPointer}
       className="relative aspect-square w-full max-w-[520px] select-none"
       role="img"
-      aria-label="A web application, a mobile application, an AI agent, an automation flow and a product, connected as one system"
+      aria-label={t("ariaLabel")}
     >
       {/* backdrop grid, furthest plane */}
       <motion.div
@@ -285,6 +287,7 @@ function PanelLabel({ children }: { children: React.ReactNode }) {
 }
 
 function WebAppPanel({ still }: { still: boolean }) {
+  const t = useTranslations("Home.Visual");
   return (
     <div className={panelClass}>
       <div className="flex items-center gap-1.5 border-b border-border/10 px-2.5 py-2">
@@ -292,7 +295,7 @@ function WebAppPanel({ still }: { still: boolean }) {
         <span className="size-1.5 rounded-full bg-border/20" />
         <span className="size-1.5 rounded-full bg-border/20" />
         <span className="ml-1.5">
-          <PanelLabel>Web app</PanelLabel>
+          <PanelLabel>{t("webApp")}</PanelLabel>
         </span>
       </div>
       <div className="flex gap-2 p-2.5">
@@ -329,6 +332,7 @@ function WebAppPanel({ still }: { still: boolean }) {
 }
 
 function MobilePanel({ still }: { still: boolean }) {
+  const t = useTranslations("Home.Visual");
   return (
     <div className={`${panelClass} p-1.5`}>
       <div className="rounded-lg border border-border/10 bg-background/50 p-2">
@@ -350,13 +354,14 @@ function MobilePanel({ still }: { still: boolean }) {
         </div>
       </div>
       <div className="px-1 pb-0.5 pt-1.5 text-center">
-        <PanelLabel>Mobile</PanelLabel>
+        <PanelLabel>{t("mobile")}</PanelLabel>
       </div>
     </div>
   );
 }
 
 function AgentPanel({ still }: { still: boolean }) {
+  const t = useTranslations("Home.Visual");
   return (
     <div className={`${panelClass} p-2.5`}>
       <div className="mb-2 flex items-center gap-1.5">
@@ -370,7 +375,7 @@ function AgentPanel({ still }: { still: boolean }) {
           )}
           <span className="relative size-1.5 rounded-full bg-primary" />
         </span>
-        <PanelLabel>AI agent</PanelLabel>
+        <PanelLabel>{t("agent")}</PanelLabel>
       </div>
       <div className="flex flex-col gap-1.5">
         <div className="ml-auto h-3 w-3/5 rounded-md rounded-br-sm bg-border/20" />
@@ -386,10 +391,11 @@ function AgentPanel({ still }: { still: boolean }) {
 }
 
 function AutomationPanel({ still }: { still: boolean }) {
+  const t = useTranslations("Home.Visual");
   return (
     <div className={`${panelClass} p-2.5`}>
       <div className="mb-2.5">
-        <PanelLabel>Automation</PanelLabel>
+        <PanelLabel>{t("automation")}</PanelLabel>
       </div>
       <div className="relative flex items-center justify-between">
         <span className="absolute inset-x-2 top-1/2 h-px -translate-y-1/2 bg-border/20" />
@@ -421,6 +427,7 @@ function AutomationPanel({ still }: { still: boolean }) {
 }
 
 function ProductCore({ still }: { still: boolean }) {
+  const t = useTranslations("Home.Visual");
   return (
     <div className="relative">
       {!still && (
@@ -435,7 +442,7 @@ function ProductCore({ still }: { still: boolean }) {
         <span className="font-serif text-lg italic leading-none text-primary">
           360
         </span>
-        <PanelLabel>Product</PanelLabel>
+        <PanelLabel>{t("product")}</PanelLabel>
       </div>
     </div>
   );

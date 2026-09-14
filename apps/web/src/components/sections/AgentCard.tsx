@@ -9,7 +9,8 @@ import {
   Crown,
   type LucideIcon,
 } from "lucide-react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { IconBox } from "@/components/ui/IconBox";
 import type { AgentProfile } from "@ai-software-house/shared-types";
 
@@ -29,6 +30,7 @@ interface AgentCardProps {
 
 export function AgentCard({ agent, descriptionLength = 140 }: AgentCardProps) {
   const Icon = iconMap[agent.icon] ?? Headphones;
+  const t = useTranslations("AgentCard");
 
   return (
     <Link
@@ -50,7 +52,7 @@ export function AgentCard({ agent, descriptionLength = 140 }: AgentCardProps) {
       </p>
 
       <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
-        Learn more
+        {t("learnMore")}
         <span
           aria-hidden="true"
           className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1 motion-reduce:transform-none"

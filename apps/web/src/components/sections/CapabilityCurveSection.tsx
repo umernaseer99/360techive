@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import type { Variants } from "framer-motion";
 import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -10,8 +11,6 @@ import { Reveal } from "@/components/ui/Reveal";
 interface CurvePoint {
   x: number;
   y: number;
-  year: string;
-  note: string;
   /**
    * Seconds into the line's draw at which the stroke actually reaches this
    * point. Derived from each point's share of total path length pushed back
@@ -28,20 +27,15 @@ interface CurvePoint {
  * do not replace the attribution or extend the solid line past "Today".
  */
 const points: CurvePoint[] = [
-  { x: 110, y: 268, year: "2019", note: "seconds", at: 0 },
-  { x: 210, y: 240, year: "2020", note: "< 1 min", at: 0.48 },
-  { x: 350, y: 196, year: "2023", note: "minutes", at: 0.76 },
-  { x: 470, y: 152, year: "2025", note: "~1 hour", at: 1.01 },
-  { x: 574, y: 124, year: "Today", note: "hours", at: 1.5, current: true },
+  { x: 110, y: 268, at: 0 },
+  { x: 210, y: 240, at: 0.48 },
+  { x: 350, y: 196, at: 0.76 },
+  { x: 470, y: 152, at: 1.01 },
+  { x: 574, y: 124, at: 1.5, current: true },
 ];
 
-const axis = [
-  { y: 270, label: "Seconds" },
-  { y: 212, label: "Minutes" },
-  { y: 154, label: "Hours" },
-  { y: 96, label: "Days" },
-  { y: 38, label: "Weeks" },
-];
+/** Gridline positions; labels come from `AiAutomation.Curve.axis`, same order. */
+const axisY = [270, 212, 154, 96, 38];
 
 const OBSERVED_D =
   "M110 268 C160 262 190 250 210 240 C280 222 320 208 350 196 C400 176 440 164 470 152 C510 138 550 130 574 124";
@@ -68,6 +62,13 @@ export function CapabilityCurveSection() {
   // …but the projection's breathing loop stops again when it scrolls away.
   const visible = useInView(figureRef, { once: false, margin: "-100px" });
   const [projectionDrawn, setProjectionDrawn] = useState(false);
+  const t = useTranslations("AiAutomation.Curve");
+  const years = t.raw("years") as string[];
+  const notes = t.raw("notes") as string[];
+  const axis = (t.raw("axis") as string[]).map((label, i) => ({
+    label,
+    y: axisY[i],
+  }));
 
   const breathing = projectionDrawn && visible && !reduced;
 
@@ -145,10 +146,10 @@ export function CapabilityCurveSection() {
     <Section>
       <Reveal>
         <SectionHeading
-          eyebrow="The trend line"
-          title="The capability curve is"
-          accent="exponential."
-          lead="METR finds that the length of task an AI agent can complete on its own has been doubling roughly every seven months — and since 2024, closer to every four. Whoever builds the structure now compounds with every doubling."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 
@@ -161,7 +162,7 @@ export function CapabilityCurveSection() {
             viewBox="0 0 760 320"
             className="w-full overflow-visible"
             role="img"
-            aria-label="Logarithmic chart showing autonomous AI task length rising from seconds in 2019 to hours today, with a projected continuation into days and weeks"
+            aria-label={t("ariaLabel")}
             initial="hidden"
             animate={started || reduced ? "shown" : "hidden"}
           >
@@ -256,7 +257,7 @@ export function CapabilityCurveSection() {
             <g className="fill-primary">
               {points.map((p) => (
                 <motion.circle
-                  key={p.year}
+                  key={p.x}
                   cx={p.x}
                   cy={p.y}
                   r={p.current ? 5.5 : 4.5}
@@ -267,15 +268,15 @@ export function CapabilityCurveSection() {
 
             {/* year labels belong to the frame, not to the data */}
             <motion.g fontSize="10.5" textAnchor="middle" variants={frame}>
-              {points.map((p) => (
+              {points.map((p, i) => (
                 <text
-                  key={p.year}
+                  key={p.x}
                   x={p.x}
                   y="292"
                   className={p.current ? "fill-foreground" : "fill-muted"}
                   fontWeight={p.current ? 600 : 400}
                 >
-                  {p.year}
+                  {years[i]}
                 </text>
               ))}
             </motion.g>
@@ -288,30 +289,28 @@ export function CapabilityCurveSection() {
               className="fill-muted/65"
               variants={projectedLabel}
             >
-              Projected
+              {t("projected")}
             </motion.text>
 
             <g fontSize="10.5" textAnchor="middle">
-              {points.map((p) => (
+              {points.map((p, i) => (
                 <motion.text
-                  key={p.year}
+                  key={p.x}
                   x={p.x}
                   y={p.y - 16}
                   className={p.current ? "fill-foreground" : "fill-muted/75"}
                   variants={noteVariants(p)}
                 >
-                  {p.note}
+                  {notes[i]}
                 </motion.text>
               ))}
             </g>
           </motion.svg>
 
           <figcaption className="mt-5 max-w-3xl text-xs leading-relaxed text-muted/60">
-            Task length an AI agent completes autonomously at a 50% success
-            rate, logarithmic scale. Source: METR,{" "}
-            <em>Measuring AI Ability to Complete Long Tasks</em> (2025). The
-            dashed continuation is an illustrative projection, not a METR
-            forecast.
+            {t.rich("caption", {
+              cite: (chunks) => <em>{chunks}</em>,
+            })}
           </figcaption>
         </figure>
       </Reveal>

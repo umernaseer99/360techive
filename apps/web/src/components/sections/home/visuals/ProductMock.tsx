@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 /**
  * Product interface mockups.
@@ -121,12 +122,13 @@ function Onboarding() {
 
 /** Weekly report: a written update beside a small trend shape. */
 function WeeklyReport() {
+  const t = useTranslations("Home.Products.mock");
   return (
     <div className="flex h-full flex-col gap-3">
       <div className="flex items-baseline justify-between">
         <span className="h-2.5 w-28 rounded-full bg-border/30" />
         <span className="text-[9px] uppercase tracking-[0.16em] text-muted">
-          This week
+          {t("thisWeek")}
         </span>
       </div>
       <div className="flex flex-1 gap-3">
@@ -167,6 +169,7 @@ function WeeklyReport() {
 
 /** Field schedule: a day column view with jobs placed on it. */
 function FieldSchedule() {
+  const t = useTranslations("Home.Products.mock");
   const jobs = [
     { col: 0, top: 12, h: 28 },
     { col: 1, top: 32, h: 22 },
@@ -177,7 +180,7 @@ function FieldSchedule() {
   return (
     <div className="flex h-full flex-col gap-2">
       <div className="flex gap-2">
-        {["Mon", "Tue", "Wed", "Thu"].map((d) => (
+        {(t.raw("days") as string[]).map((d) => (
           <span
             key={d}
             className="flex-1 text-center text-[9px] uppercase tracking-[0.14em] text-muted"

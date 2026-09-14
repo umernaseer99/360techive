@@ -1,10 +1,12 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
+import { accent } from "@/components/ui/Accent";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
-import { principles } from "@/config/company";
+import { getCompany } from "@/config/company";
 
 /**
  * How we work, in plain sentences.
@@ -14,25 +16,24 @@ import { principles } from "@/config/company";
  * the same gesture used by the capability index.
  */
 export function WhyUsSection() {
+  const t = useTranslations("Home.WhyUs");
+  const { principles } = getCompany(useLocale());
+
   return (
     <Section id="why-us">
       <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div>
-          <Eyebrow>Why us</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2 className="mt-4 text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>Good software starts</LineReveal>
-            <LineReveal delay={0.08}>with understanding</LineReveal>
+            <LineReveal>{t.rich("line1", { em: accent })}</LineReveal>
+            <LineReveal delay={0.08}>{t.rich("line2", { em: accent })}</LineReveal>
             <LineReveal delay={0.16}>
-              the{" "}
-              <span className="font-serif font-normal italic text-primary">
-                problem.
-              </span>
+              {t.rich("line3", { em: accent })}
             </LineReveal>
           </h2>
           <Reveal tier="quiet" delay={0.16}>
             <p className="mt-5 max-w-md text-pretty text-base leading-relaxed text-muted">
-              Most software that fails was built correctly. It just solved the
-              wrong thing. So we spend real time on the part before the code.
+              {t("body")}
             </p>
           </Reveal>
         </div>

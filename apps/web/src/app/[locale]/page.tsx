@@ -1,3 +1,5 @@
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 import {
   HomeHero,
   WhatWeDoSection,
@@ -10,6 +12,7 @@ import {
   WhyUsSection,
   AboutSection,
 } from "@/components/sections/home";
+import { toLocale } from "@/i18n/routing";
 
 /**
  * The homepage answers six questions in order, and stops.
@@ -25,12 +28,18 @@ import {
  *   9.  why you                         (how we work)
  *   10. who are you, really             (about)
  *
- * Tone alternates plain and tinted down the page. All copy and data live in
- * config/company.ts so this file stays a running order.
+ * Tone alternates plain and tinted down the page. Data lives in
+ * config/company.ts (and company.de.ts), headings in messages/<locale>.json,
+ * so this file stays a running order.
  *
  * The AI story that used to be this page now lives at /ai-automation in full.
  */
-export default function HomePage() {
+export default function HomePage({ params }: {
+  params: Promise<{ locale: string }>;
+}) {
+  const locale = toLocale(use(params).locale);
+  setRequestLocale(locale);
+
   return (
     <>
       <HomeHero />

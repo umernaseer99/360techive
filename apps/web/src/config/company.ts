@@ -6,7 +6,13 @@
  * a component edit. Order in these arrays is the order on the page.
  *
  * Copy rule for this file: plain sentences, no dashes of any kind.
+ *
+ * This file is the English copy. The German copy lives in company.de.ts with
+ * the same shape; components read whichever matches the page through
+ * getCompany(locale).
  */
+
+import { companyDe } from "./company.de";
 
 export type ProductStatus = "building" | "beta" | "research";
 
@@ -108,7 +114,7 @@ export const stages = [
     line: "Putting the product into the hands of real users.",
     note: "Release, watch how it is used, and keep improving it after day one.",
   },
-] as const;
+];
 
 /**
  * Section 5. PLACEHOLDER CONCEPTS.
@@ -208,7 +214,7 @@ export const technology = {
   build: ["React", "Next.js", "TypeScript", "Node.js", "React Native"],
   platform: ["Laravel", "WordPress", "PostgreSQL", "MySQL"],
   intelligence: ["AI APIs", "Vector search", "Cloud infrastructure"],
-} as const;
+};
 
 /** Section 9. */
 export const principles = [
@@ -237,3 +243,19 @@ export const principles = [
     body: "Short feedback loops, working software early and honest answers about what is hard. No long silences.",
   },
 ];
+
+const companyEn = {
+  capabilities,
+  stages,
+  products,
+  labAreas,
+  projects,
+  technology,
+  principles,
+};
+
+export type CompanyContent = typeof companyEn;
+
+export function getCompany(locale: string): CompanyContent {
+  return locale === "de" ? companyDe : companyEn;
+}

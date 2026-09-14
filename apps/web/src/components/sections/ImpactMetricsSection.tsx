@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
@@ -9,54 +10,22 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
  * Keep the disclaimer in place until real case-study numbers exist —
  * the credibility of this section depends entirely on it being honest.
  */
-const metrics = [
-  {
-    value: "\u221285%",
-    label: "Document drafting time",
-    detail:
-      "The Document Agent produces structured drafts in your house style. Your team reviews for substance instead of writing from scratch.",
-  },
-  {
-    value: "\u221290%",
-    label: "Time spent searching",
-    detail:
-      "Natural-language search across your knowledge base returns the relevant passage immediately, instead of opening a dozen files.",
-  },
-  {
-    value: "\u221288%",
-    label: "Client onboarding time",
-    detail:
-      "New accounts are captured, enriched and set up automatically — productive on day one rather than after three weeks.",
-  },
-  {
-    value: "4\u00d7",
-    label: "Capacity per team member",
-    detail:
-      "Each person supports a multiple of the accounts they can today. Growth comes from throughput, not headcount.",
-  },
-  {
-    value: "10\u00d7",
-    label: "Speed of response to change",
-    detail:
-      "Market, pricing and regulatory changes are detected daily and matched to the accounts they affect.",
-  },
-  {
-    value: "\u221285%",
-    label: "Audit preparation",
-    detail:
-      "Evidence and documentation assemble themselves from the knowledge base, with completeness enforced structurally.",
-  },
-];
-
 export function ImpactMetricsSection() {
+  const t = useTranslations("AiAutomation.Impact");
+  const metrics = t.raw("metrics") as {
+    value: string;
+    label: string;
+    detail: string;
+  }[];
+
   return (
     <Section tone="tinted">
       <Reveal>
         <SectionHeading
-          eyebrow="What changes"
-          title="The numbers that move when agents take"
-          accent="the routine."
-          lead="Projected targets modelled on a real agent deployment — what happens when the repeatable work stops touching a human."
+          eyebrow={t("eyebrow")}
+          title={t("title")}
+          accent={t("accent")}
+          lead={t("lead")}
         />
       </Reveal>
 
@@ -78,9 +47,7 @@ export function ImpactMetricsSection() {
 
       <Reveal tier="quiet">
         <p className="mt-6 text-xs text-muted/60">
-          Illustrative projections based on modelled workflows. Figures vary by
-          process, data quality and volume — we validate them against your own
-          numbers during discovery.
+          {t("disclaimer")}
         </p>
       </Reveal>
     </Section>

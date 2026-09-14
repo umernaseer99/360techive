@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { resourceTopicsDe } from "./resources.de";
 import {
   Bot,
   Cpu,
@@ -18,6 +19,7 @@ export interface ResourceTopic {
   icon: LucideIcon;
 }
 
+/** English copy. German lives in resources.de.ts; read through getResourceTopics(locale). */
 export const resourceTopics: ResourceTopic[] = [
   {
     slug: "what-is-an-ai-employee",
@@ -83,3 +85,7 @@ export const resourceTopics: ResourceTopic[] = [
     icon: ClipboardCheck,
   },
 ];
+
+export function getResourceTopics(locale: string): ResourceTopic[] {
+  return locale === "de" ? resourceTopicsDe : resourceTopics;
+}

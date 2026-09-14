@@ -3,11 +3,13 @@
 import {
   motion,
 } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { accent } from "@/components/ui/Accent";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { Reveal } from "@/components/ui/Reveal";
-import { projects, type Project } from "@/config/company";
+import { getCompany, type Project } from "@/config/company";
 import { ProjectFrame } from "./visuals/ProjectFrame";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
@@ -22,23 +24,19 @@ import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
  * Real case studies drop straight into `projects` in config/company.ts.
  */
 export function SelectedWorkSection() {
+  const t = useTranslations("Home.Work");
+  const { projects } = getCompany(useLocale());
+
   return (
     <Section id="work">
       <div className="flex flex-col gap-4">
-        <Eyebrow>Selected work</Eyebrow>
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
         <h2 className="max-w-3xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-          <LineReveal>
-            Built for{" "}
-            <span className="font-serif font-normal italic text-primary">
-              real
-            </span>{" "}
-            problems.
-          </LineReveal>
+          <LineReveal>{t.rich("title", { em: accent })}</LineReveal>
         </h2>
         <Reveal tier="quiet" delay={0.08}>
           <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-            A few of the kinds of problems we get asked to solve, and what we
-            built to solve them.
+            {t("body")}
           </p>
         </Reveal>
       </div>
@@ -54,6 +52,7 @@ export function SelectedWorkSection() {
 
 function ProjectRow({ project, index }: { project: Project; index: number }) {
   const reduced = useSafeReducedMotion();
+  const t = useTranslations("Home.Work");
 
   return (
     <motion.article
@@ -85,10 +84,10 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
 
         <Reveal delay={0.12}>
           <dl className="flex flex-col gap-6">
-            <Field label="The problem" value={project.problem} />
-            <Field label="What we built" value={project.built} />
-            <Field label="Approach" value={project.approach} mono />
-            <Field label="What changed" value={project.outcome} accent />
+            <Field label={t("problem")} value={project.problem} />
+            <Field label={t("built")} value={project.built} />
+            <Field label={t("approach")} value={project.approach} mono />
+            <Field label={t("outcome")} value={project.outcome} accent />
           </dl>
         </Reveal>
       </div>
