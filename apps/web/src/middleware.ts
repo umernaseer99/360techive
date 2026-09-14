@@ -122,7 +122,8 @@ export default async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except Next internals, the API routes and anything with a file
-  // extension (favicons, images, robots.txt).
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Everything except Next internals, the API routes, the generated
+  // apple-icon and anything with a file extension (favicons, images,
+  // robots.txt).
+  matcher: ["/((?!api|_next|_vercel|apple-icon|.*\\..*).*)"],
 };
