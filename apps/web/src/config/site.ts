@@ -21,7 +21,6 @@ export const siteConfig = {
     { label: "Products", href: "/#products" },
     { label: "Work", href: "/#work" },
     { label: "About", href: "/#about" },
-    { label: "Contact", href: "/contact" },
   ] satisfies NavLink[],
   footerLinks: {
     company: [
@@ -30,8 +29,7 @@ export const siteConfig = {
       { label: "Our products", href: "/#products" },
       { label: "Selected work", href: "/#work" },
       { label: "About", href: "/#about" },
-      { label: "Contact", href: "/contact" },
-    ],
+      ],
     product: [
       { label: "AI Automation", href: "/ai-automation" },
       { label: "All AI Employees", href: "/ai-employees" },

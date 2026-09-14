@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Settings, Database, Activity, Users, Headphones } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { IconBox } from "@/components/ui/IconBox";
 import { Accordion } from "@/components/ui/Accordion";
-import { ContactCTASection } from "@/components/sections/ContactCTASection";
 
 export const metadata: Metadata = {
   title: "Pricing — 360 Techive",
@@ -165,34 +163,6 @@ export default function PricingPage() {
           </div>
 
           <Accordion items={pricingFaqs} />
-        </div>
-      </section>
-
-      <section className="px-4 py-24 pt-0 md:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="glass-panel relative overflow-hidden rounded-2xl p-10 text-center md:p-20">
-            <div className="relative z-10 mx-auto max-w-2xl">
-              <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-                Ready to scope your deployment?
-              </h2>
-              <p className="mt-4 text-muted">
-                Tell us which department you want to start with. We&apos;ll schedule
-                a discovery call and deliver a fixed-price quote within a week.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Link href="/contact">
-                  <Button size="lg" variant="primary">
-                    Book a Discovery Call
-                  </Button>
-                </Link>
-                <Link href="/how-it-works">
-                  <Button size="lg" variant="secondary">
-                    Learn About Our Process
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

@@ -3,7 +3,6 @@ import { Bot, Cable, RefreshCw, Check } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { IconBox } from "@/components/ui/IconBox";
-import { ContactCTASection } from "@/components/sections/ContactCTASection";
 
 export const metadata: Metadata = {
   title: "Services — 360 Techive",
@@ -103,8 +102,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
-      <ContactCTASection />
     </div>
   );
 }

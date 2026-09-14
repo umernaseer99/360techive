@@ -76,14 +76,14 @@ export function HomeHero() {
             transition={{ duration: 0.5, delay: 0.54, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col gap-3 pt-2 sm:flex-row sm:flex-wrap"
           >
-            <Link href="/#contact" className="w-full sm:w-auto">
+            <Link href="/#work" className="w-full sm:w-auto">
               <Button size="lg" variant="primary" className="w-full sm:w-auto">
-                Start a project
+                Explore our work
               </Button>
             </Link>
-            <Link href="/#work" className="w-full sm:w-auto">
+            <Link href="/#services" className="w-full sm:w-auto">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto">
-                Explore our work
+                See what we build
               </Button>
             </Link>
           </motion.div>

@@ -9,7 +9,6 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { Button } from "../ui/Button";
 import { ThemeToggle } from "../ui/ThemeToggle";
 import { siteConfig } from "@/config/site";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
@@ -93,11 +92,6 @@ export function Navbar() {
 
           <div className="flex items-center gap-2 pl-2">
             <ThemeToggle />
-            <Link href="/contact">
-              <Button size="sm" variant="primary">
-                Start a project
-              </Button>
-            </Link>
           </div>
         </div>
 
@@ -167,21 +161,6 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               ))}
-
-              <motion.div
-                variants={{
-                  hidden: reduced ? { opacity: 0 } : { opacity: 0, y: 8 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                transition={{ duration: 0.26, ease: [0.16, 1, 0.3, 1] }}
-                className="mt-3 px-3"
-              >
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  <Button size="lg" variant="primary" className="w-full">
-                    Start a project
-                  </Button>
-                </Link>
-              </motion.div>
             </motion.div>
           </motion.div>
         )}

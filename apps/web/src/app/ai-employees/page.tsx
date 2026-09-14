@@ -8,7 +8,6 @@ import {
   ResourcesGridSection,
   CaseStudiesTeaserSection,
 } from "@/components/sections/ai-employees";
-import { ContactCTASection } from "@/components/sections/ContactCTASection";
 
 export const metadata: Metadata = {
   title: "AI Employees — 360 Techive",
@@ -54,7 +53,6 @@ export default function AIEmployeesPage() {
       <AIEmployeesGrid />
       <ResourcesGridSection />
       <CaseStudiesTeaserSection />
-      <ContactCTASection />
     </div>
   );
 }

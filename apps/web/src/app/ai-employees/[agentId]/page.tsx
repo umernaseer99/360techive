@@ -10,7 +10,6 @@ import {
   AgentInteractiveDemo,
   RelatedAgents,
 } from "@/components/sections/ai-employee-detail";
-import { ContactCTASection } from "@/components/sections/ContactCTASection";
 
 interface Props {
   params: Promise<{ agentId: string }>;
@@ -53,7 +52,6 @@ export default async function AIEmployeeDetailPage({ params }: Props) {
       <AgentUseCases agent={agent} />
       {agent.hasInteractiveDemo && <AgentInteractiveDemo agent={agent} />}
       <RelatedAgents current={agent} />
-      <ContactCTASection agentName={agent.name} />
     </>
   );
 }

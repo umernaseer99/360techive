@@ -9,7 +9,6 @@ import {
   TechnologySection,
   WhyUsSection,
   AboutSection,
-  StartProjectSection,
 } from "@/components/sections/home";
 
 /**
@@ -25,10 +24,8 @@ import {
  *   8.  what do you build it with       (technology)
  *   9.  why you                         (how we work)
  *   10. who are you, really             (about)
- *   11. the ask                         (start a project)
  *
- * Tone alternates plain and tinted down the page, and the closing section
- * breaks the rhythm deliberately. All copy and data live in
+ * Tone alternates plain and tinted down the page. All copy and data live in
  * config/company.ts so this file stays a running order.
  *
  * The AI story that used to be this page now lives at /ai-automation in full.
@@ -46,7 +43,6 @@ export default function HomePage() {
       <TechnologySection />
       <WhyUsSection />
       <AboutSection />
-      <StartProjectSection />
     </>
   );
 }

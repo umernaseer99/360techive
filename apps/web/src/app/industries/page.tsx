@@ -4,7 +4,6 @@ import { ShoppingCart, HeartPulse, Landmark, Building, Truck, Briefcase } from "
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
 import { IconBox } from "@/components/ui/IconBox";
-import { ContactCTASection } from "@/components/sections/ContactCTASection";
 
 export const metadata: Metadata = {
   title: "Industries — 360 Techive",
@@ -125,8 +124,6 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
-
-      <ContactCTASection />
     </div>
   );
 }

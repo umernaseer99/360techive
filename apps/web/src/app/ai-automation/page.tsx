@@ -13,7 +13,6 @@ import {
   PositionQuoteSection,
   HowItWorksSection,
   FAQSection,
-  ContactCTASection,
 } from "@/components/sections";
 
 export const metadata: Metadata = {
@@ -61,7 +60,6 @@ export default function AIAutomationPage() {
       <PositionQuoteSection />
       <HowItWorksSection />
       <FAQSection />
-      <ContactCTASection />
     </>
   );
 }

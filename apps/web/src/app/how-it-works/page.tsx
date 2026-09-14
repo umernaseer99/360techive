@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Accordion } from "@/components/ui/Accordion";
-import { ContactCTASection } from "@/components/sections/ContactCTASection";
 
 export const metadata: Metadata = {
   title: "How It Works — 360 Techive",
@@ -166,8 +165,6 @@ export default function HowItWorksPage() {
           <Accordion items={processFaqs} />
         </div>
       </section>
-
-      <ContactCTASection />
     </div>
   );
 }
