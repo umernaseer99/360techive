@@ -55,53 +55,55 @@ export function PortfolioSection() {
     if (!el) return;
     const card = el.querySelector("li");
     // Move by one card plus the gap, so the track always lands on a snap point.
-    const step = card ? card.getBoundingClientRect().width + 32 : el.clientWidth;
+    const step = card
+      ? card.getBoundingClientRect().width + 32
+      : el.clientWidth;
     el.scrollBy({ left: step * direction, behavior: "smooth" });
   }
 
   return (
     <Section id="work" tone="tinted" glow="top-right" glowStrength="medium">
-      <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">
-        <div className="flex flex-col gap-4">
-          <Eyebrow>{t("eyebrow")}</Eyebrow>
-          <h2 className="max-w-2xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
-            <LineReveal>
-              {t("headline.first")}{" "}
-              <span className="font-serif font-normal italic text-primary">
-                {t("headline.accent")}
-              </span>
-            </LineReveal>
-          </h2>
-          <Reveal tier="quiet" delay={0.08}>
-            <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
-              {t("body")}
-            </p>
-          </Reveal>
-        </div>
-
-        {/* paging stays with the heading, top right */}
-        <Reveal tier="quiet" delay={0.12}>
-          <div className="flex shrink-0 items-center gap-3">
-            <SliderButton
-              direction="prev"
-              label={t("previous")}
-              disabled={atStart}
-              onClick={() => page(-1)}
-            />
-            <SliderButton
-              direction="next"
-              label={t("next")}
-              disabled={atEnd}
-              onClick={() => page(1)}
-            />
-          </div>
+      <div className="flex flex-col gap-4">
+        <Eyebrow>{t("eyebrow")}</Eyebrow>
+        <h2 className="max-w-2xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight text-foreground md:text-[2.7rem]">
+          <LineReveal>
+            {t("headline.first")}{" "}
+            <span className="font-serif font-normal italic text-primary">
+              {t("headline.accent")}
+            </span>
+          </LineReveal>
+        </h2>
+        <Reveal tier="quiet" delay={0.08}>
+          <p className="max-w-2xl text-pretty text-base leading-relaxed text-muted">
+            {t("body")}
+          </p>
         </Reveal>
       </div>
+
+      {/* Controls sit directly above the track rather than up beside the
+          heading: next to the cards they act on, and a short reach from the
+          button to what moves. */}
+      <Reveal tier="quiet" delay={0.12}>
+        <div className="mt-8 flex items-center justify-end gap-3">
+          <SliderButton
+            direction="prev"
+            label={t("previous")}
+            disabled={atStart}
+            onClick={() => page(-1)}
+          />
+          <SliderButton
+            direction="next"
+            label={t("next")}
+            disabled={atEnd}
+            onClick={() => page(1)}
+          />
+        </div>
+      </Reveal>
 
       <ul
         ref={trackRef}
         onScroll={sync}
-        className="mt-14 flex snap-x snap-mandatory gap-8 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mt-4 flex snap-x snap-mandatory gap-8 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {portfolio.map((project, i) => (
           <li
