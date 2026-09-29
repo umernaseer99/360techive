@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -32,7 +33,14 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // A `green:` variant, so a component can style for the green theme without
+    // reading the theme in JavaScript. Doing it in CSS means the correct thing
+    // renders on the server, with no flash of the wrong one before hydration.
+    plugin(({ addVariant }) => {
+      addVariant("green", ["&:where(.green, .green *)"]);
+    }),
+  ],
 };
 
 export default config;

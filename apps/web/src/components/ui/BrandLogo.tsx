@@ -17,9 +17,20 @@ interface BrandLogoProps {
 /**
  * Brand Logo component.
  *
- * The mark lives at apps/web/public/brand/techive-logo.svg. That is the only
- * copy: it is referenced by path rather than duplicated, so replacing that one
- * file changes the logo everywhere it appears.
+ * Two marks, chosen by theme: the red one, and a green one for the green
+ * theme, where the red would fight the accent.
+ *
+ * The swap is done in CSS through the `green:` variant rather than by reading
+ * the theme in JavaScript. The server has no idea which theme is stored, so a
+ * JavaScript swap would render red first and correct itself after hydration,
+ * which is a visible flash on every green theme page load. Only one of the two
+ * is ever displayed, and the second carries an empty alt so a screen reader
+ * does not announce the company name twice.
+ *
+ * The green mark is #A2CF5A and is 10.94:1 on the near black the green theme
+ * uses. It must not go on a light surface, where it measures 1.73:1. There is
+ * a darker variant of the same hue at techive-logo-green-light.svg for that
+ * case, readable on both.
  *
  * If the file is missing or fails to load, this falls back to the text wordmark
  * rather than showing a broken image icon.
@@ -55,18 +66,31 @@ export function BrandLogo({
         flashes a broken image placeholder.
       */}
       {!imageFailed && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          ref={ref}
-          src="/brand/techive-logo.svg"
-          alt={siteConfig.name}
-          style={{ height }}
-          className={`w-auto object-contain transition-opacity duration-200 ${
-            imageLoaded ? "opacity-100" : "hidden opacity-0"
-          }`}
-          onLoad={() => setImageLoaded(true)}
-          onError={() => setImageFailed(true)}
-        />
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            ref={ref}
+            src="/brand/techive-logo.svg"
+            alt={siteConfig.name}
+            style={{ height }}
+            className={`w-auto object-contain transition-opacity duration-200 green:hidden ${
+              imageLoaded ? "opacity-100" : "hidden opacity-0"
+            }`}
+            onLoad={() => setImageLoaded(true)}
+            onError={() => setImageFailed(true)}
+          />
+
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/techive-logo-green.svg"
+            alt=""
+            aria-hidden="true"
+            style={{ height }}
+            className={`w-auto object-contain transition-opacity duration-200 hidden green:block ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        </>
       )}
 
       {/* Fallback text wordmark shown until/unless logo.svg is supplied and loaded */}
