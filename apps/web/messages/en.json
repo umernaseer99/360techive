@@ -31,6 +31,10 @@
     "aiEmployees": {
       "title": "AI Employees — 360 Techive",
       "description": "Meet six purpose-built AI Employees for Support, Sales, Finance, Research, Documents, and Executive departments. Each agent automates an entire business function."
+    },
+    "portfolio": {
+      "title": "Portfolio | 360 Techive",
+      "description": "Live sites and platforms we designed and built for clients."
     }
   },
   "nav": {
@@ -41,7 +45,6 @@
     "links": {
       "services": "Services",
       "aiAutomation": "AI Automation",
-      "products": "Products",
       "work": "Work",
       "about": "About",
       "contact": "Contact"
@@ -57,17 +60,24 @@
     "rights": "All rights reserved.",
     "columns": {
       "explore": "Explore",
-      "company": "Company"
+      "company": "Company",
+      "contact": "Contact"
     },
     "links": {
       "customSolutions": "Custom solutions",
-      "products": "Our products",
       "about": "About",
       "contact": "Contact",
       "aiAutomation": "AI Automation",
       "aiEmployees": "AI Employees",
       "howItWorks": "How it works",
-      "pricing": "Pricing"
+      "pricing": "Pricing",
+      "work": "Selected work"
+    },
+    "contact": {
+      "heading": "Contact",
+      "emailLabel": "Email",
+      "locationsLabel": "Where we are",
+      "global": "Working with clients globally"
     }
   },
   "home": {
@@ -81,7 +91,7 @@
       },
       "body": "We design and engineer solutions around the way your business actually works, and we build AI into them where it makes the result faster, cheaper and more capable. Web platforms, mobile applications, internal systems, agents and automation, engineered for your process rather than someone else's template.",
       "primaryCta": "Start a project",
-      "secondaryCta": "See our products",
+      "secondaryCta": "See our work",
       "footnote": "Come with a specification or come with the problem. We will tell you what the right solution takes."
     },
     "whatWeDo": {
@@ -198,46 +208,6 @@
         }
       }
     },
-    "products": {
-      "eyebrow": "Our products",
-      "headline": {
-        "first": "We build products",
-        "accent": "too."
-      },
-      "body": "We build and own products of our own, which is where our engineering gets proven before it reaches your project. The same team, the same standard, applied to problems we chose ourselves.",
-      "counter": "{current} of {total}",
-      "viewProject": "View Project",
-      "featured": "Featured: {name}",
-      "ownedByUs": "Built and owned by us",
-      "status": {
-        "building": "In development",
-        "beta": "In beta",
-        "research": "Research stage",
-        "live": "Live"
-      },
-      "items": {
-        "waAgent": {
-          "category": "AI Automation",
-          "description": "A WhatsApp based AI agent that automates conversations, answers frequently asked questions and handles routine customer interactions directly inside WhatsApp. Built for businesses that already run their support and sales through messaging."
-        },
-        "chatbots": {
-          "category": "AI Products",
-          "description": "Configurable AI chatbots you can embed on your own website or application. Each one is trained on your content and tuned for your domain, handling customer support and capturing leads around the clock."
-        },
-        "websites": {
-          "category": "Web Development",
-          "description": "Custom web builds ranging from marketing sites to full web applications with live data and user accounts. Our featured project, CoinStudy, is a halal crypto research platform that screens cryptocurrencies against a multi factor Shariah compliance scoring framework, with live market data and an AI assisted asset checker."
-        },
-        "ecommerce": {
-          "category": "E-commerce",
-          "description": "Online storefronts with product catalogs, checkout and customer accounts, built or customized around a client's actual catalog and operations. Our featured project, AQ Gimel, is a full e-commerce build for a private label vegan cosmetics manufacturer, with a multi category product catalog, multi currency checkout and a membership tier for repeat business customers."
-        },
-        "management": {
-          "category": "Business Tools",
-          "description": "Internal operations software that replaces spreadsheets and manual tracking for things like inventory, staff records and scheduling. Each system is built around the way a specific business actually runs, not a generic template."
-        }
-      }
-    },
     "lab": {
       "eyebrow": "AI capabilities",
       "headline": {
@@ -322,8 +292,56 @@
       },
       "body": "Tell us how your business works and what is getting in the way. We will come back with what a solution built around it actually takes.",
       "primaryCta": "Start a conversation",
-      "secondaryCta": "See our products",
+      "secondaryCta": "See our work",
       "footnote": "No pitch deck required. A paragraph about the problem is enough."
+    },
+    "portfolio": {
+      "eyebrow": "Portfolio",
+      "headline": {
+        "first": "Work we have",
+        "accent": "shipped."
+      },
+      "body": "Live sites and platforms we designed and built for clients. Every one of these is running in production today.",
+      "visit": "Visit site",
+      "counter": "{current} of {total}",
+      "items": {
+        "coinstudy": {
+          "category": "Web platform",
+          "description": "A research platform for Sharia compliant cryptocurrency, built around a scoring framework the client publishes. Live market data, a searchable index of several hundred assets and a certification workflow behind it."
+        },
+        "aqgimel": {
+          "category": "Ecommerce",
+          "description": "A private label cosmetics store selling into several markets, with multi currency and multi language built in, a product catalogue the client maintains and a member area for wholesale customers."
+        },
+        "bureauauditec": {
+          "category": "Corporate site",
+          "description": "A site for a certification body, covering accredited ISO management system certification, automotive IATF 16949 and industry specific standards. Built so each programme has its own page and every route ends at an enquiry."
+        },
+        "hrmhelp": {
+          "category": "Corporate site",
+          "description": "A site for a London based HR consultancy, presenting their support services, partners and frequently asked questions, with a free HR audit offer used as the main way into a conversation."
+        },
+        "drlasmith": {
+          "category": "Author store",
+          "description": "A storefront for an author and educator, built around her published work. Visitors browse the books, read about her, and buy directly, with customer accounts and a cart running through the site."
+        }
+      },
+      "filters": {
+        "all": "All work",
+        "nextjs": "Next.js",
+        "wordpress": "WordPress",
+        "ecommerce": "Ecommerce",
+        "webApp": "Web platform",
+        "website": "Website",
+        "ai": "AI",
+        "mobile": "Mobile",
+        "automation": "Automation"
+      },
+      "filterLabel": "Filter work by",
+      "empty": "Nothing here yet.",
+      "previous": "Previous work",
+      "next": "Next work",
+      "viewAll": "View all work"
     }
   },
   "services": {

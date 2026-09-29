@@ -17,17 +17,19 @@ export interface NavLink {
 export const siteConfig = {
   name: "360 Techive",
   contactEmail: "360techive@gmail.com",
+  /** Where the team is. Order is the order shown in the footer. */
+  locations: ["Pakistan", "Germany", "Oman"],
   navLinks: [
     { key: "services", href: "/#services" },
     { key: "aiAutomation", href: "/ai-automation" },
-    { key: "products", href: "/#products" },
+    { key: "work", href: "/portfolio" },
     { key: "about", href: "/#about" },
     { key: "contact", href: "/contact" },
   ] satisfies NavLink[],
   footerLinks: {
     company: [
       { key: "customSolutions", href: "/#services" },
-      { key: "products", href: "/#products" },
+      { key: "work", href: "/portfolio" },
         { key: "about", href: "/#about" },
       { key: "contact", href: "/contact" },
     ] satisfies NavLink[],

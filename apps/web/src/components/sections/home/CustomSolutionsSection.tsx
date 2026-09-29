@@ -11,7 +11,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { LineReveal } from "@/components/ui/TextReveal";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { capabilities } from "@/config/company";
-import { CapabilityPreview } from "./visuals/CapabilityPreview";
+import { CapabilityGraphic } from "./visuals/CapabilityGraphic";
 import { useSafeReducedMotion } from "@/components/ui/useSafeReducedMotion";
 
 /**
@@ -113,7 +113,7 @@ export function CustomSolutionsSection() {
 
                       {/* inline preview: the pointer pane does not exist below lg */}
                       <div className="mt-5 h-44 min-w-0 overflow-hidden lg:hidden">
-                        <CapabilityPreview id={c.id} />
+                        <CapabilityGraphic id={c.id} />
                       </div>
                     </div>
 
@@ -148,7 +148,7 @@ export function CustomSolutionsSection() {
                   transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                   className="size-full"
                 >
-                  <CapabilityPreview id={active.id} />
+                  <CapabilityGraphic id={active.id} />
                 </motion.div>
               </AnimatePresence>
             </div>

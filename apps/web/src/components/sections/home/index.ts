@@ -6,7 +6,7 @@ export { HomeHero } from "./HomeHero";
 export { WhatWeDoSection } from "./WhatWeDoSection";
 export { CustomSolutionsSection } from "./CustomSolutionsSection";
 export { AutomationSection } from "./AutomationSection";
-export { ProductsSection } from "./ProductsSection";
+export { PortfolioSection } from "./PortfolioSection";
 export { BuildingNextSection } from "./BuildingNextSection";
 export { AboutSection } from "./AboutSection";
 export { StartProjectSection } from "./StartProjectSection";

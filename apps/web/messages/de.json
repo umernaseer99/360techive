@@ -31,6 +31,10 @@
     "aiEmployees": {
       "title": "KI-Mitarbeiter — 360 Techive",
       "description": "Sechs KI-Mitarbeiter für Service, Vertrieb, Finanzen, Research, Dokumente und Geschäftsleitung. Jeder Agent übernimmt eine ganze Unternehmensfunktion."
+    },
+    "portfolio": {
+      "title": "Portfolio | 360 Techive",
+      "description": "Websites und Plattformen, die wir für Kunden konzipiert und gebaut haben."
     }
   },
   "nav": {
@@ -41,8 +45,7 @@
     "links": {
       "services": "Leistungen",
       "aiAutomation": "KI-Automatisierung",
-      "products": "Produkte",
-      "work": "Referenzen",
+      "work": "Arbeiten",
       "about": "Über uns",
       "contact": "Kontakt"
     },
@@ -57,17 +60,24 @@
     "rights": "Alle Rechte vorbehalten.",
     "columns": {
       "explore": "Entdecken",
-      "company": "Unternehmen"
+      "company": "Unternehmen",
+      "contact": "Kontakt"
     },
     "links": {
       "customSolutions": "Individuelle Lösungen",
-      "products": "Unsere Produkte",
       "about": "Über uns",
       "contact": "Kontakt",
       "aiAutomation": "KI-Automatisierung",
       "aiEmployees": "KI-Mitarbeiter",
       "howItWorks": "So arbeiten wir",
-      "pricing": "Preise"
+      "pricing": "Preise",
+      "work": "Ausgewählte Arbeiten"
+    },
+    "contact": {
+      "heading": "Kontakt",
+      "emailLabel": "E-Mail",
+      "locationsLabel": "Wo wir sind",
+      "global": "Weltweit für Kunden tätig"
     }
   },
   "home": {
@@ -81,7 +91,7 @@
       },
       "body": "Wir konzipieren und entwickeln Lösungen entlang der Art, wie Ihr Unternehmen tatsächlich arbeitet, und setzen KI dort ein, wo sie das Ergebnis schneller, günstiger und leistungsfähiger macht. Webplattformen, mobile Anwendungen, interne Systeme, Agenten und Automatisierung, entwickelt für Ihren Prozess statt für eine fremde Vorlage.",
       "primaryCta": "Projekt starten",
-      "secondaryCta": "Unsere Produkte ansehen",
+      "secondaryCta": "Unsere Arbeiten ansehen",
       "footnote": "Kommen Sie mit einem Lastenheft oder mit dem Problem. Wir sagen Ihnen, was die passende Lösung erfordert."
     },
     "whatWeDo": {
@@ -198,46 +208,6 @@
         }
       }
     },
-    "products": {
-      "eyebrow": "Unsere Produkte",
-      "headline": {
-        "first": "Wir bauen auch eigene",
-        "accent": "Produkte."
-      },
-      "body": "Wir entwickeln eigene Produkte. Dort beweist sich unsere Entwicklung, bevor sie in Ihr Projekt kommt. Dasselbe Team, derselbe Anspruch, angewendet auf Probleme, die wir selbst gewählt haben.",
-      "counter": "{current} von {total}",
-      "viewProject": "Projekt ansehen",
-      "featured": "Referenz: {name}",
-      "ownedByUs": "Von uns entwickelt und betrieben",
-      "status": {
-        "building": "In Entwicklung",
-        "beta": "In der Beta",
-        "research": "Forschungsphase",
-        "live": "Live"
-      },
-      "items": {
-        "waAgent": {
-          "category": "KI-Automatisierung",
-          "description": "Ein KI-Agent für WhatsApp, der Konversationen automatisiert, häufige Fragen beantwortet und wiederkehrende Kundenanliegen direkt in WhatsApp bearbeitet. Gebaut für Unternehmen, die Support und Vertrieb ohnehin über Messenger abwickeln."
-        },
-        "chatbots": {
-          "category": "KI-Produkte",
-          "description": "Konfigurierbare KI-Chatbots, die Sie in Ihre eigene Website oder Anwendung einbinden. Jeder Bot wird auf Ihre Inhalte trainiert und auf Ihre Fachdomäne abgestimmt, übernimmt den Kundenservice und erfasst rund um die Uhr Anfragen."
-        },
-        "websites": {
-          "category": "Webentwicklung",
-          "description": "Individuelle Web-Projekte von der Marketing-Website bis zur vollwertigen Webanwendung mit Live-Daten und Nutzerkonten. Unser Referenzprojekt CoinStudy ist eine Research-Plattform für halal Kryptowerte, die Coins anhand eines mehrstufigen Bewertungsmodells auf Schariakonformität prüft, mit Live-Marktdaten und einem KI-gestützten Asset-Check."
-        },
-        "ecommerce": {
-          "category": "E-Commerce",
-          "description": "Online-Shops mit Produktkatalog, Checkout und Kundenkonten, aufgebaut oder angepasst auf das reale Sortiment und die Abläufe eines Kunden. Unser Referenzprojekt AQ Gimel ist ein vollständiger E-Commerce-Aufbau für einen Private-Label-Hersteller veganer Kosmetik, mit mehrstufigem Katalog, Checkout in mehreren Währungen und einer Mitgliedsstufe für wiederkehrende Geschäftskunden."
-        },
-        "management": {
-          "category": "Business-Tools",
-          "description": "Interne Software, die Tabellen und manuelle Listen für Bereiche wie Lagerbestand, Personalakten und Einsatzplanung ablöst. Jedes System entsteht entlang der tatsächlichen Abläufe eines Unternehmens, nicht als Standardvorlage."
-        }
-      }
-    },
     "lab": {
       "eyebrow": "KI-Fähigkeiten",
       "headline": {
@@ -322,8 +292,56 @@
       },
       "body": "Erzählen Sie uns, wie Ihr Unternehmen arbeitet und was im Weg steht. Wir melden uns mit dem, was eine passgenaue Lösung tatsächlich erfordert.",
       "primaryCta": "Gespräch beginnen",
-      "secondaryCta": "Unsere Produkte ansehen",
+      "secondaryCta": "Unsere Arbeiten ansehen",
       "footnote": "Kein Pitch Deck nötig. Ein Absatz über das Problem reicht."
+    },
+    "portfolio": {
+      "eyebrow": "Portfolio",
+      "headline": {
+        "first": "Arbeiten, die",
+        "accent": "live sind."
+      },
+      "body": "Websites und Plattformen, die wir für Kunden konzipiert und gebaut haben. Jede davon läuft heute im Produktivbetrieb.",
+      "visit": "Website ansehen",
+      "counter": "{current} von {total}",
+      "items": {
+        "coinstudy": {
+          "category": "Webplattform",
+          "description": "Eine Rechercheplattform für Sharia-konforme Kryptowährungen, aufgebaut auf einem Bewertungsrahmen, den der Kunde veröffentlicht. Mit Live-Marktdaten, einem durchsuchbaren Index von mehreren hundert Werten und einem Zertifizierungsprozess dahinter."
+        },
+        "aqgimel": {
+          "category": "E-Commerce",
+          "description": "Ein Private-Label-Kosmetikshop für mehrere Märkte, mit Mehrwährungs- und Mehrsprachigkeit, einem Produktkatalog, den der Kunde selbst pflegt, und einem Mitgliederbereich für Großkunden."
+        },
+        "bureauauditec": {
+          "category": "Unternehmenswebsite",
+          "description": "Eine Website für eine Zertifizierungsstelle, mit akkreditierter Zertifizierung von ISO-Managementsystemen, IATF 16949 für die Automobilbranche und branchenspezifischen Standards. Jedes Programm hat eine eigene Seite, und jeder Weg endet bei einer Anfrage."
+        },
+        "hrmhelp": {
+          "category": "Unternehmenswebsite",
+          "description": "Eine Website für eine Londoner HR-Beratung, mit ihren Leistungen, Partnern und häufigen Fragen. Ein kostenloses HR-Audit dient als zentraler Einstieg ins Gespräch."
+        },
+        "drlasmith": {
+          "category": "Autoren-Shop",
+          "description": "Ein Shop für eine Autorin und Pädagogin, aufgebaut rund um ihre Veröffentlichungen. Besucher stöbern in den Büchern, lesen über sie und kaufen direkt, mit Kundenkonten und Warenkorb im Shop."
+        }
+      },
+      "filters": {
+        "all": "Alle Arbeiten",
+        "nextjs": "Next.js",
+        "wordpress": "WordPress",
+        "ecommerce": "E-Commerce",
+        "webApp": "Webplattform",
+        "website": "Website",
+        "ai": "KI",
+        "mobile": "Mobile",
+        "automation": "Automatisierung"
+      },
+      "filterLabel": "Arbeiten filtern nach",
+      "empty": "Hier gibt es noch nichts.",
+      "previous": "Vorherige Arbeit",
+      "next": "Nächste Arbeit",
+      "viewAll": "Alle Arbeiten ansehen"
     }
   },
   "services": {

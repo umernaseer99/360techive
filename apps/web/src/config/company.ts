@@ -8,27 +8,10 @@
  * here.
  */
 
-export type ProductStatus = "building" | "beta" | "research" | "live";
-
 export interface Capability {
   /** Stable key, also used as the preview id and the message key. */
   id: string;
 }
-
-export interface Product {
-  /** Proper noun, the same in every language. */
-  name: string;
-  /** Message key under `home.products.items`. */
-  key: string;
-  status: ProductStatus;
-  /** Stable key used to select the correct preview mockup. */
-  mockId: string;
-  /** External URL for live/shipped products. Opens in a new tab. */
-  url?: string;
-  /** Name of the featured project, shown alongside the View Project link. */
-  projectName?: string;
-}
-
 
 /** Section 3. Each one gets an interface preview, so keep the list tight. */
 export const capabilities: Capability[] = [
@@ -42,35 +25,72 @@ export const capabilities: Capability[] = [
 export const stages = ["problem", "design", "build", "launch"] as const;
 
 /**
- * Section 5.
+ * Client work.
  *
- * Five products: two reference real, live external projects (CoinStudy and
- * AQ Gimel). The other three are in active development.
+ * `image` is a screenshot of the live site, 16:9, in public/images/work. Add a
+ * project by adding an entry here plus its copy under `home.portfolio.items`
+ * in both message catalogues. The grid handles any number of them.
+ *
+ * `url` is the live site. Anything without one renders without the visit link
+ * rather than a dead button.
  */
-export const products: Product[] = [
-  { name: "WA Agent", key: "waAgent", status: "building", mockId: "wa-agent" },
-  { name: "Chatbots", key: "chatbots", status: "building", mockId: "chatbots" },
+export interface Project {
+  /** Message key under `home.portfolio.items`. */
+  key: string;
+  name: string;
+  image: string;
+  url?: string;
+  /** Short stack line, kept out of the catalogues since it is not language. */
+  stack: string[];
+  /**
+   * Filter keys. The filter bar is built from the keys actually used here, so
+   * a filter can never appear with nothing behind it. Add "ai" to a project
+   * and the AI filter shows up on its own. Each key needs a label under
+   * `home.portfolio.filters` in both catalogues.
+   */
+  tags: string[];
+}
+
+export const portfolio: Project[] = [
   {
-    name: "Websites",
-    key: "websites",
-    status: "live",
-    mockId: "websites",
+    key: "coinstudy",
+    name: "CoinStudy",
+    image: "/images/work/coinstudy.jpg",
     url: "https://coinstudy.co/",
-    projectName: "CoinStudy",
+    stack: ["Next.js", "TypeScript", "Live market data"],
+    tags: ["nextjs", "webApp"],
   },
   {
-    name: "E-commerce Platforms",
-    key: "ecommerce",
-    status: "live",
-    mockId: "ecommerce",
+    key: "aqgimel",
+    name: "AQ Gimel",
+    image: "/images/work/aqgimel.jpg",
     url: "https://aqgimel.com/",
-    projectName: "AQ Gimel",
+    stack: ["WooCommerce", "Multi currency", "Multi language"],
+    tags: ["wordpress", "ecommerce"],
   },
   {
-    name: "Management System",
-    key: "management",
-    status: "building",
-    mockId: "management",
+    key: "bureauauditec",
+    name: "Bureau Auditec",
+    image: "/images/work/bureauauditec.jpg",
+    url: "https://bureauauditec.com/",
+    stack: ["WordPress", "Custom design", "Lead capture"],
+    tags: ["wordpress", "website"],
+  },
+  {
+    key: "hrmhelp",
+    name: "HRM Help",
+    image: "/images/work/hrmhelp.jpg",
+    url: "https://hrm-help.co.uk/",
+    stack: ["WordPress", "Custom design", "Enquiry funnel"],
+    tags: ["wordpress", "website"],
+  },
+  {
+    key: "drlasmith",
+    name: "Dr. LaTisha Smith",
+    image: "/images/work/drlasmith.jpg",
+    url: "https://drlasmith.org/",
+    stack: ["WooCommerce", "Storefront", "Accounts"],
+    tags: ["wordpress", "ecommerce"],
   },
 ];
 
@@ -85,5 +105,3 @@ export const labAreas = [
   "workflows",
   "platforms",
 ] as const;
-
-

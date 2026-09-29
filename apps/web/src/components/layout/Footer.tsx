@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { siteConfig, type NavLink } from "@/config/site";
+import { Mail, MapPin } from "lucide-react";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 
 export function Footer() {
@@ -24,7 +25,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-2">
+          <div className="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3">
             <FooterColumn
               heading={t("columns.explore")}
               links={siteConfig.footerLinks.explore}
@@ -33,6 +34,7 @@ export function Footer() {
               heading={t("columns.company")}
               links={siteConfig.footerLinks.company}
             />
+            <ContactColumn />
           </div>
         </div>
 
@@ -44,6 +46,55 @@ export function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+/**
+ * Contact details. The email is a real mailto rather than plain text, and the
+ * offices come from config so they are not buried in a translation file: they
+ * are the same in every language.
+ */
+function ContactColumn() {
+  const t = useTranslations("footer.contact");
+
+  return (
+    <div className="col-span-2 md:col-span-1">
+      <h3 className="mb-4 text-[11px] font-medium uppercase tracking-[0.15em] text-muted/60">
+        {t("heading")}
+      </h3>
+
+      <a
+        href={`mailto:${siteConfig.contactEmail}`}
+        className="group inline-flex items-start gap-2.5 text-sm text-muted transition-colors duration-200 hover:text-foreground"
+      >
+        <Mail
+          className="mt-0.5 size-4 shrink-0 text-primary"
+          strokeWidth={1.7}
+          aria-hidden="true"
+        />
+        <span className="relative">
+          {siteConfig.contactEmail}
+          <span
+            aria-hidden="true"
+            className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100 motion-reduce:transition-none"
+          />
+        </span>
+      </a>
+
+      <div className="mt-5 flex items-start gap-2.5">
+        <MapPin
+          className="mt-0.5 size-4 shrink-0 text-primary"
+          strokeWidth={1.7}
+          aria-hidden="true"
+        />
+        <div className="flex flex-col gap-1">
+          <span className="text-sm text-muted">
+            {siteConfig.locations.join(" · ")}
+          </span>
+          <span className="text-[13px] text-muted/70">{t("global")}</span>
+        </div>
+      </div>
+    </div>
   );
 }
 

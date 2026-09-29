@@ -37,7 +37,7 @@ export function AboutSection() {
   const reduced = useSafeReducedMotion();
 
   return (
-    <Section id="about" glow="center" glowStrength="strong">
+    <Section id="about" tone="tinted" glow="center" glowStrength="strong">
       <div className="grid gap-14 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-20">
         <div className="flex flex-col gap-6">
           <Eyebrow>{t("eyebrow")}</Eyebrow>

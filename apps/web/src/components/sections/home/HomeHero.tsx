@@ -80,7 +80,7 @@ export function HomeHero() {
                 {t("primaryCta")}
               </Button>
             </Link>
-            <Link href="/#products" className="w-full sm:w-auto">
+            <Link href="/portfolio" className="w-full sm:w-auto">
               <Button size="lg" variant="secondary" className="w-full sm:w-auto">
                 {t("secondaryCta")}
               </Button>
