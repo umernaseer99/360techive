@@ -192,7 +192,7 @@ function ChatbotMock() {
               <div className="rounded-lg rounded-tl-xs border border-border/10 bg-background/80 p-1.5 text-[7px] text-foreground/80 leading-tight">
                 {t("greeting")}
               </div>
-              <div className="ml-auto rounded-lg rounded-tr-xs bg-primary p-1.5 text-[7px] text-white font-medium leading-tight">
+              <div className="ml-auto rounded-lg rounded-tr-xs bg-primary p-1.5 text-[7px] text-onPrimary font-medium leading-tight">
                 {t("question")}
               </div>
               <div className="rounded-lg rounded-tl-xs border border-border/10 bg-background/80 p-1.5 text-[7px] text-foreground/80 leading-tight">
@@ -205,7 +205,7 @@ function ChatbotMock() {
               <div className="h-4 flex-1 rounded border border-border/10 bg-background px-1.5 text-[6.5px] text-muted flex items-center">
                 {t("input")}
               </div>
-              <span className="flex size-4 items-center justify-center rounded bg-primary text-[7px] text-white">
+              <span className="flex size-4 items-center justify-center rounded bg-primary text-[7px] text-onPrimary">
                 ➤
               </span>
             </div>
@@ -267,7 +267,7 @@ function WebsitesMock() {
               </span>
             </div>
             <div className="flex gap-1 text-[6.5px] font-mono text-muted">
-              <span className="rounded bg-primary px-1 text-white">24H</span>
+              <span className="rounded bg-primary px-1 text-onPrimary">24H</span>
               <span className="px-0.5">7D</span>
               <span className="px-0.5">1M</span>
             </div>
@@ -395,7 +395,7 @@ function EcommerceMock() {
                   </span>
                   <div className="mt-0.5 flex items-center justify-between">
                     <span className="text-[7.5px] font-bold text-foreground">{p.price}</span>
-                    <span className="rounded bg-primary px-1.5 py-0.5 text-[6px] font-medium text-white">
+                    <span className="rounded bg-primary px-1.5 py-0.5 text-[6px] font-medium text-onPrimary">
                       {t("add")}
                     </span>
                   </div>

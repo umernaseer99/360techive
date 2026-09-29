@@ -8,6 +8,7 @@
   --color-surface: 255 255 255;
   --color-primary: 220 38 38;
   --color-primary-hover: 185 28 28;
+  --color-on-primary: 255 255 255;
   --color-muted: 82 82 82;
   --color-border: 10 10 10;
 }
@@ -16,8 +17,37 @@
   --color-background: 10 10 10;
   --color-foreground: 250 250 250;
   --color-surface: 23 23 23;
-  --color-primary: 248 113 113;
-  --color-primary-hover: 252 165 165;
+  /*
+   * The brand red, matching the logo artwork (#E42A21). Dark mode previously
+   * used a lighter coral because a saturated red on near black measures
+   * 4.39:1, just under the 4.5 AA needs for body text. It clears the 3.0 that
+   * large text, icons and borders need, and primary is used here for headline
+   * accents, rules, icons and small labels rather than for reading copy.
+   * Hover lifts to a lighter tint so the state change stays visible.
+   */
+  --color-primary: 228 42 33;
+  --color-primary-hover: 239 74 65;
+  --color-on-primary: 255 255 255;
+  --color-muted: 163 163 163;
+  --color-border: 250 250 250;
+}
+
+/*
+ * Third theme: the brand green as the accent.
+ *
+ * It is built on the dark palette rather than the light one because #A2CF5A
+ * is a light green. On the near white background it measures 1.73:1, which is
+ * unreadable, while on near black it is 10.94:1. For the same reason anything
+ * sitting on a green fill switches to near black text through
+ * --color-on-primary; white on this green is 1.73:1.
+ */
+.green {
+  --color-background: 10 10 10;
+  --color-foreground: 250 250 250;
+  --color-surface: 23 23 23;
+  --color-primary: 162 207 90;
+  --color-primary-hover: 181 219 117;
+  --color-on-primary: 10 10 10;
   --color-muted: 163 163 163;
   --color-border: 250 250 250;
 }

@@ -120,7 +120,14 @@ gtag('config', '${gaId}');`,
       </head>
       <body>
         <NextIntlClientProvider>
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            // next-themes only writes a class it has been told about, so the
+            // green theme has to be declared here or selecting it does nothing.
+            themes={["light", "dark", "green"]}
+          >
             <Shell>{children}</Shell>
           </ThemeProvider>
         </NextIntlClientProvider>

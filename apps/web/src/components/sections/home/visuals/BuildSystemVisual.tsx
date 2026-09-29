@@ -504,7 +504,7 @@ function AgentPanel({ still }: { still: boolean }) {
           initial={still ? { opacity: 1 } : { opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 1.05 }}
-          className="ml-auto rounded-lg rounded-br-xs bg-primary px-2 py-1 text-[7px] font-medium leading-tight text-white shadow-xs"
+          className="ml-auto rounded-lg rounded-br-xs bg-primary px-2 py-1 text-[7px] font-medium leading-tight text-onPrimary shadow-xs"
         >
           {t("agent.answer")}
         </motion.div>

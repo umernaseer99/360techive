@@ -80,7 +80,7 @@ export function AgentInteractiveDemo({ agent }: AgentInteractiveDemoProps) {
                   <div
                     className={`max-w-[80%] rounded-xl px-4 py-2.5 text-sm leading-relaxed ${
                       msg.role === "user"
-                        ? "bg-primary text-white"
+                        ? "bg-primary text-onPrimary"
                         : "border border-border/15 bg-surface/60 text-muted"
                     }`}
                   >
@@ -126,7 +126,7 @@ export function AgentInteractiveDemo({ agent }: AgentInteractiveDemoProps) {
               <button
                 type="submit"
                 disabled={!input.trim() || isTyping}
-                className="flex size-10 items-center justify-center rounded-xl bg-primary text-white transition-colors hover:bg-primary-dark disabled:opacity-50"
+                className="flex size-10 items-center justify-center rounded-xl bg-primary text-onPrimary transition-colors hover:bg-primary-dark disabled:opacity-50"
                 aria-label={t("send")}
               >
                 <Send className="size-4" />

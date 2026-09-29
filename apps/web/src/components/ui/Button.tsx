@@ -19,7 +19,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  */
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-primary text-white shadow-sm hover:bg-primary-hover hover:shadow-[0_8px_24px_-8px_rgb(var(--color-primary)/0.55)] focus-visible:ring-primary",
+    "bg-primary text-onPrimary shadow-sm hover:bg-primary-hover hover:shadow-[0_8px_24px_-8px_rgb(var(--color-primary)/0.55)] focus-visible:ring-primary",
   secondary:
     "border border-border/15 bg-transparent text-foreground hover:border-primary/40 hover:bg-foreground/[0.04] focus-visible:ring-foreground/30",
   ghost:

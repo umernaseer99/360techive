@@ -343,7 +343,7 @@ function Agents() {
         <div className="flex flex-col gap-1.5 border-t border-border/10 pt-2">
           <div className="flex items-center gap-2 rounded-lg border border-border/10 bg-surface/60 px-2 py-1">
             <span className="text-[8px] text-muted">{t("input")}</span>
-            <span className="ml-auto rounded bg-primary px-1.5 py-0.5 text-[7px] font-medium text-white">
+            <span className="ml-auto rounded bg-primary px-1.5 py-0.5 text-[7px] font-medium text-onPrimary">
               {t("send")}
             </span>
           </div>
@@ -450,7 +450,7 @@ function Automation() {
               <div
                 className={`flex size-10 items-center justify-center rounded-xl border transition-all ${
                   node.active
-                    ? "border-primary bg-primary text-white shadow-md shadow-primary/20 scale-105"
+                    ? "border-primary bg-primary text-onPrimary shadow-md shadow-primary/20 scale-105"
                     : "border-border/15 bg-surface/90 text-foreground/80 shadow-xs"
                 }`}
               >

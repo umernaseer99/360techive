@@ -6,7 +6,12 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
+  // Both dark themes drive the `dark:` variant. Without this the green
+  // theme would render light mode mock styling on a near black background.
+  darkMode: [
+    "variant",
+    ["&:where(.dark, .dark *)", "&:where(.green, .green *)"],
+  ],
   theme: {
     extend: {
       colors: {
@@ -18,6 +23,7 @@ const config: Config = {
           hover: "rgb(var(--color-primary-hover) / <alpha-value>)",
         },
         muted: "rgb(var(--color-muted) / <alpha-value>)",
+        onPrimary: "rgb(var(--color-on-primary) / <alpha-value>)",
         border: "rgb(var(--color-border) / <alpha-value>)",
       },
       fontFamily: {

@@ -85,7 +85,7 @@ export function BottomDock() {
             tabIndex={0}
             aria-label="Get a Demo"
             onClick={() => window.location.href.replace("/", "/contact")}
-            className="flex items-center gap-1 rounded-full px-4 py-1.5 bg-primary text-white font-medium transition-colors"
+            className="flex items-center gap-1 rounded-full px-4 py-1.5 bg-primary text-onPrimary font-medium transition-colors"
           >
             <span>Get a Demo</span>
           </motion.div>

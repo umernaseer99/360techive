@@ -385,7 +385,7 @@ export function NodeNetworkDiagram({
             }}
           >
             {CenterIcon && (
-              <div className="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+              <div className="flex size-8 items-center justify-center rounded-full bg-primary text-onPrimary">
                 <CenterIcon className="size-4" />
               </div>
             )}
@@ -409,7 +409,7 @@ export function NodeNetworkDiagram({
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             {CenterIcon && (
-              <div className="flex size-8 items-center justify-center rounded-full bg-primary text-white">
+              <div className="flex size-8 items-center justify-center rounded-full bg-primary text-onPrimary">
                 <CenterIcon className="size-4" />
               </div>
             )}
