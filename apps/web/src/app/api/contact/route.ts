@@ -15,10 +15,14 @@ import nodemailer from "nodemailer";
  *
  *   SMTP_HOST      mail server hostname
  *   SMTP_PORT      465 for implicit TLS, 587 for STARTTLS (default 587)
+ *   SMTP_SECURE    optional override; otherwise inferred from the port
  *   SMTP_USER      mailbox login
  *   SMTP_PASS      mailbox password
  *   CONTACT_TO     where enquiries are delivered (defaults to SMTP_USER)
- *   CONTACT_FROM   envelope sender (defaults to SMTP_USER)
+ *   CONTACT_FROM   sender (SMTP_FROM is accepted too, defaults to SMTP_USER)
+ *
+ * SMTP_SECURE and SMTP_FROM are aliases because hosting panels hand those
+ * names out, and a variable that is set but not read is a silent failure.
  *
  * The From address must be a mailbox the SMTP server is allowed to send as.
  * The visitor's address goes in Reply-To instead, so hitting reply answers
@@ -103,8 +107,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   }
 
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO, CONTACT_FROM } =
-    process.env;
+  const {
+    SMTP_HOST,
+    SMTP_PORT,
+    SMTP_SECURE,
+    SMTP_USER,
+    SMTP_PASS,
+    SMTP_FROM,
+    CONTACT_TO,
+    CONTACT_FROM,
+  } = process.env;
 
   if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
     // Told apart from a send failure so the form can say something accurate.
@@ -113,6 +125,12 @@ export async function POST(request: Request) {
   }
 
   const port = Number(SMTP_PORT ?? 587);
+  // 465 is implicit TLS and everything else negotiates with STARTTLS, which is
+  // right for every common provider. SMTP_SECURE exists only to override a
+  // host that does something unusual.
+  const secure =
+    SMTP_SECURE === undefined ? port === 465 : SMTP_SECURE === "true";
+  const sender = CONTACT_FROM || SMTP_FROM || SMTP_USER;
 
   const rows: [string, string][] = [
     ["Name", data.name],
@@ -128,12 +146,12 @@ export async function POST(request: Request) {
     const transport = nodemailer.createTransport({
       host: SMTP_HOST,
       port,
-      secure: port === 465,
+      secure,
       auth: { user: SMTP_USER, pass: SMTP_PASS },
     });
 
     await transport.sendMail({
-      from: CONTACT_FROM || SMTP_USER,
+      from: sender,
       to: CONTACT_TO || SMTP_USER,
       replyTo: `${data.name} <${data.email}>`,
       subject: `New project enquiry from ${data.name}`,

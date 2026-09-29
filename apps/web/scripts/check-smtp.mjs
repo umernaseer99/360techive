@@ -23,7 +23,19 @@ try {
   // no .env, environment only
 }
 
-const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, CONTACT_TO, CONTACT_FROM } = process.env;
+const {
+  SMTP_HOST,
+  SMTP_PORT,
+  SMTP_SECURE,
+  SMTP_USER,
+  SMTP_PASS,
+  SMTP_FROM,
+  CONTACT_TO,
+  CONTACT_FROM,
+} = process.env;
+
+// Same aliases the route accepts, so the check reflects what will actually run.
+const sender = CONTACT_FROM || SMTP_FROM || SMTP_USER;
 
 const missing = ["SMTP_HOST", "SMTP_USER", "SMTP_PASS"].filter((k) => !process.env[k]);
 if (missing.length) {
@@ -32,11 +44,12 @@ if (missing.length) {
 }
 
 const port = Number(SMTP_PORT ?? 587);
-const secure = port === 465;
+const secure =
+  SMTP_SECURE === undefined ? port === 465 : SMTP_SECURE === "true";
 
 console.log(`host   ${SMTP_HOST}:${port} ${secure ? "(implicit TLS)" : "(STARTTLS)"}`);
 console.log(`user   ${SMTP_USER}`);
-console.log(`from   ${CONTACT_FROM || SMTP_USER}`);
+console.log(`from   ${sender}`);
 console.log(`to     ${CONTACT_TO || SMTP_USER}\n`);
 
 const transport = nodemailer.createTransport({
@@ -77,7 +90,7 @@ try {
 
 if (process.argv.includes("--send")) {
   const info = await transport.sendMail({
-    from: CONTACT_FROM || SMTP_USER,
+    from: sender,
     to: CONTACT_TO || SMTP_USER,
     subject: "360 Techive contact form test",
     text: "If you are reading this, the contact form can send mail.\n",
