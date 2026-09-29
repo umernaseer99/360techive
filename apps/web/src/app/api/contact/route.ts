@@ -87,7 +87,14 @@ export async function POST(request: Request) {
     message: clean(payload.message, MAX_LENGTHS.message),
   };
 
-  if (!data.name || !EMAIL.test(data.email) || data.message.length < 20) {
+  // The same rules the form applies. A client can be old, cached or absent
+  // entirely, so the endpoint cannot rely on the browser having checked.
+  if (
+    !data.name ||
+    !EMAIL.test(data.email) ||
+    !data.projectType ||
+    data.message.length < 20
+  ) {
     return NextResponse.json({ error: "invalid_fields" }, { status: 422 });
   }
 

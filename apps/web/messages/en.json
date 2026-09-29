@@ -765,7 +765,8 @@
         "name": "Please tell us your name.",
         "emailMissing": "We need an address to reply to.",
         "emailInvalid": "That address does not look right.",
-        "message": "A sentence or two about the problem is enough."
+        "message": "A sentence or two about the problem is enough.",
+        "projectType": "Tell us which service you need."
       },
       "sent": {
         "title": "Message sent.",

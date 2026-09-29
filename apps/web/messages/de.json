@@ -765,7 +765,8 @@
         "name": "Bitte nennen Sie uns Ihren Namen.",
         "emailMissing": "Wir brauchen eine Adresse für die Antwort.",
         "emailInvalid": "Diese Adresse sieht nicht richtig aus.",
-        "message": "Ein bis zwei Sätze zum Problem genügen."
+        "message": "Ein bis zwei Sätze zum Problem genügen.",
+        "projectType": "Sagen Sie uns, welche Leistung Sie brauchen."
       },
       "sent": {
         "title": "Nachricht gesendet.",

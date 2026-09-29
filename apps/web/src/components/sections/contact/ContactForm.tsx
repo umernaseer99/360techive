@@ -42,19 +42,33 @@ const empty: Values = {
 
 type Errors = Partial<Record<keyof Values, string>>;
 
+/** Fields in the order they appear, so focus lands on the first one shown. */
+const FIELD_ORDER: (keyof Values)[] = [
+  "name",
+  "email",
+  "company",
+  "projectType",
+  "timeline",
+  "message",
+];
+
 /** Deliberately permissive. The mail client and the reply are the real check. */
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Validation messages come from the catalogue, so they translate too. */
 function validate(
   values: Values,
-  messages: Record<"name" | "emailMissing" | "emailInvalid" | "message", string>
+  messages: Record<
+    "name" | "emailMissing" | "emailInvalid" | "projectType" | "message",
+    string
+  >
 ): Errors {
   const errors: Errors = {};
   if (!values.name.trim()) errors.name = messages.name;
   if (!values.email.trim()) errors.email = messages.emailMissing;
   else if (!EMAIL.test(values.email.trim()))
     errors.email = messages.emailInvalid;
+  if (!values.projectType) errors.projectType = messages.projectType;
   if (values.message.trim().length < 20) errors.message = messages.message;
   return errors;
 }
@@ -107,12 +121,18 @@ export function ContactForm() {
       name: t("errors.name"),
       emailMissing: t("errors.emailMissing"),
       emailInvalid: t("errors.emailInvalid"),
+      projectType: t("errors.projectType"),
       message: t("errors.message"),
     });
     setErrors(found);
     if (Object.keys(found).length > 0) {
-      const first = document.querySelector<HTMLElement>("[data-invalid='true']");
-      first?.focus();
+      // Focus by id rather than by looking for [data-invalid]. setErrors only
+      // schedules a render, so the attribute is not in the DOM yet at this
+      // point and the query matched nothing: the focus never moved for any
+      // field. FIELD_ORDER keeps it landing on the first one visually rather
+      // than the first key the validator happened to set.
+      const firstInvalid = FIELD_ORDER.find((key) => found[key]);
+      if (firstInvalid) document.getElementById(firstInvalid)?.focus();
       return;
     }
 
@@ -280,12 +300,12 @@ export function ContactForm() {
               <SelectField
                 label={t("fields.projectType.label")}
                 id="projectType"
-                optional
-                optionalLabel={t("optional")}
+                required
                 placeholder={t("choose")}
                 value={values.projectType}
                 options={projectTypes.map((key) => t("projectTypes." + key))}
                 onChange={(v) => update("projectType", v)}
+                error={errors.projectType}
               />
               <SelectField
                 label={t("fields.timeline.label")}
@@ -454,6 +474,8 @@ function SelectField({
   optional = false,
   optionalLabel,
   placeholder,
+  required = false,
+  error,
 }: {
   label: string;
   id: string;
@@ -463,7 +485,11 @@ function SelectField({
   optional?: boolean;
   optionalLabel?: string;
   placeholder: string;
+  required?: boolean;
+  error?: string;
 }) {
+  const invalid = Boolean(error);
+
   return (
     <div className="flex flex-col gap-2">
       <Label htmlFor={id} optional={optional} optionalLabel={optionalLabel}>
@@ -475,10 +501,18 @@ function SelectField({
           id={id}
           name={id}
           value={value}
+          required={required}
+          // data-invalid is what handleSubmit focuses on a failed submit, so a
+          // select has to carry it as well as the text fields.
+          data-invalid={invalid ? "true" : undefined}
+          aria-invalid={invalid || undefined}
+          aria-describedby={error ? `${id}-error` : undefined}
           onChange={(e) => onChange(e.target.value)}
-          className={`${controlClass} appearance-none border-border/15 pr-10 focus:border-primary/40 ${
-            value ? "text-foreground" : "text-muted/60"
-          }`}
+          className={`${controlClass} appearance-none pr-10 ${
+            invalid
+              ? "border-primary/60"
+              : "border-border/15 focus:border-primary/40"
+          } ${value ? "text-foreground" : "text-muted/60"}`}
         >
           <option value="">{placeholder}</option>
           {options.map((option) => (
@@ -503,6 +537,8 @@ function SelectField({
           </svg>
         </span>
       </div>
+
+      {error && <ErrorText id={`${id}-error`}>{error}</ErrorText>}
     </div>
   );
 }
