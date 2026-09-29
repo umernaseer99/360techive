@@ -749,10 +749,8 @@
         }
       },
       "projectTypes": {
-        "webApp": "Web application",
+        "webApp": "Web application or website",
         "mobileApp": "Mobile application",
-        "website": "Website",
-        "design": "UI and UX design",
         "agents": "AI agents and chatbots",
         "automation": "Business automation",
         "unsure": "Not sure yet"

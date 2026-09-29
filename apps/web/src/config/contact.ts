@@ -6,11 +6,10 @@
  */
 
 /**
- * The enquiry form is hidden for now; enquiries go by email. Set to true to
- * bring the form back beside the hero. The form, its API route and its
- * copy are all still in place.
+ * Set to false to hide the enquiry form and fall back to the email address
+ * alone. The form, its API route and its copy stay in place either way.
  */
-export const SHOW_CONTACT_FORM = false;
+export const SHOW_CONTACT_FORM = true;
 
 /** The three places client work begins. */
 export const engagements = ["newProduct", "rebuild", "continuing"] as const;
@@ -40,8 +39,6 @@ export const contactNotes = ["answered", "builders", "private"] as const;
 export const projectTypes = [
   "webApp",
   "mobileApp",
-  "website",
-  "design",
   "agents",
   "automation",
   "unsure",

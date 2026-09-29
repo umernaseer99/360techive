@@ -749,10 +749,8 @@
         }
       },
       "projectTypes": {
-        "webApp": "Webanwendung",
+        "webApp": "Webanwendung oder Website",
         "mobileApp": "Mobile Anwendung",
-        "website": "Website",
-        "design": "UI- und UX-Design",
         "agents": "KI-Agenten und Chatbots",
         "automation": "Geschäftsautomatisierung",
         "unsure": "Noch offen"
