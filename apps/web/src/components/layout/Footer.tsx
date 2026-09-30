@@ -63,23 +63,34 @@ function ContactColumn() {
         {t("heading")}
       </h3>
 
-      <a
-        href={`mailto:${siteConfig.contactEmail}`}
-        className="group inline-flex items-start gap-2.5 text-sm text-muted transition-colors duration-200 hover:text-foreground"
-      >
-        <Mail
-          className="mt-0.5 size-4 shrink-0 text-primary"
-          strokeWidth={1.7}
-          aria-hidden="true"
-        />
-        <span className="relative">
-          {siteConfig.contactEmail}
-          <span
-            aria-hidden="true"
-            className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100 motion-reduce:transition-none"
-          />
-        </span>
-      </a>
+      <div className="flex flex-col gap-2">
+        {siteConfig.contactEmails.map((address, i) => (
+          <a
+            key={address}
+            href={`mailto:${address}`}
+            className="group inline-flex items-start gap-2.5 text-sm text-muted transition-colors duration-200 hover:text-foreground"
+          >
+            {/* the icon marks the pair, so it is drawn once and the second
+                address lines up under the first rather than repeating it */}
+            {i === 0 ? (
+              <Mail
+                className="mt-0.5 size-4 shrink-0 text-primary"
+                strokeWidth={1.7}
+                aria-hidden="true"
+              />
+            ) : (
+              <span className="size-4 shrink-0" aria-hidden="true" />
+            )}
+            <span className="relative">
+              {address}
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100 motion-reduce:transition-none"
+              />
+            </span>
+          </a>
+        ))}
+      </div>
 
       <div className="mt-5 flex items-start gap-2.5">
         <MapPin

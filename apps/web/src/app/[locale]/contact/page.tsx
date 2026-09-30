@@ -220,28 +220,48 @@ function HeroHeading() {
   );
 }
 
+/**
+ * Both published addresses. The first is the domain mailbox the site sends
+ * from and the one to lead with; the second stays because it is the address
+ * already in circulation.
+ */
 function EmailLink({ size = "base" }: { size?: "base" | "large" }) {
   return (
-    <a
-      href={`mailto:${siteConfig.contactEmail}`}
-      className={`group inline-flex w-fit max-w-full items-center gap-3 font-medium text-foreground ${
-        size === "large" ? "text-xl md:text-2xl" : "text-lg"
-      }`}
-    >
-      <span className="relative break-all">
-        {siteConfig.contactEmail}
-        <span
-          aria-hidden="true"
-          className="absolute inset-x-0 -bottom-1 h-px origin-left bg-primary transition-transform duration-300 group-hover:scale-x-0 motion-reduce:transition-none"
-        />
-      </span>
-      <span
-        aria-hidden="true"
-        className="text-primary transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none"
-      >
-        &rarr;
-      </span>
-    </a>
+    <div className="flex flex-col gap-2">
+      {siteConfig.contactEmails.map((address, i) => (
+        <a
+          key={address}
+          href={`mailto:${address}`}
+          className={`group inline-flex w-fit max-w-full items-center gap-3 font-medium ${
+            i === 0 ? "text-foreground" : "text-muted"
+          } ${
+            i === 0
+              ? size === "large"
+                ? "text-xl md:text-2xl"
+                : "text-lg"
+              : "text-base"
+          }`}
+        >
+          <span className="relative break-all">
+            {address}
+            <span
+              aria-hidden="true"
+              className={`absolute inset-x-0 -bottom-1 h-px bg-primary transition-transform duration-300 motion-reduce:transition-none ${
+                i === 0
+                  ? "origin-left group-hover:scale-x-0"
+                  : "origin-left scale-x-0 group-hover:scale-x-100"
+              }`}
+            />
+          </span>
+          <span
+            aria-hidden="true"
+            className="text-primary transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none"
+          >
+            &rarr;
+          </span>
+        </a>
+      ))}
+    </div>
   );
 }
 

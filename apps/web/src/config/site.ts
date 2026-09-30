@@ -16,7 +16,14 @@ export interface NavLink {
  */
 export const siteConfig = {
   name: "360 Techive",
-  contactEmail: "360techive@gmail.com",
+  /**
+   * The address anything automated writes to: the mailto fallback when the
+   * form cannot send, and the address quoted when it fails. The domain
+   * mailbox leads because that is what the site sends from.
+   */
+  contactEmail: "info@360techive.com",
+  /** Both published addresses, in the order they are shown. */
+  contactEmails: ["info@360techive.com", "360techive@gmail.com"],
   /** Where the team is. Order is the order shown in the footer. */
   locations: ["Pakistan", "Germany", "Oman"],
   navLinks: [
