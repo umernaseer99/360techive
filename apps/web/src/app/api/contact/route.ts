@@ -18,7 +18,8 @@ import nodemailer from "nodemailer";
  *   SMTP_SECURE    optional override; otherwise inferred from the port
  *   SMTP_USER      mailbox login
  *   SMTP_PASS      mailbox password
- *   CONTACT_TO     where enquiries are delivered (defaults to SMTP_USER)
+ *   CONTACT_TO     where enquiries are delivered. Comma separated for more
+ *                  than one address; each gets a copy. Defaults to SMTP_USER
  *   CONTACT_FROM   sender (SMTP_FROM is accepted too, defaults to SMTP_USER)
  *
  * SMTP_SECURE and SMTP_FROM are aliases because hosting panels hand those
