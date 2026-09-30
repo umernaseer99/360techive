@@ -10,17 +10,25 @@
  * contact form tells you only that something failed; this tells you what.
  */
 import nodemailer from "nodemailer";
-import { readFileSync } from "node:fs";
 
-// Load a .env sitting next to the app, if there is one. Values already in the
-// environment win, since that is what the running process would see.
+// Read .env exactly as the app does.
+//
+// This used to parse the file itself, which was worse than useless: dotenv
+// treats an unquoted # as the start of a comment and cuts the value there, so
+// a password containing one was whole here and truncated in the app. The check
+// passed while the site failed. Using Next's own loader means what this
+// reports is what the route will see.
 try {
-  for (const line of readFileSync(new URL("../.env", import.meta.url), "utf8").split("\n")) {
-    const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
-    if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, "");
-  }
-} catch {
-  // no .env, environment only
+  // createRequire because @next/env is CommonJS and ships no ESM entry.
+  const { createRequire } = await import("node:module");
+  const { loadEnvConfig } = createRequire(import.meta.url)("@next/env");
+  loadEnvConfig(process.cwd(), false, { info: () => {}, error: console.error });
+} catch (error) {
+  console.error(
+    `Could not load @next/env (${error.message}).\n` +
+      "Run this from apps/web, after npm install.\n"
+  );
+  process.exit(1);
 }
 
 const {
@@ -49,6 +57,7 @@ const secure =
 
 console.log(`host   ${SMTP_HOST}:${port} ${secure ? "(implicit TLS)" : "(STARTTLS)"}`);
 console.log(`user   ${SMTP_USER}`);
+console.log(`pass   ${SMTP_PASS.length} characters`);
 console.log(`from   ${sender}`);
 console.log(`to     ${CONTACT_TO || SMTP_USER}\n`);
 
